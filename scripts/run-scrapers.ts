@@ -19,11 +19,15 @@ async function main() {
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
   if (!url || !serviceKey) {
-    console.error(
-      "Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY. " +
-        "Set them in the environment before running the scraper.",
+    // Treat an unconfigured environment as a graceful no-op rather than a hard
+    // failure. The scheduled workflow runs before Supabase secrets are set up,
+    // and a red CI X for "not configured yet" is noise. Once the secrets exist,
+    // any real misconfiguration surfaces as a normal error below.
+    console.warn(
+      "Skipping scrape: NEXT_PUBLIC_SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY " +
+        "are not set. Configure them (repo secrets) to enable scheduled scraping.",
     );
-    process.exit(1);
+    process.exit(0);
   }
 
   const admin = createClient(url, serviceKey, {
