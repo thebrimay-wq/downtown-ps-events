@@ -1,0 +1,39 @@
+import type { Metadata } from "next";
+import { SubmitForm } from "@/components/submit-form";
+import { CATEGORY_META } from "@/lib/categories";
+
+export const metadata: Metadata = {
+  title: "Submit an Event",
+  description:
+    "Local businesses and community members can submit an event to the Pleasanton Events Hub for review.",
+};
+
+export default function SubmitPage() {
+  const categories = Object.entries(CATEGORY_META).map(([slug, meta]) => ({
+    slug,
+    label: meta.label,
+  }));
+
+  return (
+    <div className="container-page py-12">
+      <div className="mx-auto max-w-2xl">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-brand-600">
+            🙌 Community submissions
+          </p>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Submit an event
+          </h1>
+          <p className="mx-auto mt-3 max-w-lg text-ink-muted">
+            Hosting something in Pleasanton? Tell us about it. Submissions are
+            reviewed by our team before appearing on the calendar.
+          </p>
+        </div>
+
+        <div className="mt-8 rounded-3xl bg-canvas-raised p-6 shadow-card ring-1 ring-black/[0.04] sm:p-8">
+          <SubmitForm categories={categories} />
+        </div>
+      </div>
+    </div>
+  );
+}
