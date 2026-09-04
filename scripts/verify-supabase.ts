@@ -95,6 +95,34 @@ async function main() {
       `${allDay} all-day (a 0 here means the UI invents 12:00 PM times)`,
     );
 
+    // PostgREST truncates at 1,000 rows without raising an error, so a naive
+    // select silently drops everything past the thousandth event.
+    const { count: totalApproved } = await anon
+      .from("events")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "approved");
+    const { data: unpaged } = await anon
+      .from("events")
+      .select("id")
+      .eq("status", "approved")
+      .order("start_at", { ascending: true });
+    let paged = 0;
+    for (let from = 0; ; from += 1000) {
+      const { data } = await anon
+        .from("events")
+        .select("id")
+        .eq("status", "approved")
+        .order("start_at", { ascending: true })
+        .range(from, from + 999);
+      paged += data?.length ?? 0;
+      if (!data || data.length < 1000) break;
+    }
+    check(
+      "paging reaches every approved event",
+      paged === (totalApproved ?? -1),
+      `${paged} paged vs ${totalApproved} total (one unpaged select returns ${unpaged?.length})`,
+    );
+
     const { count: future } = await anon
       .from("events")
       .select("id", { count: "exact", head: true })

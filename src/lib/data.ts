@@ -50,28 +50,58 @@ export async function getSources(): Promise<Source[]> {
   return data as Source[];
 }
 
+// PostgREST caps a single response at 1,000 rows and gives no error when it
+// truncates, so an unpaginated select silently loses everything past the
+// thousandth event. Page until a short response says we have them all.
+const PAGE_SIZE = 1000;
+
+type Row = Record<string, unknown>;
+
+// Typed by what pagination actually needs, rather than by supabase-js's
+// generics, which are awkward to name at a call boundary like this.
+type RangeableQuery = PromiseLike<{ data: Row[] | null; error: unknown }> & {
+  range: (from: number, to: number) => PromiseLike<{
+    data: Row[] | null;
+    error: unknown;
+  }>;
+};
+
+async function fetchAllRows(build: () => RangeableQuery): Promise<Row[]> {
+  const rows: Row[] = [];
+  for (let from = 0; ; from += PAGE_SIZE) {
+    const { data, error } = await build().range(from, from + PAGE_SIZE - 1);
+    if (error) break;
+    if (!data?.length) break;
+    rows.push(...(data as Row[]));
+    if (data.length < PAGE_SIZE) break;
+  }
+  return rows;
+}
+
+function toEventRecord(row: Row): EventRecord {
+  const event = row as unknown as EventRecord;
+  return {
+    ...event,
+    // Reconstructed from tags, which is where it is persisted.
+    all_day: hasAllDayTag(event.tags),
+    source_name: (row.sources as { name?: string } | null)?.name ?? null,
+  };
+}
+
 // All approved events (used as the base for all public queries).
 async function getApprovedEventsRaw(): Promise<EventRecord[]> {
   const supabase = getServerClient();
   if (!supabase) return getBundledEvents();
 
-  const { data, error } = await supabase
-    .from("events")
-    .select("*, sources(name)")
-    .eq("status", "approved")
-    .is("duplicate_of", null)
-    .order("start_at", { ascending: true });
-
-  if (error || !data) return [];
-  return data.map((row: Record<string, unknown>) => {
-    const event = row as unknown as EventRecord;
-    return {
-      ...event,
-      // Reconstructed from tags, which is where it is persisted.
-      all_day: hasAllDayTag(event.tags),
-      source_name: (row.sources as { name?: string } | null)?.name ?? null,
-    };
-  });
+  const rows = await fetchAllRows(() =>
+    supabase
+      .from("events")
+      .select("*, sources(name)")
+      .eq("status", "approved")
+      .is("duplicate_of", null)
+      .order("start_at", { ascending: true }),
+  );
+  return rows.map(toEventRecord);
 }
 
 function applyFilters(
@@ -184,15 +214,14 @@ export async function getRelatedEvents(
 export async function getPendingEvents(): Promise<EventRecord[]> {
   const supabase = getServerClient();
   if (!supabase) return [];
-  const { data } = await supabase
-    .from("events")
-    .select("*, sources(name)")
-    .eq("status", "pending")
-    .order("start_at", { ascending: true });
-  return (data ?? []).map((row: Record<string, unknown>) => ({
-    ...(row as unknown as EventRecord),
-    source_name: (row.sources as { name?: string } | null)?.name ?? null,
-  }));
+  const rows = await fetchAllRows(() =>
+    supabase
+      .from("events")
+      .select("*, sources(name)")
+      .eq("status", "pending")
+      .order("start_at", { ascending: true }),
+  );
+  return rows.map(toEventRecord);
 }
 
 export async function getSubmittedEvents(): Promise<SubmittedEvent[]> {
