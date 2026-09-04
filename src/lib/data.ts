@@ -187,18 +187,21 @@ export async function getEventByIdOrSlug(
       events.find((e) => e.id === idOrSlug || e.slug === idOrSlug) ?? null
     );
   }
+  // `id` is a uuid column: asking Postgres to compare it to a slug fails the
+  // whole query, which turned every slug-based event link into a 404 once the
+  // database was connected. Decide which column to match before asking.
+  const isUuid =
+    /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(
+      idOrSlug,
+    );
   const { data } = await supabase
     .from("events")
     .select("*, sources(name)")
-    .or(`id.eq.${idOrSlug},slug.eq.${idOrSlug}`)
+    .eq(isUuid ? "id" : "slug", idOrSlug)
     .limit(1)
     .maybeSingle();
   if (!data) return null;
-  return {
-    ...(data as unknown as EventRecord),
-    source_name:
-      (data.sources as { name?: string } | null)?.name ?? null,
-  };
+  return toEventRecord(data as Row);
 }
 
 export async function getRelatedEvents(
