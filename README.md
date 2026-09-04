@@ -43,8 +43,31 @@ Actions (scheduling).
 ```bash
 npm install
 npm run dev
-# open http://localhost:3000  → fully browsable in demo mode
+# open http://localhost:3000  → fully browsable, no setup needed
 ```
+
+With no database configured the site serves a bundled dataset of **1,529 real
+events** (September 2026 → September 2027) crawled from 15 Pleasanton and
+Tri-Valley sources. See [`data/CRAWL-REPORT.md`](data/CRAWL-REPORT.md) for
+coverage and [`scripts/crawl4ai/`](scripts/crawl4ai/README.md) for the crawler
+that produced it.
+
+### Connecting a database
+
+The bundle is read-only. To get submissions, moderation and scheduled
+scraping, point the app at a Supabase project:
+
+1. Create a project at supabase.com and open the SQL editor.
+2. Run, in order: `supabase/schema.sql`, `supabase/seed.sql`, then
+   `supabase/seed-events.sql` (loads the same 1,500+ events the bundle shows,
+   already approved, so the site isn't empty on first load — plus the 15
+   sources they came from, as disabled provenance rows; only sources that
+   were reachable and actually produced events are included).
+3. Copy `.env.example` to `.env.local` and fill in
+   `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and
+   `SUPABASE_SERVICE_ROLE_KEY` from Project Settings → API.
+4. Restart `npm run dev`. The "No database connected" banner disappears and
+   `/admin` becomes live.
 
 ### Enabling the database & scraping
 
@@ -87,8 +110,9 @@ src/
     api/                    submit · scrape · events · admin/{events,submissions}
   components/               UI: cards, filters, calendar, header/footer, admin
   lib/
-    data.ts                 Read layer (Supabase, with mock fallback)
-    mock-data.ts            Bundled demo events (used when Supabase is absent)
+    data.ts                 Read layer (Supabase, falling back to the bundle)
+    bundled-data.ts         Bundled crawl results (used when Supabase is absent)
+    *.generated.json        Crawler output — regenerate, don't hand-edit
     supabase/               Browser/server/admin clients
     scrapers/               Fetch + extraction engine + per-source adapters
     ai/normalize.ts         Claude normalization (+ heuristic fallback)
@@ -96,6 +120,8 @@ src/
     types.ts, utils.ts, categories.ts
 supabase/                   schema.sql + seed.sql
 scripts/run-scrapers.ts     CLI scrape entry point
+scripts/crawl4ai/           Wide one-shot Crawl4AI sweep → bundled dataset
+data/                       Crawl archive + coverage report
 .github/workflows/scrape.yml  Scheduled scrape
 vercel.json                 Vercel Cron config
 ```

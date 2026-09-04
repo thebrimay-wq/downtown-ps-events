@@ -6,6 +6,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
       colors: {
         // Warm, local Pleasanton palette: golden hills + clean Apple neutrals.
@@ -32,6 +33,17 @@ const config: Config = {
           800: "#7f3c1c",
           900: "#68331b",
         },
+        // "Map blue" — reserved for location and wayfinding affordances so it
+        // never competes with the orange primary.
+        accent: {
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+        },
       },
       borderRadius: {
         "4xl": "2rem",
@@ -49,6 +61,10 @@ const config: Config = {
       },
       animation: {
         "fade-up": "fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both",
+      },
+      transitionTimingFunction: {
+        // Enter fast, settle slow — the standard "ease-out" for entering UI.
+        out: "cubic-bezier(0.22, 1, 0.36, 1)",
       },
     },
   },

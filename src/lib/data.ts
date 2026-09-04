@@ -2,10 +2,10 @@ import "server-only";
 import { getServerClient } from "./supabase/server";
 import { isSupabaseConfigured } from "./supabase/env";
 import {
-  MOCK_CATEGORIES,
-  MOCK_SOURCES,
-  getMockEvents,
-} from "./mock-data";
+  BUNDLED_CATEGORIES,
+  BUNDLED_SOURCES,
+  getBundledEvents,
+} from "./bundled-data";
 import type {
   EventCategory,
   EventFilters,
@@ -17,40 +17,42 @@ import type {
 import { isThisWeekend, isToday, isUpcoming } from "./utils";
 
 // ---------------------------------------------------------------------------
-// Read layer. Reads from Supabase when configured; otherwise returns bundled
-// mock data so the UI is fully functional with no setup.
+// Read layer. Reads from Supabase when configured; otherwise returns the
+// bundled crawl results so the UI is fully functional with no setup.
 // ---------------------------------------------------------------------------
 
-export function usingMockData(): boolean {
+// True when no database is configured and the site is serving the bundled
+// crawl results instead of live Supabase rows.
+export function usingBundledData(): boolean {
   return !isSupabaseConfigured;
 }
 
 export async function getCategories(): Promise<EventCategory[]> {
   const supabase = getServerClient();
-  if (!supabase) return MOCK_CATEGORIES;
+  if (!supabase) return BUNDLED_CATEGORIES;
   const { data, error } = await supabase
     .from("event_categories")
     .select("*")
     .order("sort_order", { ascending: true });
-  if (error || !data?.length) return MOCK_CATEGORIES;
+  if (error || !data?.length) return BUNDLED_CATEGORIES;
   return data as EventCategory[];
 }
 
 export async function getSources(): Promise<Source[]> {
   const supabase = getServerClient();
-  if (!supabase) return MOCK_SOURCES;
+  if (!supabase) return BUNDLED_SOURCES;
   const { data, error } = await supabase
     .from("sources")
     .select("*")
     .order("name", { ascending: true });
-  if (error || !data?.length) return MOCK_SOURCES;
+  if (error || !data?.length) return BUNDLED_SOURCES;
   return data as Source[];
 }
 
 // All approved events (used as the base for all public queries).
 async function getApprovedEventsRaw(): Promise<EventRecord[]> {
   const supabase = getServerClient();
-  if (!supabase) return getMockEvents();
+  if (!supabase) return getBundledEvents();
 
   const { data, error } = await supabase
     .from("events")
@@ -145,7 +147,7 @@ export async function getEventByIdOrSlug(
 ): Promise<EventRecord | null> {
   const supabase = getServerClient();
   if (!supabase) {
-    const events = getMockEvents();
+    const events = getBundledEvents();
     return (
       events.find((e) => e.id === idOrSlug || e.slug === idOrSlug) ?? null
     );
@@ -207,6 +209,14 @@ export async function getScrapeLogs(limit = 20): Promise<ScrapedEventLog[]> {
     .order("started_at", { ascending: false })
     .limit(limit);
   return (data ?? []) as ScrapedEventLog[];
+}
+
+// The bundled dataset (and, once configured, the scrapers) reach across the
+// wider Tri-Valley. This narrows a list to Pleasanton proper, which is what the
+// homepage rails promise; /events exposes the full regional set.
+export function inPleasanton(event: EventRecord): boolean {
+  const where = `${event.venue ?? ""} ${event.address ?? ""}`.toLowerCase();
+  return where.includes("pleasanton");
 }
 
 export function categoryBySlug(

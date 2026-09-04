@@ -34,6 +34,8 @@ export interface EventRecord {
   description?: string | null;
   start_at: string; // ISO timestamp
   end_at?: string | null;
+  // True when the source gave only a day; start_at's time is a placeholder.
+  all_day?: boolean;
   venue?: string | null;
   address?: string | null;
   latitude?: number | null;

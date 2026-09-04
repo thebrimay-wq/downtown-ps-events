@@ -23,7 +23,7 @@ export function SiteFooter() {
           </Link>
         </nav>
       </div>
-      <div className="container-page pb-8 text-xs text-ink-faint">
+      <div className="container-page pb-8 text-xs text-ink-muted">
         © {new Date().getFullYear()} Pleasanton Events Hub · Made with care for
         the Tri-Valley community.
       </div>

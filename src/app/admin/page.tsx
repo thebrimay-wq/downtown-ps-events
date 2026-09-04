@@ -4,10 +4,10 @@ import {
   getSubmittedEvents,
   getSources,
   getScrapeLogs,
-  usingMockData,
+  usingBundledData,
 } from "@/lib/data";
 import { AdminDashboard } from "@/components/admin/admin-dashboard";
-import { DemoBanner } from "@/components/demo-banner";
+import { BundledDataBanner } from "@/components/bundled-data-banner";
 
 export const metadata: Metadata = {
   title: "Admin Dashboard",
@@ -26,10 +26,10 @@ export default async function AdminPage() {
 
   return (
     <div>
-      {usingMockData() && <DemoBanner />}
+      {usingBundledData() && <BundledDataBanner />}
       <div className="container-page py-10">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          <h1 className="display text-[2rem] leading-tight text-ink sm:text-[2.75rem]">
             Admin dashboard
           </h1>
           <p className="mt-1 text-ink-muted">
@@ -42,7 +42,7 @@ export default async function AdminPage() {
           initialSubmissions={submissions}
           sources={sources}
           logs={logs}
-          mockMode={usingMockData()}
+          bundledMode={usingBundledData()}
         />
       </div>
     </div>

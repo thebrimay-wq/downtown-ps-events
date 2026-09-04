@@ -42,13 +42,14 @@ export function CalendarView({ events }: { events: EventRecord[] }) {
   return (
     <div className="overflow-hidden rounded-3xl bg-canvas-raised shadow-card ring-1 ring-black/[0.04]">
       <div className="flex items-center justify-between border-b border-black/5 px-5 py-4">
-        <h2 className="text-lg font-semibold tracking-tight">{monthLabel}</h2>
-        <span className="text-sm text-ink-muted">
-          {events.length} event{events.length === 1 ? "" : "s"}
+        <h2 className="display text-xl text-ink sm:text-2xl">{monthLabel}</h2>
+        <span className="tabular text-sm text-ink-muted">
+          {events.length.toLocaleString("en-US")} event
+          {events.length === 1 ? "" : "s"}
         </span>
       </div>
 
-      <div className="grid grid-cols-7 border-b border-black/5 bg-canvas-sunken/50 text-center text-xs font-semibold uppercase tracking-wide text-ink-faint">
+      <div className="grid grid-cols-7 border-b border-black/5 bg-canvas-sunken/50 text-center text-xs font-semibold uppercase tracking-wide text-ink-muted">
         {WEEKDAYS.map((d) => (
           <div key={d} className="py-2.5">
             <span className="hidden sm:inline">{d}</span>
@@ -63,7 +64,7 @@ export function CalendarView({ events }: { events: EventRecord[] }) {
             return (
               <div
                 key={i}
-                className="min-h-[84px] border-b border-r border-black/5 bg-canvas-sunken/30 last:border-r-0"
+                className="min-h-[68px] border-b border-r border-black/5 bg-canvas-sunken/30 last:border-r-0 sm:min-h-[116px]"
               />
             );
           const key = keyFor(day);
@@ -72,43 +73,73 @@ export function CalendarView({ events }: { events: EventRecord[] }) {
           return (
             <div
               key={i}
-              className="min-h-[84px] space-y-1 border-b border-r border-black/5 p-1.5 [&:nth-child(7n)]:border-r-0 sm:min-h-[116px]"
+              className="min-h-[68px] space-y-1 border-b border-r border-black/5 p-1.5 [&:nth-child(7n)]:border-r-0 sm:min-h-[116px]"
             >
               <div
                 className={
                   isToday
-                    ? "ml-auto grid h-6 w-6 place-items-center rounded-full bg-brand-500 text-xs font-bold text-white"
-                    : "px-1 text-xs font-semibold text-ink-muted"
+                    ? "tabular ml-auto grid h-6 w-6 place-items-center rounded-full bg-brand-500 text-xs font-bold text-white"
+                    : "tabular px-1 text-xs font-semibold text-ink-muted"
                 }
               >
                 {day}
               </div>
-              {dayEvents.slice(0, 3).map((e) => {
-                const meta = categoryMeta(e.category);
-                return (
-                  <Link
+              {/* Phones: coloured dots read as density. Titles truncated to
+                  "W…" tell the reader nothing, and a 12px link is well under
+                  the 44px minimum tap target. List view carries the detail. */}
+              <div
+                className="flex flex-wrap gap-1 px-1 sm:hidden"
+                aria-label={`${dayEvents.length} event${
+                  dayEvents.length === 1 ? "" : "s"
+                }`}
+              >
+                {dayEvents.slice(0, 5).map((e) => (
+                  <span
                     key={e.id}
-                    href={`/events/${e.slug ?? e.id}`}
-                    className="block truncate rounded-lg px-1.5 py-1 text-[11px] font-medium leading-tight transition hover:opacity-80"
-                    style={{
-                      backgroundColor: `${meta.color}1a`,
-                      color: meta.color,
-                    }}
-                    title={e.title}
-                  >
-                    {e.title}
-                  </Link>
-                );
-              })}
-              {dayEvents.length > 3 && (
-                <div className="px-1.5 text-[11px] font-medium text-ink-faint">
-                  +{dayEvents.length - 3} more
-                </div>
-              )}
+                    aria-hidden
+                    className="h-1.5 w-1.5 rounded-full"
+                    style={{ backgroundColor: categoryMeta(e.category).color }}
+                  />
+                ))}
+                {dayEvents.length > 5 && (
+                  <span aria-hidden className="text-[9px] font-bold leading-none text-ink-muted">
+                    +{dayEvents.length - 5}
+                  </span>
+                )}
+              </div>
+
+              <div className="hidden space-y-1 sm:block">
+                {dayEvents.slice(0, 3).map((e) => {
+                  const meta = categoryMeta(e.category);
+                  return (
+                    <Link
+                      key={e.id}
+                      href={`/events/${e.slug ?? e.id}`}
+                      className="block truncate rounded-lg px-1.5 py-1 text-[11px] font-medium leading-tight transition duration-200 hover:opacity-80"
+                      style={{
+                        backgroundColor: `${meta.color}1f`,
+                        color: meta.color,
+                      }}
+                      title={e.title}
+                    >
+                      {e.title}
+                    </Link>
+                  );
+                })}
+                {dayEvents.length > 3 && (
+                  <div className="tabular px-1.5 text-[11px] font-medium text-ink-muted">
+                    +{dayEvents.length - 3} more
+                  </div>
+                )}
+              </div>
             </div>
           );
         })}
       </div>
+
+      <p className="border-t border-black/5 px-5 py-3 text-xs text-ink-muted sm:hidden">
+        Each dot is one event. Switch to List for titles and times.
+      </p>
     </div>
   );
 }

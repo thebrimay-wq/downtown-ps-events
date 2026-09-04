@@ -25,13 +25,13 @@ export function AdminDashboard({
   initialSubmissions,
   sources,
   logs,
-  mockMode,
+  bundledMode,
 }: {
   initialPending: EventRecord[];
   initialSubmissions: SubmittedEvent[];
   sources: Source[];
   logs: ScrapedEventLog[];
-  mockMode: boolean;
+  bundledMode: boolean;
 }) {
   const [tab, setTab] = useState<Tab>("review");
   const [secret, setSecret] = useState("");
@@ -113,7 +113,7 @@ export function AdminDashboard({
       {/* Secret + scrape controls */}
       <div className="mb-6 flex flex-col gap-3 rounded-3xl bg-canvas-raised p-4 shadow-card ring-1 ring-black/[0.04] sm:flex-row sm:items-center">
         <label className="flex-1">
-          <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-faint">
+          <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-muted">
             Admin secret
           </span>
           <input
@@ -139,11 +139,11 @@ export function AdminDashboard({
         </div>
       )}
 
-      {mockMode && (
+      {bundledMode && (
         <div className="mb-6 rounded-2xl bg-canvas-sunken px-4 py-3 text-sm text-ink-muted">
-          Running in demo mode — admin lists are empty because there is no
-          database connected. Configure Supabase to manage real scraped events,
-          submissions, and sources.
+          No database connected — the site is serving the bundled crawl
+          results, so these admin lists are empty. Configure Supabase to manage
+          live scraped events, submissions, and sources.
         </div>
       )}
 
@@ -215,11 +215,11 @@ export function AdminDashboard({
                   <p className="text-sm text-ink-muted">{s.venue}</p>
                 )}
                 {s.description && (
-                  <p className="mt-1 line-clamp-2 text-sm text-ink-faint">
+                  <p className="mt-1 line-clamp-2 text-sm text-ink-muted">
                     {s.description}
                   </p>
                 )}
-                <p className="mt-1 text-xs text-ink-faint">
+                <p className="mt-1 text-xs text-ink-muted">
                   Contact: {s.contact_email}
                 </p>
               </div>
@@ -257,14 +257,14 @@ export function AdminDashboard({
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 block truncate text-sm text-brand-600 hover:text-brand-700"
+                className="mt-1 block truncate text-sm text-brand-700 hover:text-brand-800"
               >
                 {s.url}
               </a>
               {s.notes && (
                 <p className="mt-2 text-sm text-ink-muted">{s.notes}</p>
               )}
-              <div className="mt-3 flex items-center gap-3 text-xs text-ink-faint">
+              <div className="mt-3 flex items-center gap-3 text-xs text-ink-muted">
                 <span className="rounded bg-canvas-sunken px-2 py-0.5 font-medium">
                   {s.scraper_key}
                 </span>
@@ -301,7 +301,7 @@ export function AdminDashboard({
                     {log.source_slug ?? "all sources"}
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-ink-faint">
+                <p className="mt-1 text-xs text-ink-muted">
                   {new Date(log.started_at).toLocaleString()}
                 </p>
                 {log.error_message && (
@@ -314,7 +314,7 @@ export function AdminDashboard({
                 <p>
                   {log.items_created} new · {log.items_duplicate} dupes
                 </p>
-                <p className="text-xs text-ink-faint">
+                <p className="text-xs text-ink-muted">
                   {log.items_found} found
                 </p>
               </div>
@@ -374,7 +374,7 @@ function ReviewRow({
         <h3 className="mt-1.5 font-semibold text-ink">{event.title}</h3>
         {event.venue && <p className="text-sm text-ink-muted">{event.venue}</p>}
         {event.source_name && (
-          <p className="mt-1 text-xs text-ink-faint">
+          <p className="mt-1 text-xs text-ink-muted">
             via {event.source_name}
           </p>
         )}
@@ -398,7 +398,7 @@ function Actions({
       <button
         onClick={onApprove}
         disabled={busy}
-        className="rounded-xl bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-600 disabled:opacity-50"
+        className="rounded-xl bg-emerald-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800 disabled:opacity-50"
       >
         Approve
       </button>

@@ -4,6 +4,8 @@
 
 export interface CategoryMeta {
   label: string;
+  // Mirrors event_categories.icon in the database. The UI renders vector icons
+  // from <CategoryIcon> instead; this is kept only for data parity.
   icon: string;
   color: string;
 }

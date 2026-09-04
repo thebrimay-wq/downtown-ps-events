@@ -140,7 +140,7 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
           className="h-4 w-4 rounded border-black/20 text-brand-500 focus:ring-brand-400"
         />
         <span className="text-sm font-medium text-ink-soft">
-          🧸 This event is family / kid-friendly
+          This event is family / kid-friendly
         </span>
       </label>
 
@@ -157,7 +157,7 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
       >
         {status === "submitting" ? "Submitting…" : "Submit event for review"}
       </button>
-      <p className="text-center text-xs text-ink-faint">
+      <p className="text-center text-xs text-ink-muted">
         By submitting, you confirm this event is accurate and open to the public.
       </p>
     </form>
@@ -165,7 +165,7 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
 }
 
 const inputClass =
-  "w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-sm text-ink shadow-sm ring-1 ring-black/[0.06] placeholder:text-ink-faint focus:outline-none focus:ring-2 focus:ring-brand-400";
+  "w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-sm text-ink shadow-sm ring-1 ring-black/[0.06] placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:ring-brand-400";
 
 function Field({
   label,

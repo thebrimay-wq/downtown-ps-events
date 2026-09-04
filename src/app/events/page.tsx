@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { getEvents, usingMockData } from "@/lib/data";
+import { getEvents, usingBundledData } from "@/lib/data";
 import type { EventFilters as Filters, EventRecord } from "@/lib/types";
 import { EventCard } from "@/components/event-card";
 import { EventFilters } from "@/components/event-filters";
 import { ViewToggle } from "@/components/view-toggle";
 import { CalendarView } from "@/components/calendar-view";
 import { EmptyState } from "@/components/empty-state";
-import { DemoBanner } from "@/components/demo-banner";
+import { BundledDataBanner } from "@/components/bundled-data-banner";
 import { isThisWeekend, isToday, localDateKey } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Browse Events",
-  description: "Browse and filter all upcoming events in Pleasanton, California.",
+  description:
+    "Browse and filter upcoming events in Pleasanton and across the Tri-Valley.",
 };
 
 export const revalidate = 300;
@@ -75,17 +76,20 @@ export default async function EventsPage({
 
   return (
     <div>
-      {usingMockData() && <DemoBanner />}
+      {usingBundledData() && <BundledDataBanner />}
 
       {/* Page header */}
       <div className="container-page pt-10">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-              Events in Pleasanton
+            <h1 className="display text-[2rem] leading-tight text-ink sm:text-[2.75rem]">
+              Events in Pleasanton &amp; the Tri-Valley
             </h1>
-            <p className="mt-1 text-ink-muted">
-              {events.length} upcoming event{events.length === 1 ? "" : "s"}
+            <p className="mt-1.5 text-ink-muted">
+              <span className="tabular font-semibold text-ink-soft">
+                {events.length.toLocaleString("en-US")}
+              </span>{" "}
+              upcoming event{events.length === 1 ? "" : "s"}
             </p>
           </div>
           <ViewToggle />
@@ -117,7 +121,7 @@ export default async function EventsPage({
                     {dayHeadingFmt.format(new Date(`${dayKey}T12:00:00`))}
                   </span>
                   <span className="h-px flex-1 bg-black/[0.06]" />
-                  <span className="text-ink-faint">
+                  <span className="text-ink-muted">
                     {dayEvents.length} event{dayEvents.length === 1 ? "" : "s"}
                   </span>
                 </h2>
