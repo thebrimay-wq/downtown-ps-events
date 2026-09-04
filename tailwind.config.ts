@@ -6,65 +6,67 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "Georgia", "serif"],
       },
       colors: {
-        // Warm, local Pleasanton palette: golden hills + clean Apple neutrals.
+        // "Golden Hour": Pleasanton's own palette — bone, espresso, terracotta,
+        // gold — held to a precise system. Colour is warm; structure is strict.
         ink: {
-          DEFAULT: "#1c1c1e",
-          soft: "#3a3a3c",
-          muted: "#6e6e73",
-          faint: "#8e8e93",
+          DEFAULT: "#2A1F16",
+          soft: "#4A3D32",
+          muted: "#6F6052",
+          faint: "#9A8B7C",
         },
         canvas: {
-          DEFAULT: "#ffffff",
-          // Cards sit at the same value as the page, so their definition comes
-          // from shadow and hairline rather than a fill.
-          raised: "#ffffff",
-          // Neutral rather than warm, so recessed surfaces read as recessed
-          // against white instead of as a beige tint.
-          sunken: "#f4f4f6",
+          DEFAULT: "#FBF8F3",
+          raised: "#FFFFFF",
+          sunken: "#F3EEE6",
         },
+        // Terracotta. 500 is the true hue, for fills and the gradient; 600 is
+        // the darkest step that still reads as terracotta, and it clears AA as
+        // text on bone and under white text, so it carries all the copy.
         brand: {
-          50: "#fdf6ed",
-          100: "#f9e7cc",
-          200: "#f2cd99",
-          300: "#eaad5e",
-          400: "#e3923a",
-          500: "#d9791f",
-          600: "#c0611a",
-          700: "#9d4a1a",
-          800: "#7f3c1c",
-          900: "#68331b",
+          50: "#FCF3EE",
+          100: "#F8E3D8",
+          200: "#F0C4AE",
+          300: "#E49A78",
+          400: "#D4744C",
+          500: "#C2542D",
+          600: "#AE4624",
+          700: "#9C3E20",
+          800: "#7E321B",
+          900: "#622716",
         },
-        // "Map blue" — reserved for location and wayfinding affordances so it
-        // never competes with the orange primary.
+        // Gold. Decorative — the gradient, a hairline, a highlight. Never text.
         accent: {
-          50: "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          400: "#60a5fa",
-          500: "#3b82f6",
-          600: "#2563eb",
-          700: "#1d4ed8",
+          100: "#FBF0D6",
+          200: "#F3DDA5",
+          400: "#E3B45C",
+          500: "#D9A441",
+          600: "#B8862E",
         },
       },
       borderRadius: {
         "4xl": "2rem",
       },
       boxShadow: {
-        card: "0 1px 2px rgba(0,0,0,0.05), 0 8px 24px -12px rgba(0,0,0,0.16)",
-        "card-hover": "0 2px 6px rgba(0,0,0,0.07), 0 16px 40px -16px rgba(0,0,0,0.24)",
-        float: "0 12px 48px -16px rgba(0,0,0,0.28)",
+        // Contact + ambient, both warm-tinted so they sit on bone naturally.
+        card: "0 1px 2px rgba(42,31,22,0.05), 0 10px 28px -16px rgba(42,31,22,0.28)",
+        "card-hover": "0 2px 4px rgba(42,31,22,0.06), 0 20px 44px -20px rgba(42,31,22,0.36)",
+        float: "0 24px 64px -28px rgba(42,31,22,0.40)",
       },
       keyframes: {
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(8px)" },
+          "0%": { opacity: "0", transform: "translateY(14px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "warm-in": {
+          "0%": { opacity: "0", transform: "scale(1.04) translateY(-2%)" },
+          "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
         },
       },
       animation: {
-        "fade-up": "fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both",
+        "fade-up": "fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "warm-in": "warm-in 1.6s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
       transitionTimingFunction: {
         // Enter fast, settle slow — the standard "ease-out" for entering UI.

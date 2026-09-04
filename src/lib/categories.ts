@@ -11,17 +11,17 @@ export interface CategoryMeta {
 }
 
 export const CATEGORY_META: Record<string, CategoryMeta> = {
-  music: { label: "Live Music", icon: "🎵", color: "#d9791f" },
-  arts: { label: "Arts & Culture", icon: "🎨", color: "#9d4a1a" },
-  "food-drink": { label: "Food & Drink", icon: "🍷", color: "#c0611a" },
-  family: { label: "Family & Kids", icon: "🧸", color: "#e3923a" },
-  market: { label: "Markets", icon: "🧺", color: "#7f3c1c" },
-  community: { label: "Community", icon: "🤝", color: "#68331b" },
-  sports: { label: "Sports & Fitness", icon: "🏃", color: "#d9791f" },
-  festival: { label: "Festivals", icon: "🎪", color: "#c0611a" },
-  education: { label: "Education", icon: "📚", color: "#9d4a1a" },
-  nightlife: { label: "Nightlife", icon: "🌙", color: "#7f3c1c" },
-  other: { label: "Other", icon: "📌", color: "#8e8e93" },
+  music: { label: "Live Music", icon: "🎵", color: "#7A3B4A" },
+  arts: { label: "Arts & Culture", icon: "🎨", color: "#5B5236" },
+  "food-drink": { label: "Food & Drink", icon: "🍷", color: "#8A4A26" },
+  family: { label: "Family & Kids", icon: "🧸", color: "#5E6A4A" },
+  market: { label: "Markets", icon: "🧺", color: "#7A6230" },
+  community: { label: "Community", icon: "🤝", color: "#4A5A5E" },
+  sports: { label: "Sports & Fitness", icon: "🏃", color: "#4C6250" },
+  festival: { label: "Festivals", icon: "🎪", color: "#8E3F34" },
+  education: { label: "Education", icon: "📚", color: "#4C5068" },
+  nightlife: { label: "Nightlife", icon: "🌙", color: "#46425A" },
+  other: { label: "Other", icon: "📌", color: "#6A6157" },
 };
 
 export function categoryMeta(slug?: string | null): CategoryMeta {

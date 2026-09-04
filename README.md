@@ -33,8 +33,8 @@ presents everything in a fast, mobile-first, Apple-inspired interface.
 ## Tech stack
 
 Next.js 15 (App Router) · TypeScript · Tailwind CSS · Supabase (Postgres) ·
-Cheerio (scraping) · Anthropic Claude (`claude-opus-4-8`) · Vercel / GitHub
-Actions (scheduling).
+Cheerio (scraping) · Anthropic Claude (`claude-opus-4-8`) · Cloudflare Workers
+(hosting) · GitHub Actions (scheduling).
 
 ---
 
@@ -106,8 +106,6 @@ The seven live sources from `seed.sql` keep running.
 
 ### Enabling the database & scraping
 
-### Enabling the database & scraping
-
 1. Create a [Supabase](https://supabase.com) project.
 2. In the SQL editor, run `supabase/schema.sql` then `supabase/seed.sql`.
 3. Copy `.env.example` → `.env.local` and fill in:
@@ -132,6 +130,71 @@ and click **Run scrapers now**) or via the API:
 ```bash
 curl -X POST https://your-site/api/scrape -H "x-admin-secret: $ADMIN_SECRET"
 ```
+
+---
+
+## Deploying to Cloudflare
+
+The site runs as a single Cloudflare Worker, built by
+[`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare). The Worker is
+named `downtown-ps-events` in [`wrangler.jsonc`](wrangler.jsonc); rename it
+there if you want a different `*.workers.dev` hostname.
+
+### From your machine
+
+```bash
+npx wrangler login      # once
+npm run deploy          # builds the Worker and uploads it
+```
+
+Then give the Worker its secrets. Values are read from `.env.local`, so fill
+that in first:
+
+```bash
+for k in NEXT_PUBLIC_SUPABASE_URL NEXT_PUBLIC_SUPABASE_ANON_KEY SUPABASE_SERVICE_ROLE_KEY ADMIN_SECRET ANTHROPIC_API_KEY; do
+  v=$(grep "^$k=" .env.local | cut -d= -f2-)
+  [ -n "$v" ] && printf '%s' "$v" | npx wrangler secret put "$k"
+done
+```
+
+Secrets persist across deploys. `NEXT_PUBLIC_SITE_URL` is a plain var in
+`wrangler.jsonc`; change it there when you attach a custom domain.
+
+`npm run preview` runs the built Worker locally under `wrangler dev`, which is
+the closest thing to production. `npm run dev` still works for day-to-day
+development.
+
+### On every push (Workers Builds)
+
+In the Cloudflare dashboard open the Worker → **Settings → Build** and connect
+the GitHub repository. Set:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npx opennextjs-cloudflare build` |
+| Deploy command | `npx opennextjs-cloudflare deploy` |
+| Build variables | `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` |
+
+The two `NEXT_PUBLIC_` values are baked in at build time, so they must be
+build variables as well as runtime secrets. Everything else is runtime only
+(Settings → Variables & Secrets).
+
+### What changes on Cloudflare
+
+- **Plan.** Every page fetches all approved events from Supabase and filters
+  them in memory. Parsing that response costs about 7 ms of CPU before React
+  renders anything, and the Workers free plan allows 10 ms per request. On the
+  free plan most routes fail with Cloudflare error 1102. Move the account to
+  Workers Paid (30 s of CPU per request) or cut the per-request data volume.
+- **Caching.** Routes marked `revalidate` render on each request. No
+  incremental cache is configured, which keeps the setup free of extra
+  resources. For edge caching, enable R2 in the dashboard and switch
+  `open-next.config.ts` to `r2IncrementalCache`.
+- **Scheduling.** `vercel.json` does nothing here. Scheduled scraping runs
+  from `.github/workflows/scrape.yml`; keep that as the scheduler.
+- **Bundled env.** A local `npm run deploy` copies the values in `.env.local`
+  into the Worker bundle, where Worker secrets override them. Rotate a secret
+  with `wrangler secret put` and redeploy to purge the old copy.
 
 ---
 
@@ -160,7 +223,8 @@ scripts/run-scrapers.ts     CLI scrape entry point
 scripts/crawl4ai/           Wide one-shot Crawl4AI sweep → bundled dataset
 data/                       Crawl archive + coverage report
 .github/workflows/scrape.yml  Scheduled scrape
-vercel.json                 Vercel Cron config
+wrangler.jsonc              Cloudflare Worker config
+open-next.config.ts         OpenNext (Next.js → Worker) adapter config
 ```
 
 ### Data model
@@ -190,9 +254,9 @@ unless a site requires a new extraction adapter (add one under
 - **GitHub Actions** (`.github/workflows/scrape.yml`): runs daily at 09:00 UTC.
   Add repo secrets `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`,
   and (optionally) `ANTHROPIC_API_KEY`.
-- **Vercel Cron** (`vercel.json`): hits `GET /api/scrape` daily. Set a
-  `CRON_SECRET` env var in Vercel equal to your `ADMIN_SECRET` — Vercel sends it
-  as a `Bearer` token, which the endpoint validates.
+- **Any external cron** can hit `GET /api/scrape` with
+  `Authorization: Bearer $ADMIN_SECRET`. `vercel.json` shows the shape but
+  does nothing on Cloudflare.
 
 ---
 

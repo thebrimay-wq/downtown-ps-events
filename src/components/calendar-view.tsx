@@ -97,8 +97,8 @@ export function CalendarView({
   const activeCount = countByMonth.get(active) ?? 0;
 
   return (
-    <div className="overflow-hidden rounded-3xl bg-canvas-raised shadow-card ring-1 ring-black/[0.07]">
-      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3 border-b border-black/5 px-4 py-4 sm:px-5">
+    <div className="overflow-hidden rounded-2xl bg-canvas-raised shadow-card ring-1 ring-ink/10">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3 border-b border-ink/10 px-4 py-4 sm:px-5">
         <div className="flex items-center gap-1">
           <NavArrow
             direction="prev"
@@ -110,13 +110,13 @@ export function CalendarView({
             href={next ? hrefWithMonth(params, next) : null}
             label={next ? `Go to ${labelFor(next)}` : "No later events"}
           />
-          <h2 className="display ml-2 text-xl text-ink sm:text-2xl">
+          <h2 className="display ml-2 text-[1.375rem] text-ink sm:text-[1.625rem]">
             {labelFor(active)}
           </h2>
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="tabular text-sm text-ink-muted">
+          <span className="eyebrow tabular text-ink-muted">
             {activeCount.toLocaleString("en-US")} event
             {activeCount === 1 ? "" : "s"}
           </span>
@@ -124,7 +124,7 @@ export function CalendarView({
         </div>
       </div>
 
-      <div className="grid grid-cols-7 border-b border-black/5 bg-canvas-sunken/50 text-center text-xs font-semibold uppercase tracking-wide text-ink-muted">
+      <div className="eyebrow grid grid-cols-7 border-b border-ink/10 bg-canvas-sunken/70 text-center text-ink-muted">
         {WEEKDAYS.map((d) => (
           <div key={d} className="py-2.5">
             <span className="hidden sm:inline">{d}</span>
@@ -139,7 +139,7 @@ export function CalendarView({
             return (
               <div
                 key={i}
-                className="min-h-[68px] border-b border-r border-black/5 bg-canvas-sunken/30 last:border-r-0 sm:min-h-[116px]"
+                className="min-h-[68px] border-b border-r border-ink/10 bg-canvas-sunken/30 last:border-r-0 sm:min-h-[116px]"
               />
             );
           const key = keyFor(day);
@@ -148,7 +148,7 @@ export function CalendarView({
           return (
             <div
               key={i}
-              className="min-h-[68px] space-y-1 border-b border-r border-black/5 p-1.5 [&:nth-child(7n)]:border-r-0 sm:min-h-[116px]"
+              className="min-h-[68px] space-y-1 border-b border-r border-ink/10 p-1.5 [&:nth-child(7n)]:border-r-0 sm:min-h-[116px]"
             >
               <div
                 className={
@@ -213,7 +213,7 @@ export function CalendarView({
         })}
       </div>
 
-      <p className="border-t border-black/5 px-5 py-3 text-xs text-ink-muted sm:hidden">
+      <p className="border-t border-ink/10 px-5 py-3 text-xs text-ink-muted sm:hidden">
         Each dot is one event. Switch to List for titles and times.
       </p>
     </div>
@@ -248,7 +248,7 @@ function NavArrow({
       scroll={false}
       aria-label={label}
       title={label}
-      className={`${shape} text-ink-soft hover:bg-black/[0.04] hover:text-ink`}
+      className={`${shape} text-ink-soft hover:bg-ink/[0.05] hover:text-ink`}
     >
       <Icon className="h-5 w-5" strokeWidth={2.25} />
     </Link>

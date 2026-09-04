@@ -83,10 +83,10 @@ export default async function EventsPage({
       <div className="container-page pt-10">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h1 className="display text-[2rem] leading-tight text-ink sm:text-[2.75rem]">
+            <h1 className="display text-[2rem] text-ink sm:text-[2.75rem]">
               Events in Pleasanton &amp; the Tri-Valley
             </h1>
-            <p className="mt-1.5 text-ink-muted">
+            <p className="mt-2 text-ink-muted">
               <span className="tabular font-semibold text-ink-soft">
                 {events.length.toLocaleString("en-US")}
               </span>{" "}
@@ -98,7 +98,7 @@ export default async function EventsPage({
       </div>
 
       {/* Sticky filters */}
-      <div className="sticky top-16 z-40 mt-6 border-y border-black/5 glass">
+      <div className="sticky top-16 z-40 mt-6 border-y border-ink/10 glass">
         <div className="container-page py-4">
           <EventFilters />
         </div>
@@ -114,15 +114,15 @@ export default async function EventsPage({
         ) : view === "calendar" ? (
           <CalendarView events={events} month={month} params={sp} />
         ) : (
-          <div className="space-y-10">
+          <div className="space-y-12">
             {grouped.map(([dayKey, dayEvents]) => (
               <section key={dayKey}>
-                <h2 className="mb-4 flex items-center gap-3 text-sm font-semibold uppercase tracking-wide text-ink-muted">
-                  <span>
+                <h2 className="eyebrow mb-5 flex items-center gap-3 text-ink-muted">
+                  <span className="text-ink">
                     {dayHeadingFmt.format(new Date(`${dayKey}T12:00:00`))}
                   </span>
-                  <span className="h-px flex-1 bg-black/[0.06]" />
-                  <span className="text-ink-muted">
+                  <span className="h-px flex-1 bg-ink/10" />
+                  <span className="tabular">
                     {dayEvents.length} event{dayEvents.length === 1 ? "" : "s"}
                   </span>
                 </h2>

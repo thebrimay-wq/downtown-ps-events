@@ -17,8 +17,8 @@ function formatDay(iso: string): string {
 // from the bundled crawl rather than a live database.
 export function BundledDataBanner() {
   return (
-    <div className="border-b border-brand-200/60 bg-brand-50/80">
-      <div className="container-page flex items-start gap-2 py-2 text-xs leading-relaxed text-brand-800">
+    <div className="border-b border-accent-200/70 bg-accent-100/70">
+      <div className="container-page flex items-start gap-2 py-2 text-xs leading-relaxed text-ink-soft">
         <Database aria-hidden className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
         <span>
           <strong className="font-semibold">No database connected.</strong>{" "}
@@ -29,7 +29,7 @@ export function BundledDataBanner() {
           {formatDay(meta.generated_at)}.{" "}
           <span className="hidden sm:inline">
             Connect Supabase (see{" "}
-            <code className="rounded bg-brand-100 px-1 py-0.5">
+            <code className="rounded bg-accent-200/60 px-1 py-0.5">
               .env.example
             </code>
             ) for live scraping and submissions.

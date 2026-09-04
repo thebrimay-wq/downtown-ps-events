@@ -29,7 +29,7 @@ export function MonthPicker({
             router.replace(`${pathname}?${params.toString()}`, { scroll: false });
           });
         }}
-        className="min-h-11 cursor-pointer appearance-none rounded-full bg-canvas-sunken py-2 pl-4 pr-9 text-sm font-medium text-ink-soft ring-1 ring-black/[0.06] transition hover:text-ink"
+        className="min-h-11 cursor-pointer appearance-none rounded-full bg-canvas py-2 pl-4 pr-9 text-sm font-semibold text-ink-soft ring-1 ring-inset ring-ink/10 transition hover:ring-ink/30 hover:text-ink"
       >
         {months.map((m) => (
           <option key={m.key} value={m.key}>

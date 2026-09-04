@@ -111,7 +111,7 @@ export function AdminDashboard({
   return (
     <div>
       {/* Secret + scrape controls */}
-      <div className="mb-6 flex flex-col gap-3 rounded-3xl bg-canvas-raised p-4 shadow-card ring-1 ring-black/[0.04] sm:flex-row sm:items-center">
+      <div className="mb-6 flex flex-col gap-3 rounded-3xl bg-canvas-raised p-4 shadow-card ring-1 ring-ink/10 sm:flex-row sm:items-center">
         <label className="flex-1">
           <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-muted">
             Admin secret
@@ -121,7 +121,7 @@ export function AdminDashboard({
             value={secret}
             onChange={(e) => setSecret(e.target.value)}
             placeholder="Required for actions (ADMIN_SECRET)"
-            className="w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-sm shadow-sm ring-1 ring-black/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-400"
+            className="min-h-11 w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-base shadow-sm ring-1 ring-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-500"
           />
         </label>
         <button
@@ -148,7 +148,7 @@ export function AdminDashboard({
       )}
 
       {/* Tabs */}
-      <div className="mb-6 flex gap-1 overflow-x-auto no-scrollbar rounded-full bg-canvas-sunken p-1 ring-1 ring-black/[0.05]">
+      <div className="mb-6 flex gap-1 overflow-x-auto no-scrollbar rounded-full bg-canvas-sunken p-1 ring-1 ring-ink/10">
         {TABS.map((t) => (
           <button
             key={t.key}
@@ -201,7 +201,7 @@ export function AdminDashboard({
           {submissions.map((s) => (
             <div
               key={s.id}
-              className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-black/[0.04] sm:flex-row sm:items-center"
+              className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10 sm:flex-row sm:items-center"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-2">
@@ -238,7 +238,7 @@ export function AdminDashboard({
           {sources.map((s) => (
             <div
               key={s.id}
-              className="rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-black/[0.04]"
+              className="rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10"
             >
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-ink">{s.name}</h3>
@@ -247,7 +247,7 @@ export function AdminDashboard({
                     "rounded-full px-2 py-0.5 text-xs font-semibold",
                     s.enabled
                       ? "bg-emerald-100 text-emerald-700"
-                      : "bg-canvas-sunken text-ink-faint",
+                      : "bg-canvas-sunken text-ink-muted",
                   )}
                 >
                   {s.enabled ? "Enabled" : "Disabled"}
@@ -281,7 +281,7 @@ export function AdminDashboard({
           {logs.map((log) => (
             <div
               key={log.id}
-              className="flex items-center justify-between rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-black/[0.04]"
+              className="flex items-center justify-between rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10"
             >
               <div>
                 <div className="flex items-center gap-2">
@@ -337,7 +337,7 @@ function Panel({
 }) {
   if (empty) {
     return (
-      <div className="rounded-3xl border border-dashed border-black/10 bg-canvas-raised/50 py-14 text-center text-sm text-ink-muted">
+      <div className="rounded-3xl border border-dashed border-ink/15 bg-canvas-raised/50 py-14 text-center text-sm text-ink-muted">
         {emptyText}
       </div>
     );
@@ -357,7 +357,7 @@ function ReviewRow({
   onReject: () => void;
 }) {
   return (
-    <div className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-black/[0.04] sm:flex-row sm:items-center">
+    <div className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10 sm:flex-row sm:items-center">
       <div className="flex-1">
         <div className="flex flex-wrap items-center gap-2">
           <CategoryBadge slug={event.category} />
@@ -405,7 +405,7 @@ function Actions({
       <button
         onClick={onReject}
         disabled={busy}
-        className="rounded-xl bg-canvas-sunken px-4 py-2 text-sm font-semibold text-ink-soft transition hover:bg-black/[0.06] disabled:opacity-50"
+        className="rounded-xl bg-canvas-sunken px-4 py-2 text-sm font-semibold text-ink-soft transition hover:bg-ink/[0.06] disabled:opacity-50"
       >
         Reject
       </button>

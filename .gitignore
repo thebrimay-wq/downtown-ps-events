@@ -32,3 +32,9 @@ yarn-error.log*
 
 # scraper artifacts
 /scrape-output
+
+# cloudflare / opennext
+/.open-next
+/.wrangler
+.dev.vars
+cloudflare-env.d.ts

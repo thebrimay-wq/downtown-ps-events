@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
-import { Calistoga, Inter } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-// Editorial display face for headlines, paired with Inter for everything else.
-const display = Calistoga({
-  weight: "400",
+// One family, hierarchy by weight. Instrument Sans is crisp and slightly
+// narrow, with a friendly single-storey a — warmer than a neutral grotesque
+// without giving up any rigour.
+const sans = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const sans = Inter({
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -41,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable}`}>
+    <html lang="en" className={sans.variable}>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"

@@ -29,7 +29,7 @@ export default async function AdminPage() {
       {usingBundledData() && <BundledDataBanner />}
       <div className="container-page py-10">
         <div className="mb-8">
-          <h1 className="display text-[2rem] leading-tight text-ink sm:text-[2.75rem]">
+          <h1 className="display text-[2rem] text-ink sm:text-[2.75rem]">
             Admin dashboard
           </h1>
           <p className="mt-1 text-ink-muted">

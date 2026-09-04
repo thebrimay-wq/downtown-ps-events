@@ -9,13 +9,14 @@
   }
   body {
     @apply bg-canvas text-ink antialiased;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   }
   /* One visible focus treatment for every interactive element. */
   :where(a, button, input, select, textarea, [tabindex]):focus-visible {
     @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-canvas;
   }
   ::selection {
-    @apply bg-brand-200/70 text-ink;
+    @apply bg-accent-200 text-ink;
   }
 }
 
@@ -24,11 +25,10 @@
     @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
   }
   .glass {
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: saturate(140%) blur(16px);
+    -webkit-backdrop-filter: saturate(140%) blur(16px);
   }
-  /* Hide scrollbars on horizontal chip rows while keeping scroll. */
   .no-scrollbar {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -43,15 +43,38 @@
   .tabular {
     font-variant-numeric: tabular-nums;
   }
-  /* Editorial headline treatment: display face, tight tracking. */
+
+  /* Headline voice: the same sans, heavy and drawn tight. */
   .display {
-    font-family: var(--font-display), Georgia, "Times New Roman", serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  /* Small, wide-tracked label for eyebrows and metadata. */
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* The one atmospheric effect on the page: a sunset over the hills, kept
+     inside the hero. Warms in once on load and then holds still. */
+  .hero-mesh {
+    background:
+      radial-gradient(70% 90% at 92% 0%, rgba(217, 164, 65, 0.42), transparent 62%),
+      radial-gradient(55% 70% at 4% 100%, rgba(194, 84, 45, 0.22), transparent 62%),
+      radial-gradient(40% 50% at 60% 40%, rgba(251, 240, 214, 0.9), transparent 70%);
+    filter: blur(6px);
+  }
+
+  /* Hairlines carry the structure here, in place of borders and shadows. */
+  .rule {
+    @apply h-px w-full border-0 bg-ink/10;
   }
 }
 
-/* Honour the OS setting rather than insisting on motion. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -19,11 +19,11 @@ export default function SubmitPage() {
     <div className="container-page py-12">
       <div className="mx-auto max-w-2xl">
         <div className="text-center">
-          <p className="flex items-center justify-center gap-1.5 text-sm font-semibold uppercase tracking-[0.1em] text-brand-700">
+          <p className="flex items-center justify-center gap-1.5 text-sm font-semibold uppercase tracking-[0.1em] text-brand-600">
             <Megaphone aria-hidden className="h-4 w-4" strokeWidth={2.25} />
             Community submissions
           </p>
-          <h1 className="display mt-3 text-[2rem] leading-tight text-ink sm:text-[2.75rem]">
+          <h1 className="display mt-3 text-[2rem] text-ink sm:text-[2.75rem]">
             Submit an event
           </h1>
           <p className="mx-auto mt-4 max-w-lg leading-relaxed text-ink-muted">
@@ -32,7 +32,7 @@ export default function SubmitPage() {
           </p>
         </div>
 
-        <div className="mt-8 rounded-3xl bg-canvas-raised p-6 shadow-card ring-1 ring-black/[0.07] sm:p-8">
+        <div className="mt-8 rounded-3xl bg-canvas-raised p-6 shadow-card ring-1 ring-ink/10 sm:p-8">
           <SubmitForm categories={categories} />
         </div>
       </div>

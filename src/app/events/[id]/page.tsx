@@ -63,7 +63,7 @@ export default async function EventDetailPage({
         className={cn(
           "relative w-full overflow-hidden bg-canvas-sunken",
           // A flat category tint doesn't need the height a photograph earns.
-          event.image_url ? "h-64 sm:h-96" : "h-44 sm:h-60",
+          event.image_url ? "h-64 sm:h-96" : "h-48 sm:h-64",
         )}
       >
         {event.image_url ? (
@@ -93,9 +93,9 @@ export default async function EventDetailPage({
         )}
       </div>
 
-      <div className="container-page -mt-16 relative pb-16">
+      <div className="container-page relative -mt-16 pb-16">
         <div className="mx-auto max-w-3xl">
-          <div className="rounded-3xl bg-canvas-raised p-6 shadow-float ring-1 ring-black/[0.07] sm:p-8">
+          <div className="rounded-3xl bg-canvas-raised p-6 shadow-float ring-1 ring-ink/10 sm:p-8">
             <Link
               href="/events"
               className="mb-5 inline-flex items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-ink"
@@ -107,24 +107,22 @@ export default async function EventDetailPage({
             <div className="flex flex-wrap items-center gap-2">
               <CategoryBadge slug={event.category} />
               {event.is_free && (
-                <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-800">
-                  Free
-                </span>
+                <span className="rounded-full bg-ink px-2.5 py-1 text-xs font-semibold text-white">Free</span>
               )}
               {event.is_family_friendly && (
-                <span className="inline-flex items-center gap-1 rounded-full bg-brand-100 px-2.5 py-1 text-xs font-semibold text-brand-800">
+                <span className="inline-flex items-center gap-1 rounded-full bg-brand-100 px-2.5 py-1 text-xs font-semibold text-brand-700">
                   <Baby aria-hidden className="h-3.5 w-3.5" strokeWidth={2} />
                   Kid-friendly
                 </span>
               )}
             </div>
 
-            <h1 className="display mt-4 text-balance text-[2rem] leading-[1.1] text-ink sm:text-[2.75rem]">
+            <h1 className="display mt-4 text-balance text-[2rem] text-ink sm:text-[2.75rem]">
               {event.title}
             </h1>
 
             {/* Key facts */}
-            <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+            <dl className="mt-7 grid gap-x-6 gap-y-5 border-t border-ink/10 pt-6 sm:grid-cols-2">
               <Fact icon="calendar" label="Date">
                 {formatLongDate(event.start_at)}
               </Fact>
@@ -140,7 +138,7 @@ export default async function EventDetailPage({
                   href={`https://www.google.com/maps/search/?api=1&query=${mapsQuery}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1.5 inline-flex items-center gap-1 text-sm font-semibold text-accent-600 transition-colors hover:text-accent-700"
+                  className="mt-1.5 inline-flex items-center gap-1 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700"
                 >
                   <MapPin aria-hidden className="h-3.5 w-3.5" strokeWidth={2.25} />
                   View on map
@@ -169,10 +167,8 @@ export default async function EventDetailPage({
 
             {/* Description */}
             {event.description && (
-              <div className="mt-8 border-t border-black/5 pt-6">
-                <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">
-                  About this event
-                </h2>
+              <div className="mt-8 border-t border-ink/10 pt-6">
+                <h2 className="eyebrow text-ink-muted">About this event</h2>
                 <p className="mt-3 whitespace-pre-line text-[15px] leading-relaxed text-ink-soft">
                   {event.description}
                 </p>
@@ -195,7 +191,7 @@ export default async function EventDetailPage({
 
             {/* Source attribution */}
             {(event.source_name || event.source_url) && (
-              <div className="mt-8 border-t border-black/5 pt-5 text-sm text-ink-muted">
+              <div className="mt-8 border-t border-ink/10 pt-5 text-sm text-ink-muted">
                 Listed via{" "}
                 <span className="font-medium text-ink-soft">
                   {event.source_name ?? "external source"}
@@ -220,7 +216,7 @@ export default async function EventDetailPage({
           {/* Related */}
           {related.length > 0 && (
             <div className="mt-12">
-              <h2 className="display mb-6 text-2xl text-ink sm:text-3xl">
+              <h2 className="display mb-6 text-[1.75rem] text-ink sm:text-[2rem]">
                 More like this
               </h2>
               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
