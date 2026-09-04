@@ -10,7 +10,8 @@
     "lint": "next lint",
     "scrape": "tsx --env-file-if-exists=.env.local scripts/run-scrapers.ts",
     "typecheck": "tsc --noEmit",
-    "seed": "tsx --env-file-if-exists=.env.local scripts/seed-supabase.ts"
+    "seed": "tsx --env-file-if-exists=.env.local scripts/seed-supabase.ts",
+    "verify": "tsx --env-file-if-exists=.env.local scripts/verify-supabase.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.68.0",

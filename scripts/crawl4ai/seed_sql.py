@@ -11,6 +11,14 @@ def q(v):
     if isinstance(v, (int, float)): return str(v)
     return "'" + str(v).replace("'", "''") + "'"
 
+
+def all_tags(e):
+    """Tags plus the all-day marker; see src/lib/tags.ts for why it lives here."""
+    tags = list(e.get("tags") or [])
+    if e.get("all_day") and "all-day" not in tags:
+        tags.append("all-day")
+    return tags
+
 def arr(xs):
     xs = [x for x in (xs or []) if x]
     return "array[" + ",".join(q(x) for x in xs) + "]::text[]" if xs else "'{}'::text[]"
@@ -36,7 +44,7 @@ A("insert into sources (slug, name, url, website, scraper_key, strategy, enabled
 rows = []
 for s in sources:
     note = f"One-shot Crawl4AI sweep, {s['notes']} Disabled: no scheduled adapter."
-    rows.append(f"  ({q(s['slug'])}, {q(s['name'])}, {q(s['url'])}, {q(s['website'])}, "
+    rows.append(f"  ({q('crawl-' + s['slug'])}, {q(s['name'])}, {q(s['url'])}, {q(s['website'])}, "
                 f"{q('crawl4ai:' + s['scraper_key'])}, {q(s['strategy'])}, false, {q(note)})")
 A(",\n".join(rows))
 A("on conflict (slug) do update set name = excluded.name, url = excluded.url,")
@@ -46,14 +54,14 @@ A("insert into events (title, slug, description, start_at, end_at, venue, addres
 A("  tags, price, is_free, is_family_friendly, image_url, ticket_url, source_id, source_url,")
 A("  status, origin, dedupe_hash) values")
 rows = []
-by_name = {s["name"]: s["slug"] for s in sources}
+by_name = {s["name"]: "crawl-" + s["slug"] for s in sources}
 for e in events:
     src_slug = by_name.get(e.get("source_name"))
     src_expr = f"(select id from sources where slug = {q(src_slug)})" if src_slug else "null"
     rows.append(
         f"  ({q(e['title'])}, {q(e['slug'])}, {q(e['description'])}, {q(e['start_at'])}, "
         f"{q(e['end_at'])}, {q(e['venue'])}, {q(e['address'])}, {q(e['category'])}, "
-        f"{arr(e.get('tags'))}, {q(e['price'])}, {q(bool(e['is_free']))}, "
+        f"{arr(all_tags(e))}, {q(e['price'])}, {q(bool(e['is_free']))}, "
         f"{q(bool(e['is_family_friendly']))}, {q(e['image_url'])}, {q(e['ticket_url'])}, "
         f"{src_expr}, {q(e['source_url'])}, 'approved', 'scraper', {q(e['id'])})")
 # Chunked so each statement is pasteable: one 1,529-row INSERT times out in

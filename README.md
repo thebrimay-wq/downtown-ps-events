@@ -94,6 +94,12 @@ npm run dev
 
 The "No database connected" banner disappears and `/admin` goes live.
 
+Two implementation notes. Crawl source slugs are namespaced `crawl-*` so an
+upsert can never overwrite a live scraper source from `seed.sql`. And the
+`all_day` flag — set on the 209 events whose source published a date but no
+time — rides along in the `tags` array rather than its own column, so no
+migration is needed; see `src/lib/tags.ts`.
+
 The crawl sources are seeded **disabled** on purpose: they are provenance for
 the bundled events, and the scheduled scraper has no adapter for their keys.
 The seven live sources from `seed.sql` keep running.

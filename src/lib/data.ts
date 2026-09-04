@@ -15,6 +15,7 @@ import type {
   SubmittedEvent,
 } from "./types";
 import { isThisWeekend, isToday, isUpcoming } from "./utils";
+import { hasAllDayTag, visibleTags } from "./tags";
 
 // ---------------------------------------------------------------------------
 // Read layer. Reads from Supabase when configured; otherwise returns the
@@ -62,11 +63,15 @@ async function getApprovedEventsRaw(): Promise<EventRecord[]> {
     .order("start_at", { ascending: true });
 
   if (error || !data) return [];
-  return data.map((row: Record<string, unknown>) => ({
-    ...(row as unknown as EventRecord),
-    source_name:
-      (row.sources as { name?: string } | null)?.name ?? null,
-  }));
+  return data.map((row: Record<string, unknown>) => {
+    const event = row as unknown as EventRecord;
+    return {
+      ...event,
+      // Reconstructed from tags, which is where it is persisted.
+      all_day: hasAllDayTag(event.tags),
+      source_name: (row.sources as { name?: string } | null)?.name ?? null,
+    };
+  });
 }
 
 function applyFilters(
@@ -99,7 +104,7 @@ function applyFilters(
         e.title.toLowerCase().includes(q) ||
         e.description?.toLowerCase().includes(q) ||
         e.venue?.toLowerCase().includes(q) ||
-        e.tags?.some((t) => t.toLowerCase().includes(q)),
+        visibleTags(e.tags).some((t) => t.toLowerCase().includes(q)),
     );
   }
   if (filters.from) {

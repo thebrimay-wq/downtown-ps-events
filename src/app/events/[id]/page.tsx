@@ -13,12 +13,10 @@ import { EventCard } from "@/components/event-card";
 import { BundledDataBanner } from "@/components/bundled-data-banner";
 import { cn, formatLongDate, formatTimeRange } from "@/lib/utils";
 import { categoryMeta } from "@/lib/categories";
+import { visibleTags } from "@/lib/tags";
 import { CategoryIcon } from "@/components/category-icon";
 import { ArrowLeft, Baby, ExternalLink, MapPin } from "lucide-react";
 
-// Region markers used for filtering; the Location fact already says where the
-// event is, so they don't need to appear again as tags.
-const REGION_TAGS = new Set(["pleasanton", "tri-valley"]);
 
 export const revalidate = 300;
 
@@ -51,7 +49,7 @@ export default async function EventDetailPage({
 
   const related = await getRelatedEvents(event);
   const meta = categoryMeta(event.category);
-  const tags = (event.tags ?? []).filter((tag) => !REGION_TAGS.has(tag));
+  const tags = visibleTags(event.tags);
   const mapsQuery = encodeURIComponent(
     [event.venue, event.address].filter(Boolean).join(", ") || "Pleasanton, CA",
   );

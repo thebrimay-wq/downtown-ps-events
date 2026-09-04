@@ -13,6 +13,7 @@
  */
 import { createClient } from "@supabase/supabase-js";
 import { BUNDLED_CATEGORIES, BUNDLED_SOURCES, getBundledEvents } from "../src/lib/bundled-data";
+import { withAllDayTag } from "../src/lib/tags";
 
 const BATCH = 500;
 
@@ -52,8 +53,11 @@ async function main() {
   // Provenance for the crawled events. Disabled because the scheduled scraper
   // has no adapter for these keys; the seven live sources in seed.sql are
   // untouched by this upsert.
+  // Namespaced: slugify("Pleasanton Weekly") collides with seed.sql's own
+  // `pleasanton-weekly`, and an upsert on that slug would overwrite a live
+  // scheduled scraper with a disabled provenance row.
   const sources = BUNDLED_SOURCES.map((s) => ({
-    slug: s.slug,
+    slug: `crawl-${s.slug}`,
     name: s.name,
     url: s.url,
     website: s.website,
@@ -62,6 +66,10 @@ async function main() {
     enabled: false,
     notes: `One-shot Crawl4AI sweep. ${s.notes ?? ""} No scheduled adapter.`.trim(),
   }));
+  // Guard the invariant rather than trusting it.
+  const stray = sources.find((s) => !s.slug.startsWith("crawl-"));
+  if (stray) throw new Error(`refusing to write outside the crawl- namespace: ${stray.slug}`);
+
   const { error: srcErr } = await admin.from("sources").upsert(sources, { onConflict: "slug" });
   if (srcErr) throw new Error(`sources: ${srcErr.message}`);
   console.log(`sources     ${sources.length}`);
@@ -70,7 +78,7 @@ async function main() {
   const { data: dbSources, error: readErr } = await admin.from("sources").select("id, slug");
   if (readErr) throw new Error(`reading sources back: ${readErr.message}`);
   const idBySlug = new Map((dbSources ?? []).map((s) => [s.slug, s.id]));
-  const slugByName = new Map(BUNDLED_SOURCES.map((s) => [s.name, s.slug]));
+  const slugByName = new Map(BUNDLED_SOURCES.map((s) => [s.name, `crawl-${s.slug}`]));
 
   const events = getBundledEvents().map((e) => ({
     title: e.title,
@@ -81,7 +89,8 @@ async function main() {
     venue: e.venue,
     address: e.address,
     category: e.category,
-    tags: e.tags ?? [],
+    // `all_day` has no column; it rides along as a tag. See src/lib/tags.ts.
+    tags: withAllDayTag(e.tags ?? [], e.all_day ?? false),
     price: e.price,
     is_free: e.is_free,
     is_family_friendly: e.is_family_friendly,
@@ -92,7 +101,6 @@ async function main() {
     status: "approved",
     origin: "scraper",
     dedupe_hash: e.id,
-    // `all_day` is a bundle-only field; the events table has no such column.
   }));
 
   let written = 0;
