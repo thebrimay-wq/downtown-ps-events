@@ -56,13 +56,26 @@ for e in events:
         f"{arr(e.get('tags'))}, {q(e['price'])}, {q(bool(e['is_free']))}, "
         f"{q(bool(e['is_family_friendly']))}, {q(e['image_url'])}, {q(e['ticket_url'])}, "
         f"{src_expr}, {q(e['source_url'])}, 'approved', 'scraper', {q(e['id'])})")
-A(",\n".join(rows))
-A("on conflict (slug) do update set")
-A("  description = excluded.description, start_at = excluded.start_at, end_at = excluded.end_at,")
-A("  venue = excluded.venue, address = excluded.address, category = excluded.category,")
-A("  tags = excluded.tags, price = excluded.price, is_free = excluded.is_free,")
-A("  is_family_friendly = excluded.is_family_friendly, image_url = excluded.image_url,")
-A("  ticket_url = excluded.ticket_url, source_url = excluded.source_url, updated_at = now();")
+# Chunked so each statement is pasteable: one 1,529-row INSERT times out in
+# the Supabase web SQL editor. `npm run seed` is the easier path; this file is
+# for a pure-SQL or psql workflow.
+CHUNK = 250
+HEAD = ("insert into events (title, slug, description, start_at, end_at, venue, address, category,\n"
+        "  tags, price, is_free, is_family_friendly, image_url, ticket_url, source_id, source_url,\n"
+        "  status, origin, dedupe_hash) values")
+TAIL = """on conflict (slug) do update set
+  description = excluded.description, start_at = excluded.start_at, end_at = excluded.end_at,
+  venue = excluded.venue, address = excluded.address, category = excluded.category,
+  tags = excluded.tags, price = excluded.price, is_free = excluded.is_free,
+  is_family_friendly = excluded.is_family_friendly, image_url = excluded.image_url,
+  ticket_url = excluded.ticket_url, source_url = excluded.source_url, updated_at = now();"""
+out.pop()  # drop the single-statement header written above
+for i in range(0, len(rows), CHUNK):
+    A(f"-- events {i + 1}-{min(i + CHUNK, len(rows))} of {len(rows)}")
+    A(HEAD)
+    A(",\n".join(rows[i:i + CHUNK]))
+    A(TAIL)
+    A("")
 A("")
 
 path = os.path.join(REPO, "supabase", "seed-events.sql")

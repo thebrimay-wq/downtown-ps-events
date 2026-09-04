@@ -54,20 +54,51 @@ that produced it.
 
 ### Connecting a database
 
-The bundle is read-only. To get submissions, moderation and scheduled
-scraping, point the app at a Supabase project:
+The bundled dataset is read-only. Point the app at Supabase to get
+submissions, moderation, and scheduled scraping.
 
-1. Create a project at supabase.com and open the SQL editor.
-2. Run, in order: `supabase/schema.sql`, `supabase/seed.sql`, then
-   `supabase/seed-events.sql` (loads the same 1,500+ events the bundle shows,
-   already approved, so the site isn't empty on first load — plus the 15
-   sources they came from, as disabled provenance rows; only sources that
-   were reachable and actually produced events are included).
-3. Copy `.env.example` to `.env.local` and fill in
-   `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and
-   `SUPABASE_SERVICE_ROLE_KEY` from Project Settings → API.
-4. Restart `npm run dev`. The "No database connected" banner disappears and
-   `/admin` becomes live.
+**1. Create the project.** At [supabase.com](https://supabase.com), New
+project. Save the database password; pick the region nearest you.
+
+**2. Create the schema.** In the SQL Editor, run `supabase/schema.sql`, then
+`supabase/seed.sql`. Both are small and idempotent.
+
+**3. Add your keys.** From Project Settings → API, fill in `.env.local`:
+
+```ini
+NEXT_PUBLIC_SUPABASE_URL=        # Project URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=   # anon public key — safe in the browser
+SUPABASE_SERVICE_ROLE_KEY=       # service_role key — server only, bypasses RLS
+ADMIN_SECRET=                    # openssl rand -hex 32
+```
+
+**4. Load the events.**
+
+```bash
+npm run seed
+```
+
+This upserts the categories, the 15 crawl sources, and all 1,529 events in
+batches of 500, so the site isn't empty on first load. Safe to re-run — every
+table keys on `slug`.
+
+> Prefer pure SQL? `supabase/seed-events.sql` does the same thing, chunked
+> into eight statements so the web editor doesn't time out. `npm run seed` is
+> the easier path.
+
+**5. Restart.**
+
+```bash
+npm run dev
+```
+
+The "No database connected" banner disappears and `/admin` goes live.
+
+The crawl sources are seeded **disabled** on purpose: they are provenance for
+the bundled events, and the scheduled scraper has no adapter for their keys.
+The seven live sources from `seed.sql` keep running.
+
+### Enabling the database & scraping
 
 ### Enabling the database & scraping
 
