@@ -32,7 +32,7 @@ export default function SubmitPage() {
           </p>
         </div>
 
-        <div className="mt-8 rounded-3xl bg-canvas-raised p-6 shadow-card ring-1 ring-black/[0.04] sm:p-8">
+        <div className="mt-8 rounded-3xl bg-canvas-raised p-6 shadow-card ring-1 ring-black/[0.07] sm:p-8">
           <SubmitForm categories={categories} />
         </div>
       </div>

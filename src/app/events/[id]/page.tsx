@@ -95,7 +95,7 @@ export default async function EventDetailPage({
 
       <div className="container-page -mt-16 relative pb-16">
         <div className="mx-auto max-w-3xl">
-          <div className="rounded-3xl bg-canvas-raised p-6 shadow-float ring-1 ring-black/[0.04] sm:p-8">
+          <div className="rounded-3xl bg-canvas-raised p-6 shadow-float ring-1 ring-black/[0.07] sm:p-8">
             <Link
               href="/events"
               className="mb-5 inline-flex items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-ink"

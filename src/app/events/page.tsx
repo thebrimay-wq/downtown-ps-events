@@ -68,6 +68,7 @@ export default async function EventsPage({
   };
   const datePreset = str(sp.date);
   const view = str(sp.view) === "calendar" ? "calendar" : "list";
+  const month = str(sp.month);
 
   let events = await getEvents(filters);
   events = applyDatePreset(events, datePreset);
@@ -111,7 +112,7 @@ export default async function EventsPage({
             description="Try clearing a filter or widening your date range."
           />
         ) : view === "calendar" ? (
-          <CalendarView events={events} />
+          <CalendarView events={events} month={month} params={sp} />
         ) : (
           <div className="space-y-10">
             {grouped.map(([dayKey, dayEvents]) => (

@@ -74,7 +74,7 @@ export function EventFilters() {
     activeCategory || activeDate || free || family || search || location;
 
   return (
-    <div className="space-y-3.5 rounded-3xl bg-canvas-raised/70 p-4 shadow-sm ring-1 ring-black/[0.04] sm:p-5">
+    <div className="space-y-3.5 rounded-3xl bg-canvas-raised/70 p-4 shadow-sm ring-1 ring-black/[0.07] sm:p-5">
       {/* Search + location */}
       <div className="grid gap-3 sm:grid-cols-2">
         <SearchInput
