@@ -171,13 +171,14 @@ the GitHub repository. Set:
 
 | Setting | Value |
 | --- | --- |
-| Build command | `npx opennextjs-cloudflare build` |
-| Deploy command | `npx opennextjs-cloudflare deploy` |
-| Build variables | `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` |
+| Build command | `npm run build` (the default) |
+| Deploy command | `npx wrangler deploy` (the default) |
+| Build variables | none needed |
 
-The two `NEXT_PUBLIC_` values are baked in at build time, so they must be
-build variables as well as runtime secrets. Everything else is runtime only
-(Settings → Variables & Secrets).
+`npm run build` runs the OpenNext build, which wraps `next build` and emits
+the Worker under `.open-next/`. `npm run build:next` is the plain Next build.
+All environment values are read at request time from the Worker's secrets
+(Settings → Variables & Secrets), so the build needs none of them.
 
 ### What changes on Cloudflare
 

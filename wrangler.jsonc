@@ -19,9 +19,10 @@
   "observability": {
     "enabled": true
   },
-  // Workers Paid only. Raises the per-request CPU budget for long scrapes
-  // triggered from /admin. Free-plan deploys reject this block.
-  // "limits": { "cpu_ms": 300000 },
+  // Per-request CPU budget (Workers Paid). Pages need well under a second;
+  // the headroom is for scrapes triggered from /admin. Free-plan deploys
+  // reject this block.
+  "limits": { "cpu_ms": 300000 },
   // Plain (non-secret) runtime vars. Secrets — SUPABASE_*, ADMIN_SECRET,
   // ANTHROPIC_* — are NOT here: set them with `wrangler secret put` or in
   // the dashboard (Settings → Variables & Secrets) so they never land in git.

@@ -5,15 +5,16 @@
   "description": "A centralized event calendar for Pleasanton, California.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "opennextjs-cloudflare build",
+    "build:next": "next build",
     "start": "next start",
     "lint": "next lint",
     "scrape": "tsx --env-file-if-exists=.env.local scripts/run-scrapers.ts",
     "typecheck": "tsc --noEmit",
     "seed": "tsx --env-file-if-exists=.env.local scripts/seed-supabase.ts",
     "verify": "tsx --env-file-if-exists=.env.local scripts/verify-supabase.ts",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "npm run build && opennextjs-cloudflare preview",
+    "deploy": "npm run build && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
