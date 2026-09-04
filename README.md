@@ -167,7 +167,10 @@ development.
 ### On every push (Workers Builds)
 
 In the Cloudflare dashboard open the Worker → **Settings → Build** and connect
-the GitHub repository. Set:
+the GitHub repository. The "Cloudflare Workers and Pages" GitHub App must
+have access to this repository (GitHub → Settings → Applications), or pushes
+never reach Cloudflare and the Build settings show "disconnected from your
+Git account". The defaults then work as they are:
 
 | Setting | Value |
 | --- | --- |
