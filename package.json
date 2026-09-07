@@ -13,12 +13,13 @@
     "typecheck": "tsc --noEmit",
     "seed": "tsx --env-file-if-exists=.env.local scripts/seed-supabase.ts",
     "verify": "tsx --env-file-if-exists=.env.local scripts/verify-supabase.ts",
+    "knowledge": "tsx scripts/build-knowledge.ts",
     "preview": "npm run build && opennextjs-cloudflare preview",
     "deploy": "npm run build && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.68.0",
+    "@anthropic-ai/sdk": "^0.124.0",
     "@supabase/ssr": "^0.7.0",
     "@supabase/supabase-js": "^2.58.0",
     "cheerio": "^1.0.0",

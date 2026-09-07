@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Inbox, MapPin, Moon, PartyPopper, Search, Sun, type LucideIcon } from "lucide-react";
+import { ArrowRight, CalendarDays, Inbox, MapPin, Moon, PartyPopper, Search, Sparkles, Sun, type LucideIcon } from "lucide-react";
 import {
   getTodayEvents,
   getWeekendEvents,
@@ -81,6 +81,21 @@ export default async function HomePage() {
                 Search
               </button>
             </form>
+
+            <p
+              className="animate-fade-up mt-4 text-sm text-ink-muted"
+              style={{ animationDelay: "280ms" }}
+            >
+              Or just ask:{" "}
+              <Link
+                href="/ask?q=What%27s+happening+this+weekend%3F"
+                className="group inline-flex items-center gap-1 font-semibold text-brand-600 transition-colors hover:text-brand-700"
+              >
+                <Sparkles aria-hidden className="h-3.5 w-3.5" strokeWidth={2.25} />
+                &ldquo;What&apos;s happening this weekend?&rdquo;
+                <ArrowRight aria-hidden className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+              </Link>
+            </p>
 
             <dl
               className="animate-fade-up mt-7 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-sm text-ink-muted"

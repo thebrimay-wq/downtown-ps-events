@@ -29,11 +29,16 @@ presents everything in a fast, mobile-first, Apple-inspired interface.
 - **Duplicate detection** — exact hashing + fuzzy title/venue/date matching
   flags possible duplicates for review.
 - **Scheduled scraping** — GitHub Actions cron and/or Vercel Cron.
+- **Ask the calendar** — a chat at `/ask` that answers "what's going on this
+  weekend?", "anything for kids on the 12th?", or "what's at the Firehouse?"
+  from a markdown knowledge base built out of the crawled listings, with
+  links to every event it names.
 
 ## Tech stack
 
 Next.js 15 (App Router) · TypeScript · Tailwind CSS · Supabase (Postgres) ·
-Cheerio (scraping) · Anthropic Claude (`claude-opus-4-8`) · Cloudflare Workers
+Cheerio (scraping) · Anthropic Claude (`claude-opus-4-8` for normalization,
+`claude-opus-5` for the Ask page) · Cloudflare Workers
 (hosting) · GitHub Actions (scheduling).
 
 ---
@@ -114,6 +119,57 @@ The seven live sources from `seed.sql` keep running.
    - `ANTHROPIC_API_KEY` (optional — enables AI normalization)
    - `ADMIN_SECRET` (`openssl rand -hex 32`) — gates scraping + admin actions
 4. Restart `npm run dev`. The app now reads/writes Supabase.
+
+### Enabling the Ask page
+
+`/ask` works out of the box as a keyword search over the listings. Set
+`ANTHROPIC_API_KEY` (the same key that powers scrape normalization) and it
+becomes a conversation: Claude reads the question, works out the dates
+("this weekend", "next Friday", "in October"), runs one or more searches over
+the knowledge base, and answers with linked events. Nothing is answered from
+memory: every event it names came back from a search.
+
+```ini
+ANTHROPIC_API_KEY=            # enables AI answers on /ask
+ANTHROPIC_CHAT_MODEL=claude-opus-5   # optional
+ANTHROPIC_CHAT_EFFORT=medium         # optional: low · medium · high · xhigh · max
+```
+
+How it fits together:
+
+```
+knowledge/                    Markdown knowledge base (see knowledge/README.md)
+  events/*.md                 One digest per crawled source, one section per event
+  pages/**/*.md               Raw crawled pages, optional
+        │  npm run knowledge
+        ▼
+src/lib/knowledge.generated.json   Chunk index bundled with the app
+        │
+        ▼
+src/lib/knowledge/            engine.ts: date/city/category filters + BM25 keywords
+                              search.ts: bundled index, or live Supabase events
+        │
+        ▼
+src/lib/ai/chat.ts            Claude + one tool (search_events), streamed
+src/app/api/chat/route.ts     POST {messages} → newline-delimited JSON events
+src/app/ask/page.tsx          The chat UI
+```
+
+When Supabase is connected the event sections are replaced at request time by
+the live `events` table, so the chat and the calendar always agree. Raw pages
+under `knowledge/pages/` are indexed either way.
+
+To feed the chat more than the event digests, run the crawl (see
+`scripts/crawl4ai/README.md`), then:
+
+```bash
+python3 scripts/crawl4ai/export_pages.py   # raw page markdown → knowledge/pages/
+npm run knowledge                          # rebuild digests + index
+```
+
+The API route is public and calls Claude on every question, so it caps
+message length and history, and rate-limits each IP to 30 questions per ten
+minutes per server instance.
 
 ### Running the scraper
 
@@ -211,7 +267,8 @@ src/
     events/                 List/calendar + detail pages
     submit/                 Submission form
     admin/                  Moderation dashboard
-    api/                    submit · scrape · events · admin/{events,submissions}
+    ask/                    Chat: "what's going on this weekend?"
+    api/                    submit · scrape · events · chat · admin/{events,submissions}
   components/               UI: cards, filters, calendar, header/footer, admin
   lib/
     data.ts                 Read layer (Supabase, falling back to the bundle)
@@ -220,10 +277,15 @@ src/
     supabase/               Browser/server/admin clients
     scrapers/               Fetch + extraction engine + per-source adapters
     ai/normalize.ts         Claude normalization (+ heuristic fallback)
+    ai/chat.ts              The Ask assistant: Claude + search_events tool, streamed
+    knowledge/              Markdown → chunks (parse.ts), search (engine.ts, search.ts)
+    knowledge.generated.json  Compiled knowledge index — npm run knowledge
     dedupe.ts               Hashing + fuzzy duplicate detection
     types.ts, utils.ts, categories.ts
 supabase/                   schema.sql + seed.sql
 scripts/run-scrapers.ts     CLI scrape entry point
+scripts/build-knowledge.ts  Renders knowledge/events/*.md and compiles the index
+knowledge/                  Markdown knowledge base for the Ask page
 scripts/crawl4ai/           Wide one-shot Crawl4AI sweep → bundled dataset
 data/                       Crawl archive + coverage report
 .github/workflows/scrape.yml  Scheduled scrape

@@ -4,6 +4,7 @@ import Link from "next/link";
 // soon as there is room for it.
 const NAV = [
   { href: "/events", label: "Events", shortLabel: "Events" },
+  { href: "/ask", label: "Ask", shortLabel: "Ask" },
   { href: "/admin", label: "Admin", shortLabel: "Admin" },
 ];
 
