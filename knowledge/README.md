@@ -1,6 +1,6 @@
 # Knowledge base
 
-Everything the **Ask** page (`/ask`) knows lives in this folder as markdown.
+Everything the **Ask** panel knows lives in this folder as markdown.
 `npm run knowledge` compiles it into `src/lib/knowledge.generated.json`, which
 the chat's search tool reads at request time. No database or vector store is
 involved: the index ships inside the app.

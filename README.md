@@ -29,10 +29,11 @@ presents everything in a fast, mobile-first, Apple-inspired interface.
 - **Duplicate detection** — exact hashing + fuzzy title/venue/date matching
   flags possible duplicates for review.
 - **Scheduled scraping** — GitHub Actions cron and/or Vercel Cron.
-- **Ask the calendar** — a chat at `/ask` that answers "what's going on this
-  weekend?", "anything for kids on the 12th?", or "what's at the Firehouse?"
-  from a markdown knowledge base built out of the crawled listings, with
-  links to every event it names.
+- **Ask the calendar** — a chat panel, opened from the floating **Ask**
+  button on every page, that answers "what's going on this weekend?",
+  "anything for kids on the 12th?", or "what's at the Firehouse?" from a
+  markdown knowledge base built out of the crawled listings, with links to
+  every event it names.
 
 ## Tech stack
 
@@ -120,17 +121,17 @@ The seven live sources from `seed.sql` keep running.
    - `ADMIN_SECRET` (`openssl rand -hex 32`) — gates scraping + admin actions
 4. Restart `npm run dev`. The app now reads/writes Supabase.
 
-### Enabling the Ask page
+### Enabling the Ask panel
 
-`/ask` works out of the box as a keyword search over the listings. Set
-`ANTHROPIC_API_KEY` (the same key that powers scrape normalization) and it
-becomes a conversation: Claude reads the question, works out the dates
+The **Ask** button (bottom right of every page) works out of the box as a
+keyword search over the listings. Set `ANTHROPIC_API_KEY` (the same key that
+powers scrape normalization) and it becomes a conversation: Claude reads the question, works out the dates
 ("this weekend", "next Friday", "in October"), runs one or more searches over
 the knowledge base, and answers with linked events. Nothing is answered from
 memory: every event it names came back from a search.
 
 ```ini
-ANTHROPIC_API_KEY=            # enables AI answers on /ask
+ANTHROPIC_API_KEY=            # enables AI answers in the Ask panel
 ANTHROPIC_CHAT_MODEL=claude-opus-5   # optional
 ANTHROPIC_CHAT_EFFORT=medium         # optional: low · medium · high · xhigh · max
 ```
@@ -152,7 +153,7 @@ src/lib/knowledge/            engine.ts: date/city/category filters + BM25 keywo
         ▼
 src/lib/ai/chat.ts            Claude + one tool (search_events), streamed
 src/app/api/chat/route.ts     POST {messages} → newline-delimited JSON events
-src/app/ask/page.tsx          The chat UI
+src/components/ask-panel.tsx  Floating button + slide-in panel (ask-chat.tsx inside)
 ```
 
 When Supabase is connected the event sections are replaced at request time by
@@ -267,9 +268,8 @@ src/
     events/                 List/calendar + detail pages
     submit/                 Submission form
     admin/                  Moderation dashboard
-    ask/                    Chat: "what's going on this weekend?"
     api/                    submit · scrape · events · chat · admin/{events,submissions}
-  components/               UI: cards, filters, calendar, header/footer, admin
+  components/               UI: cards, filters, calendar, header/footer, admin, Ask panel
   lib/
     data.ts                 Read layer (Supabase, falling back to the bundle)
     bundled-data.ts         Bundled crawl results (used when Supabase is absent)

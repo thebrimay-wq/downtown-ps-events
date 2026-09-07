@@ -10,9 +10,9 @@ import { categoryMeta } from "@/lib/categories";
 import { cn } from "@/lib/utils";
 
 // ---------------------------------------------------------------------------
-// The conversation on /ask. Sends the thread to /api/chat and renders the
-// reply as it streams in: text first, a status line while a search runs,
-// and event cards once the answer is complete.
+// The conversation inside the Ask panel. Sends the thread to /api/chat and
+// renders the reply as it streams in: text first, a status line while a
+// search runs, and event cards once the answer is complete.
 // ---------------------------------------------------------------------------
 
 interface Message {
@@ -45,18 +45,22 @@ const nextId = () => `m${Date.now().toString(36)}${(counter += 1)}`;
 
 export function AskChat({
   aiEnabled,
-  initialQuestion,
+  pending,
+  active,
 }: {
   aiEnabled: boolean;
-  initialQuestion?: string;
+  // A question queued from elsewhere on the site (the homepage prompt, say).
+  pending: { text: string; key: number } | null;
+  // Whether the panel is open; focus lands in the box when it is.
+  active: boolean;
 }) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
-  const endRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const started = useRef(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const handledKey = useRef<number | null>(null);
 
   const patch = useCallback((id: string, update: (m: Message) => Message) => {
     setMessages((prev) => prev.map((m) => (m.id === id ? update(m) : m)));
@@ -145,17 +149,26 @@ export function AskChat({
     [aiEnabled, busy, patch],
   );
 
-  // A question can arrive in the URL (?q=…) from the homepage.
+  // A question queued by open(question) is sent once, as a fresh turn in
+  // whatever conversation is already there.
   useEffect(() => {
-    if (initialQuestion && !started.current) {
-      started.current = true;
-      void send(initialQuestion, []);
+    if (pending && handledKey.current !== pending.key && !busy) {
+      handledKey.current = pending.key;
+      void send(pending.text, messages);
     }
-  }, [initialQuestion, send]);
+  }, [pending, busy, messages, send]);
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ block: "end", behavior: "smooth" });
+    const el = scrollRef.current;
+    if (el) el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
   }, [messages]);
+
+  useEffect(() => {
+    if (active) {
+      const t = window.setTimeout(() => textareaRef.current?.focus(), 320);
+      return () => window.clearTimeout(t);
+    }
+  }, [active]);
 
   function stop() {
     abortRef.current?.abort();
@@ -183,130 +196,132 @@ export function AskChat({
   const empty = messages.length === 0;
 
   return (
-    <div className="flex min-h-[60vh] flex-col">
-      {empty ? (
-        <div className="animate-fade-up">
-          <p className="eyebrow text-ink-muted">Try asking</p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {SUGGESTIONS.map((s) => (
-              <button
-                key={s}
-                type="button"
-                onClick={() => void send(s, [])}
-                className="inline-flex min-h-11 items-center rounded-full bg-canvas-raised px-4 text-sm font-semibold text-ink-soft ring-1 ring-ink/10 transition duration-200 hover:-translate-y-0.5 hover:text-ink hover:shadow-card"
-              >
-                {s}
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <ol className="flex flex-col gap-6" aria-live="polite" aria-busy={busy}>
-          {messages.map((m) =>
-            m.role === "user" ? (
-              <li key={m.id} className="flex justify-end">
-                <p className="max-w-[85%] whitespace-pre-wrap rounded-3xl rounded-br-lg bg-brand-600 px-4 py-2.5 text-[15px] leading-relaxed text-white shadow-sm sm:max-w-[75%]">
-                  {m.content}
-                </p>
-              </li>
-            ) : (
-              <li key={m.id} className="flex gap-3">
-                <span
-                  aria-hidden
-                  className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-accent-100 text-brand-600 ring-1 ring-accent-200"
+    <div className="flex min-h-0 flex-1 flex-col">
+      <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-5">
+        {empty ? (
+          <div className="animate-fade-up">
+            <p className="eyebrow text-ink-muted">Try asking</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {SUGGESTIONS.map((s) => (
+                <button
+                  key={s}
+                  type="button"
+                  onClick={() => void send(s, [])}
+                  className="inline-flex min-h-10 items-center rounded-full bg-canvas-raised px-3.5 text-[13px] font-semibold text-ink-soft ring-1 ring-ink/10 transition duration-200 hover:-translate-y-0.5 hover:text-ink hover:shadow-card"
                 >
-                  <Sparkles className="h-4 w-4" strokeWidth={2.25} />
-                </span>
-                <div className="min-w-0 flex-1">
-                  {m.content && (
-                    <div className="text-[15px] leading-relaxed text-ink-soft">
-                      <MarkdownLite text={m.content} />
-                    </div>
-                  )}
-                  {m.status && (
-                    <p className="mt-2 flex items-center gap-2 text-sm text-ink-muted">
-                      <span className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
-                        <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
-                      </span>
-                      {m.status}
-                    </p>
-                  )}
-                  {m.error && (
-                    <p className="mt-2 rounded-2xl bg-brand-50 px-4 py-3 text-sm text-brand-800 ring-1 ring-brand-200">
-                      {m.error}
-                    </p>
-                  )}
-                  {m.sources && m.sources.length > 0 && <Sources cards={m.sources} />}
-                </div>
-              </li>
-            ),
-          )}
-        </ol>
-      )}
-      <div ref={endRef} />
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <ol className="flex flex-col gap-5" aria-live="polite" aria-busy={busy}>
+            {messages.map((m) =>
+              m.role === "user" ? (
+                <li key={m.id} className="flex justify-end">
+                  <p className="max-w-[85%] whitespace-pre-wrap rounded-3xl rounded-br-lg bg-brand-600 px-4 py-2.5 text-[15px] leading-relaxed text-white shadow-sm">
+                    {m.content}
+                  </p>
+                </li>
+              ) : (
+                <li key={m.id} className="flex gap-2.5">
+                  <span
+                    aria-hidden
+                    className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-accent-100 text-brand-600 ring-1 ring-accent-200"
+                  >
+                    <Sparkles className="h-3.5 w-3.5" strokeWidth={2.25} />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    {m.content && (
+                      <div className="text-[15px] leading-relaxed text-ink-soft">
+                        <MarkdownLite text={m.content} />
+                      </div>
+                    )}
+                    {m.status && (
+                      <p className="mt-2 flex items-center gap-2 text-sm text-ink-muted">
+                        <span className="relative flex h-2 w-2">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
+                          <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
+                        </span>
+                        {m.status}
+                      </p>
+                    )}
+                    {m.error && (
+                      <p className="mt-2 rounded-2xl bg-brand-50 px-4 py-3 text-sm text-brand-800 ring-1 ring-brand-200">
+                        {m.error}
+                      </p>
+                    )}
+                    {m.sources && m.sources.length > 0 && <Sources cards={m.sources} />}
+                  </div>
+                </li>
+              ),
+            )}
+          </ol>
+        )}
+      </div>
 
-      <form
-        onSubmit={onSubmit}
-        className="sticky bottom-4 mt-8 rounded-3xl bg-canvas-raised p-2 shadow-float ring-1 ring-ink/10 transition focus-within:ring-2 focus-within:ring-brand-500"
-      >
-        <div className="flex items-end gap-2">
-          <label htmlFor="ask-input" className="sr-only">
-            Ask about events
-          </label>
-          <textarea
-            id="ask-input"
-            ref={textareaRef}
-            value={input}
-            onChange={(e) => {
-              setInput(e.target.value);
-              grow(e.target);
-            }}
-            onKeyDown={onKeyDown}
-            rows={1}
-            maxLength={2000}
-            placeholder={empty ? "Ask what's going on…" : "Ask a follow-up…"}
-            autoFocus
-            className="max-h-40 min-h-11 min-w-0 flex-1 resize-none bg-transparent px-3 py-2.5 text-base leading-relaxed text-ink placeholder:text-ink-muted focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
-          />
-          {busy ? (
+      <div className="border-t border-ink/10 bg-canvas px-4 pb-4 pt-3">
+        <form
+          onSubmit={onSubmit}
+          className="rounded-3xl bg-canvas-raised p-1.5 shadow-card ring-1 ring-ink/10 transition focus-within:ring-2 focus-within:ring-brand-500"
+        >
+          <div className="flex items-end gap-2">
+            <label htmlFor="ask-input" className="sr-only">
+              Ask about events
+            </label>
+            <textarea
+              id="ask-input"
+              ref={textareaRef}
+              value={input}
+              onChange={(e) => {
+                setInput(e.target.value);
+                grow(e.target);
+              }}
+              onKeyDown={onKeyDown}
+              rows={1}
+              maxLength={2000}
+              placeholder={empty ? "Ask what's going on…" : "Ask a follow-up…"}
+              className="max-h-40 min-h-11 min-w-0 flex-1 resize-none bg-transparent px-3 py-2.5 text-base leading-relaxed text-ink placeholder:text-ink-muted focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+            />
+            {busy ? (
+              <button
+                type="button"
+                onClick={stop}
+                aria-label="Stop"
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-ink text-white shadow-sm transition hover:bg-ink-soft"
+              >
+                <Square className="h-4 w-4 fill-current" />
+              </button>
+            ) : (
+              <button
+                type="submit"
+                disabled={!input.trim()}
+                aria-label="Send"
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-600 text-white shadow-sm transition duration-200 hover:bg-brand-700 active:scale-[0.97] disabled:cursor-not-allowed disabled:bg-ink/15 disabled:text-ink-muted"
+              >
+                <ArrowUp className="h-5 w-5" strokeWidth={2.5} />
+              </button>
+            )}
+          </div>
+        </form>
+
+        <div className="mt-2.5 flex items-center justify-between gap-3 px-1 text-[11px] leading-snug text-ink-muted">
+          <span>
+            {aiEnabled
+              ? "AI answers from crawled listings can be wrong. Check the source before you go."
+              : "Keyword search only until an ANTHROPIC_API_KEY is configured."}
+          </span>
+          {!empty && (
             <button
               type="button"
-              onClick={stop}
-              aria-label="Stop"
-              className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-ink text-white shadow-sm transition hover:bg-ink-soft"
+              onClick={reset}
+              className="inline-flex shrink-0 items-center gap-1 font-semibold text-ink-soft transition-colors hover:text-brand-600"
             >
-              <Square className="h-4 w-4 fill-current" />
-            </button>
-          ) : (
-            <button
-              type="submit"
-              disabled={!input.trim()}
-              aria-label="Send"
-              className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-600 text-white shadow-sm transition duration-200 hover:bg-brand-700 active:scale-[0.97] disabled:cursor-not-allowed disabled:bg-ink/15 disabled:text-ink-muted"
-            >
-              <ArrowUp className="h-5 w-5" strokeWidth={2.5} />
+              <RotateCcw className="h-3 w-3" strokeWidth={2.25} />
+              New chat
             </button>
           )}
         </div>
-      </form>
-
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-2 px-1 text-xs text-ink-muted">
-        <span>
-          {aiEnabled
-            ? "Answers are AI-generated from crawled listings and can be wrong. Check the source before you go."
-            : "Keyword search only until an ANTHROPIC_API_KEY is configured."}
-        </span>
-        {!empty && (
-          <button
-            type="button"
-            onClick={reset}
-            className="inline-flex items-center gap-1 font-semibold text-ink-soft transition-colors hover:text-brand-600"
-          >
-            <RotateCcw className="h-3.5 w-3.5" strokeWidth={2.25} />
-            New conversation
-          </button>
-        )}
       </div>
     </div>
   );
@@ -366,7 +381,7 @@ function Sources({ cards }: { cards: SourceCard[] }) {
             </>
           );
           const className = cn(
-            "flex w-56 shrink-0 snap-start flex-col rounded-2xl bg-canvas-raised p-3.5 shadow-card ring-1 ring-ink/10 transition duration-200 hover:-translate-y-0.5 hover:shadow-card-hover",
+            "flex w-52 shrink-0 snap-start flex-col rounded-2xl bg-canvas-raised p-3 shadow-card ring-1 ring-ink/10 transition duration-200 hover:-translate-y-0.5 hover:shadow-card-hover",
           );
           return (
             <li key={c.id} className="flex">

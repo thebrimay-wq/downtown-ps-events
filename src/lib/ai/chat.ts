@@ -34,9 +34,7 @@ const EFFORT: Effort = EFFORTS.includes(process.env.ANTHROPIC_CHAT_EFFORT as Eff
 const MAX_ROUNDS = 4;
 const MAX_TOKENS = 8000;
 
-export function chatEnabled(): boolean {
-  return Boolean(process.env.ANTHROPIC_API_KEY);
-}
+export { chatEnabled } from "./config";
 
 export interface ChatTurn {
   role: "user" | "assistant";
