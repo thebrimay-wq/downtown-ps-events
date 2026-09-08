@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AskTrigger } from "./ask-context";
 
 export function SiteFooter() {
   return (
@@ -13,6 +14,7 @@ export function SiteFooter() {
         </div>
         <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-ink-muted">
           <Link href="/events" className="transition-colors hover:text-brand-600">Browse events</Link>
+          <AskTrigger className="transition-colors hover:text-brand-600">Ask the calendar</AskTrigger>
           <Link href="/submit" className="transition-colors hover:text-brand-600">Submit an event</Link>
           <Link href="/admin" className="transition-colors hover:text-brand-600">Admin</Link>
         </nav>

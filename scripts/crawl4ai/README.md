@@ -28,6 +28,8 @@ python3 scripts/crawl4ai/harvest_images.py # fetch each event page's artwork (sl
 python3 scripts/crawl4ai/apply_images.py   # merge artwork; category photo for the rest
 python3 scripts/crawl4ai/emit.py         # write data/ + src/lib/ artefacts
 python3 scripts/crawl4ai/seed_sql.py     # write supabase/seed-events.sql
+python3 scripts/crawl4ai/export_pages.py # copy raw page markdown into knowledge/pages/
+npm run knowledge                        # rebuild the Ask page's knowledge index
 ```
 
 Both crawl rounds append to `manifest.json` and drop raw HTML + markdown in
@@ -46,6 +48,7 @@ Both crawl rounds append to `manifest.json` and drop raw HTML + markdown in
 | `apply_images.py` | Merges harvested artwork; events with none get a category photo chosen by id |
 | `emit.py` | Writes `data/pleasanton-events.json` + `data/CRAWL-REPORT.md` |
 | `seed_sql.py` | Writes `supabase/seed-events.sql` so a fresh database matches the bundle |
+| `export_pages.py` | Copies each crawled page's markdown into `knowledge/pages/` for the Ask page (see `knowledge/README.md`) |
 
 ## Extraction strategies
 

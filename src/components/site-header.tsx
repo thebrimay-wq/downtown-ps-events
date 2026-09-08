@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Sparkles } from "lucide-react";
+import { AskTrigger } from "./ask-context";
 
 // Short labels keep the bar on one line at 375px; the full wording returns as
 // soon as there is room for it.
@@ -35,6 +37,10 @@ export function SiteHeader() {
               <span className="hidden sm:inline">{item.label}</span>
             </Link>
           ))}
+          <AskTrigger className="inline-flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-sm font-semibold text-ink-soft transition duration-200 hover:bg-ink/[0.05] hover:text-ink">
+            <Sparkles aria-hidden className="h-4 w-4 text-brand-600" strokeWidth={2.25} />
+            Ask
+          </AskTrigger>
           <Link
             href="/submit"
             className="ml-1 inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-brand-600 px-4 text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-brand-700"
