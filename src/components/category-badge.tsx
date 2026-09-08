@@ -1,6 +1,8 @@
 import { categoryMeta } from "@/lib/categories";
+import { CategoryIcon } from "./category-icon";
 import { cn } from "@/lib/utils";
 
+// A softly tinted pill in the category's own muted colour.
 export function CategoryBadge({
   slug,
   className,
@@ -14,15 +16,12 @@ export function CategoryBadge({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold",
+        "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold",
         className,
       )}
-      style={{
-        backgroundColor: `${meta.color}1a`,
-        color: meta.color,
-      }}
+      style={{ backgroundColor: `${meta.color}1a`, color: meta.color }}
     >
-      {withIcon && <span aria-hidden>{meta.icon}</span>}
+      {withIcon && <CategoryIcon slug={slug} className="h-3.5 w-3.5" />}
       {meta.label}
     </span>
   );

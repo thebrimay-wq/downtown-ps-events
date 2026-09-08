@@ -1,0 +1,32 @@
+{
+  // Cloudflare Workers config for the Pleasanton Events Hub.
+  // The Next.js app is compiled to a Worker by @opennextjs/cloudflare
+  // (`npm run deploy`, or Workers Builds on push). See README → Deploying.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "downtown-ps-events",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-03",
+  "compatibility_flags": [
+    // Required by OpenNext: Node built-ins such as node:crypto (dedupe.ts).
+    "nodejs_compat",
+    // Refuse fetches to private/internal addresses from server code.
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  // Per-request CPU budget (Workers Paid). Pages need well under a second;
+  // the headroom is for scrapes triggered from /admin. Free-plan deploys
+  // reject this block.
+  "limits": { "cpu_ms": 300000 },
+  // Plain (non-secret) runtime vars. Secrets — SUPABASE_*, ADMIN_SECRET,
+  // ANTHROPIC_* — are NOT here: set them with `wrangler secret put` or in
+  // the dashboard (Settings → Variables & Secrets) so they never land in git.
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://downtown-ps-events.thebrimay.workers.dev"
+  }
+}

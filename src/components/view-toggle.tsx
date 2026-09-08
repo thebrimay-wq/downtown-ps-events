@@ -17,16 +17,14 @@ export function ViewToggle() {
   };
 
   return (
-    <div className="inline-flex rounded-full bg-canvas-sunken p-1 ring-1 ring-black/[0.05]">
+    <div className="inline-flex rounded-full bg-canvas-sunken p-0.5 ring-1 ring-inset ring-ink/10">
       {(["list", "calendar"] as const).map((v) => (
         <button
           key={v}
           onClick={() => setView(v)}
           className={cn(
-            "rounded-full px-4 py-1.5 text-sm font-medium capitalize transition",
-            view === v
-              ? "bg-canvas-raised text-ink shadow-sm"
-              : "text-ink-muted hover:text-ink",
+            "min-h-11 rounded-full px-4 text-sm font-semibold capitalize transition",
+            view === v ? "bg-canvas-raised text-ink shadow-sm" : "text-ink-muted hover:text-ink",
           )}
         >
           {v}

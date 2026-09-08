@@ -137,10 +137,10 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
         <input
           type="checkbox"
           name="is_family_friendly"
-          className="h-4 w-4 rounded border-black/20 text-brand-500 focus:ring-brand-400"
+          className="h-4 w-4 rounded border-ink/20 text-brand-600 focus:ring-brand-500"
         />
         <span className="text-sm font-medium text-ink-soft">
-          🧸 This event is family / kid-friendly
+          This event is family / kid-friendly
         </span>
       </label>
 
@@ -157,7 +157,7 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
       >
         {status === "submitting" ? "Submitting…" : "Submit event for review"}
       </button>
-      <p className="text-center text-xs text-ink-faint">
+      <p className="text-center text-xs text-ink-muted">
         By submitting, you confirm this event is accurate and open to the public.
       </p>
     </form>
@@ -165,7 +165,7 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
 }
 
 const inputClass =
-  "w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-sm text-ink shadow-sm ring-1 ring-black/[0.06] placeholder:text-ink-faint focus:outline-none focus:ring-2 focus:ring-brand-400";
+  "min-h-11 w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-base text-ink shadow-sm ring-1 ring-ink/10 placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:ring-brand-500";
 
 function Field({
   label,
@@ -180,7 +180,7 @@ function Field({
     <label className="block">
       <span className="mb-1.5 block text-sm font-medium text-ink-soft">
         {label}
-        {required && <span className="text-brand-500"> *</span>}
+        {required && <span className="text-brand-600"> *</span>}
       </span>
       {children}
     </label>

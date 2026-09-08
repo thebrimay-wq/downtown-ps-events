@@ -5,13 +5,18 @@ import { notFound } from "next/navigation";
 import {
   getEventByIdOrSlug,
   getRelatedEvents,
-  usingMockData,
+  usingBundledData,
 } from "@/lib/data";
 import { CategoryBadge } from "@/components/category-badge";
 import { AddToCalendar } from "@/components/add-to-calendar";
 import { EventCard } from "@/components/event-card";
-import { DemoBanner } from "@/components/demo-banner";
-import { formatLongDate, formatTimeRange } from "@/lib/utils";
+import { BundledDataBanner } from "@/components/bundled-data-banner";
+import { cn, formatLongDate, formatTimeRange } from "@/lib/utils";
+import { categoryMeta } from "@/lib/categories";
+import { visibleTags } from "@/lib/tags";
+import { CategoryIcon } from "@/components/category-icon";
+import { ArrowLeft, Baby, ExternalLink, MapPin } from "lucide-react";
+
 
 export const revalidate = 300;
 
@@ -43,16 +48,24 @@ export default async function EventDetailPage({
   if (!event) notFound();
 
   const related = await getRelatedEvents(event);
+  const meta = categoryMeta(event.category);
+  const tags = visibleTags(event.tags);
   const mapsQuery = encodeURIComponent(
     [event.venue, event.address].filter(Boolean).join(", ") || "Pleasanton, CA",
   );
 
   return (
     <div>
-      {usingMockData() && <DemoBanner />}
+      {usingBundledData() && <BundledDataBanner />}
 
       {/* Hero image */}
-      <div className="relative h-64 w-full overflow-hidden bg-canvas-sunken sm:h-96">
+      <div
+        className={cn(
+          "relative w-full overflow-hidden bg-canvas-sunken",
+          // A flat category tint doesn't need the height a photograph earns.
+          event.image_url ? "h-64 sm:h-96" : "h-48 sm:h-64",
+        )}
+      >
         {event.image_url ? (
           <Image
             src={event.image_url}
@@ -63,48 +76,58 @@ export default async function EventDetailPage({
             className="object-cover"
           />
         ) : (
-          <div className="grid h-full w-full place-items-center text-6xl">
-            🗓️
+          // Most scraped listings ship no artwork; tint the hero by category
+          // rather than leaving a bare grey band.
+          <div
+            className="grid h-full w-full place-items-center"
+            style={{
+              background: `linear-gradient(135deg, ${meta.color}2e, ${meta.color}0f)`,
+              color: meta.color,
+            }}
+          >
+            <CategoryIcon slug={event.category} className="h-16 w-16 opacity-55" />
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        {event.image_url && (
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        )}
       </div>
 
-      <div className="container-page -mt-16 relative pb-16">
+      <div className="container-page relative -mt-16 pb-16">
         <div className="mx-auto max-w-3xl">
-          <div className="rounded-3xl bg-canvas-raised p-6 shadow-float ring-1 ring-black/[0.04] sm:p-8">
+          <div className="rounded-3xl bg-canvas-raised p-6 shadow-float ring-1 ring-ink/10 sm:p-8">
             <Link
               href="/events"
-              className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-ink-muted hover:text-ink"
+              className="mb-5 inline-flex items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-ink"
             >
-              ← All events
+              <ArrowLeft aria-hidden className="h-4 w-4" strokeWidth={2} />
+              All events
             </Link>
 
             <div className="flex flex-wrap items-center gap-2">
               <CategoryBadge slug={event.category} />
               {event.is_free && (
-                <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-700">
-                  Free
-                </span>
+                <span className="rounded-full bg-ink px-2.5 py-1 text-xs font-semibold text-white">Free</span>
               )}
               {event.is_family_friendly && (
-                <span className="rounded-full bg-brand-100 px-2.5 py-1 text-xs font-semibold text-brand-800">
-                  🧸 Kid-friendly
+                <span className="inline-flex items-center gap-1 rounded-full bg-brand-100 px-2.5 py-1 text-xs font-semibold text-brand-700">
+                  <Baby aria-hidden className="h-3.5 w-3.5" strokeWidth={2} />
+                  Kid-friendly
                 </span>
               )}
             </div>
 
-            <h1 className="mt-3 text-balance text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            <h1 className="display mt-4 text-balance text-[2rem] text-ink sm:text-[2.75rem]">
               {event.title}
             </h1>
 
             {/* Key facts */}
-            <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+            <dl className="mt-7 grid gap-x-6 gap-y-5 border-t border-ink/10 pt-6 sm:grid-cols-2">
               <Fact icon="calendar" label="Date">
                 {formatLongDate(event.start_at)}
               </Fact>
               <Fact icon="clock" label="Time">
-                {formatTimeRange(event.start_at, event.end_at)}
+                {formatTimeRange(event.start_at, event.end_at, event.all_day)}
               </Fact>
               <Fact icon="pin" label="Location">
                 <span className="font-medium text-ink">{event.venue}</span>
@@ -115,9 +138,10 @@ export default async function EventDetailPage({
                   href={`https://www.google.com/maps/search/?api=1&query=${mapsQuery}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1 inline-block text-sm font-medium text-brand-600 hover:text-brand-700"
+                  className="mt-1.5 inline-flex items-center gap-1 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700"
                 >
-                  View on map →
+                  <MapPin aria-hidden className="h-3.5 w-3.5" strokeWidth={2.25} />
+                  View on map
                 </a>
               </Fact>
               <Fact icon="ticket" label="Price">
@@ -133,19 +157,18 @@ export default async function EventDetailPage({
                   href={event.ticket_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-500 px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-brand-600 active:scale-[0.98]"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-brand-700 active:scale-[0.98]"
                 >
-                  Get tickets ↗
+                  Get tickets
+                  <ExternalLink aria-hidden className="h-4 w-4" strokeWidth={2} />
                 </a>
               )}
             </div>
 
             {/* Description */}
             {event.description && (
-              <div className="mt-8 border-t border-black/5 pt-6">
-                <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">
-                  About this event
-                </h2>
+              <div className="mt-8 border-t border-ink/10 pt-6">
+                <h2 className="eyebrow text-ink-muted">About this event</h2>
                 <p className="mt-3 whitespace-pre-line text-[15px] leading-relaxed text-ink-soft">
                   {event.description}
                 </p>
@@ -153,9 +176,9 @@ export default async function EventDetailPage({
             )}
 
             {/* Tags */}
-            {event.tags && event.tags.length > 0 && (
+            {tags.length > 0 && (
               <div className="mt-6 flex flex-wrap gap-2">
-                {event.tags.map((tag) => (
+                {tags.map((tag) => (
                   <span
                     key={tag}
                     className="rounded-full bg-canvas-sunken px-3 py-1 text-xs font-medium text-ink-muted"
@@ -168,7 +191,7 @@ export default async function EventDetailPage({
 
             {/* Source attribution */}
             {(event.source_name || event.source_url) && (
-              <div className="mt-8 border-t border-black/5 pt-5 text-sm text-ink-muted">
+              <div className="mt-8 border-t border-ink/10 pt-5 text-sm text-ink-muted">
                 Listed via{" "}
                 <span className="font-medium text-ink-soft">
                   {event.source_name ?? "external source"}
@@ -180,7 +203,7 @@ export default async function EventDetailPage({
                       href={event.source_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium text-brand-600 hover:text-brand-700"
+                      className="font-medium text-brand-700 hover:text-brand-800"
                     >
                       View original ↗
                     </a>
@@ -193,7 +216,7 @@ export default async function EventDetailPage({
           {/* Related */}
           {related.length > 0 && (
             <div className="mt-12">
-              <h2 className="mb-5 text-xl font-bold tracking-tight text-ink">
+              <h2 className="display mb-6 text-[1.75rem] text-ink sm:text-[2rem]">
                 More like this
               </h2>
               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -246,13 +269,13 @@ function Fact({
   };
   return (
     <div className="flex gap-3">
-      <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-canvas-sunken text-brand-600">
+      <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-canvas-sunken text-brand-700">
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           {paths[icon]}
         </svg>
       </span>
       <div>
-        <dt className="text-xs font-semibold uppercase tracking-wide text-ink-faint">
+        <dt className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
           {label}
         </dt>
         <dd className="mt-0.5 text-[15px] text-ink-soft">{children}</dd>

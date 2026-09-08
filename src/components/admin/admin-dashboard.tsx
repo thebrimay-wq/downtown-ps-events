@@ -25,13 +25,13 @@ export function AdminDashboard({
   initialSubmissions,
   sources,
   logs,
-  mockMode,
+  bundledMode,
 }: {
   initialPending: EventRecord[];
   initialSubmissions: SubmittedEvent[];
   sources: Source[];
   logs: ScrapedEventLog[];
-  mockMode: boolean;
+  bundledMode: boolean;
 }) {
   const [tab, setTab] = useState<Tab>("review");
   const [secret, setSecret] = useState("");
@@ -111,9 +111,9 @@ export function AdminDashboard({
   return (
     <div>
       {/* Secret + scrape controls */}
-      <div className="mb-6 flex flex-col gap-3 rounded-3xl bg-canvas-raised p-4 shadow-card ring-1 ring-black/[0.04] sm:flex-row sm:items-center">
+      <div className="mb-6 flex flex-col gap-3 rounded-3xl bg-canvas-raised p-4 shadow-card ring-1 ring-ink/10 sm:flex-row sm:items-center">
         <label className="flex-1">
-          <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-faint">
+          <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-muted">
             Admin secret
           </span>
           <input
@@ -121,7 +121,7 @@ export function AdminDashboard({
             value={secret}
             onChange={(e) => setSecret(e.target.value)}
             placeholder="Required for actions (ADMIN_SECRET)"
-            className="w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-sm shadow-sm ring-1 ring-black/[0.06] focus:outline-none focus:ring-2 focus:ring-brand-400"
+            className="min-h-11 w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-base shadow-sm ring-1 ring-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-500"
           />
         </label>
         <button
@@ -139,16 +139,16 @@ export function AdminDashboard({
         </div>
       )}
 
-      {mockMode && (
+      {bundledMode && (
         <div className="mb-6 rounded-2xl bg-canvas-sunken px-4 py-3 text-sm text-ink-muted">
-          Running in demo mode — admin lists are empty because there is no
-          database connected. Configure Supabase to manage real scraped events,
-          submissions, and sources.
+          No database connected — the site is serving the bundled crawl
+          results, so these admin lists are empty. Configure Supabase to manage
+          live scraped events, submissions, and sources.
         </div>
       )}
 
       {/* Tabs */}
-      <div className="mb-6 flex gap-1 overflow-x-auto no-scrollbar rounded-full bg-canvas-sunken p-1 ring-1 ring-black/[0.05]">
+      <div className="mb-6 flex gap-1 overflow-x-auto no-scrollbar rounded-full bg-canvas-sunken p-1 ring-1 ring-ink/10">
         {TABS.map((t) => (
           <button
             key={t.key}
@@ -201,7 +201,7 @@ export function AdminDashboard({
           {submissions.map((s) => (
             <div
               key={s.id}
-              className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-black/[0.04] sm:flex-row sm:items-center"
+              className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10 sm:flex-row sm:items-center"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-2">
@@ -215,11 +215,11 @@ export function AdminDashboard({
                   <p className="text-sm text-ink-muted">{s.venue}</p>
                 )}
                 {s.description && (
-                  <p className="mt-1 line-clamp-2 text-sm text-ink-faint">
+                  <p className="mt-1 line-clamp-2 text-sm text-ink-muted">
                     {s.description}
                   </p>
                 )}
-                <p className="mt-1 text-xs text-ink-faint">
+                <p className="mt-1 text-xs text-ink-muted">
                   Contact: {s.contact_email}
                 </p>
               </div>
@@ -238,7 +238,7 @@ export function AdminDashboard({
           {sources.map((s) => (
             <div
               key={s.id}
-              className="rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-black/[0.04]"
+              className="rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10"
             >
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-ink">{s.name}</h3>
@@ -247,7 +247,7 @@ export function AdminDashboard({
                     "rounded-full px-2 py-0.5 text-xs font-semibold",
                     s.enabled
                       ? "bg-emerald-100 text-emerald-700"
-                      : "bg-canvas-sunken text-ink-faint",
+                      : "bg-canvas-sunken text-ink-muted",
                   )}
                 >
                   {s.enabled ? "Enabled" : "Disabled"}
@@ -257,14 +257,14 @@ export function AdminDashboard({
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 block truncate text-sm text-brand-600 hover:text-brand-700"
+                className="mt-1 block truncate text-sm text-brand-700 hover:text-brand-800"
               >
                 {s.url}
               </a>
               {s.notes && (
                 <p className="mt-2 text-sm text-ink-muted">{s.notes}</p>
               )}
-              <div className="mt-3 flex items-center gap-3 text-xs text-ink-faint">
+              <div className="mt-3 flex items-center gap-3 text-xs text-ink-muted">
                 <span className="rounded bg-canvas-sunken px-2 py-0.5 font-medium">
                   {s.scraper_key}
                 </span>
@@ -281,7 +281,7 @@ export function AdminDashboard({
           {logs.map((log) => (
             <div
               key={log.id}
-              className="flex items-center justify-between rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-black/[0.04]"
+              className="flex items-center justify-between rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10"
             >
               <div>
                 <div className="flex items-center gap-2">
@@ -301,7 +301,7 @@ export function AdminDashboard({
                     {log.source_slug ?? "all sources"}
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-ink-faint">
+                <p className="mt-1 text-xs text-ink-muted">
                   {new Date(log.started_at).toLocaleString()}
                 </p>
                 {log.error_message && (
@@ -314,7 +314,7 @@ export function AdminDashboard({
                 <p>
                   {log.items_created} new · {log.items_duplicate} dupes
                 </p>
-                <p className="text-xs text-ink-faint">
+                <p className="text-xs text-ink-muted">
                   {log.items_found} found
                 </p>
               </div>
@@ -337,7 +337,7 @@ function Panel({
 }) {
   if (empty) {
     return (
-      <div className="rounded-3xl border border-dashed border-black/10 bg-canvas-raised/50 py-14 text-center text-sm text-ink-muted">
+      <div className="rounded-3xl border border-dashed border-ink/15 bg-canvas-raised/50 py-14 text-center text-sm text-ink-muted">
         {emptyText}
       </div>
     );
@@ -357,7 +357,7 @@ function ReviewRow({
   onReject: () => void;
 }) {
   return (
-    <div className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-black/[0.04] sm:flex-row sm:items-center">
+    <div className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10 sm:flex-row sm:items-center">
       <div className="flex-1">
         <div className="flex flex-wrap items-center gap-2">
           <CategoryBadge slug={event.category} />
@@ -374,7 +374,7 @@ function ReviewRow({
         <h3 className="mt-1.5 font-semibold text-ink">{event.title}</h3>
         {event.venue && <p className="text-sm text-ink-muted">{event.venue}</p>}
         {event.source_name && (
-          <p className="mt-1 text-xs text-ink-faint">
+          <p className="mt-1 text-xs text-ink-muted">
             via {event.source_name}
           </p>
         )}
@@ -398,14 +398,14 @@ function Actions({
       <button
         onClick={onApprove}
         disabled={busy}
-        className="rounded-xl bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-600 disabled:opacity-50"
+        className="rounded-xl bg-emerald-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800 disabled:opacity-50"
       >
         Approve
       </button>
       <button
         onClick={onReject}
         disabled={busy}
-        className="rounded-xl bg-canvas-sunken px-4 py-2 text-sm font-semibold text-ink-soft transition hover:bg-black/[0.06] disabled:opacity-50"
+        className="rounded-xl bg-canvas-sunken px-4 py-2 text-sm font-semibold text-ink-soft transition hover:bg-ink/[0.06] disabled:opacity-50"
       >
         Reject
       </button>

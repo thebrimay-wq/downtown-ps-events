@@ -40,7 +40,27 @@ export function formatTime(iso: string): string {
   return timeFmt.format(new Date(iso));
 }
 
-export function formatTimeRange(startIso: string, endIso?: string | null): string {
+
+// Month + day split out for the ticket-stub date block on cards.
+const monthFmt = new Intl.DateTimeFormat("en-US", { month: "short", timeZone: TZ });
+const dayFmt = new Intl.DateTimeFormat("en-US", { day: "numeric", timeZone: TZ });
+
+export function formatMonthShort(iso: string): string {
+  return monthFmt.format(new Date(iso));
+}
+
+export function formatDayNumber(iso: string): string {
+  return dayFmt.format(new Date(iso));
+}
+
+export function formatTimeRange(
+  startIso: string,
+  endIso?: string | null,
+  allDay?: boolean,
+): string {
+  // Many list pages publish a date with no time (Eventbrite and AllEvents
+  // both do). Say so, rather than print the placeholder noon we stored.
+  if (allDay) return "Time not listed";
   const start = formatTime(startIso);
   if (!endIso) return start;
   return `${start} – ${formatTime(endIso)}`;
