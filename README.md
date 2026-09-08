@@ -221,7 +221,25 @@ Secrets persist across deploys. `NEXT_PUBLIC_SITE_URL` is a plain var in
 the closest thing to production. `npm run dev` still works for day-to-day
 development.
 
-### On every push (Workers Builds)
+### On every push (GitHub Actions)
+
+`.github/workflows/deploy.yml` builds the Worker and uploads it whenever
+`main` or `claude/pleasanton-events-hub-dvwuym` changes, and can be run by
+hand from the Actions tab. It needs two repository secrets (GitHub →
+Settings → Secrets and variables → Actions):
+
+| Secret | Where to get it |
+| --- | --- |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare → My Profile → API Tokens → Create Token → "Edit Cloudflare Workers" template |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare → Workers & Pages, right-hand column of the overview |
+
+After each deploy the workflow copies any of `ANTHROPIC_API_KEY`,
+`ADMIN_SECRET`, `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+and `SUPABASE_SERVICE_ROLE_KEY` that exist as repository secrets onto the
+Worker, so adding `ANTHROPIC_API_KEY` there is all it takes to switch on
+AI answers in the Ask panel.
+
+### On every push (Workers Builds, the alternative)
 
 In the Cloudflare dashboard open the Worker → **Settings → Build** and connect
 the GitHub repository. The "Cloudflare Workers and Pages" GitHub App must
