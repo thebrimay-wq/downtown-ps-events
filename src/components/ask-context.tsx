@@ -10,7 +10,6 @@ import type { ReactNode } from "react";
 // ---------------------------------------------------------------------------
 
 interface AskState {
-  aiEnabled: boolean;
   isOpen: boolean;
   // A question queued by open(question). `key` changes each time so the same
   // question can be asked twice in a row.
@@ -22,13 +21,7 @@ interface AskState {
 
 const AskContext = createContext<AskState | null>(null);
 
-export function AskProvider({
-  aiEnabled,
-  children,
-}: {
-  aiEnabled: boolean;
-  children: ReactNode;
-}) {
+export function AskProvider({ children }: { children: ReactNode }) {
   const [isOpen, setOpen] = useState(false);
   const [pending, setPending] = useState<AskState["pending"]>(null);
 
@@ -41,8 +34,8 @@ export function AskProvider({
   const toggle = useCallback(() => setOpen((v) => !v), []);
 
   const value = useMemo(
-    () => ({ aiEnabled, isOpen, pending, open, close, toggle }),
-    [aiEnabled, isOpen, pending, open, close, toggle],
+    () => ({ isOpen, pending, open, close, toggle }),
+    [isOpen, pending, open, close, toggle],
   );
   return <AskContext.Provider value={value}>{children}</AskContext.Provider>;
 }

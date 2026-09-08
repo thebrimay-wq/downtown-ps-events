@@ -11,8 +11,8 @@ import { cn } from "@/lib/utils";
 
 // ---------------------------------------------------------------------------
 // The conversation inside the Ask panel. Sends the thread to /api/chat and
-// renders the reply as it streams in: text first, a status line while a
-// search runs, and event cards once the answer is complete.
+// renders the reply as it arrives: a status line while the calendar is
+// searched, then the answer, then event cards.
 // ---------------------------------------------------------------------------
 
 interface Message {
@@ -44,11 +44,9 @@ let counter = 0;
 const nextId = () => `m${Date.now().toString(36)}${(counter += 1)}`;
 
 export function AskChat({
-  aiEnabled,
   pending,
   active,
 }: {
-  aiEnabled: boolean;
   // A question queued from elsewhere on the site (the homepage prompt, say).
   pending: { text: string; key: number } | null;
   // Whether the panel is open; focus lands in the box when it is.
@@ -76,7 +74,7 @@ export function AskChat({
         id: replyId,
         role: "assistant",
         content: "",
-        status: aiEnabled ? "Thinking…" : "Searching the listings…",
+        status: "Checking the calendar…",
       };
       const thread = [...history, userMsg];
       setMessages([...thread, reply]);
@@ -146,7 +144,7 @@ export function AskChat({
         setBusy(false);
       }
     },
-    [aiEnabled, busy, patch],
+    [busy, patch],
   );
 
   // A question queued by open(question) is sent once, as a fresh turn in
@@ -306,11 +304,7 @@ export function AskChat({
         </form>
 
         <div className="mt-2.5 flex items-center justify-between gap-3 px-1 text-[11px] leading-snug text-ink-muted">
-          <span>
-            {aiEnabled
-              ? "AI answers from crawled listings can be wrong. Check the source before you go."
-              : "Keyword search only until an ANTHROPIC_API_KEY is configured."}
-          </span>
+          <span>Answers come straight from crawled listings. Check the source before you go.</span>
           {!empty && (
             <button
               type="button"

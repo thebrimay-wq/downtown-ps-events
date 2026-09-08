@@ -19,6 +19,15 @@ export interface SearchParams {
   to?: string | null; // YYYY-MM-DD inclusive
   city?: string | null;
   category?: string | null;
+  // Only free listings; only family-friendly ones; only event chunks (no
+  // raw page slices).
+  free?: boolean | null;
+  family?: boolean | null;
+  eventsOnly?: boolean | null;
+  // With a query: drop matches scoring below this fraction of the best one,
+  // so a search for a venue name does not also count everything that shares
+  // a word with it. 0 (the default) keeps every match.
+  minRelevance?: number | null;
   limit?: number | null;
 }
 
@@ -135,14 +144,27 @@ function expand(term: string, vocab: string[]): string[] {
   return out.length ? out : [term];
 }
 
-function bm25(corpus: Corpus, query: string): Float64Array {
+interface Scored {
+  scores: Float64Array;
+  // How many distinct query words each chunk hit, and how many there were.
+  matched: Uint16Array;
+  terms: number;
+  // Whether each chunk hit the rarest (most specific) query word.
+  rare: Uint8Array;
+}
+
+function bm25(corpus: Corpus, query: string): Scored {
   const N = corpus.chunks.length;
   const scores = new Float64Array(N);
   const matched = new Uint16Array(N); // distinct query words each chunk hit
   const terms = [...new Set(tokenize(query))];
+  let rare = new Uint8Array(N);
+  let rareIdf = -1;
   for (const term of terms) {
     const variants = expand(term, corpus.vocab);
     const hit = new Uint8Array(N);
+    const df = variants.reduce((sum, v) => sum + (corpus.df.get(v) ?? 0), 0);
+    const termIdf = df ? Math.log(1 + (N - df + 0.5) / (df + 0.5)) : -1;
     // An exact word is worth more than a prefix cousin.
     for (const v of variants) {
       const df = corpus.df.get(v);
@@ -158,6 +180,10 @@ function bm25(corpus: Corpus, query: string): Float64Array {
       }
     }
     for (let i = 0; i < N; i++) matched[i] += hit[i];
+    if (termIdf > rareIdf) {
+      rareIdf = termIdf;
+      rare = hit;
+    }
   }
   // Matching every word of the question beats matching one word many times,
   // and the exact phrase in a title or venue beats everything.
@@ -169,7 +195,7 @@ function bm25(corpus: Corpus, query: string): Float64Array {
     const named = `${c.title} ${c.venue ?? ""}`.toLowerCase();
     if (phrase.length >= 4 && named.includes(phrase)) scores[i] *= 2;
   }
-  return scores;
+  return { scores, matched, terms: terms.length, rare };
 }
 
 // --- Search -----------------------------------------------------------------
@@ -197,24 +223,54 @@ export function searchCorpus(corpus: Corpus, params: SearchParams): SearchRespon
   const category = params.category?.trim().toLowerCase() || null;
   const limit = Math.min(Math.max(params.limit ?? DEFAULT_RESULTS, 1), MAX_RESULTS);
 
-  const scores = query ? bm25(corpus, query) : null;
+  const scored = query ? bm25(corpus, query) : null;
+  const scores = scored?.scores ?? null;
 
-  const matches: { chunk: KnowledgeChunk; score: number }[] = [];
+  const matches: { chunk: KnowledgeChunk; score: number; full: boolean; rare: boolean }[] = [];
   corpus.chunks.forEach((chunk, i) => {
+    if (params.eventsOnly && chunk.kind !== "event") return;
     if (city && chunk.city !== city) return;
     if (category && chunk.category !== category) return;
+    if (params.free && !chunk.is_free) return;
+    if (params.family && !(chunk.is_family_friendly || chunk.category === "family")) return;
     if ((from || to) && !overlaps(chunk, from, to)) return;
     if (scores) {
       const s = scores[i];
       if (s <= 0) return;
       // A Pleasanton listing edges out an identical one from a town over.
-      matches.push({ chunk, score: chunk.city === "Pleasanton" ? s * 1.15 : s });
+      matches.push({
+        chunk,
+        score: chunk.city === "Pleasanton" ? s * 1.15 : s,
+        full: scored!.matched[i] === scored!.terms,
+        rare: scored!.rare[i] === 1,
+      });
     } else {
       // No keyword: a dated listing is required, or the range means nothing.
       if (!chunk.date) return;
-      matches.push({ chunk, score: 0 });
+      matches.push({ chunk, score: 0, full: true, rare: true });
     }
   });
+
+  // "trivia night" should mean trivia nights, not every night. When some
+  // listings contain every word of the query, only those count; failing
+  // that, the ones with its rarest word; any-word matches are the last
+  // resort.
+  if (scored && scored.terms > 1) {
+    const keep = matches.some((m) => m.full) ? "full" : matches.some((m) => m.rare) ? "rare" : null;
+    if (keep) {
+      for (let i = matches.length - 1; i >= 0; i--) {
+        if (!matches[i][keep]) matches.splice(i, 1);
+      }
+    }
+  }
+
+  if (scores && params.minRelevance) {
+    const top = matches.reduce((m, x) => Math.max(m, x.score), 0);
+    const floor = top * params.minRelevance;
+    for (let i = matches.length - 1; i >= 0; i--) {
+      if (matches[i].score < floor) matches.splice(i, 1);
+    }
+  }
 
   if (scores) {
     matches.sort(

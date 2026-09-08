@@ -117,24 +117,25 @@ The seven live sources from `seed.sql` keep running.
 3. Copy `.env.example` → `.env.local` and fill in:
    - `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - `SUPABASE_SERVICE_ROLE_KEY` (server-only)
-   - `ANTHROPIC_API_KEY` (optional — enables AI normalization)
+   - `ANTHROPIC_API_KEY` (optional — enables AI normalization of scraped text)
    - `ADMIN_SECRET` (`openssl rand -hex 32`) — gates scraping + admin actions
 4. Restart `npm run dev`. The app now reads/writes Supabase.
 
-### Enabling the Ask panel
+### The Ask panel
 
-The **Ask** button (bottom right of every page) works out of the box as a
-keyword search over the listings. Set `ANTHROPIC_API_KEY` (the same key that
-powers scrape normalization) and it becomes a conversation: Claude reads the question, works out the dates
-("this weekend", "next Friday", "in October"), runs one or more searches over
-the knowledge base, and answers with linked events. Nothing is answered from
-memory: every event it names came back from a search.
+The **Ask** button (bottom right of every page) answers questions about the
+calendar without calling any model, so it costs nothing per question and
+needs no API key. A question is parsed into search filters (`src/lib/ai/intent.ts`):
+dates ("tonight", "this weekend", "next Friday", "October 3", "in October"),
+towns, kinds of event ("live music", "markets"), "free", "for kids", and
+whatever is left over becomes a keyword search ("jazz", "Firehouse Arts
+Center"). The listings are searched, and the reply is written from
+templates: a lead line, the events grouped by day, and a pointer to the full
+calendar when there is more. Follow-ups ("what about Sunday?", "anything
+free?", "more") carry the earlier filters forward. Every event named came
+back from a search, so nothing is made up.
 
-```ini
-ANTHROPIC_API_KEY=            # enables AI answers in the Ask panel
-ANTHROPIC_CHAT_MODEL=claude-opus-5   # optional
-ANTHROPIC_CHAT_EFFORT=medium         # optional: low · medium · high · xhigh · max
-```
+`npm test` runs the parser's tests.
 
 How it fits together:
 
@@ -151,7 +152,8 @@ src/lib/knowledge/            engine.ts: date/city/category filters + BM25 keywo
                               search.ts: bundled index, or live Supabase events
         │
         ▼
-src/lib/ai/chat.ts            Claude + one tool (search_events), streamed
+src/lib/ai/intent.ts          Question → date range, town, category, keywords
+src/lib/ai/chat.ts            Search, then write the answer from templates
 src/app/api/chat/route.ts     POST {messages} → newline-delimited JSON events
 src/components/ask-panel.tsx  Floating button + slide-in panel (ask-chat.tsx inside)
 ```
@@ -236,8 +238,8 @@ Settings → Secrets and variables → Actions):
 After each deploy the workflow copies any of `ANTHROPIC_API_KEY`,
 `ADMIN_SECRET`, `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 and `SUPABASE_SERVICE_ROLE_KEY` that exist as repository secrets onto the
-Worker, so adding `ANTHROPIC_API_KEY` there is all it takes to switch on
-AI answers in the Ask panel.
+Worker. `ANTHROPIC_API_KEY` only matters for scrape normalization; the Ask
+panel never uses it.
 
 ### On every push (Workers Builds, the alternative)
 

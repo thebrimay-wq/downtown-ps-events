@@ -16,7 +16,7 @@ import meta from "@/lib/dataset-meta.generated.json";
 // ---------------------------------------------------------------------------
 
 export function AskPanel() {
-  const { isOpen, close, open, pending, aiEnabled } = useAsk();
+  const { isOpen, close, open, pending } = useAsk();
   const panelRef = useRef<HTMLDivElement>(null);
   const fabRef = useRef<HTMLButtonElement>(null);
   const openedOnce = useRef(false);
@@ -123,7 +123,7 @@ export function AskPanel() {
         </header>
 
         {openedOnce.current && (
-          <AskChat aiEnabled={aiEnabled} pending={pending} active={isOpen} />
+          <AskChat pending={pending} active={isOpen} />
         )}
       </div>
     </>

@@ -1,40 +1,20 @@
 import "server-only";
-import Anthropic from "@anthropic-ai/sdk";
-import {
-  coverageWindow,
-  MAX_RESULTS,
-  searchKnowledge,
-  type SearchParams,
-  type SearchResponse,
-} from "../knowledge/search";
-import { TRI_VALLEY_CITIES, whenLabel } from "../knowledge/render";
+import { coverageWindow, MAX_RESULTS, searchKnowledge, type SearchParams } from "../knowledge/search";
+import { whenLabel } from "../knowledge/render";
 import type { KnowledgeChunk } from "../knowledge/types";
-import { localDateKey } from "../utils";
+import { formatTime, localDateKey } from "../utils";
+import { dayLabel, parseConversation, toKey, type Intent } from "./intent";
 
 // ---------------------------------------------------------------------------
-// The "Ask" assistant. Claude answers questions about local events by calling
-// one tool, search_events, which runs over the markdown knowledge base
-// (src/lib/knowledge). It never answers from memory: every event it names
-// came back from a search in this conversation.
+// The "Ask" assistant, with no model behind it. A question is parsed into
+// search filters (intent.ts), the knowledge base is searched, and the reply
+// is written from templates: a lead line, the events grouped by day, and a
+// closing line when there is more to see. Every event named came from the
+// search, so nothing is made up, and nothing costs anything per question.
 //
-// Responses stream as a sequence of ChatEvents so the page can show text as
-// it arrives, a status line while a search runs, and event cards at the end.
+// Responses stream as a sequence of ChatEvents so the page can show a status
+// line while the search runs and event cards at the end.
 // ---------------------------------------------------------------------------
-
-export const CHAT_MODEL = process.env.ANTHROPIC_CHAT_MODEL || "claude-opus-5";
-
-type Effort = "low" | "medium" | "high" | "xhigh" | "max";
-const EFFORTS: Effort[] = ["low", "medium", "high", "xhigh", "max"];
-const EFFORT: Effort = EFFORTS.includes(process.env.ANTHROPIC_CHAT_EFFORT as Effort)
-  ? (process.env.ANTHROPIC_CHAT_EFFORT as Effort)
-  : "medium";
-
-// Tool rounds per question. Two or three searches cover a weekend; the last
-// round is forced to answer so a chatty search loop cannot run away.
-const MAX_ROUNDS = 4;
-const MAX_TOKENS = 8000;
-
-export { chatEnabled } from "./config";
 
 export interface ChatTurn {
   role: "user" | "assistant";
@@ -64,194 +44,285 @@ export type ChatEvent =
   | { type: "done" }
   | { type: "error"; message: string };
 
-// --- Prompt -----------------------------------------------------------------
+// How much of a long list to show before offering to narrow down.
+const PER_DAY = 5;
+const TOTAL = 14;
+const DAYS = 7;
+const MORE = { perDay: 12, total: 40, days: 14 };
 
-// Fixed for every request, so it caches. Anything that changes per request
-// (today's date, coverage) goes in the second system block.
-const SYSTEM = `You are the assistant for Pleasanton Events Hub, a community calendar for Pleasanton, California and the rest of the Tri-Valley (Livermore, Dublin, San Ramon, Danville, Sunol). People ask you what is going on: this weekend, on a date, at a venue, for kids, for free, and so on.
+// [one, many]
+const CATEGORY_NOUN: Record<string, [string, string]> = {
+  music: ["live music event", "live music events"],
+  arts: ["arts & culture event", "arts & culture events"],
+  "food-drink": ["food & drink event", "food & drink events"],
+  family: ["family event", "family events"],
+  market: ["market", "markets"],
+  community: ["community event", "community events"],
+  sports: ["sports & fitness event", "sports & fitness events"],
+  festival: ["festival", "festivals"],
+  education: ["class or talk", "classes & talks"],
+  nightlife: ["nightlife event", "nightlife events"],
+  other: ["listing", "listings"],
+};
 
-Your only source of truth is the search_events tool. It searches a knowledge base compiled from event listings crawled from local websites. Call it before answering any question about events, dates, venues, prices, or things to do. Never answer such questions from memory, and never invent an event, date, time, price, or venue. If the search finds nothing, say so plainly.
-
-Searching well:
-- Turn relative dates into a from/to range using the date facts below. "This weekend" means the coming Friday through Sunday (or today through Sunday if the weekend has started). "This week" runs through the coming Sunday. A month means its first to last day.
-- Use query for topics, artists, venues, and kinds of events ("live music", "wine tasting", "storytime", "Firehouse Arts Center"). For a plain "what's happening" question leave query null and let the dates do the work.
-- Use city when the person names one. Otherwise leave it null: results already list Pleasanton first.
-- A busy weekend can return more matches than one search shows. Read the counts by day in the result, and search again (one day at a time, or with a keyword) when you need a fuller picture.
-- If a search comes back empty, widen the dates or drop the keyword once before concluding nothing is on.
-
-Answering:
-- Be warm, direct, and brief. A one-line lead, then the events. Group by day when the question spans several days.
-- For each event give the name, day and time, venue or city, and price if known. Link the event name to its link path exactly as the tool gives it, as a markdown link: [Title](/events/some-slug). Do not link to anything else.
-- Mention how many matches there were in total when you only list some, and offer to narrow down.
-- Prefer Pleasanton events. Bring in nearby Tri-Valley events when they fit the question or Pleasanton is quiet, and say which town they are in.
-- Listings come from public websites and can change. When details matter (tickets, times), suggest checking the source before going.
-- If the question is not about local events, answer in a sentence and steer back to what you can help with.
-- Do not include internal or system XML tags in your response.`;
-
-function pad(n: number): string {
-  return String(n).padStart(2, "0");
+function categoryNoun(category: string, n: number): string {
+  const pair = CATEGORY_NOUN[category] ?? [category, category];
+  return n === 1 ? pair[0] : pair[1];
 }
 
-function addDays(d: Date, n: number): Date {
-  const out = new Date(d);
-  out.setUTCDate(out.getUTCDate() + n);
+// --- Searching ---------------------------------------------------------------
+
+interface Found {
+  chunks: KnowledgeChunk[];
+  total: number;
+  pleasanton: number;
+  byDay: Record<string, number>;
+  // Set when the first search came back empty and a looser one was used.
+  note: string | null;
+}
+
+function toParams(i: Intent, today: string): SearchParams {
+  return {
+    query: i.query,
+    from: i.from ?? today,
+    to: i.to,
+    city: i.city,
+    category: i.category,
+    free: i.free,
+    family: i.family,
+    eventsOnly: true,
+    minRelevance: 0.35,
+    limit: MAX_RESULTS,
+  };
+}
+
+// Listings the scraper marked family-friendly that say otherwise in the title.
+const ADULTS_RE = /\b(adults?[- ]only|21\s*\+|18\s*\+|19\s*\+|over 21)\b/i;
+
+// Events on or after 4 PM, plus all-day ones, when someone asked for tonight.
+function eveningOnly(chunks: KnowledgeChunk[]): KnowledgeChunk[] {
+  const hour = new Intl.DateTimeFormat("en-US", {
+    hour: "numeric",
+    hour12: false,
+    timeZone: "America/Los_Angeles",
+  });
+  return chunks.filter(
+    (c) => c.all_day || !c.start_at || Number(hour.format(new Date(c.start_at))) >= 16,
+  );
+}
+
+async function run(params: SearchParams, evening: boolean): Promise<Omit<Found, "note">> {
+  const res = await searchKnowledge(params);
+  const family = Boolean(params.family);
+  if (!evening && !family) {
+    return { chunks: res.results, total: res.total, pleasanton: res.pleasanton, byDay: res.byDay };
+  }
+  let chunks = res.results;
+  if (evening) chunks = eveningOnly(chunks);
+  if (family) chunks = chunks.filter((c) => !ADULTS_RE.test(c.title));
+  const byDay: Record<string, number> = {};
+  let pleasanton = 0;
+  for (const c of chunks) {
+    if (c.city === "Pleasanton") pleasanton += 1;
+    byDay[c.date ?? "undated"] = (byDay[c.date ?? "undated"] ?? 0) + 1;
+  }
+  return { chunks, total: chunks.length, pleasanton, byDay };
+}
+
+function addDaysKey(key: string, n: number): string {
+  const [y, m, d] = key.split("-").map(Number);
+  return toKey(new Date(Date.UTC(y, m - 1, d + n)));
+}
+
+// The first search, then progressively looser ones when it finds nothing:
+// drop the category, look further ahead for the keyword, drop the keyword,
+// and finally look at the next two weeks with no filters at all.
+async function find(i: Intent, today: string): Promise<Found> {
+  const base = toParams(i, today);
+  const scope = describeScope(i);
+  const first = await run(base, i.evening);
+  if (first.total > 0) return { ...first, note: null };
+
+  if (i.category) {
+    const r = await run({ ...base, category: null }, i.evening);
+    if (r.total > 0) {
+      return {
+        ...r,
+        note: `No ${categoryNoun(i.category, 2)} ${scope}, but here is what else is on:`,
+      };
+    }
+  }
+  if (i.query && i.to) {
+    const from = i.from ?? today;
+    const r = await run({ ...base, category: null, from, to: addDaysKey(from, 90) }, false);
+    if (r.total > 0) {
+      return { ...r, note: `Nothing for “${i.query}” ${scope}. The next ones coming up:` };
+    }
+  }
+  if (i.query) {
+    const r = await run({ ...base, query: null, category: null }, i.evening);
+    if (r.total > 0) {
+      return { ...r, note: `Nothing matched “${i.query}” ${scope}. Here is what is on instead:` };
+    }
+  }
+  if (i.free || i.family) {
+    const r = await run({ ...base, query: null, category: null, free: false, family: false }, i.evening);
+    if (r.total > 0) {
+      return { ...r, note: `Nothing ${i.free ? "free" : "for kids"} ${scope} that I can see. Everything else on:` };
+    }
+  }
+  if (i.to) {
+    const from = i.to > today ? i.to : today;
+    const r = await run({ query: null, from, to: addDaysKey(from, 14), city: i.city, eventsOnly: true, limit: MAX_RESULTS }, false);
+    if (r.total > 0) {
+      return { ...r, note: `Nothing on the calendar ${scope}${i.city ? "" : " anywhere in the Tri-Valley"}. The next couple of weeks:` };
+    }
+  }
+  return { ...first, note: null };
+}
+
+// "this weekend in Livermore", "tonight", "in October"
+function describeScope(i: Intent): string {
+  return [i.when ?? "coming up", i.city ? `in ${i.city}` : ""].filter(Boolean).join(" ");
+}
+
+// --- Writing ------------------------------------------------------------------
+
+// Some sources put a note where the venue should be. Those are dropped.
+const NOT_A_VENUE = /contact us|call for details|@|\bTBA\b|\bTBD\b|to be announced/i;
+
+function cleanVenue(venue: string): string | null {
+  if (NOT_A_VENUE.test(venue)) return null;
+  const v = venue
+    .replace(/\s*\([^)]*\)/g, "")
+    .split(">")
+    .pop()!
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!v) return null;
+  return v.length > 48 ? `${v.slice(0, 45).trimEnd()}…` : v;
+}
+
+// Prices arrive as whatever the source page said. Placeholders are dropped
+// and bare numbers get a dollar sign.
+function cleanPrice(price: string | null): string | null {
+  if (!price) return null;
+  const p = price.trim();
+  if (!p || p.length > 24 || /^(none|null|n\/a|tba|tbd|varies|see (website|site))$/i.test(p)) return null;
+  if (/^\d+(\.\d{1,2})?$/.test(p)) return `$${p.replace(/\.0$/, "")}`;
+  return p;
+}
+
+function bullet(c: KnowledgeChunk, showTown: boolean): string {
+  const parts: string[] = [];
+  if (c.start_at && !c.all_day) parts.push(formatTime(c.start_at));
+  const town = showTown && c.city && c.city !== "Pleasanton" ? c.city : null;
+  const venue = c.venue ? cleanVenue(c.venue) : null;
+  if (venue) {
+    parts.push(town && !venue.toLowerCase().includes(town.toLowerCase()) ? `${venue}, ${town}` : venue);
+  } else if (town) {
+    parts.push(town);
+  }
+  const price = c.is_free ? "free" : cleanPrice(c.price);
+  if (price) parts.push(price);
+  const title = c.title.replace(/\s+/g, " ").trim();
+  const name = c.link ? `[${title}](${c.link})` : c.url ? `[${title}](${c.url})` : title;
+  return `- ${name}${parts.length ? `, ${parts.join(", ")}` : ""}`;
+}
+
+// Which of the matches to show: up to a few per day, across the first few
+// days. Keyword searches come back ranked, so the top matches are taken
+// first and then put back into date order.
+function choose(chunks: KnowledgeChunk[], i: Intent): KnowledgeChunk[] {
+  const cap = i.more ? MORE : { perDay: PER_DAY, total: TOTAL, days: DAYS };
+  const pool = i.query ? chunks.slice(0, cap.total) : chunks;
+  const byDay = new Map<string, KnowledgeChunk[]>();
+  for (const c of pool) {
+    const day = c.date ?? "undated";
+    if (!byDay.has(day)) byDay.set(day, []);
+    byDay.get(day)!.push(c);
+  }
+  // A keyword search is already trimmed to its best matches; show them all.
+  const days = [...byDay.keys()].sort().slice(0, i.query ? undefined : cap.days);
+  const out: KnowledgeChunk[] = [];
+  for (const day of days) {
+    const items = byDay
+      .get(day)!
+      .sort((a, b) => (a.start_at ?? "").localeCompare(b.start_at ?? ""))
+      .slice(0, cap.perDay);
+    for (const c of items) {
+      if (out.length >= cap.total) break;
+      out.push(c);
+    }
+  }
   return out;
 }
 
-// Date facts in Pleasanton's own timezone, written so the model has nothing
-// to work out: today, tomorrow, the coming weekend, and the coverage window.
-async function contextBlock(): Promise<string> {
-  const now = new Date();
-  const todayKey = localDateKey(now);
-  const weekday = new Intl.DateTimeFormat("en-US", {
-    weekday: "long",
-    timeZone: "America/Los_Angeles",
-  }).format(now);
-  // Do date arithmetic on the local calendar day, not the UTC instant.
-  const [y, m, d] = todayKey.split("-").map(Number);
-  const today = new Date(Date.UTC(y, m - 1, d));
-  const key = (date: Date) =>
-    `${date.getUTCFullYear()}-${pad(date.getUTCMonth() + 1)}-${pad(date.getUTCDate())}`;
-  const wd = today.getUTCDay(); // 0 = Sunday
-  const daysToFriday = wd === 6 || wd === 0 ? 0 : (5 - wd + 7) % 7;
-  const weekendStart = wd === 6 || wd === 0 ? today : addDays(today, daysToFriday);
-  const weekendEnd = addDays(today, (7 - wd) % 7);
-  const window = await coverageWindow();
-  return [
-    `Today is ${weekday}, ${todayKey} (America/Los_Angeles).`,
-    `Tomorrow is ${key(addDays(today, 1))}.`,
-    `The coming weekend is ${key(weekendStart)} (Friday) to ${key(weekendEnd)} (Sunday).`,
-    `The end of this week is ${key(weekendEnd)}.`,
-    window.start && window.end
-      ? `The listings cover ${window.start} to ${window.end}. Outside that window there is nothing to find.`
-      : "",
-  ]
-    .filter(Boolean)
-    .join("\n");
+// "Saturday, September 12", with the year once it is a different one.
+function label(day: string, today: string): string {
+  return day.slice(0, 4) === today.slice(0, 4) ? dayLabel(day) : `${dayLabel(day)}, ${day.slice(0, 4)}`;
 }
 
-// --- Tool -------------------------------------------------------------------
-
-const SEARCH_TOOL: Anthropic.Beta.BetaTool = {
-  name: "search_events",
-  description:
-    "Search the local event listings. Filters by date range, city, and category, and ranks by keyword relevance when a query is given. Returns up to `limit` matching events with their day, time, venue, price, description, and link, plus counts of all matches by day.",
-  strict: true,
-  input_schema: {
-    type: "object",
-    properties: {
-      query: {
-        type: ["string", "null"],
-        description:
-          "Keywords: a topic, artist, venue, or kind of event. Null for a plain what's-on question.",
-      },
-      from: {
-        type: ["string", "null"],
-        description: "First day to include, YYYY-MM-DD (inclusive). Null for no lower bound.",
-      },
-      to: {
-        type: ["string", "null"],
-        description: "Last day to include, YYYY-MM-DD (inclusive). Null for no upper bound.",
-      },
-      city: {
-        type: ["string", "null"],
-        description: `Only events in this town. One of: ${TRI_VALLEY_CITIES.join(", ")}. Null for the whole Tri-Valley.`,
-      },
-      category: {
-        type: ["string", "null"],
-        description:
-          "Only this category. One of: music, arts, food-drink, family, market, community, sports, festival, education, nightlife, other. Null for any.",
-      },
-      limit: {
-        type: ["integer", "null"],
-        description: `How many events to return, 1 to ${MAX_RESULTS}. Null for the default of 40.`,
-      },
-    },
-    required: ["query", "from", "to", "city", "category", "limit"],
-    additionalProperties: false,
-  },
-};
-
-const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-
-function parseParams(input: unknown): SearchParams {
-  const raw = (input ?? {}) as Record<string, unknown>;
-  const str = (k: string) => (typeof raw[k] === "string" && raw[k] ? String(raw[k]) : null);
-  const date = (k: string) => {
-    const v = str(k);
-    return v && DATE_RE.test(v) ? v : null;
-  };
-  const limit = typeof raw.limit === "number" && Number.isFinite(raw.limit) ? raw.limit : null;
-  return {
-    query: str("query"),
-    from: date("from"),
-    to: date("to"),
-    city: str("city"),
-    category: str("category"),
-    limit,
-  };
+function heading(day: string, today: string): string {
+  if (day === "undated") return "Date to be announced";
+  if (day === today) return `Today, ${dayLabel(day)}`;
+  if (day === addDaysKey(today, 1)) return `Tomorrow, ${dayLabel(day)}`;
+  return label(day, today);
 }
 
-const shortDate = new Intl.DateTimeFormat("en-US", {
-  weekday: "short",
-  month: "short",
-  day: "numeric",
-  timeZone: "UTC",
-});
-
-function dayLabel(key: string): string {
-  const [y, m, d] = key.split("-").map(Number);
-  return shortDate.format(new Date(Date.UTC(y, m - 1, d)));
+function countWord(n: number): string {
+  return n === 1 ? "One" : String(n);
 }
 
-// What the status line says while a search runs.
-export function describeSearch(p: SearchParams): string {
-  const parts: string[] = [];
-  if (p.query) parts.push(`“${p.query}”`);
-  if (p.city) parts.push(`in ${p.city}`);
-  if (p.from && p.to && p.from === p.to) parts.push(`on ${dayLabel(p.from)}`);
-  else if (p.from && p.to) parts.push(`${dayLabel(p.from)} to ${dayLabel(p.to)}`);
-  else if (p.from) parts.push(`from ${dayLabel(p.from)}`);
-  else if (p.to) parts.push(`through ${dayLabel(p.to)}`);
-  return parts.length ? `Searching listings ${parts.join(" ")}…` : "Searching the listings…";
+function whatPhrase(i: Intent, n: number): string {
+  if (i.query) return n === 1 ? `match for “${i.query}”` : `matches for “${i.query}”`;
+  const bits: string[] = [];
+  if (i.free) bits.push("free");
+  if (i.family && i.category !== "family") bits.push("family-friendly");
+  if (i.category) bits.push(categoryNoun(i.category, n));
+  else bits.push(n === 1 ? "event" : "events");
+  return bits.join(" ");
 }
 
-function formatChunk(c: KnowledgeChunk, n: number): string {
-  const where = [c.venue, c.address].filter(Boolean).join(", ") || c.city || "location not listed";
-  const when = c.start_at ? whenLabel({ start_at: c.start_at, end_at: c.end_at, all_day: c.all_day }) : c.date ?? "date not listed";
-  const price = c.is_free ? "free" : c.price ?? "price not listed";
-  const flags = [c.category, price, c.is_family_friendly ? "family friendly" : null]
-    .filter(Boolean)
-    .join(" · ");
-  const head =
-    c.kind === "event"
-      ? `[${n}] ${c.title}\n    when: ${when}\n    where: ${where}\n    ${flags}\n    link: ${c.link}\n    source: ${c.source}${c.url ? ` (${c.url})` : ""}`
-      : `[${n}] ${c.title} (crawled page from ${c.source}${c.url ? `, ${c.url}` : ""})${c.date ? `\n    mentions dates: ${c.date}${c.end_date ? ` to ${c.end_date}` : ""}` : ""}`;
-  const body = c.text ? `\n    ${c.text.replace(/\s+/g, " ").trim()}` : "";
-  return head + body;
+function wherePhrase(i: Intent, f: Found): string {
+  if (i.city) return `in ${i.city}`;
+  if (f.pleasanton === f.total) return "in Pleasanton";
+  if (f.pleasanton === 0) return "around the Tri-Valley";
+  return `across the Tri-Valley, ${f.pleasanton} in Pleasanton`;
 }
 
-function formatResults(res: SearchResponse, p: SearchParams): string {
-  if (res.total === 0) {
-    return "No listings matched. Try a wider date range, a different keyword, or no keyword.";
-  }
-  const days = Object.entries(res.byDay)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([day, n]) => `${day}: ${n}`)
-    .join(", ");
-  const lines = [
-    `${res.total} matching listings (${res.pleasanton} in Pleasanton). Showing ${res.results.length}${
-      res.total > res.results.length
-        ? p.query
-          ? ", ranked by relevance."
-          : ", Pleasanton first then by date. Search a narrower range for the rest."
-        : "."
-    }`,
-    `Matches by day: ${days}`,
-    "",
-    ...res.results.map((c, i) => formatChunk(c, i + 1)),
-  ];
-  return lines.join("\n");
+function lead(i: Intent, f: Found, shown: number): string {
+  const when = i.when ?? "coming up";
+  const line = `${countWord(f.total)} ${whatPhrase(i, f.total)} ${when} ${wherePhrase(i, f)}.`;
+  if (shown >= f.total) return line.replace(/\.$/, ":");
+  const next = i.query ? "The closest matches, in date order:" : "The first few, leaning Pleasanton:";
+  return `${line} ${next}`;
+}
+
+// The /events page takes the same filters, so the closing line can hand off
+// to it with the person's question already applied.
+function calendarPath(i: Intent): string {
+  const q = new URLSearchParams();
+  if (i.category) q.set("category", i.category);
+  if (i.query) q.set("search", i.query);
+  if (i.city) q.set("location", i.city);
+  if (i.free) q.set("free", "1");
+  if (i.family) q.set("family", "1");
+  if (i.when === "today" || i.when === "tonight") q.set("date", "today");
+  else if (i.when === "this weekend") q.set("date", "weekend");
+  else if (i.when === "this week") q.set("date", "week");
+  const s = q.toString();
+  return s ? `/events?${s}` : "/events";
+}
+
+function closing(i: Intent, f: Found, shown: KnowledgeChunk[], today: string): string | null {
+  if (shown.length >= f.total) return null;
+  const days = Object.keys(f.byDay).filter((d) => d !== "undated").sort();
+  const lastShown = shown.map((c) => c.date ?? "").sort().pop() ?? "";
+  const lastDay = days[days.length - 1];
+  const later = lastDay && lastDay > lastShown ? ` The rest run through ${label(lastDay, today)}.` : "";
+  const narrow = i.city && i.query ? "Try another day" : i.city ? "Ask about one day or a kind of event" : "Ask about one day, a town, or a kind of event";
+  return `That's ${shown.length} of ${f.total}.${later} ${narrow} to narrow it down, say “more” for a longer list, or browse the [full calendar](${calendarPath(i)}).`;
 }
 
 function toCard(c: KnowledgeChunk): SourceCard {
@@ -273,141 +344,75 @@ function toCard(c: KnowledgeChunk): SourceCard {
   };
 }
 
-// The cards under an answer are the events the answer linked, in the order
-// they were mentioned; failing that, the best matches the search returned.
-function pickSources(answer: string, seen: Map<string, KnowledgeChunk>): SourceCard[] {
-  const mentioned: KnowledgeChunk[] = [];
-  for (const m of answer.matchAll(/\]\((\/events\/[^)\s]+)\)/g)) {
-    const chunk = [...seen.values()].find((c) => c.link === m[1]);
-    if (chunk && !mentioned.includes(chunk)) mentioned.push(chunk);
-  }
-  const picked = mentioned.length ? mentioned : [...seen.values()].filter((c) => c.kind === "event").slice(0, 6);
-  return picked.slice(0, 8).map(toCard);
+function statusLine(i: Intent): string {
+  const parts: string[] = [];
+  if (i.query) parts.push(`“${i.query}”`);
+  else if (i.category) parts.push(categoryNoun(i.category, 2));
+  if (i.when) parts.push(i.when);
+  if (i.city) parts.push(`in ${i.city}`);
+  return parts.length ? `Checking ${parts.join(" ")}…` : "Checking the calendar…";
 }
 
-// --- The loop ---------------------------------------------------------------
+const HELP =
+  "I know the local calendar and nothing else. Ask about a day (“tonight”, “Saturday”, “October 3”), a stretch (“this weekend”, “next week”, “in October”), a town, a venue, or a kind of event (“live music”, “free”, “for kids”). Follow-ups work too: “what about Sunday?”, “anything free?”, “more”.";
 
-export async function* runChat(
-  turns: ChatTurn[],
-  signal?: AbortSignal,
-): AsyncGenerator<ChatEvent> {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  const messages: Anthropic.Beta.BetaMessageParam[] = turns.map((t) => ({
-    role: t.role,
-    content: t.content,
-  }));
-  const system: Anthropic.Beta.BetaTextBlockParam[] = [
-    { type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } },
-    { type: "text", text: await contextBlock() },
-  ];
+export async function* runChat(turns: ChatTurn[]): AsyncGenerator<ChatEvent> {
+  const today = localDateKey();
+  const questions = turns.filter((t) => t.role === "user").map((t) => t.content);
+  const intent = parseConversation(questions, today);
 
-  const seen = new Map<string, KnowledgeChunk>();
-  let answer = "";
-
-  for (let round = 0; round < MAX_ROUNDS; round++) {
-    const lastRound = round === MAX_ROUNDS - 1;
-    const stream = client.beta.messages.stream(
-      {
-        model: CHAT_MODEL,
-        max_tokens: MAX_TOKENS,
-        betas: ["server-side-fallback-2026-07-01"],
-        fallbacks: "default",
-        system,
-        tools: [SEARCH_TOOL],
-        tool_choice: lastRound ? { type: "none" } : { type: "auto" },
-        thinking: { type: "adaptive" },
-        output_config: { effort: EFFORT },
-        messages,
-      },
-      { signal },
-    );
-
-    for await (const event of stream) {
-      if (event.type === "content_block_delta" && event.delta.type === "text_delta") {
-        answer += event.delta.text;
-        yield { type: "text", text: event.delta.text };
-      } else if (
-        event.type === "content_block_start" &&
-        event.content_block.type === "tool_use"
-      ) {
-        yield { type: "status", text: "Searching the listings…" };
-      }
-    }
-    const message = await stream.finalMessage();
-
-    if (message.stop_reason === "refusal") {
-      yield {
-        type: "text",
-        text: answer
-          ? ""
-          : "I can't help with that one. Ask me what's going on around Pleasanton and I'll dig in.",
-      };
-      break;
-    }
-    if (message.stop_reason === "pause_turn") {
-      messages.push({ role: "assistant", content: message.content });
-      continue;
-    }
-    if (message.stop_reason !== "tool_use") break;
-
-    const uses = message.content.filter(
-      (b): b is Anthropic.Beta.BetaToolUseBlock => b.type === "tool_use",
-    );
-    messages.push({ role: "assistant", content: message.content });
-
-    const results: Anthropic.Beta.BetaToolResultBlockParam[] = [];
-    for (const use of uses) {
-      const params = parseParams(use.input);
-      yield { type: "status", text: describeSearch(params) };
-      try {
-        const res = await searchKnowledge(params);
-        for (const c of res.results) seen.set(c.id, c);
-        results.push({
-          type: "tool_result",
-          tool_use_id: use.id,
-          content: formatResults(res, params),
-        });
-      } catch (err) {
-        results.push({
-          type: "tool_result",
-          tool_use_id: use.id,
-          content: `Search failed: ${err instanceof Error ? err.message : String(err)}`,
-          is_error: true,
-        });
-      }
-    }
-    messages.push({ role: "user", content: results });
+  if (intent.kind === "greeting") {
+    yield { type: "text", text: "Hi. Ask me what's going on around Pleasanton: a day, a weekend, a town, a venue, or a kind of event." };
+    yield { type: "done" };
+    return;
+  }
+  if (intent.kind === "thanks") {
+    yield { type: "text", text: "Any time. Ask again whenever you're planning something." };
+    yield { type: "done" };
+    return;
+  }
+  if (intent.kind === "help") {
+    yield { type: "text", text: HELP };
+    yield { type: "done" };
+    return;
   }
 
-  yield { type: "sources", events: pickSources(answer, seen) };
-  yield { type: "done" };
-}
+  yield { type: "status", text: statusLine(intent) };
+  const found = await find(intent, today);
 
-// --- Without an API key -----------------------------------------------------
-
-// Keyword search only, so the page still does something useful before the
-// site has a key. Says so up front rather than pretending to be an answer.
-export async function* runWithoutAi(question: string): AsyncGenerator<ChatEvent> {
-  const res = await searchKnowledge({ query: question, limit: 8 });
-  yield {
-    type: "text",
-    text:
-      "AI answers are not switched on for this site yet (no ANTHROPIC_API_KEY is configured), so here is a plain keyword search of the listings instead.\n\n",
-  };
-  if (res.total === 0) {
-    yield { type: "text", text: `Nothing in the listings matched “${question}”. Try a venue, an artist, or a kind of event.` };
-  } else {
-    const lines = res.results.map(
-      (c) =>
-        `- [${c.title}](${c.link ?? c.url ?? "#"}) — ${
-          c.start_at ? whenLabel({ start_at: c.start_at, end_at: c.end_at, all_day: c.all_day }) : c.date ?? ""
-        }${c.venue ? `, ${c.venue}` : c.city ? `, ${c.city}` : ""}`,
-    );
+  if (found.total === 0) {
+    const window = await coverageWindow();
+    const scope = describeScope(intent);
+    const reach =
+      window.end && intent.from && intent.from > window.end
+        ? ` The listings only run through ${label(window.end, today)} so far.`
+        : "";
     yield {
       type: "text",
-      text: `${res.total} listings matched “${question}”. The closest:\n\n${lines.join("\n")}`,
+      text: intent.query
+        ? `Nothing in the listings matches “${intent.query}” ${scope}.${reach} Try a venue, an artist, or a kind of event, or ask about a day instead.`
+        : `Nothing on the calendar ${scope}.${reach} Try another day or a wider stretch, like “this month”.`,
     };
+    yield { type: "done" };
+    return;
   }
-  yield { type: "sources", events: res.results.filter((c) => c.kind === "event").map(toCard) };
+
+  const shown = choose(found.chunks, intent);
+  const lines: string[] = [found.note ?? lead(intent, found, shown.length)];
+  const multiDay = new Set(shown.map((c) => c.date ?? "undated")).size > 1;
+  let currentDay: string | null = null;
+  for (const c of shown) {
+    const day = c.date ?? "undated";
+    if (multiDay && day !== currentDay) {
+      lines.push("", `**${heading(day, today)}**`);
+      currentDay = day;
+    }
+    lines.push(bullet(c, !intent.city));
+  }
+  const tail = found.note ? null : closing(intent, found, shown, today);
+  if (tail) lines.push("", tail);
+
+  yield { type: "text", text: lines.join("\n") };
+  yield { type: "sources", events: shown.slice(0, 8).map(toCard) };
   yield { type: "done" };
 }
