@@ -18,6 +18,19 @@ const nextConfig = {
     // renders without a per-host allowlist.
     unoptimized: true,
   },
+  // Keep one canonical address: anything arriving on www is sent to the bare
+  // domain, path and query intact. Matched on the Host header, so local dev
+  // and the *.workers.dev hostname are untouched.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.pleasantonevents.com" }],
+        destination: "https://pleasantonevents.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

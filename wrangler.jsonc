@@ -23,10 +23,19 @@
   // the headroom is for scrapes triggered from /admin. Free-plan deploys
   // reject this block.
   "limits": { "cpu_ms": 300000 },
+  // Custom domains. `custom_domain: true` makes Cloudflare create and manage
+  // the DNS records for these hostnames on deploy, so the Worker answers on
+  // pleasantonevents.com directly. Both hostnames must belong to a zone in
+  // this Cloudflare account; www redirects to the bare domain in
+  // next.config.mjs so only one address is canonical.
+  "routes": [
+    { "pattern": "pleasantonevents.com", "custom_domain": true },
+    { "pattern": "www.pleasantonevents.com", "custom_domain": true }
+  ],
   // Plain (non-secret) runtime vars. Secrets — SUPABASE_*, ADMIN_SECRET,
   // ANTHROPIC_* — are NOT here: set them with `wrangler secret put` or in
   // the dashboard (Settings → Variables & Secrets) so they never land in git.
   "vars": {
-    "NEXT_PUBLIC_SITE_URL": "https://downtown-ps-events.thebrimay.workers.dev"
+    "NEXT_PUBLIC_SITE_URL": "https://pleasantonevents.com"
   }
 }
