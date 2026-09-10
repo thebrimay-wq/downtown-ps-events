@@ -23,19 +23,28 @@
   // the headroom is for scrapes triggered from /admin. Free-plan deploys
   // reject this block.
   "limits": { "cpu_ms": 300000 },
-  // Custom domains. `custom_domain: true` makes Cloudflare create and manage
-  // the DNS records for these hostnames on deploy, so the Worker answers on
-  // pleasantonevents.com directly. Both hostnames must belong to a zone in
-  // this Cloudflare account; www redirects to the bare domain in
-  // next.config.mjs so only one address is canonical.
-  "routes": [
-    { "pattern": "pleasantonevents.com", "custom_domain": true },
-    { "pattern": "www.pleasantonevents.com", "custom_domain": true }
-  ],
+  // --- Custom domain: pleasantonevents.com -----------------------------------
+  // STAGED, NOT LIVE YET. The domain is registered but is not a zone in this
+  // Cloudflare account, and a deploy with these routes active fails with
+  // "Could not find zone" — which would also take down the deploy workflow.
+  //
+  // Turn it on in one step once Cloudflare shows the domain as Active
+  // (README → Connecting the custom domain):
+  //   1. uncomment the five "routes" lines below (strip their leading //),
+  //   2. change NEXT_PUBLIC_SITE_URL to https://pleasantonevents.com,
+  //   3. deploy. Cloudflare creates the DNS records and the certificate.
+  //
+  // "routes": [
+  //   { "pattern": "pleasantonevents.com", "custom_domain": true },
+  //   { "pattern": "www.pleasantonevents.com", "custom_domain": true }
+  // ],
+  //
   // Plain (non-secret) runtime vars. Secrets — SUPABASE_*, ADMIN_SECRET,
   // ANTHROPIC_* — are NOT here: set them with `wrangler secret put` or in
   // the dashboard (Settings → Variables & Secrets) so they never land in git.
   "vars": {
-    "NEXT_PUBLIC_SITE_URL": "https://pleasantonevents.com"
+    // Feeds metadataBase in src/app/layout.tsx (canonical + Open Graph URLs),
+    // so it should only name the custom domain once that domain resolves.
+    "NEXT_PUBLIC_SITE_URL": "https://downtown-ps-events.thebrimay.workers.dev"
   }
 }

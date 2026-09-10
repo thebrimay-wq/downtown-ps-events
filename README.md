@@ -217,45 +217,66 @@ done
 Secrets persist across deploys. `NEXT_PUBLIC_SITE_URL` is a plain var in
 `wrangler.jsonc`.
 
-### The custom domain
+### Connecting the custom domain
 
-The site is served at **https://pleasantonevents.com**. Three pieces of
-config make that work, all already in the repository:
+The site is meant to live at **https://pleasantonevents.com**. The domain is
+registered, but it is not yet a zone in this Cloudflare account, so the
+config is staged rather than live:
 
-| File | What it does |
+| File | State |
 | --- | --- |
-| `wrangler.jsonc` → `routes` | Attaches `pleasantonevents.com` and `www.pleasantonevents.com` to the Worker. `custom_domain: true` means Cloudflare creates and keeps the DNS records itself, so there is nothing to add by hand in the DNS tab. |
-| `wrangler.jsonc` → `vars.NEXT_PUBLIC_SITE_URL` | The address the app uses for canonical links, Open Graph tags, and calendar files. |
-| `next.config.mjs` → `redirects()` | Sends `www.pleasantonevents.com` to the bare domain with a 308, so only one address is canonical. |
+| `wrangler.jsonc` → `routes` | Commented out. Attaching a hostname to a Worker only works once Cloudflare is authoritative for the domain; deploying these routes before that fails the build with `Could not find zone`. |
+| `wrangler.jsonc` → `vars.NEXT_PUBLIC_SITE_URL` | Still the `*.workers.dev` address. It feeds `metadataBase`, so canonical links and Open Graph tags would break if it named a hostname that does not resolve. |
+| `next.config.mjs` → `redirects()` | Live already, and harmless. It only fires on requests whose `Host` header is `www.pleasantonevents.com`, which nothing sends yet. |
 
-The routes are applied by the next deploy (`npm run deploy`, or a push that
-runs the GitHub Actions workflow). Prerequisites, one time only:
+#### 1. Move the domain's DNS to Cloudflare
 
-1. `pleasantonevents.com` is a zone in the same Cloudflare account as the
-   Worker — the domain shows up under **Websites** and its status is
-   **Active**, meaning the registrar's nameservers point at Cloudflare.
-2. If a DNS record already exists for `pleasantonevents.com` or `www` (a
-   parking page from the registrar, for instance), delete it first.
-   Cloudflare will not overwrite an existing record and the deploy fails
-   with `record already exists`.
-3. The API token used for deploys needs **Zone → Workers Routes → Edit** on
-   top of the Workers permissions. The stock "Edit Cloudflare Workers"
-   template already includes it.
+Cloudflare has to answer DNS for the domain before it can route it to a
+Worker. The registrar keeps the registration; only the nameservers change.
 
-Certificates are issued automatically and usually go live within a couple of
-minutes. Verify with:
+1. Cloudflare dashboard → **Add a domain** → enter `pleasantonevents.com` →
+   choose the **Free** plan.
+2. Cloudflare scans the existing DNS records and shows what it found. If the
+   domain is new and unused, there is nothing worth keeping — delete any
+   parking-page record the registrar added for `pleasantonevents.com` or
+   `www`, since a leftover record blocks the Worker from claiming the
+   hostname later.
+3. Cloudflare shows **two nameservers** (something like `nia.ns.cloudflare.com`).
+   Sign in at the registrar where the domain was bought, find its nameserver
+   setting, replace the registrar's defaults with Cloudflare's two, and save.
+   The setting is usually under: GoDaddy → Domain → Nameservers → Change;
+   Namecheap → Domain → Nameservers → Custom DNS; Squarespace/Google Domains
+   → Domain → DNS → Custom nameservers.
+4. Wait. The domain's status in Cloudflare flips from **Pending** to
+   **Active** on its own, typically within an hour, occasionally up to 24.
+   Cloudflare emails when it does. Nothing below works until then.
+
+#### 2. Switch the config on
+
+Once the domain reads **Active**, edit `wrangler.jsonc`:
+
+- uncomment the `routes` block,
+- set `NEXT_PUBLIC_SITE_URL` to `https://pleasantonevents.com`.
+
+Then deploy (`npm run deploy`, or merge to a branch the deploy workflow
+watches). `custom_domain: true` makes Cloudflare create the DNS records and
+issue the certificate itself, so there is nothing to add by hand in the DNS
+tab.
+
+The API token used for deploys needs **Zone → Workers Routes → Edit** on top
+of the Workers permissions. The stock "Edit Cloudflare Workers" template
+already includes it.
+
+#### 3. Verify
 
 ```bash
 curl -sI https://pleasantonevents.com | head -1        # expect HTTP/2 200
 curl -sI https://www.pleasantonevents.com | head -2    # expect a 308 to the bare domain
 ```
 
-The `*.workers.dev` hostname keeps working as a fallback, which is handy for
-checking a deploy before the domain propagates.
-
-`npm run preview` runs the built Worker locally under `wrangler dev`, which is
-the closest thing to production. `npm run dev` still works for day-to-day
-development.
+Certificates usually go live within a couple of minutes of the deploy. The
+`*.workers.dev` hostname keeps working throughout, so the site is never down
+while the domain settles.
 
 ### On every push (GitHub Actions)
 
