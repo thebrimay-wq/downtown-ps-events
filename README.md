@@ -170,9 +170,11 @@ python3 scripts/crawl4ai/export_pages.py   # raw page markdown → knowledge/pag
 npm run knowledge                          # rebuild digests + index
 ```
 
-The API route is public and calls Claude on every question, so it caps
-message length and history, and rate-limits each IP to 30 questions per ten
-minutes per server instance.
+The API route answers from the bundled index with no model call, so a
+question costs nothing. It is public all the same, so it caps message length
+and history and rate-limits each IP to 30 questions per ten minutes per
+server instance. The Anthropic SDK is still a dependency, used only for
+optional normalization of scraped text in `src/lib/ai/normalize.ts`.
 
 ### Running the scraper
 
