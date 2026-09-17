@@ -37,10 +37,23 @@ jobs:
     steps:
       - name: Check Cloudflare credentials
         run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "::error::Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID as repository secrets (Settings → Secrets and variables → Actions)."
+          # Name each missing secret rather than failing on both together: the
+          # usual cause is one typo, or a secret saved under Environments or
+          # Dependabot, where `secrets.*` in this job cannot see it.
+          missing=""
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            missing="$missing CLOUDFLARE_API_TOKEN"
+          fi
+          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            missing="$missing CLOUDFLARE_ACCOUNT_ID"
+          fi
+          if [ -n "$missing" ]; then
+            echo "::error::Missing or empty repository secret(s):$missing — add under Settings → Secrets and variables → Actions → *Repository secrets* (an Environment or Dependabot secret is not visible here). Names are case-sensitive and must match exactly."
             exit 1
           fi
+          # Lengths only, never the values, so a truncated paste is visible in
+          # the log without the secret being in it. Expect roughly 40 and 32.
+          echo "Credentials present: token ${#CLOUDFLARE_API_TOKEN} chars, account id ${#CLOUDFLARE_ACCOUNT_ID} chars."
 
       - name: Checkout
         uses: actions/checkout@v4
