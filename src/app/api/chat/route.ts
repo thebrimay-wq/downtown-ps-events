@@ -1,6 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import Anthropic from "@anthropic-ai/sdk";
-import { chatEnabled, runChat, runWithoutAi, type ChatEvent, type ChatTurn } from "@/lib/ai/chat";
+import { runChat, type ChatEvent, type ChatTurn } from "@/lib/ai/chat";
 import { rateLimited } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
@@ -53,9 +52,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Send a messages array ending with a user message." }, { status: 400 });
   }
 
-  const events = chatEnabled()
-    ? runChat(turns, req.signal)
-    : runWithoutAi(turns[turns.length - 1].content);
+  const events = runChat(turns);
 
   const encoder = new TextEncoder();
   const stream = new ReadableStream<Uint8Array>({
@@ -67,7 +64,7 @@ export async function POST(req: NextRequest) {
       } catch (err) {
         if (req.signal.aborted) return;
         console.error("chat failed:", err);
-        send({ type: "error", message: friendlyError(err) });
+        send({ type: "error", message: "Something went wrong while answering. Please try again." });
       } finally {
         controller.close();
       }
@@ -83,18 +80,3 @@ export async function POST(req: NextRequest) {
   });
 }
 
-function friendlyError(err: unknown): string {
-  if (err instanceof Anthropic.AuthenticationError) {
-    return "The site's AI key was rejected. Check ANTHROPIC_API_KEY.";
-  }
-  if (err instanceof Anthropic.RateLimitError) {
-    return "The assistant is busy right now. Try again in a moment.";
-  }
-  if (err instanceof Anthropic.APIConnectionError) {
-    return "Couldn't reach the assistant. Try again in a moment.";
-  }
-  if (err instanceof Anthropic.APIError && err.status && err.status >= 500) {
-    return "The assistant is temporarily unavailable. Try again in a moment.";
-  }
-  return "Something went wrong while answering. Please try again.";
-}

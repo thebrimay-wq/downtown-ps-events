@@ -10,7 +10,9 @@ name: Deploy to Cloudflare
 #   CLOUDFLARE_ACCOUNT_ID  from the Workers & Pages overview page
 #
 # Any of these secrets that are also set on the repository are copied to the
-# Worker after each deploy, so the site's settings live in one place:
+# Worker after each deploy, so the site's settings live in one place
+# (ANTHROPIC_API_KEY is only for scrape normalization; the Ask panel does not
+# call a model):
 #   ANTHROPIC_API_KEY, ADMIN_SECRET, NEXT_PUBLIC_SUPABASE_URL,
 #   NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY
 

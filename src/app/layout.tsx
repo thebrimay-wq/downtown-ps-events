@@ -5,7 +5,6 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { AskProvider } from "@/components/ask-context";
 import { AskPanel } from "@/components/ask-panel";
-import { chatEnabled } from "@/lib/ai/config";
 
 // One family, hierarchy by weight. Instrument Sans is crisp and slightly
 // narrow, with a friendly single-storey a — warmer than a neutral grotesque
@@ -42,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={sans.variable}>
       <body className="flex min-h-dvh flex-col">
-        <AskProvider aiEnabled={chatEnabled()}>
+        <AskProvider>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"

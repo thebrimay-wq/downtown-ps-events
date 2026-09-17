@@ -11,6 +11,7 @@
     "lint": "next lint",
     "scrape": "tsx --env-file-if-exists=.env.local scripts/run-scrapers.ts",
     "typecheck": "tsc --noEmit",
+    "test": "tsx --test 'src/**/*.test.ts'",
     "seed": "tsx --env-file-if-exists=.env.local scripts/seed-supabase.ts",
     "verify": "tsx --env-file-if-exists=.env.local scripts/verify-supabase.ts",
     "knowledge": "tsx scripts/build-knowledge.ts",
