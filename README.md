@@ -276,6 +276,20 @@ curl -sI https://pleasantonevents.com | head -1        # expect HTTP/2 200
 curl -sI https://www.pleasantonevents.com | head -2    # expect a 308 to the bare domain
 ```
 
+```bash
+curl -s https://pleasantonevents.com/robots.txt        # expect the sitemap line
+```
+
+### Search engines
+
+`src/app/sitemap.ts` and `src/app/robots.ts` generate `/sitemap.xml` and
+`/robots.txt` from the live data: every upcoming event plus the home, events
+and submit pages, with `/admin` and `/api/` disallowed. Both are
+`force-dynamic` on purpose — `NEXT_PUBLIC_SITE_URL` is a Worker var that does
+not exist during `next build`, so prerendering them would freeze the
+localhost fallback into the files crawlers read. Submit the sitemap once at
+[Google Search Console](https://search.google.com/search-console).
+
 Certificates usually go live within a couple of minutes of the deploy. The
 `*.workers.dev` hostname keeps working throughout, so the site is never down
 while the domain settles.
