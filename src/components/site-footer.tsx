@@ -16,7 +16,6 @@ export function SiteFooter() {
           <Link href="/events" className="transition-colors hover:text-brand-600">Browse events</Link>
           <AskTrigger className="transition-colors hover:text-brand-600">Ask the calendar</AskTrigger>
           <Link href="/submit" className="transition-colors hover:text-brand-600">Submit an event</Link>
-          <Link href="/admin" className="transition-colors hover:text-brand-600">Admin</Link>
         </nav>
       </div>
       <div className="container-page flex flex-wrap items-center justify-between gap-2 border-t border-ink/10 py-5 text-xs text-ink-muted">

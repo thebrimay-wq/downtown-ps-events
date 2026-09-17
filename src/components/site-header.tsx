@@ -6,7 +6,6 @@ import { AskTrigger } from "./ask-context";
 // soon as there is room for it.
 const NAV = [
   { href: "/events", label: "Events", shortLabel: "Events" },
-  { href: "/admin", label: "Admin", shortLabel: "Admin" },
 ];
 
 export function SiteHeader() {
