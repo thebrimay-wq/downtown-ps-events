@@ -7,11 +7,20 @@ interface CategoryOption {
   label: string;
 }
 
-type Status = "idle" | "submitting" | "success" | "error";
+type Status = "idle" | "submitting" | "success" | "unsaved" | "error";
+
+// Today in the browser's own zone, for the date field's floor. The server
+// re-checks against Pleasanton's date, so this only saves a round trip.
+function todayLocal(): string {
+  const d = new Date();
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
 
 export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -30,9 +39,17 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
           is_family_friendly: data.is_family_friendly === "on",
         }),
       });
+      const body = await res.json().catch(() => ({}));
       if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
         throw new Error(body.error ?? "Something went wrong. Please try again.");
+      }
+      // The API says whether anything was actually stored. When it was not,
+      // the person gets that message, not a thank-you for a queue that does
+      // not exist.
+      if (body.persisted === false) {
+        setNotice(body.message ?? "Your event was not saved.");
+        setStatus("unsaved");
+        return;
       }
       setStatus("success");
       form.reset();
@@ -40,6 +57,24 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
       setStatus("error");
       setError(err instanceof Error ? err.message : "Submission failed.");
     }
+  }
+
+  if (status === "unsaved") {
+    return (
+      <div className="flex flex-col items-center justify-center py-10 text-center">
+        <div className="grid h-14 w-14 place-items-center rounded-full bg-amber-100 text-2xl" aria-hidden>
+          !
+        </div>
+        <h2 className="mt-4 text-xl font-semibold text-ink">This event wasn&rsquo;t saved</h2>
+        <p className="mt-2 max-w-sm text-ink-muted">{notice}</p>
+        <button
+          onClick={() => setStatus("idle")}
+          className="mt-6 rounded-2xl bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-ink-soft"
+        >
+          Back to the form
+        </button>
+      </div>
+    );
   }
 
   if (status === "success") {
@@ -73,7 +108,7 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
 
       <div className="grid gap-5 sm:grid-cols-3">
         <Field label="Date" required>
-          <input type="date" name="event_date" required className={inputClass} />
+          <input type="date" name="event_date" required min={todayLocal()} className={inputClass} />
         </Field>
         <Field label="Start time">
           <input type="time" name="start_time" className={inputClass} />
