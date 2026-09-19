@@ -167,8 +167,13 @@ def parse_vibe(md, url, source, group):
                 elif start_t is None: start_t = tm.group(1)
                 continue
             if re.match(r"^[A-Z][a-z]{2},\s+[A-Z][a-z]{2}\s+\d{1,2}$", l): continue
+            # The entry's own heading, whichever side of the venue heading
+            # it sits on. Waiting for the venue first meant that when the
+            # title came before it in the walk, the walk skipped it, kept
+            # going, and took the previous entry's title instead — 14 of 34
+            # events shipped with a neighbour's name.
             hm = re.match(r"^##\s+(.{3,180})$", l)
-            if hm and venue is not None:
+            if hm:
                 cand = txt(hm.group(1))
                 if cand and cand.lower() not in ("featured", "featured events"):
                     title = cand; break

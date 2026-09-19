@@ -39,7 +39,12 @@ Window: **2026-09-02 → 2027-09-02** (the next 12 months). **1529 distinct even
 
 ## Images
 
-Every event carries an `image_url`. Where it came from:
+Every event carried an `image_url` when crawled. Where it came from:
+
+> Since repaired: the 355 `category-stock` rows ship with no `image_url`.
+> A stock photo shown as the event's own picture was misleading, so the
+> site draws its category fallback for them instead. See
+> `scripts/crawl4ai/repair.py`.
 
 | Origin | Events |
 |---|---:|
