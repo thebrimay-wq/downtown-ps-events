@@ -1,5 +1,5 @@
 import "server-only";
-import { coverageWindow, MAX_RESULTS, searchKnowledge, type SearchParams } from "../knowledge/search";
+import { coverageWindow, MAX_RESULTS, searchKnowledge, type SearchParams, type SearchResponse } from "../knowledge/search";
 import { whenLabel } from "../knowledge/render";
 import type { KnowledgeChunk } from "../knowledge/types";
 import { formatTime, localDateKey } from "../utils";
@@ -77,8 +77,21 @@ interface Found {
   total: number;
   pleasanton: number;
   byDay: Record<string, number>;
+  // How much of a keyword query the listings contained; see SearchResponse.
+  tier: SearchResponse["tier"];
   // Set when the first search came back empty and a looser one was used.
   note: string | null;
+}
+
+const NOTHING: Omit<Found, "note"> = { chunks: [], total: 0, pleasanton: 0, byDay: {}, tier: null };
+
+// A keyword search is an answer when the listings contain the whole phrase.
+// A hit on only its rarest word is still worth showing, labelled as the
+// nearest thing; a hit on any one word ("rally" in "monster truck rally")
+// is noise, and reporting it as a match is how the panel came to invent a
+// Broadway show for a monster truck question.
+function credible(r: Omit<Found, "note">): boolean {
+  return r.total > 0 && r.tier !== "any";
 }
 
 function toParams(i: Intent, today: string): SearchParams {
@@ -115,7 +128,7 @@ async function run(params: SearchParams, evening: boolean): Promise<Omit<Found, 
   const res = await searchKnowledge(params);
   const family = Boolean(params.family);
   if (!evening && !family) {
-    return { chunks: res.results, total: res.total, pleasanton: res.pleasanton, byDay: res.byDay };
+    return { chunks: res.results, total: res.total, pleasanton: res.pleasanton, byDay: res.byDay, tier: res.tier };
   }
   let chunks = res.results;
   if (evening) chunks = eveningOnly(chunks);
@@ -126,7 +139,7 @@ async function run(params: SearchParams, evening: boolean): Promise<Omit<Found, 
     if (c.city === "Pleasanton") pleasanton += 1;
     byDay[c.date ?? "undated"] = (byDay[c.date ?? "undated"] ?? 0) + 1;
   }
-  return { chunks, total: chunks.length, pleasanton, byDay };
+  return { chunks, total: chunks.length, pleasanton, byDay, tier: res.tier };
 }
 
 function addDaysKey(key: string, n: number): string {
@@ -141,11 +154,16 @@ async function find(i: Intent, today: string): Promise<Found> {
   const base = toParams(i, today);
   const scope = describeScope(i);
   const first = await run(base, i.evening);
-  if (first.total > 0) return { ...first, note: null };
+  if (credible(first)) {
+    if (first.tier === "rare") {
+      return { ...first, note: `Nothing matched all of “${i.query}” ${scope}. The closest listings:` };
+    }
+    return { ...first, note: null };
+  }
 
   if (i.category) {
     const r = await run({ ...base, category: null }, i.evening);
-    if (r.total > 0) {
+    if (credible(r)) {
       return {
         ...r,
         note: `No ${categoryNoun(i.category, 2)} ${scope}, but here is what else is on:`,
@@ -155,7 +173,7 @@ async function find(i: Intent, today: string): Promise<Found> {
   if (i.query && i.to) {
     const from = i.from ?? today;
     const r = await run({ ...base, category: null, from, to: addDaysKey(from, 90) }, false);
-    if (r.total > 0) {
+    if (credible(r)) {
       return { ...r, note: `Nothing for “${i.query}” ${scope}. The next ones coming up:` };
     }
   }
@@ -178,7 +196,9 @@ async function find(i: Intent, today: string): Promise<Found> {
       return { ...r, note: `Nothing on the calendar ${scope}${i.city ? "" : " anywhere in the Tri-Valley"}. The next couple of weeks:` };
     }
   }
-  return { ...first, note: null };
+  // Every rung failed. Any-word hits from the first search are not an
+  // answer, so the panel says it found nothing rather than showing them.
+  return { ...NOTHING, note: null };
 }
 
 // "this weekend in Livermore", "tonight", "in October"

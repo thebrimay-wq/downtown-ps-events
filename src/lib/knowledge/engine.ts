@@ -36,6 +36,11 @@ export interface SearchResponse {
   pleasanton: number;
   byDay: Record<string, number>;
   results: KnowledgeChunk[];
+  // How well a keyword query was matched: every word of it, only its rarest
+  // word, or any one word. null when there was no query. A caller deciding
+  // whether to call the results "matches" needs this; a single-word hit on
+  // "monster truck rally" is not one.
+  tier: "full" | "rare" | "any" | null;
 }
 
 export const MAX_RESULTS = 80;
@@ -255,6 +260,7 @@ export function searchCorpus(corpus: Corpus, params: SearchParams): SearchRespon
   // listings contain every word of the query, only those count; failing
   // that, the ones with its rarest word; any-word matches are the last
   // resort.
+  let tier: SearchResponse["tier"] = null;
   if (scored && scored.terms > 1) {
     const keep = matches.some((m) => m.full) ? "full" : matches.some((m) => m.rare) ? "rare" : null;
     if (keep) {
@@ -262,6 +268,9 @@ export function searchCorpus(corpus: Corpus, params: SearchParams): SearchRespon
         if (!matches[i][keep]) matches.splice(i, 1);
       }
     }
+    tier = matches.length ? (keep ?? "any") : null;
+  } else if (scored) {
+    tier = matches.length ? "full" : null;
   }
 
   if (scores && params.minRelevance) {
@@ -305,5 +314,6 @@ export function searchCorpus(corpus: Corpus, params: SearchParams): SearchRespon
     pleasanton,
     byDay,
     results: matches.slice(0, limit).map((m) => m.chunk),
+    tier,
   };
 }
