@@ -2,8 +2,9 @@ import Link from "next/link";
 import { Sparkles } from "lucide-react";
 import { AskTrigger } from "./ask-context";
 
-// Short labels keep the bar on one line at 375px; the full wording returns as
-// soon as there is room for it.
+// The bar has to fit a 360px phone with the logo, two links and the Submit
+// pill on one line, so below `sm` the labels are short and the padding is
+// tight; the full wording and spacing return as soon as there is room.
 const NAV = [
   { href: "/events", label: "Events", shortLabel: "Events" },
 ];
@@ -25,24 +26,24 @@ export function SiteHeader() {
           <span className="sr-only">— home</span>
         </Link>
 
-        <nav className="flex items-center gap-1 sm:gap-2">
+        <nav className="flex items-center gap-0.5 sm:gap-2">
           {NAV.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-3 text-sm font-semibold text-ink-soft transition duration-200 hover:bg-ink/[0.05] hover:text-ink"
+              className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-2.5 text-sm font-semibold text-ink-soft transition duration-200 hover:bg-ink/[0.05] hover:text-ink sm:px-3"
             >
               <span className="sm:hidden">{item.shortLabel}</span>
               <span className="hidden sm:inline">{item.label}</span>
             </Link>
           ))}
-          <AskTrigger className="inline-flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-sm font-semibold text-ink-soft transition duration-200 hover:bg-ink/[0.05] hover:text-ink">
+          <AskTrigger className="inline-flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 text-sm font-semibold text-ink-soft transition duration-200 hover:bg-ink/[0.05] hover:text-ink sm:px-3">
             <Sparkles aria-hidden className="h-4 w-4 text-brand-600" strokeWidth={2.25} />
             Ask
           </AskTrigger>
           <Link
             href="/submit"
-            className="ml-1 inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-brand-600 px-4 text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-brand-700"
+            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-brand-600 px-3.5 text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-brand-700 sm:ml-1 sm:px-4"
           >
             <span className="sm:hidden">Submit</span>
             <span className="hidden sm:inline">Submit an event</span>

@@ -210,7 +210,7 @@ function CardGrid({ events }: { events: Awaited<ReturnType<typeof getEvents>> })
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {events.map((event, i) => (
-        <div key={event.id} className="animate-fade-up" style={{ animationDelay: `${Math.min(i, 5) * 50}ms` }}>
+        <div key={event.id} className="min-w-0 animate-fade-up" style={{ animationDelay: `${Math.min(i, 5) * 50}ms` }}>
           <EventCard event={event} />
         </div>
       ))}

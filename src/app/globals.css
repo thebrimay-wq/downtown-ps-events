@@ -6,6 +6,13 @@
   html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* Nothing may scroll the page sideways. A header that once needed 474px
+       on a 390px phone dragged every page to the right and took the
+       position:fixed Ask button and drawer controls off-screen with it. The
+       rule has to sit on html: on body it propagates to the viewport as
+       visible and the page still scrolls. clip, not hidden, so html never
+       becomes a scroll container and the sticky header keeps working. */
+    overflow-x: clip;
   }
   body {
     @apply bg-canvas text-ink antialiased;

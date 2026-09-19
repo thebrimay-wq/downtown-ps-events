@@ -18,7 +18,7 @@ export function EventCard({ event }: { event: EventRecord }) {
   return (
     <Link
       href={`/events/${event.slug ?? event.id}`}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl bg-canvas-raised shadow-card ring-1 ring-ink/10 transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-card-hover"
+      className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl bg-canvas-raised shadow-card ring-1 ring-ink/10 transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-card-hover"
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-canvas-sunken">
         {event.image_url ? (
