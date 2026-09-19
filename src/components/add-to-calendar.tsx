@@ -7,8 +7,26 @@ function toICSDate(iso: string): string {
   return new Date(iso).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
 }
 
+// The calendar date an ISO string names in its own zone, as YYYYMMDD. Taken
+// from the text rather than a Date so a 7 PM Pacific start does not become
+// the next day once it is read back in UTC.
+function toICSDay(iso: string): string {
+  return iso.slice(0, 10).replace(/-/g, "");
+}
+
+function nextICSDay(yyyymmdd: string): string {
+  const y = Number(yyyymmdd.slice(0, 4));
+  const m = Number(yyyymmdd.slice(4, 6));
+  const d = Number(yyyymmdd.slice(6, 8));
+  return new Date(Date.UTC(y, m - 1, d + 1)).toISOString().slice(0, 10).replace(/-/g, "");
+}
+
+// Text values per RFC 5545: backslash, semicolon and comma are escaped, a
+// newline becomes the literal \n, and a bare carriage return is dropped so
+// no value can start a new property line of its own.
 function escapeICS(text: string): string {
   return text
+    .replace(/\r/g, "")
     .replace(/\\/g, "\\\\")
     .replace(/;/g, "\\;")
     .replace(/,/g, "\\,")
@@ -17,11 +35,23 @@ function escapeICS(text: string): string {
 
 export function AddToCalendar({ event }: { event: EventRecord }) {
   const handleDownload = () => {
-    const end = event.end_at
-      ? event.end_at
-      : new Date(
-          new Date(event.start_at).getTime() + 2 * 60 * 60 * 1000,
-        ).toISOString();
+    // An all-day event's start_at carries a placeholder clock time the page
+    // deliberately does not show. Writing it into the file would put an
+    // invented 12:00 PM in the reader's calendar, so those go out as
+    // VALUE=DATE, whose DTEND is the day after the last day (exclusive).
+    let when: string[];
+    if (event.all_day) {
+      const first = toICSDay(event.start_at);
+      const last = event.end_at ? toICSDay(event.end_at) : first;
+      when = [`DTSTART;VALUE=DATE:${first}`, `DTEND;VALUE=DATE:${nextICSDay(last)}`];
+    } else {
+      const end = event.end_at
+        ? event.end_at
+        : new Date(
+            new Date(event.start_at).getTime() + 2 * 60 * 60 * 1000,
+          ).toISOString();
+      when = [`DTSTART:${toICSDate(event.start_at)}`, `DTEND:${toICSDate(end)}`];
+    }
 
     const lines = [
       "BEGIN:VCALENDAR",
@@ -31,8 +61,7 @@ export function AddToCalendar({ event }: { event: EventRecord }) {
       "BEGIN:VEVENT",
       `UID:${event.id}@pleasanton-events-hub`,
       `DTSTAMP:${toICSDate(new Date().toISOString())}`,
-      `DTSTART:${toICSDate(event.start_at)}`,
-      `DTEND:${toICSDate(end)}`,
+      ...when,
       `SUMMARY:${escapeICS(event.title)}`,
       event.description
         ? `DESCRIPTION:${escapeICS(event.description)}`
@@ -40,7 +69,7 @@ export function AddToCalendar({ event }: { event: EventRecord }) {
       event.address || event.venue
         ? `LOCATION:${escapeICS([event.venue, event.address].filter(Boolean).join(", "))}`
         : "",
-      event.source_url ? `URL:${event.source_url}` : "",
+      event.source_url ? `URL:${event.source_url.replace(/[\r\n]/g, "")}` : "",
       "END:VEVENT",
       "END:VCALENDAR",
     ].filter(Boolean);
