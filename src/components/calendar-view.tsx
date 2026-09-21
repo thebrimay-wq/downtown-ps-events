@@ -22,15 +22,36 @@ function labelFor(monthKey: string): string {
 
 export type SearchParams = Record<string, string | string[] | undefined>;
 
-function hrefWithMonth(params: SearchParams, monthKey: string): string {
+function hrefWith(
+  params: SearchParams,
+  changes: Record<string, string>,
+  omit: string[],
+): string {
   const next = new URLSearchParams();
   for (const [key, value] of Object.entries(params)) {
-    if (key === "month" || value === undefined) continue;
+    if (omit.includes(key) || key in changes || value === undefined) continue;
     next.set(key, Array.isArray(value) ? (value[0] ?? "") : value);
   }
-  next.set("month", monthKey);
+  for (const [key, value] of Object.entries(changes)) next.set(key, value);
   return `/events?${next.toString()}`;
 }
+
+function hrefWithMonth(params: SearchParams, monthKey: string): string {
+  return hrefWith(params, { month: monthKey }, []);
+}
+
+// One day's list, with the other filters kept. The month and any earlier
+// page cut belong to this grid, not to the list.
+function hrefForDay(params: SearchParams, dayKey: string): string {
+  return hrefWith(params, { date: dayKey }, ["view", "month", "limit"]);
+}
+
+const dayLabelFmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+  timeZone: "UTC",
+});
 
 /**
  * A month grid with navigation. Only months that actually contain events are
@@ -145,46 +166,67 @@ export function CalendarView({
           const key = keyFor(day);
           const dayEvents = byDay.get(key) ?? [];
           const isToday = key === todayKey;
+          // Days with events link to their own list. A day with nothing on
+          // it has nothing to open.
+          const href = dayEvents.length > 0 ? hrefForDay(params, key) : null;
+          const dayLabel = `${dayEvents.length} event${
+            dayEvents.length === 1 ? "" : "s"
+          } on ${dayLabelFmt.format(new Date(Date.UTC(year, monthNum - 1, day)))}`;
+          const numberClass = isToday
+            ? "tabular ml-auto grid h-6 w-6 place-items-center rounded-full bg-brand-600 text-xs font-bold text-white"
+            : "tabular block px-1 text-xs font-semibold text-ink-muted";
+          const dots = (
+            <span className="flex flex-wrap gap-1 px-1" aria-hidden>
+              {dayEvents.slice(0, 5).map((e) => (
+                <span
+                  key={e.id}
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ backgroundColor: categoryMeta(e.category).color }}
+                />
+              ))}
+              {dayEvents.length > 5 && (
+                <span className="text-[9px] font-bold leading-none text-ink-muted">
+                  +{dayEvents.length - 5}
+                </span>
+              )}
+            </span>
+          );
           return (
             <div
               key={i}
-              className="min-h-[68px] space-y-1 border-b border-r border-ink/10 p-1.5 [&:nth-child(7n)]:border-r-0 sm:min-h-[116px]"
+              className="flex min-h-[68px] flex-col border-b border-r border-ink/10 p-1.5 [&:nth-child(7n)]:border-r-0 sm:min-h-[116px]"
             >
-              <div
-                className={
-                  isToday
-                    ? "tabular ml-auto grid h-6 w-6 place-items-center rounded-full bg-brand-600 text-xs font-bold text-white"
-                    : "tabular px-1 text-xs font-semibold text-ink-muted"
-                }
-              >
-                {day}
-              </div>
-
               {/* Phones: coloured dots read as density. Titles truncated to
                   "W…" tell the reader nothing, and a 12px link is well under
-                  the 44px minimum tap target. List view carries the detail. */}
-              <div
-                className="flex flex-wrap gap-1 px-1 sm:hidden"
-                aria-label={`${dayEvents.length} event${
-                  dayEvents.length === 1 ? "" : "s"
-                }`}
-              >
-                {dayEvents.slice(0, 5).map((e) => (
-                  <span
-                    key={e.id}
-                    aria-hidden
-                    className="h-1.5 w-1.5 rounded-full"
-                    style={{ backgroundColor: categoryMeta(e.category).color }}
-                  />
-                ))}
-                {dayEvents.length > 5 && (
-                  <span aria-hidden className="text-[9px] font-bold leading-none text-ink-muted">
-                    +{dayEvents.length - 5}
-                  </span>
-                )}
-              </div>
+                  the 44px minimum tap target, so the whole cell is the tap
+                  target and it opens the day's list. */}
+              {href ? (
+                <Link
+                  href={href}
+                  aria-label={dayLabel}
+                  className="flex flex-1 flex-col gap-1 rounded-lg transition duration-200 hover:bg-ink/[0.04] sm:hidden"
+                >
+                  <span className={numberClass}>{day}</span>
+                  {dots}
+                </Link>
+              ) : (
+                <div className={`${numberClass} sm:hidden`}>{day}</div>
+              )}
 
               <div className="hidden space-y-1 sm:block">
+                {href ? (
+                  <Link
+                    href={href}
+                    aria-label={dayLabel}
+                    className={`${numberClass} transition duration-200 ${
+                      isToday ? "hover:bg-brand-700" : "hover:text-brand-600"
+                    }`}
+                  >
+                    {day}
+                  </Link>
+                ) : (
+                  <div className={numberClass}>{day}</div>
+                )}
                 {dayEvents.slice(0, 3).map((e) => {
                   const meta = categoryMeta(e.category);
                   return (
@@ -202,10 +244,13 @@ export function CalendarView({
                     </Link>
                   );
                 })}
-                {dayEvents.length > 3 && (
-                  <div className="tabular px-1.5 text-[11px] font-medium text-ink-muted">
+                {dayEvents.length > 3 && href && (
+                  <Link
+                    href={href}
+                    className="tabular block rounded-lg px-1.5 py-1 text-[11px] font-semibold text-ink-muted transition duration-200 hover:bg-ink/[0.05] hover:text-ink"
+                  >
                     +{dayEvents.length - 3} more
-                  </div>
+                  </Link>
                 )}
               </div>
             </div>
@@ -214,7 +259,7 @@ export function CalendarView({
       </div>
 
       <p className="border-t border-ink/10 px-5 py-3 text-xs text-ink-muted sm:hidden">
-        Each dot is one event. Switch to List for titles and times.
+        Each dot is one event. Tap a day for its titles and times.
       </p>
     </div>
   );

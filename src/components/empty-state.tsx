@@ -4,10 +4,13 @@ export function EmptyState({
   title,
   description,
   icon: Icon = Search,
+  action,
 }: {
   title: string;
   description?: string;
   icon?: LucideIcon;
+  // The way forward, right here, so nobody has to hunt for it elsewhere.
+  action?: React.ReactNode;
 }) {
   return (
     <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-ink/15 bg-canvas-raised/60 px-6 py-16 text-center">
@@ -18,6 +21,7 @@ export function EmptyState({
       {description && (
         <p className="mt-1.5 max-w-sm text-sm leading-relaxed text-ink-muted">{description}</p>
       )}
+      {action && <div className="mt-6">{action}</div>}
     </div>
   );
 }
