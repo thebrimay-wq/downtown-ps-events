@@ -5,6 +5,7 @@ import { fetchHtml } from "./fetch";
 import { normalizeEvents, aiEnabled } from "../ai/normalize";
 import { compareEvents, dedupeHash } from "../dedupe";
 import { slugify } from "../utils";
+import { fetchAllRows } from "../supabase/rows";
 
 import { pleasantonDowntown } from "./sources/pleasanton-downtown";
 import { farmersMarket } from "./sources/farmers-market";
@@ -62,12 +63,18 @@ export async function runScrapers(
     aiNormalization: aiEnabled(),
   };
 
-  // Load existing future events once for in-memory dedupe.
-  const { data: existingRows } = await admin
-    .from("events")
-    .select("id, title, start_at, venue, dedupe_hash")
-    .gte("start_at", new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString());
-  const existing: ExistingEvent[] = (existingRows ?? []) as ExistingEvent[];
+  // Load existing future events once for in-memory dedupe. This has to be
+  // the complete set: any row the paginator misses is a row the run below
+  // re-inserts, and the calendar fills with compounding duplicates.
+  const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+  const existingRows = await fetchAllRows(() =>
+    admin
+      .from("events")
+      .select("id, title, start_at, venue, dedupe_hash")
+      .gte("start_at", since)
+      .order("start_at", { ascending: true }),
+  );
+  const existing: ExistingEvent[] = existingRows as unknown as ExistingEvent[];
   const existingHashes = new Set(
     existing.map((e) => e.dedupe_hash).filter(Boolean) as string[],
   );
