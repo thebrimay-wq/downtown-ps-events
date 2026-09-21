@@ -24,10 +24,19 @@ export default async function HomePage() {
     getEvents(),
   ]);
 
-  // The homepage headings say Pleasanton, so the rails show Pleasanton.
-  const today = allToday.filter(inPleasanton);
-  const weekend = allWeekend.filter(inPleasanton);
-  const upcoming = allUpcoming.filter(inPleasanton);
+  // The homepage headings say Pleasanton, so the rails show Pleasanton. Each
+  // rail also skips what an earlier one already showed: today's events are
+  // this weekend's and this month's too, and the three rails were once
+  // twelve slots for six events.
+  const seen = new Set<string>();
+  const fresh = (events: Awaited<ReturnType<typeof getEvents>>, take: number) => {
+    const out = events.filter((e) => inPleasanton(e) && !seen.has(e.id)).slice(0, take);
+    for (const e of out) seen.add(e.id);
+    return out;
+  };
+  const today = fresh(allToday, Infinity);
+  const weekend = fresh(allWeekend, 6);
+  const upcoming = fresh(allUpcoming, 6);
 
   return (
     <div>
@@ -49,7 +58,7 @@ export default async function HomePage() {
 
             <h1
               className="display animate-fade-up mt-6 text-balance text-[2.75rem] text-ink sm:text-[4rem] lg:text-[4.75rem]"
-              style={{ animationDelay: "80ms" }}
+              style={{ animationDelay: "60ms" }}
             >
               What&apos;s happening in{" "}
               <span className="text-brand-600">Pleasanton</span>
@@ -57,7 +66,7 @@ export default async function HomePage() {
 
             <p
               className="animate-fade-up mt-5 max-w-xl text-lg leading-relaxed text-ink-soft"
-              style={{ animationDelay: "160ms" }}
+              style={{ animationDelay: "120ms" }}
             >
               Every concert, market, festival and family outing across the
               Tri-Valley, gathered into one calendar.
@@ -66,7 +75,7 @@ export default async function HomePage() {
             <form
               action="/events"
               className="animate-fade-up mt-8 flex max-w-xl items-center gap-2 rounded-2xl bg-canvas-raised p-2 shadow-card ring-1 ring-ink/10 transition focus-within:ring-2 focus-within:ring-brand-500"
-              style={{ animationDelay: "240ms" }}
+              style={{ animationDelay: "180ms" }}
             >
               <Search aria-hidden className="ml-3 h-5 w-5 shrink-0 text-ink-muted" strokeWidth={2} />
               <input
@@ -77,7 +86,7 @@ export default async function HomePage() {
               />
               <button
                 type="submit"
-                className="min-h-11 shrink-0 rounded-xl bg-brand-600 px-5 text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-brand-700 active:scale-[0.98]"
+                className="min-h-11 shrink-0 rounded-xl bg-brand-600 px-5 text-sm font-semibold text-white shadow-card transition duration-200 hover:bg-brand-700 active:scale-[0.98]"
               >
                 Search
               </button>
@@ -85,7 +94,7 @@ export default async function HomePage() {
 
             <p
               className="animate-fade-up mt-4 text-sm text-ink-muted"
-              style={{ animationDelay: "280ms" }}
+              style={{ animationDelay: "180ms" }}
             >
               Or just ask:{" "}
               <AskTrigger
@@ -100,7 +109,7 @@ export default async function HomePage() {
 
             <dl
               className="animate-fade-up mt-7 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-sm text-ink-muted"
-              style={{ animationDelay: "320ms" }}
+              style={{ animationDelay: "180ms" }}
             >
               <Stat value={meta.events.toLocaleString("en-US")} label="events" />
               <Stat value={String(meta.sources)} label="local sources" />
@@ -109,7 +118,7 @@ export default async function HomePage() {
 
             <div
               className="animate-fade-up mt-8 flex flex-wrap gap-2"
-              style={{ animationDelay: "400ms" }}
+              style={{ animationDelay: "180ms" }}
             >
               {Object.entries(CATEGORY_META)
                 .filter(([slug]) => slug !== "other")
@@ -139,7 +148,7 @@ export default async function HomePage() {
 
       <Section title="This weekend in Pleasanton" eyebrow="Make plans" eyebrowIcon={PartyPopper} href="/events?date=weekend" linkLabel="See the weekend">
         {weekend.length > 0 ? (
-          <CardGrid events={weekend.slice(0, 6)} />
+          <CardGrid events={weekend} />
         ) : (
           <EmptyState icon={Inbox} title="No weekend events yet" description="New events arrive as our sources publish them." />
         )}
@@ -147,7 +156,7 @@ export default async function HomePage() {
 
       <Section title="Coming up" eyebrow="On the horizon" eyebrowIcon={CalendarDays} href="/events" linkLabel="Browse the whole Tri-Valley">
         {upcoming.length > 0 ? (
-          <CardGrid events={upcoming.slice(0, 6)} />
+          <CardGrid events={upcoming} />
         ) : (
           <EmptyState title="No upcoming events" />
         )}

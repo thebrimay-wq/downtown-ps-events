@@ -49,7 +49,9 @@ export default function RootLayout({
           Skip to content
         </a>
         <SiteHeader />
-        <main id="main" className="flex-1">
+        {/* Bottom padding clears the floating Ask button, which otherwise sat
+            over the last row of every page. */}
+        <main id="main" className="flex-1 pb-24">
           {children}
         </main>
         <SiteFooter />

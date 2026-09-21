@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { fromZonedTime } from "date-fns-tz";
 import { getEvents, usingBundledData } from "@/lib/data";
 import type { EventFilters as Filters, EventRecord } from "@/lib/types";
 import { EventCard } from "@/components/event-card";
@@ -6,8 +8,14 @@ import { EventFilters } from "@/components/event-filters";
 import { ViewToggle } from "@/components/view-toggle";
 import { CalendarView } from "@/components/calendar-view";
 import { EmptyState } from "@/components/empty-state";
+import { ShowMore } from "@/components/show-more";
+import {
+  FilterCount,
+  FilterResults,
+  FilterTransitionProvider,
+} from "@/components/filter-transition";
 import { BundledDataBanner } from "@/components/bundled-data-banner";
-import { isThisWeekend, isToday, localDateKey } from "@/lib/utils";
+import { TZ, isThisWeekend, isToday, localDateKey } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Browse Events",
@@ -17,10 +25,26 @@ export const metadata: Metadata = {
 
 export const revalidate = 300;
 
+// How many cards a page carries before "Show more". The full list is over a
+// thousand cards and 11 MB of HTML; on a phone it was half a million pixels
+// tall.
+const PAGE_SIZE = 60;
+
 type SearchParams = Record<string, string | string[] | undefined>;
 
 function str(v: string | string[] | undefined): string | undefined {
   return Array.isArray(v) ? v[0] : v;
+}
+
+// A calendar day link asks for date=YYYY-MM-DD; the presets are words.
+const DAY_KEY = /^\d{4}-\d{2}-\d{2}$/;
+
+// The instants that bound one Pleasanton calendar day.
+function dayBounds(key: string): Pick<Filters, "from" | "to"> {
+  return {
+    from: fromZonedTime(`${key}T00:00:00`, TZ).toISOString(),
+    to: fromZonedTime(`${key}T23:59:59.999`, TZ).toISOString(),
+  };
 }
 
 function applyDatePreset(events: EventRecord[], preset?: string): EventRecord[] {
@@ -35,22 +59,35 @@ function applyDatePreset(events: EventRecord[], preset?: string): EventRecord[] 
   return events;
 }
 
-// Group a list of events by their local date key for the list view.
-function groupByDay(events: EventRecord[]): [string, EventRecord[]][] {
-  const map = new Map<string, EventRecord[]>();
+type DayGroup = { key: string; total: number; events: EventRecord[] };
+
+// Group events by their local date key for the list view, keeping only the
+// first `limit` cards. A group cut short still knows its full size, so the
+// day heading stays honest and the next page picks the same day up again.
+function groupByDay(events: EventRecord[], limit: number): DayGroup[] {
+  const groups: DayGroup[] = [];
+  let shown = 0;
   for (const e of events) {
     const key = localDateKey(new Date(e.start_at));
-    if (!map.has(key)) map.set(key, []);
-    map.get(key)!.push(e);
+    let group = groups[groups.length - 1];
+    if (!group || group.key !== key) {
+      group = { key, total: 0, events: [] };
+      groups.push(group);
+    }
+    group.total += 1;
+    if (shown < limit) {
+      group.events.push(e);
+      shown += 1;
+    }
   }
-  return [...map.entries()];
+  return groups.filter((g) => g.events.length > 0);
 }
 
 const dayHeadingFmt = new Intl.DateTimeFormat("en-US", {
   weekday: "long",
   month: "long",
   day: "numeric",
-  timeZone: "America/Los_Angeles",
+  timeZone: TZ,
 });
 
 export default async function EventsPage({
@@ -59,24 +96,40 @@ export default async function EventsPage({
   searchParams: Promise<SearchParams>;
 }) {
   const sp = await searchParams;
+  const datePreset = str(sp.date);
   const filters: Filters = {
     category: str(sp.category),
     search: str(sp.search),
     location: str(sp.location),
     free: str(sp.free) === "1",
     familyFriendly: str(sp.family) === "1",
+    ...(datePreset && DAY_KEY.test(datePreset) ? dayBounds(datePreset) : {}),
   };
-  const datePreset = str(sp.date);
   const view = str(sp.view) === "calendar" ? "calendar" : "list";
   const month = str(sp.month);
+  const limit = Math.max(1, parseInt(str(sp.limit) ?? "", 10) || PAGE_SIZE);
+  const hasFilters = ["category", "search", "location", "free", "family", "date"]
+    .some((key) => str(sp[key]));
 
   let events = await getEvents(filters);
   events = applyDatePreset(events, datePreset);
 
-  const grouped = groupByDay(events);
+  // The header count is the whole result; only the cards are cut.
+  const grouped = groupByDay(events, limit);
+  const shown = Math.min(limit, events.length);
+  const remaining = events.length - shown;
+  const moreHref = (() => {
+    const next = new URLSearchParams();
+    for (const [key, value] of Object.entries(sp)) {
+      const v = str(value);
+      if (v !== undefined && key !== "limit") next.set(key, v);
+    }
+    next.set("limit", String(Math.min(limit + PAGE_SIZE, events.length)));
+    return `/events?${next.toString()}`;
+  })();
 
   return (
-    <div>
+    <FilterTransitionProvider>
       {usingBundledData() && <BundledDataBanner />}
 
       {/* Page header */}
@@ -87,10 +140,7 @@ export default async function EventsPage({
               Events in Pleasanton &amp; the Tri-Valley
             </h1>
             <p className="mt-2 text-ink-muted">
-              <span className="tabular font-semibold text-ink-soft">
-                {events.length.toLocaleString("en-US")}
-              </span>{" "}
-              upcoming event{events.length === 1 ? "" : "s"}
+              <FilterCount total={events.length} />
             </p>
           </div>
           <ViewToggle />
@@ -105,37 +155,57 @@ export default async function EventsPage({
       </div>
 
       {/* Results */}
-      <div className="container-page py-8">
-        {events.length === 0 ? (
-          <EmptyState
-            title="No events match your filters"
-            description="Try clearing a filter or widening your date range."
-          />
-        ) : view === "calendar" ? (
-          <CalendarView events={events} month={month} params={sp} />
-        ) : (
-          <div className="space-y-12">
-            {grouped.map(([dayKey, dayEvents]) => (
-              <section key={dayKey}>
-                <h2 className="eyebrow mb-5 flex items-center gap-3 text-ink-muted">
-                  <span className="text-ink">
-                    {dayHeadingFmt.format(new Date(`${dayKey}T12:00:00`))}
-                  </span>
-                  <span className="h-px flex-1 bg-ink/10" />
-                  <span className="tabular">
-                    {dayEvents.length} event{dayEvents.length === 1 ? "" : "s"}
-                  </span>
-                </h2>
-                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {dayEvents.map((event) => (
-                    <EventCard key={event.id} event={event} />
-                  ))}
-                </div>
-              </section>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
+      <FilterResults>
+        <div className="container-page py-8">
+          {events.length === 0 ? (
+            <EmptyState
+              title="No events match your filters"
+              description="Try clearing a filter or widening your date range."
+              action={
+                hasFilters && (
+                  <Link
+                    href="/events"
+                    className="inline-flex min-h-11 items-center rounded-full bg-ink px-5 text-sm font-semibold text-white shadow-card transition hover:bg-ink-soft"
+                  >
+                    Clear all filters
+                  </Link>
+                )
+              }
+            />
+          ) : view === "calendar" ? (
+            <CalendarView events={events} month={month} params={sp} />
+          ) : (
+            <div className="space-y-12">
+              {grouped.map((day) => (
+                <section key={day.key}>
+                  <h2 className="eyebrow mb-5 flex items-center gap-3 text-ink-muted">
+                    <span className="text-ink">
+                      {dayHeadingFmt.format(new Date(`${day.key}T12:00:00`))}
+                    </span>
+                    <span className="h-px flex-1 bg-ink/10" />
+                    <span className="tabular">
+                      {day.total} event{day.total === 1 ? "" : "s"}
+                    </span>
+                  </h2>
+                  <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    {day.events.map((event) => (
+                      <EventCard key={event.id} event={event} />
+                    ))}
+                  </div>
+                </section>
+              ))}
+              {remaining > 0 && (
+                <ShowMore
+                  href={moreHref}
+                  step={Math.min(PAGE_SIZE, remaining)}
+                  shown={shown}
+                  total={events.length}
+                />
+              )}
+            </div>
+          )}
+        </div>
+      </FilterResults>
+    </FilterTransitionProvider>
   );
 }

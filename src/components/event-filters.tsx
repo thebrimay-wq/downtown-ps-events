@@ -1,10 +1,11 @@
 "use client";
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useCallback, useState, useEffect, useTransition } from "react";
+import { useCallback, useState, useEffect, useRef } from "react";
 import { CATEGORY_META } from "@/lib/categories";
 import { CategoryIcon } from "./category-icon";
-import { BadgeDollarSign, Baby, MapPin, X } from "lucide-react";
+import { useFilterTransition } from "./filter-transition";
+import { BadgeDollarSign, Baby, CalendarDays, MapPin, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const DATE_PRESETS = [
@@ -18,35 +19,60 @@ export function EventFilters() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [, startTransition] = useTransition();
+  const [isPending, startTransition] = useFilterTransition();
 
   const [search, setSearch] = useState(searchParams.get("search") ?? "");
   const [location, setLocation] = useState(searchParams.get("location") ?? "");
 
+  // The params the last navigation asked for. The URL only catches up once
+  // the server has answered, which can take seconds, so anything that edits
+  // the query in the meantime builds on this rather than on the stale URL.
+  // Without it, "Clear all filters" with text in a box reset the URL and
+  // then the search debounce rewrote it from the old params, minus only the
+  // text — every pill came back.
+  const pending = useRef<URLSearchParams | null>(null);
+
   // Keep local inputs in sync if the URL changes externally (e.g. back button).
   useEffect(() => {
+    pending.current = null;
     setSearch(searchParams.get("search") ?? "");
     setLocation(searchParams.get("location") ?? "");
   }, [searchParams]);
 
+  const current = useCallback(
+    () => pending.current ?? new URLSearchParams(searchParams.toString()),
+    [searchParams],
+  );
+
+  const navigate = useCallback(
+    (params: URLSearchParams) => {
+      pending.current = params;
+      const query = params.toString();
+      startTransition(() => {
+        router.replace(query ? `${pathname}?${query}` : pathname, {
+          scroll: false,
+        });
+      });
+    },
+    [router, pathname, startTransition],
+  );
+
   const update = useCallback(
     (changes: Record<string, string | null>) => {
-      const params = new URLSearchParams(searchParams.toString());
+      const params = current();
       for (const [key, value] of Object.entries(changes)) {
         if (value === null || value === "") params.delete(key);
         else params.set(key, value);
       }
-      startTransition(() => {
-        router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-      });
+      navigate(params);
     },
-    [router, pathname, searchParams],
+    [current, navigate],
   );
 
   // Debounce free-text inputs.
   useEffect(() => {
     const t = setTimeout(() => {
-      if (search !== (searchParams.get("search") ?? "")) update({ search });
+      if (search !== (current().get("search") ?? "")) update({ search });
     }, 300);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -54,7 +80,7 @@ export function EventFilters() {
 
   useEffect(() => {
     const t = setTimeout(() => {
-      if (location !== (searchParams.get("location") ?? ""))
+      if (location !== (current().get("location") ?? ""))
         update({ location });
     }, 300);
     return () => clearTimeout(t);
@@ -63,6 +89,9 @@ export function EventFilters() {
 
   const activeCategory = searchParams.get("category") ?? "";
   const activeDate = searchParams.get("date") ?? "";
+  // A calendar day link lands here with date=YYYY-MM-DD, which no preset
+  // matches; it gets its own pill so the state is visible and clearable.
+  const customDate = /^\d{4}-\d{2}-\d{2}$/.test(activeDate) ? activeDate : "";
   const free = searchParams.get("free") === "1";
   const family = searchParams.get("family") === "1";
 
@@ -74,7 +103,10 @@ export function EventFilters() {
     activeCategory || activeDate || free || family || search || location;
 
   return (
-    <div className="space-y-3.5 rounded-2xl bg-canvas-raised p-4 shadow-card ring-1 ring-ink/10 sm:p-5">
+    <div
+      aria-busy={isPending}
+      className="space-y-3.5 rounded-2xl bg-canvas-raised p-4 shadow-card ring-1 ring-ink/10 sm:p-5"
+    >
       {/* Search + location */}
       <div className="grid gap-3 sm:grid-cols-2">
         <SearchInput
@@ -92,7 +124,17 @@ export function EventFilters() {
       </div>
 
       {/* Date presets */}
-      <div className="-mx-1 flex gap-2 overflow-x-auto no-scrollbar px-1 pb-1 md:flex-wrap md:overflow-visible">
+      <PillRow label="Date and price filters">
+        {/* First in the row, so it is on screen on a phone without scrolling
+            the row; it is the state the reader just chose. */}
+        {customDate && (
+          <Pill active onClick={() => update({ date: null })}>
+            <CalendarDays aria-hidden className="h-4 w-4" strokeWidth={2} />
+            {dayLabel(customDate)}
+            <X aria-hidden className="-mr-1 h-4 w-4 opacity-70" strokeWidth={2.25} />
+            <span className="sr-only">Clear date</span>
+          </Pill>
+        )}
         {DATE_PRESETS.map((preset) => (
           <Pill
             key={preset.key}
@@ -121,10 +163,10 @@ export function EventFilters() {
           <MapPin aria-hidden className="h-4 w-4" strokeWidth={2} />
           Pleasanton only
         </Pill>
-      </div>
+      </PillRow>
 
       {/* Categories */}
-      <div className="-mx-1 flex gap-2 overflow-x-auto no-scrollbar px-1 pb-1 md:flex-wrap md:overflow-visible">
+      <PillRow label="Category filters">
         <Pill
           active={!activeCategory}
           onClick={() => update({ category: null })}
@@ -145,14 +187,14 @@ export function EventFilters() {
               {meta.label}
             </Pill>
           ))}
-      </div>
+      </PillRow>
 
       {hasFilters && (
         <button
           onClick={() => {
             setSearch("");
             setLocation("");
-            startTransition(() => router.replace(pathname, { scroll: false }));
+            navigate(new URLSearchParams());
           }}
           className="inline-flex items-center gap-1.5 rounded-full px-1 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700"
         >
@@ -160,6 +202,42 @@ export function EventFilters() {
           Clear all filters
         </button>
       )}
+    </div>
+  );
+}
+
+// "Wed, Sep 24" for a YYYY-MM-DD key. Noon keeps the day stable in any
+// browser timezone.
+function dayLabel(key: string): string {
+  const [y, m, d] = key.split("-").map(Number);
+  return new Intl.DateTimeFormat("en-US", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+  }).format(new Date(y, m - 1, d, 12));
+}
+
+// A row of pills that scrolls sideways on a phone and wraps from md up. The
+// scrollbar is hidden, so a fade over the right edge is what says there is
+// more; it goes once the row wraps. The row itself takes focus so arrow keys
+// can scroll it, and tabbing to a pill scrolls it into view anyway.
+function PillRow({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="relative -mx-1 after:pointer-events-none after:absolute after:inset-y-0 after:right-0 after:w-10 after:bg-gradient-to-l after:from-canvas-raised after:to-transparent md:after:hidden">
+      <div
+        role="group"
+        aria-label={label}
+        tabIndex={0}
+        className="flex gap-2 overflow-x-auto no-scrollbar rounded-lg px-1 pb-1 md:flex-wrap md:overflow-visible"
+      >
+        {children}
+      </div>
     </div>
   );
 }
@@ -179,7 +257,7 @@ function Pill({
       className={cn(
         "inline-flex min-h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 text-sm font-semibold transition duration-200",
         active
-          ? "bg-ink text-white shadow-sm"
+          ? "bg-ink text-white shadow-card"
           : "bg-canvas text-ink-soft ring-1 ring-inset ring-ink/10 hover:ring-ink/30 hover:text-ink",
       )}
     >

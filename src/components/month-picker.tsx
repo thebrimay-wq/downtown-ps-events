@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useTransition } from "react";
+import { useFilterTransition } from "./filter-transition";
 
 // Jump straight to a month. The prev/next arrows beside this are plain links
 // so they work without JavaScript; this select is the shortcut for a long range.
@@ -15,13 +15,14 @@ export function MonthPicker({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [, startTransition] = useTransition();
+  const [isPending, startTransition] = useFilterTransition();
 
   return (
     <label className="relative">
       <span className="sr-only">Jump to month</span>
       <select
         value={active}
+        disabled={isPending}
         onChange={(e) => {
           const params = new URLSearchParams(searchParams.toString());
           params.set("month", e.target.value);
@@ -29,7 +30,7 @@ export function MonthPicker({
             router.replace(`${pathname}?${params.toString()}`, { scroll: false });
           });
         }}
-        className="min-h-11 cursor-pointer appearance-none rounded-full bg-canvas py-2 pl-4 pr-9 text-sm font-semibold text-ink-soft ring-1 ring-inset ring-ink/10 transition hover:ring-ink/30 hover:text-ink"
+        className="min-h-11 cursor-pointer appearance-none rounded-full bg-canvas py-2 pl-4 pr-9 text-sm font-semibold text-ink-soft ring-1 ring-inset ring-ink/10 transition hover:ring-ink/30 hover:text-ink disabled:opacity-60"
       >
         {months.map((m) => (
           <option key={m.key} value={m.key}>

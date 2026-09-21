@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -11,10 +10,9 @@ import { CategoryBadge } from "@/components/category-badge";
 import { AddToCalendar } from "@/components/add-to-calendar";
 import { EventCard } from "@/components/event-card";
 import { BundledDataBanner } from "@/components/bundled-data-banner";
-import { cn, formatLongDate, formatTimeRange, safeHttpUrl } from "@/lib/utils";
-import { categoryMeta } from "@/lib/categories";
+import { EventImage } from "@/components/event-image";
+import { cn, formatLongDateRange, formatTimeRange, safeHttpUrl } from "@/lib/utils";
 import { visibleTags } from "@/lib/tags";
-import { CategoryIcon } from "@/components/category-icon";
 import { ArrowLeft, Baby, ExternalLink, MapPin } from "lucide-react";
 
 
@@ -28,12 +26,13 @@ export async function generateMetadata({
   const { id } = await params;
   const event = await getEventByIdOrSlug(id);
   if (!event) return { title: "Event not found" };
+  const image = safeHttpUrl(event.image_url);
   return {
     title: event.title,
     description: event.description?.slice(0, 160) ?? undefined,
     openGraph: {
       title: event.title,
-      images: event.image_url ? [event.image_url] : undefined,
+      images: image ? [image] : undefined,
     },
   };
 }
@@ -48,7 +47,6 @@ export default async function EventDetailPage({
   if (!event) notFound();
 
   const related = await getRelatedEvents(event);
-  const meta = categoryMeta(event.category);
   const tags = visibleTags(event.tags);
   // Scraped and submitted links are only rendered when they are web URLs.
   const imageUrl = safeHttpUrl(event.image_url);
@@ -70,31 +68,15 @@ export default async function EventDetailPage({
           imageUrl ? "h-64 sm:h-96" : "h-48 sm:h-64",
         )}
       >
-        {imageUrl ? (
-          <Image
-            src={imageUrl}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-        ) : (
-          // Most scraped listings ship no artwork; tint the hero by category
-          // rather than leaving a bare grey band.
-          <div
-            className="grid h-full w-full place-items-center"
-            style={{
-              background: `linear-gradient(135deg, ${meta.color}2e, ${meta.color}0f)`,
-              color: meta.color,
-            }}
-          >
-            <CategoryIcon slug={event.category} className="h-16 w-16 opacity-55" />
-          </div>
-        )}
-        {imageUrl && (
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        )}
+        {/* Most scraped listings ship no artwork, and the ones that do can
+            lose it; either way the hero falls back to the category tint
+            rather than a bare grey band. */}
+        <EventImage
+          src={event.image_url}
+          category={event.category}
+          variant="hero"
+          priority
+        />
       </div>
 
       <div className="container-page relative -mt-16 pb-16">
@@ -128,7 +110,7 @@ export default async function EventDetailPage({
             {/* Key facts */}
             <dl className="mt-7 grid gap-x-6 gap-y-5 border-t border-ink/10 pt-6 sm:grid-cols-2">
               <Fact icon="calendar" label="Date">
-                {formatLongDate(event.start_at)}
+                {formatLongDateRange(event.start_at, event.end_at)}
               </Fact>
               <Fact icon="clock" label="Time">
                 {formatTimeRange(event.start_at, event.end_at, event.all_day)}

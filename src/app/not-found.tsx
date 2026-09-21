@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { Map } from "lucide-react";
 
+// Most arrivals here followed a link to an event that has since ended, so the
+// way forward is the calendar, with home as the quieter second choice.
 export default function NotFound() {
   return (
     <div className="container-page flex min-h-[60vh] flex-col items-center justify-center text-center">
-      <div className="text-5xl">🗺️</div>
+      <span className="grid h-20 w-20 place-items-center rounded-2xl bg-canvas-sunken text-ink-faint">
+        <Map aria-hidden className="h-12 w-12" strokeWidth={1.5} />
+      </span>
       <h1 className="mt-4 text-3xl font-bold tracking-tight text-ink">
         Page not found
       </h1>
@@ -12,8 +17,14 @@ export default function NotFound() {
         moved.
       </p>
       <Link
+        href="/events"
+        className="mt-6 rounded-2xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-brand-700"
+      >
+        Browse all events
+      </Link>
+      <Link
         href="/"
-        className="mt-6 rounded-2xl bg-brand-500 px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-brand-600"
+        className="mt-4 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700"
       >
         Back to home
       </Link>
