@@ -87,3 +87,22 @@ test("no query means no tier", () => {
   assert.equal(r.tier, null);
   assert.equal(r.total, 6);
 });
+
+test("\"here\" and \"nearby\" are not words to search for", () => {
+  // Every listing is "here", so the word carries nothing; before it was a
+  // stop word, "knitting here" was a rare-tier hit on knitting alone.
+  const r = searchCorpus(corpus, { query: "knitting here" });
+  assert.equal(r.tier, "full");
+  assert.deepEqual(r.results.map((c) => c.id), ["d"]);
+  const n = searchCorpus(corpus, { query: "taco truck nearby" });
+  assert.equal(n.tier, "full");
+  assert.deepEqual(n.results.map((c) => c.id), ["f"]);
+});
+
+test("only the first dozen distinct words are searched", () => {
+  // The CPU cap: a term past the twelfth is ignored, even when it is the one
+  // that would have matched.
+  const filler = "alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima";
+  assert.equal(searchCorpus(corpus, { query: `${filler} knitting` }).tier, null);
+  assert.equal(searchCorpus(corpus, { query: `knitting ${filler}` }).tier, "rare");
+});

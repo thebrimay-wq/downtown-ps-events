@@ -45,11 +45,14 @@ export interface SearchResponse {
 
 export const MAX_RESULTS = 80;
 const DEFAULT_RESULTS = 40;
+const MAX_QUERY_TERMS = 12;
 
 // --- Tokenizing -------------------------------------------------------------
 
+// "here" and "nearby" are how people say "around Pleasanton", which is every
+// listing there is; left in, "Taylor Swift here" searched for the word "here".
 const STOP = new Set(
-  "a an and are as at be by for from in into is it of on or that the this to with what whats where when who how any some there".split(" "),
+  "a an and are as at be by for from in into is it of on or that the this to with what whats where when who how any some there here nearby".split(" "),
 );
 
 function stem(t: string): string {
@@ -162,7 +165,11 @@ function bm25(corpus: Corpus, query: string): Scored {
   const N = corpus.chunks.length;
   const scores = new Float64Array(N);
   const matched = new Uint16Array(N); // distinct query words each chunk hit
-  const terms = [...new Set(tokenize(query))];
+  // Every distinct term costs its prefix expansions times every document, so
+  // a 2,000-character query of short high-expansion words is ~50x the CPU
+  // of a real question. Nobody asks about more than a dozen things at once;
+  // past that the rest of the words are ignored.
+  const terms = [...new Set(tokenize(query))].slice(0, MAX_QUERY_TERMS);
   let rare = new Uint8Array(N);
   let rareIdf = -1;
   for (const term of terms) {

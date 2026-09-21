@@ -10,6 +10,11 @@ export const dynamic = "force-dynamic";
 
 const MAX_TURNS = 16;
 const MAX_CHARS = 2000;
+// The panel resends the whole thread, replies included (about 2 KB each),
+// and readTurns keeps at most MAX_TURNS of MAX_CHARS, so a legitimate body
+// tops out around 32 KB of text plus JSON. Anything past this is refused
+// before req.json() parses it rather than after.
+const MAX_BODY_BYTES = 64 * 1024;
 
 function readTurns(body: unknown): ChatTurn[] | null {
   const raw = (body as { messages?: unknown })?.messages;
@@ -39,6 +44,10 @@ export async function POST(req: NextRequest) {
       { error: "You've asked a lot in the last few minutes. Give it a short break and try again." },
       { status: 429 },
     );
+  }
+
+  if (Number(req.headers.get("content-length") ?? 0) > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "That conversation is too long to send." }, { status: 413 });
   }
 
   let body: unknown;
