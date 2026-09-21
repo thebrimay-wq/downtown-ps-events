@@ -119,6 +119,21 @@ export function relativeDayLabel(iso: string): string {
   return formatEventDate(iso);
 }
 
+// Event links and images come from scraped third-party pages and from the
+// public submit form, so an href built from one is an href chosen by a
+// stranger. React refuses `javascript:` but passes `data:` and `vbscript:`
+// through untouched. Returns the value only when it is a web URL; render
+// paths treat null as "no link" and show their fallback.
+export function safeHttpUrl(v: string | null | undefined): string | null {
+  if (!v) return null;
+  try {
+    const protocol = new URL(v).protocol;
+    return protocol === "https:" || protocol === "http:" ? v : null;
+  } catch {
+    return null;
+  }
+}
+
 export function slugify(s: string): string {
   return s
     .toLowerCase()

@@ -11,7 +11,7 @@ import { CategoryBadge } from "@/components/category-badge";
 import { AddToCalendar } from "@/components/add-to-calendar";
 import { EventCard } from "@/components/event-card";
 import { BundledDataBanner } from "@/components/bundled-data-banner";
-import { cn, formatLongDate, formatTimeRange } from "@/lib/utils";
+import { cn, formatLongDate, formatTimeRange, safeHttpUrl } from "@/lib/utils";
 import { categoryMeta } from "@/lib/categories";
 import { visibleTags } from "@/lib/tags";
 import { CategoryIcon } from "@/components/category-icon";
@@ -50,6 +50,10 @@ export default async function EventDetailPage({
   const related = await getRelatedEvents(event);
   const meta = categoryMeta(event.category);
   const tags = visibleTags(event.tags);
+  // Scraped and submitted links are only rendered when they are web URLs.
+  const imageUrl = safeHttpUrl(event.image_url);
+  const ticketUrl = safeHttpUrl(event.ticket_url);
+  const sourceUrl = safeHttpUrl(event.source_url);
   const mapsQuery = encodeURIComponent(
     [event.venue, event.address].filter(Boolean).join(", ") || "Pleasanton, CA",
   );
@@ -63,12 +67,12 @@ export default async function EventDetailPage({
         className={cn(
           "relative w-full overflow-hidden bg-canvas-sunken",
           // A flat category tint doesn't need the height a photograph earns.
-          event.image_url ? "h-64 sm:h-96" : "h-48 sm:h-64",
+          imageUrl ? "h-64 sm:h-96" : "h-48 sm:h-64",
         )}
       >
-        {event.image_url ? (
+        {imageUrl ? (
           <Image
-            src={event.image_url}
+            src={imageUrl}
             alt=""
             fill
             priority
@@ -88,7 +92,7 @@ export default async function EventDetailPage({
             <CategoryIcon slug={event.category} className="h-16 w-16 opacity-55" />
           </div>
         )}
-        {event.image_url && (
+        {imageUrl && (
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         )}
       </div>
@@ -152,9 +156,9 @@ export default async function EventDetailPage({
             {/* Actions */}
             <div className="mt-7 flex flex-wrap gap-3">
               <AddToCalendar event={event} />
-              {event.ticket_url && (
+              {ticketUrl && (
                 <a
-                  href={event.ticket_url}
+                  href={ticketUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-brand-700 active:scale-[0.98]"
@@ -190,17 +194,17 @@ export default async function EventDetailPage({
             )}
 
             {/* Source attribution */}
-            {(event.source_name || event.source_url) && (
+            {(event.source_name || sourceUrl) && (
               <div className="mt-8 border-t border-ink/10 pt-5 text-sm text-ink-muted">
                 Listed via{" "}
                 <span className="font-medium text-ink-soft">
                   {event.source_name ?? "external source"}
                 </span>
-                {event.source_url && (
+                {sourceUrl && (
                   <>
                     {" · "}
                     <a
-                      href={event.source_url}
+                      href={sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-medium text-brand-700 hover:text-brand-800"

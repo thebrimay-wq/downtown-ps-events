@@ -10,10 +10,12 @@ import {
   formatMonthShort,
   formatTimeRange,
   relativeDayLabel,
+  safeHttpUrl,
 } from "@/lib/utils";
 
 export function EventCard({ event }: { event: EventRecord }) {
   const meta = categoryMeta(event.category);
+  const imageUrl = safeHttpUrl(event.image_url);
 
   return (
     <Link
@@ -21,9 +23,9 @@ export function EventCard({ event }: { event: EventRecord }) {
       className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl bg-canvas-raised shadow-card ring-1 ring-ink/10 transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-card-hover"
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-canvas-sunken">
-        {event.image_url ? (
+        {imageUrl ? (
           <Image
-            src={event.image_url}
+            src={imageUrl}
             alt=""
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

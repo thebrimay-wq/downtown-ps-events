@@ -9,8 +9,7 @@ import type {
   SubmittedEvent,
 } from "@/lib/types";
 import { CategoryBadge } from "@/components/category-badge";
-import { formatEventDate, formatTimeRange } from "@/lib/utils";
-import { cn } from "@/lib/utils";
+import { cn, formatEventDate, formatTimeRange, safeHttpUrl } from "@/lib/utils";
 
 type Tab = "review" | "submissions" | "sources" | "logs";
 
@@ -255,14 +254,20 @@ export function AdminDashboard({
                   {s.enabled ? "Enabled" : "Disabled"}
                 </span>
               </div>
-              <a
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-1 block truncate text-sm text-brand-700 hover:text-brand-800"
-              >
-                {s.url}
-              </a>
+              {safeHttpUrl(s.url) ? (
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block truncate text-sm text-brand-700 hover:text-brand-800"
+                >
+                  {s.url}
+                </a>
+              ) : (
+                // Shown but not linked: a source row can be edited by hand,
+                // and only a web URL belongs in an href.
+                <p className="mt-1 truncate text-sm text-ink-muted">{s.url}</p>
+              )}
               {s.notes && (
                 <p className="mt-2 text-sm text-ink-muted">{s.notes}</p>
               )}
