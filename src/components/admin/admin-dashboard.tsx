@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import type {
   EventRecord,
   ScrapedEventLog,
@@ -33,36 +34,39 @@ export function AdminDashboard({
   logs: ScrapedEventLog[];
   bundledMode: boolean;
 }) {
+  const router = useRouter();
   const [tab, setTab] = useState<Tab>("review");
-  const [secret, setSecret] = useState("");
   const [pending, setPending] = useState(initialPending);
   const [submissions, setSubmissions] = useState(initialSubmissions);
   const [busy, setBusy] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
 
-  // Persist the admin secret locally so it survives reloads.
-  useEffect(() => {
-    const stored = localStorage.getItem("admin_secret");
-    if (stored) setSecret(stored);
-  }, []);
-  useEffect(() => {
-    if (secret) localStorage.setItem("admin_secret", secret);
-  }, [secret]);
-
+  // The browser holds no secret. The session cookie set at sign-in rides
+  // along with every same-site fetch, and the routes accept it.
   async function callApi(path: string, body: Record<string, unknown>) {
     const res = await fetch(path, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-admin-secret": secret,
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
+    if (res.status === 401) {
+      throw new Error("Your admin session has expired. Reload the page to sign in again.");
+    }
     if (!res.ok) {
       const data = await res.json().catch(() => ({}));
       throw new Error(data.error ?? `Request failed (${res.status})`);
     }
     return res.json();
+  }
+
+  async function signOut() {
+    setBusy("signout");
+    try {
+      await fetch("/api/admin/session", { method: "DELETE" });
+    } finally {
+      // The server decides what an unsigned visitor sees; ask it again.
+      router.refresh();
+    }
   }
 
   async function moderateEvent(id: string, action: "approve" | "reject") {
@@ -110,24 +114,22 @@ export function AdminDashboard({
 
   return (
     <div>
-      {/* Secret + scrape controls */}
+      {/* Session + scrape controls */}
       <div className="mb-6 flex flex-col gap-3 rounded-3xl bg-canvas-raised p-4 shadow-card ring-1 ring-ink/10 sm:flex-row sm:items-center">
-        <label className="flex-1">
-          <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-muted">
-            Admin secret
-          </span>
-          <input
-            type="password"
-            value={secret}
-            onChange={(e) => setSecret(e.target.value)}
-            placeholder="Required for actions (ADMIN_SECRET)"
-            className="min-h-11 w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-base shadow-sm ring-1 ring-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-500"
-          />
-        </label>
+        <p className="flex-1 text-sm text-ink-muted">
+          Signed in as admin. The session lasts 12 hours.
+        </p>
+        <button
+          onClick={signOut}
+          disabled={busy === "signout"}
+          className="rounded-2xl bg-canvas-sunken px-5 py-2.5 text-sm font-semibold text-ink-soft transition hover:bg-ink/[0.06] disabled:opacity-60"
+        >
+          Sign out
+        </button>
         <button
           onClick={triggerScrape}
           disabled={busy === "scrape"}
-          className="self-end rounded-2xl bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-ink-soft disabled:opacity-60"
+          className="rounded-2xl bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-ink-soft disabled:opacity-60"
         >
           {busy === "scrape" ? "Scraping…" : "Run scrapers now"}
         </button>
