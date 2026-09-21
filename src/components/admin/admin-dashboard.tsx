@@ -375,7 +375,7 @@ function ReviewRow({
           )}
           <span className="text-sm text-ink-muted">
             {formatEventDate(event.start_at)} ·{" "}
-            {formatTimeRange(event.start_at, event.end_at)}
+            {formatTimeRange(event.start_at, event.end_at, event.all_day)}
           </span>
         </div>
         <h3 className="mt-1.5 font-semibold text-ink">{event.title}</h3>

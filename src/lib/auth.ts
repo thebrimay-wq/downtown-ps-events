@@ -40,14 +40,15 @@ export async function isValidSecret(candidate: string): Promise<boolean> {
   return safeEqual(candidate, expected);
 }
 
-// The session cookie does not hold the secret. It holds an HMAC-SHA256 of a
-// fixed label keyed by the secret, so the browser's cookie jar (and anything
-// that reads it: a backup, a synced profile, a stray log line) never contains
-// the value that the cron and the scripts send as a header, and a leaked
-// cookie cannot be turned into one.
-const SESSION_LABEL = "pleasanton-events admin session v1";
+// The session cookie does not hold the secret. It is `<expiry>.<mac>`: the
+// expiry as a unix second, and an HMAC-SHA256 over a fixed label plus that
+// expiry, keyed by the secret. The browser's cookie jar (and anything that
+// reads it: a backup, a synced profile, a stray log line) never contains the
+// value the cron sends as a header, and a copied cookie stops working when
+// its expiry passes rather than only when the secret is rotated.
+const SESSION_LABEL = "pleasanton-events admin session v2";
 
-export async function sessionTokenFor(secret: string): Promise<string> {
+async function sessionMac(secret: string, expires: number): Promise<string> {
   const enc = new TextEncoder();
   const key = await crypto.subtle.importKey(
     "raw",
@@ -56,18 +57,30 @@ export async function sessionTokenFor(secret: string): Promise<string> {
     false,
     ["sign"],
   );
-  const mac = await crypto.subtle.sign("HMAC", key, enc.encode(SESSION_LABEL));
+  const mac = await crypto.subtle.sign("HMAC", key, enc.encode(`${SESSION_LABEL}:${expires}`));
   return toHex(new Uint8Array(mac));
 }
 
+export async function sessionTokenFor(
+  secret: string,
+  expires = Math.floor(Date.now() / 1000) + ADMIN_SESSION_MAX_AGE,
+): Promise<string> {
+  return `${expires}.${await sessionMac(secret, expires)}`;
+}
+
 // True when `token` (the cookie's value) was minted from the configured
-// secret. The admin page calls this with the cookie it reads server-side.
+// secret and has not expired. The admin page calls this with the cookie it
+// reads server-side.
 export async function isValidSessionToken(
   token: string | null | undefined,
 ): Promise<boolean> {
   const expected = process.env.ADMIN_SECRET;
   if (!expected || !token) return false;
-  return safeEqual(token, await sessionTokenFor(expected));
+  const dot = token.indexOf(".");
+  if (dot < 1) return false;
+  const expires = Number(token.slice(0, dot));
+  if (!Number.isInteger(expires) || expires <= Math.floor(Date.now() / 1000)) return false;
+  return safeEqual(token.slice(dot + 1), await sessionMac(expected, expires));
 }
 
 // Length-independent comparison. Both sides are hashed first, so the loop

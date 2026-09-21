@@ -99,18 +99,30 @@ export function formatLongDateRange(
   return `${sameYear ? longDateNoYearFmt.format(start) : longDateFmt.format(start)} – ${longDateFmt.format(end)}`;
 }
 
+// Built once: an Intl.DateTimeFormat costs ~40µs to construct, and a sort
+// or a day-grouping pass calls these for every one of 1,500 events.
+const dateKeyFmt = new Intl.DateTimeFormat("en-CA", { timeZone: TZ });
+const weekdayFmt = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: TZ });
+
 // Returns YYYY-MM-DD for a date in the Pleasanton timezone.
 export function localDateKey(d: Date = new Date()): string {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: TZ }).format(d);
+  return dateKeyFmt.format(d);
 }
 
 // Day-of-week (0=Sun..6=Sat) for an ISO instant, in the Pleasanton timezone.
 function localWeekday(iso: string): number {
-  const wd = new Intl.DateTimeFormat("en-US", {
-    weekday: "short",
-    timeZone: TZ,
-  }).format(new Date(iso));
+  const wd = weekdayFmt.format(new Date(iso));
   return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(wd);
+}
+
+// True for a YYYY-MM-DD string that names a day that exists. A shape check
+// alone lets "2026-02-30" through, and building a Date from that throws
+// once it reaches toISOString.
+export function isRealDate(ymd: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(ymd)) return false;
+  const [y, m, d] = ymd.split("-").map(Number);
+  const dt = new Date(Date.UTC(y, m - 1, d));
+  return dt.getUTCFullYear() === y && dt.getUTCMonth() === m - 1 && dt.getUTCDate() === d;
 }
 
 export function isToday(iso: string): boolean {

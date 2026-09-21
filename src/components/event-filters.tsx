@@ -6,7 +6,7 @@ import { CATEGORY_META } from "@/lib/categories";
 import { CategoryIcon } from "./category-icon";
 import { useFilterTransition } from "./filter-transition";
 import { BadgeDollarSign, Baby, CalendarDays, MapPin, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { isRealDate, cn } from "@/lib/utils";
 
 const DATE_PRESETS = [
   { key: "", label: "Any date" },
@@ -32,9 +32,15 @@ export function EventFilters() {
   // text — every pill came back.
   const pending = useRef<URLSearchParams | null>(null);
 
-  // Keep local inputs in sync if the URL changes externally (e.g. back button).
+  // The query this component last asked for. When the URL lands on it, the
+  // commit is ours and the inputs are left alone: the reader may have typed
+  // more since, and syncing would wipe those keystrokes. Any other change
+  // (back button, a calendar link) is external and the inputs follow it.
+  const requested = useRef<string | null>(null);
+
   useEffect(() => {
     pending.current = null;
+    if (searchParams.toString() === requested.current) return;
     setSearch(searchParams.get("search") ?? "");
     setLocation(searchParams.get("location") ?? "");
   }, [searchParams]);
@@ -48,6 +54,7 @@ export function EventFilters() {
     (params: URLSearchParams) => {
       pending.current = params;
       const query = params.toString();
+      requested.current = query;
       startTransition(() => {
         router.replace(query ? `${pathname}?${query}` : pathname, {
           scroll: false,
@@ -91,7 +98,7 @@ export function EventFilters() {
   const activeDate = searchParams.get("date") ?? "";
   // A calendar day link lands here with date=YYYY-MM-DD, which no preset
   // matches; it gets its own pill so the state is visible and clearable.
-  const customDate = /^\d{4}-\d{2}-\d{2}$/.test(activeDate) ? activeDate : "";
+  const customDate = isRealDate(activeDate) ? activeDate : "";
   const free = searchParams.get("free") === "1";
   const family = searchParams.get("family") === "1";
 

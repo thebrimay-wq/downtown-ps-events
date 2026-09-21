@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getAdminClient } from "@/lib/supabase/server";
+import { isRealDate } from "@/lib/utils";
 import { rateLimited } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
@@ -7,20 +8,12 @@ export const runtime = "nodejs";
 // A whole submission is a few hundred bytes; anything larger is not a form.
 const MAX_BODY_BYTES = 16 * 1024;
 
-const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const TIME_RE = /^\d{2}:\d{2}$/;
 
 // Today's date where the events happen, so an evening submission from
 // another zone is not refused as "in the past".
 function todayInPleasanton(): string {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(new Date());
-}
-
-function isRealDate(ymd: string): boolean {
-  if (!DATE_RE.test(ymd)) return false;
-  const [y, m, d] = ymd.split("-").map(Number);
-  const dt = new Date(Date.UTC(y, m - 1, d));
-  return dt.getUTCFullYear() === y && dt.getUTCMonth() === m - 1 && dt.getUTCDate() === d;
 }
 
 // Only web links belong in a href that the site will render for other people.

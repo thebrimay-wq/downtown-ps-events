@@ -72,7 +72,8 @@ async function getApprovedEventsRaw(): Promise<EventRecord[]> {
       .select("*, sources(name)")
       .eq("status", "approved")
       .is("duplicate_of", null)
-      .order("start_at", { ascending: true }),
+      .order("start_at", { ascending: true })
+      .order("id", { ascending: true }),
   );
   return rows.map(toEventRecord);
 }
@@ -187,7 +188,8 @@ export async function getPendingEvents(): Promise<EventRecord[]> {
       .from("events")
       .select("*, sources(name)")
       .eq("status", "pending")
-      .order("start_at", { ascending: true }),
+      .order("start_at", { ascending: true })
+      .order("id", { ascending: true }),
   );
   return rows.map(toEventRecord);
 }
@@ -199,7 +201,8 @@ export async function getSubmittedEvents(): Promise<SubmittedEvent[]> {
     supabase
       .from("submitted_events")
       .select("*")
-      .order("created_at", { ascending: false }),
+      .order("created_at", { ascending: false })
+      .order("id", { ascending: true }),
   );
   return rows as unknown as SubmittedEvent[];
 }
