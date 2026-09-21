@@ -1,5 +1,6 @@
 import "server-only";
 import { getServerClient } from "./supabase/server";
+import { fetchAllRows, type Row } from "./supabase/rows";
 import { isSupabaseConfigured } from "./supabase/env";
 import {
   BUNDLED_CATEGORIES,
@@ -48,34 +49,6 @@ export async function getSources(): Promise<Source[]> {
     .order("name", { ascending: true });
   if (error || !data?.length) return BUNDLED_SOURCES;
   return data as Source[];
-}
-
-// PostgREST caps a single response at 1,000 rows and gives no error when it
-// truncates, so an unpaginated select silently loses everything past the
-// thousandth event. Page until a short response says we have them all.
-const PAGE_SIZE = 1000;
-
-type Row = Record<string, unknown>;
-
-// Typed by what pagination actually needs, rather than by supabase-js's
-// generics, which are awkward to name at a call boundary like this.
-type RangeableQuery = PromiseLike<{ data: Row[] | null; error: unknown }> & {
-  range: (from: number, to: number) => PromiseLike<{
-    data: Row[] | null;
-    error: unknown;
-  }>;
-};
-
-async function fetchAllRows(build: () => RangeableQuery): Promise<Row[]> {
-  const rows: Row[] = [];
-  for (let from = 0; ; from += PAGE_SIZE) {
-    const { data, error } = await build().range(from, from + PAGE_SIZE - 1);
-    if (error) break;
-    if (!data?.length) break;
-    rows.push(...(data as Row[]));
-    if (data.length < PAGE_SIZE) break;
-  }
-  return rows;
 }
 
 function toEventRecord(row: Row): EventRecord {
@@ -230,11 +203,13 @@ export async function getPendingEvents(): Promise<EventRecord[]> {
 export async function getSubmittedEvents(): Promise<SubmittedEvent[]> {
   const supabase = getServerClient();
   if (!supabase) return [];
-  const { data } = await supabase
-    .from("submitted_events")
-    .select("*")
-    .order("created_at", { ascending: false });
-  return (data ?? []) as SubmittedEvent[];
+  const rows = await fetchAllRows(() =>
+    supabase
+      .from("submitted_events")
+      .select("*")
+      .order("created_at", { ascending: false }),
+  );
+  return rows as unknown as SubmittedEvent[];
 }
 
 export async function getScrapeLogs(limit = 20): Promise<ScrapedEventLog[]> {

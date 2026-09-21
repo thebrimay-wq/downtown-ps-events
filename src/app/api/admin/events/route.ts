@@ -8,7 +8,7 @@ export const runtime = "nodejs";
 // Body: { id, action: "approve" | "reject" | "merge" | "edit",
 //         mergeIntoId?, patch? }
 export async function POST(req: NextRequest) {
-  if (!isAuthorized(req)) {
+  if (!(await isAuthorized(req))) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
   const admin = getAdminClient();

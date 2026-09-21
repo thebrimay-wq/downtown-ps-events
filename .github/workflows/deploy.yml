@@ -67,6 +67,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # A red check blocks the deploy: nothing below runs when any of these
+      # fails. `next build` would catch type errors on its own, but not a
+      # failing test, and lint had never run at all before this gate.
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Lint
+        run: npm run lint
+
       - name: Build the Worker
         run: npm run build
 

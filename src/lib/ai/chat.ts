@@ -183,10 +183,24 @@ async function find(i: Intent, today: string): Promise<Found> {
       return { ...r, note: `Nothing matched “${i.query}” ${scope}. Here is what is on instead:` };
     }
   }
+  // With both filters asked for, loosen one at a time and say which one
+  // gave. Dropping both at once while the note named only one produced
+  // "Nothing free this weekend" above a list that opened with a free tour.
+  if (i.free && i.family) {
+    const stillFree = await run({ ...base, query: null, category: null, family: false }, i.evening);
+    if (stillFree.total > 0) {
+      return { ...stillFree, note: `Nothing for kids that is also free ${scope}, but these are free:` };
+    }
+    const stillKids = await run({ ...base, query: null, category: null, free: false }, i.evening);
+    if (stillKids.total > 0) {
+      return { ...stillKids, note: `Nothing free that is also for kids ${scope}, but these are for kids:` };
+    }
+  }
   if (i.free || i.family) {
     const r = await run({ ...base, query: null, category: null, free: false, family: false }, i.evening);
     if (r.total > 0) {
-      return { ...r, note: `Nothing ${i.free ? "free" : "for kids"} ${scope} that I can see. Everything else on:` };
+      const asked = i.free && i.family ? "free or for kids" : i.free ? "free" : "for kids";
+      return { ...r, note: `Nothing ${asked} ${scope} that I can see. Everything else on:` };
     }
   }
   if (i.to) {

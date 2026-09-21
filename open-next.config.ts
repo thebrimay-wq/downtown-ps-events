@@ -5,10 +5,12 @@ import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 // setup free of extra Cloudflare resources. To cache ISR output, enable R2
 // in the dashboard and add `r2IncrementalCache` here — see
 // https://opennext.js.org/cloudflare/caching
-export default {
+const config = {
   ...defineCloudflareConfig(),
   // `npm run build` is the OpenNext build (so Workers Builds' default
   // command produces the Worker), so point OpenNext at Next directly here.
   // Without this, OpenNext would run `npm run build` and recurse.
   buildCommand: "npx next build",
 };
+
+export default config;

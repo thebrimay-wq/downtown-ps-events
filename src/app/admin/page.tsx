@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import {
   getPendingEvents,
   getSubmittedEvents,
@@ -6,7 +7,13 @@ import {
   getScrapeLogs,
   usingBundledData,
 } from "@/lib/data";
+import {
+  ADMIN_SESSION_COOKIE,
+  adminSecretConfigured,
+  isValidSessionToken,
+} from "@/lib/auth";
 import { AdminDashboard } from "@/components/admin/admin-dashboard";
+import { AdminSignIn } from "@/components/admin/admin-sign-in";
 import { BundledDataBanner } from "@/components/bundled-data-banner";
 
 export const metadata: Metadata = {
@@ -17,12 +24,22 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
-  const [pending, submissions, sources, logs] = await Promise.all([
-    getPendingEvents(),
-    getSubmittedEvents(),
-    getSources(),
-    getScrapeLogs(),
-  ]);
+  // Submissions carry contact emails, so nothing is loaded, let alone
+  // rendered, until the session cookie checks out. Row-level security is not
+  // the thing standing between a submitter's email and the public internet.
+  const cookieStore = await cookies();
+  const authorized = await isValidSessionToken(
+    cookieStore.get(ADMIN_SESSION_COOKIE)?.value,
+  );
+
+  const data = authorized
+    ? await Promise.all([
+        getPendingEvents(),
+        getSubmittedEvents(),
+        getSources(),
+        getScrapeLogs(),
+      ])
+    : null;
 
   return (
     <div>
@@ -33,17 +50,22 @@ export default async function AdminPage() {
             Admin dashboard
           </h1>
           <p className="mt-1 text-ink-muted">
-            Review scraped &amp; submitted events, manage sources, and monitor
-            scrape runs.
+            {data
+              ? "Review scraped & submitted events, manage sources, and monitor scrape runs."
+              : "Sign in with the admin secret to review events and run scrapers."}
           </p>
         </div>
-        <AdminDashboard
-          initialPending={pending}
-          initialSubmissions={submissions}
-          sources={sources}
-          logs={logs}
-          bundledMode={usingBundledData()}
-        />
+        {data ? (
+          <AdminDashboard
+            initialPending={data[0]}
+            initialSubmissions={data[1]}
+            sources={data[2]}
+            logs={data[3]}
+            bundledMode={usingBundledData()}
+          />
+        ) : (
+          <AdminSignIn configured={adminSecretConfigured()} />
+        )}
       </div>
     </div>
   );

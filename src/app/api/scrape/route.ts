@@ -9,7 +9,7 @@ export const runtime = "nodejs";
 export const maxDuration = 300;
 
 async function handle(req: NextRequest) {
-  if (!isAuthorized(req)) {
+  if (!(await isAuthorized(req))) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
@@ -45,7 +45,8 @@ export async function POST(req: NextRequest) {
   return handle(req);
 }
 
-// GET: triggered by Vercel Cron / GitHub Actions (auth via ?secret= or Bearer).
+// GET: triggered by an external cron (auth via `Authorization: Bearer`; never
+// the query string, which would land the secret in the request logs).
 export async function GET(req: NextRequest) {
   return handle(req);
 }

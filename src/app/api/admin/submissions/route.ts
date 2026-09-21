@@ -10,7 +10,7 @@ export const runtime = "nodejs";
 // Moderation endpoint for community submissions.
 // Body: { id, action: "approve" | "reject", review_notes? }
 export async function POST(req: NextRequest) {
-  if (!isAuthorized(req)) {
+  if (!(await isAuthorized(req))) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
   const admin = getAdminClient();

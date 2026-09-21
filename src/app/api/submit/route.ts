@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getAdminClient } from "@/lib/supabase/server";
+import { rateLimited } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 
@@ -39,6 +40,22 @@ function bad(error: string, status = 400) {
 
 // Public endpoint for community / business event submissions.
 export async function POST(req: NextRequest) {
+  // This is the one public route that writes, so a script can fill the
+  // moderation queue with junk. Nobody submits five real events in ten
+  // minutes. The limiter is in memory and per-isolate on Workers, so it is
+  // only a speed bump; the durable control is a Cloudflare WAF rate-limiting
+  // rule on POST /api/submit, which lives in the dashboard, not in code.
+  const ip =
+    req.headers.get("cf-connecting-ip") ??
+    req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
+    "unknown";
+  if (rateLimited(`submit:${ip}`, { limit: 5, windowMs: 10 * 60 * 1000 })) {
+    return bad(
+      "That's a lot of submissions in a short time. Please wait a few minutes and try again.",
+      429,
+    );
+  }
+
   const length = Number(req.headers.get("content-length") ?? 0);
   if (length > MAX_BODY_BYTES) return bad("Submission is too large.", 413);
 

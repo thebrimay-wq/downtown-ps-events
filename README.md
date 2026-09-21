@@ -185,8 +185,9 @@ npm run scrape          # reads enabled sources, scrapes, normalizes, dedupes
 New events are inserted with `status = 'pending'` and appear in the **Admin →
 Scraped events** tab for approval. Approved events become visible site-wide.
 
-You can also trigger a run from the admin dashboard (enter your `ADMIN_SECRET`
-and click **Run scrapers now**) or via the API:
+You can also trigger a run from the admin dashboard (sign in with your
+`ADMIN_SECRET`, which sets a 12-hour session cookie, then click **Run scrapers
+now**) or via the API, where the secret goes in a header, never the URL:
 
 ```bash
 curl -X POST https://your-site/api/scrape -H "x-admin-secret: $ADMIN_SECRET"
@@ -275,10 +276,11 @@ Certificates usually go live within a couple of minutes of the deploy.
 
 ### On every push (GitHub Actions)
 
-`.github/workflows/deploy.yml` builds the Worker and uploads it whenever
-`main` or `claude/pleasanton-events-hub-dvwuym` changes, and can be run by
-hand from the Actions tab. It needs two repository secrets (GitHub →
-Settings → Secrets and variables → Actions):
+`.github/workflows/deploy.yml` typechecks, tests and lints, then builds the
+Worker and uploads it whenever `main` or
+`claude/pleasanton-events-hub-dvwuym` changes, and can be run by hand from
+the Actions tab; a failing check stops the deploy. It needs two repository
+secrets (GitHub → Settings → Secrets and variables → Actions):
 
 | Secret | Where to get it |
 | --- | --- |
