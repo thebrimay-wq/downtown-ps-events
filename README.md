@@ -276,10 +276,11 @@ Certificates usually go live within a couple of minutes of the deploy.
 
 ### On every push (GitHub Actions)
 
-`.github/workflows/deploy.yml` builds the Worker and uploads it whenever
-`main` or `claude/pleasanton-events-hub-dvwuym` changes, and can be run by
-hand from the Actions tab. It needs two repository secrets (GitHub →
-Settings → Secrets and variables → Actions):
+`.github/workflows/deploy.yml` typechecks, tests and lints, then builds the
+Worker and uploads it whenever `main` or
+`claude/pleasanton-events-hub-dvwuym` changes, and can be run by hand from
+the Actions tab; a failing check stops the deploy. It needs two repository
+secrets (GitHub → Settings → Secrets and variables → Actions):
 
 | Secret | Where to get it |
 | --- | --- |

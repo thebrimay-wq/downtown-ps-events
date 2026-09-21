@@ -8,7 +8,7 @@
     "build": "opennextjs-cloudflare build",
     "build:next": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "scrape": "tsx --env-file-if-exists=.env.local scripts/run-scrapers.ts",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test 'src/**/*.test.ts'",
@@ -34,6 +34,7 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
     "@opennextjs/cloudflare": "^1.20.6",
     "@types/node": "^22.10.0",
     "@types/react": "^19.0.0",
