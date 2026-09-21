@@ -41,3 +41,7 @@ cloudflare-env.d.ts
 
 # Agent worktrees created by Claude Code; each is its own checkout.
 .claude/worktrees/
+
+# Python bytecode from the crawl and repair scripts.
+__pycache__/
+*.pyc
