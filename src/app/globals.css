@@ -74,6 +74,10 @@
       radial-gradient(55% 70% at 4% 100%, rgba(194, 84, 45, 0.22), transparent 62%),
       radial-gradient(40% 50% at 60% 40%, rgba(251, 240, 214, 0.9), transparent 70%);
     filter: blur(6px);
+    /* The section clips the blur to a hard line where the bottom-left
+       terracotta radial meets the edge; fading the layer out first hides it. */
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
   }
 
   /* Hairlines carry the structure here, in place of borders and shadows. */

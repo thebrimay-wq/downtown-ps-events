@@ -14,7 +14,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-ink/10 glass">
       <div className="container-page flex h-16 items-center justify-between gap-3">
         <Link href="/" className="group flex shrink-0 items-center gap-2.5 rounded-xl">
-          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-brand-600 text-white shadow-sm transition duration-200 group-hover:bg-brand-700">
+          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-brand-600 text-white shadow-card transition duration-200 group-hover:bg-brand-700">
             <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M3 21h18" /><path d="M5 21V8l7-5 7 5v13" /><path d="M9 21v-6h6v6" />
             </svg>
@@ -43,7 +43,7 @@ export function SiteHeader() {
           </AskTrigger>
           <Link
             href="/submit"
-            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-brand-600 px-3.5 text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-brand-700 sm:ml-1 sm:px-4"
+            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-brand-600 px-3.5 text-sm font-semibold text-white shadow-card transition duration-200 hover:bg-brand-700 sm:ml-1 sm:px-4"
           >
             <span className="sm:hidden">Submit</span>
             <span className="hidden sm:inline">Submit an event</span>

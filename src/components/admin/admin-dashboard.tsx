@@ -121,7 +121,7 @@ export function AdminDashboard({
             value={secret}
             onChange={(e) => setSecret(e.target.value)}
             placeholder="Required for actions (ADMIN_SECRET)"
-            className="min-h-11 w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-base shadow-sm ring-1 ring-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-500"
+            className="min-h-11 w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-base shadow-card ring-1 ring-ink/10 focus:outline-none focus:ring-2 focus:ring-brand-500"
           />
         </label>
         <button
@@ -156,7 +156,7 @@ export function AdminDashboard({
             className={cn(
               "shrink-0 rounded-full px-4 py-2 text-sm font-medium transition",
               tab === t.key
-                ? "bg-canvas-raised text-ink shadow-sm"
+                ? "bg-canvas-raised text-ink shadow-card"
                 : "text-ink-muted hover:text-ink",
             )}
           >
@@ -201,7 +201,7 @@ export function AdminDashboard({
           {submissions.map((s) => (
             <div
               key={s.id}
-              className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10 sm:flex-row sm:items-center"
+              className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-card ring-1 ring-ink/10 sm:flex-row sm:items-center"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-2">
@@ -238,7 +238,7 @@ export function AdminDashboard({
           {sources.map((s) => (
             <div
               key={s.id}
-              className="rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10"
+              className="rounded-2xl bg-canvas-raised p-4 shadow-card ring-1 ring-ink/10"
             >
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-ink">{s.name}</h3>
@@ -281,7 +281,7 @@ export function AdminDashboard({
           {logs.map((log) => (
             <div
               key={log.id}
-              className="flex items-center justify-between rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10"
+              className="flex items-center justify-between rounded-2xl bg-canvas-raised p-4 shadow-card ring-1 ring-ink/10"
             >
               <div>
                 <div className="flex items-center gap-2">
@@ -357,7 +357,7 @@ function ReviewRow({
   onReject: () => void;
 }) {
   return (
-    <div className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-sm ring-1 ring-ink/10 sm:flex-row sm:items-center">
+    <div className="flex flex-col gap-3 rounded-2xl bg-canvas-raised p-4 shadow-card ring-1 ring-ink/10 sm:flex-row sm:items-center">
       <div className="flex-1">
         <div className="flex flex-wrap items-center gap-2">
           <CategoryBadge slug={event.category} />

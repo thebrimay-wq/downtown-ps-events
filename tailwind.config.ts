@@ -65,7 +65,7 @@ const config: Config = {
         },
       },
       animation: {
-        "fade-up": "fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "fade-up": "fade-up 0.35s cubic-bezier(0.16, 1, 0.3, 1) both",
         "warm-in": "warm-in 1.6s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
       transitionTimingFunction: {
