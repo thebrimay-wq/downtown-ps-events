@@ -14,7 +14,7 @@ import type {
   Source,
   SubmittedEvent,
 } from "./types";
-import { isThisWeekend, isToday, isUpcoming } from "./utils";
+import { isThisWeekend, isToday, isUpcoming, sortByDayAndTime } from "./utils";
 import { hasAllDayTag, visibleTags } from "./tags";
 
 // ---------------------------------------------------------------------------
@@ -154,27 +154,19 @@ export async function getEvents(
 ): Promise<EventRecord[]> {
   let events = await getApprovedEventsRaw();
   if (opts.upcomingOnly) events = events.filter((e) => isUpcoming(e.start_at));
-  return applyFilters(events, filters).sort(
-    (a, b) => new Date(a.start_at).getTime() - new Date(b.start_at).getTime(),
-  );
+  return sortByDayAndTime(applyFilters(events, filters));
 }
 
 export async function getTodayEvents(): Promise<EventRecord[]> {
   const events = await getApprovedEventsRaw();
-  return events
-    .filter((e) => isToday(e.start_at))
-    .sort(
-      (a, b) => new Date(a.start_at).getTime() - new Date(b.start_at).getTime(),
-    );
+  return sortByDayAndTime(events.filter((e) => isToday(e.start_at)));
 }
 
 export async function getWeekendEvents(): Promise<EventRecord[]> {
   const events = await getApprovedEventsRaw();
-  return events
-    .filter((e) => isThisWeekend(e.start_at) && isUpcoming(e.start_at))
-    .sort(
-      (a, b) => new Date(a.start_at).getTime() - new Date(b.start_at).getTime(),
-    );
+  return sortByDayAndTime(
+    events.filter((e) => isThisWeekend(e.start_at) && isUpcoming(e.start_at)),
+  );
 }
 
 export async function getEventByIdOrSlug(

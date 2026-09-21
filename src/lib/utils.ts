@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const TZ = "America/Los_Angeles";
+export const TZ = "America/Los_Angeles";
 
 const dateFmt = new Intl.DateTimeFormat("en-US", {
   weekday: "short",
@@ -53,6 +53,13 @@ export function formatDayNumber(iso: string): string {
   return dayFmt.format(new Date(iso));
 }
 
+// True when the end falls on a later Pleasanton calendar day than the start.
+export function spansDays(startIso: string, endIso?: string | null): boolean {
+  return (
+    !!endIso && localDateKey(new Date(endIso)) !== localDateKey(new Date(startIso))
+  );
+}
+
 export function formatTimeRange(
   startIso: string,
   endIso?: string | null,
@@ -63,7 +70,33 @@ export function formatTimeRange(
   if (allDay) return "Time not listed";
   const start = formatTime(startIso);
   if (!endIso) return start;
+  // An event that runs into another day gets both dates in the range;
+  // "10:00 AM – 12:00 PM" would read as a two-hour slot.
+  if (spansDays(startIso, endIso)) {
+    return `${monthFmt.format(new Date(startIso))} ${formatDayNumber(startIso)}, ${start} – ${monthFmt.format(new Date(endIso))} ${formatDayNumber(endIso)}, ${formatTime(endIso)}`;
+  }
   return `${start} – ${formatTime(endIso)}`;
+}
+
+const longDateNoYearFmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+  timeZone: TZ,
+});
+
+// "Friday, September 18 – Sunday, September 20, 2026" for a multi-day event,
+// or the plain long date when it ends the same day. The year is spelled out
+// on both ends only when it changes between them.
+export function formatLongDateRange(
+  startIso: string,
+  endIso?: string | null,
+): string {
+  if (!spansDays(startIso, endIso)) return formatLongDate(startIso);
+  const start = new Date(startIso);
+  const end = new Date(endIso!);
+  const sameYear = localDateKey(start).slice(0, 4) === localDateKey(end).slice(0, 4);
+  return `${sameYear ? longDateNoYearFmt.format(start) : longDateFmt.format(start)} – ${longDateFmt.format(end)}`;
 }
 
 // Returns YYYY-MM-DD for a date in the Pleasanton timezone.
@@ -102,6 +135,28 @@ export function isThisWeekend(iso: string): boolean {
   }
   // Only count weekend days that are today or in the future.
   return weekendKeys.has(key) && key >= todayKey;
+}
+
+// Orders events by Pleasanton calendar day, then timed before all-day, then
+// start time. All-day events carry a placeholder noon in start_at, so a raw
+// timestamp sort put six "time not listed" cards ahead of the 7 PM show.
+export function sortByDayAndTime<T extends { start_at: string; all_day?: boolean }>(
+  events: T[],
+): T[] {
+  return events
+    .map((event) => ({
+      event,
+      day: localDateKey(new Date(event.start_at)),
+      allDay: event.all_day ? 1 : 0,
+      at: new Date(event.start_at).getTime(),
+    }))
+    .sort(
+      (a, b) =>
+        (a.day < b.day ? -1 : a.day > b.day ? 1 : 0) ||
+        a.allDay - b.allDay ||
+        a.at - b.at,
+    )
+    .map((x) => x.event);
 }
 
 export function isUpcoming(iso: string): boolean {
