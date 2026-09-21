@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -11,10 +10,9 @@ import { CategoryBadge } from "@/components/category-badge";
 import { AddToCalendar } from "@/components/add-to-calendar";
 import { EventCard } from "@/components/event-card";
 import { BundledDataBanner } from "@/components/bundled-data-banner";
-import { cn, formatLongDate, formatTimeRange } from "@/lib/utils";
-import { categoryMeta } from "@/lib/categories";
+import { EventImage } from "@/components/event-image";
+import { cn, formatLongDateRange, formatTimeRange } from "@/lib/utils";
 import { visibleTags } from "@/lib/tags";
-import { CategoryIcon } from "@/components/category-icon";
 import { ArrowLeft, Baby, ExternalLink, MapPin } from "lucide-react";
 
 
@@ -48,7 +46,6 @@ export default async function EventDetailPage({
   if (!event) notFound();
 
   const related = await getRelatedEvents(event);
-  const meta = categoryMeta(event.category);
   const tags = visibleTags(event.tags);
   const mapsQuery = encodeURIComponent(
     [event.venue, event.address].filter(Boolean).join(", ") || "Pleasanton, CA",
@@ -66,31 +63,15 @@ export default async function EventDetailPage({
           event.image_url ? "h-64 sm:h-96" : "h-48 sm:h-64",
         )}
       >
-        {event.image_url ? (
-          <Image
-            src={event.image_url}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-        ) : (
-          // Most scraped listings ship no artwork; tint the hero by category
-          // rather than leaving a bare grey band.
-          <div
-            className="grid h-full w-full place-items-center"
-            style={{
-              background: `linear-gradient(135deg, ${meta.color}2e, ${meta.color}0f)`,
-              color: meta.color,
-            }}
-          >
-            <CategoryIcon slug={event.category} className="h-16 w-16 opacity-55" />
-          </div>
-        )}
-        {event.image_url && (
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        )}
+        {/* Most scraped listings ship no artwork, and the ones that do can
+            lose it; either way the hero falls back to the category tint
+            rather than a bare grey band. */}
+        <EventImage
+          src={event.image_url}
+          category={event.category}
+          variant="hero"
+          priority
+        />
       </div>
 
       <div className="container-page relative -mt-16 pb-16">
@@ -124,7 +105,7 @@ export default async function EventDetailPage({
             {/* Key facts */}
             <dl className="mt-7 grid gap-x-6 gap-y-5 border-t border-ink/10 pt-6 sm:grid-cols-2">
               <Fact icon="calendar" label="Date">
-                {formatLongDate(event.start_at)}
+                {formatLongDateRange(event.start_at, event.end_at)}
               </Fact>
               <Fact icon="clock" label="Time">
                 {formatTimeRange(event.start_at, event.end_at, event.all_day)}
