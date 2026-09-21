@@ -110,7 +110,7 @@ Sat, Sep 12, 5:00 pm - 9:00 pm
 - slug: closed-for-a-private-event-4c9707
 - date: 2026-12-10
 - when: Thursday, December 10, 2026 (time not listed)
-- start: 2026-12-10T12:00:00-07:00
+- start: 2026-12-10T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: 
@@ -133,7 +133,7 @@ Sat, Sep 12, 5:00 pm - 9:00 pm
 - slug: closed-for-christmas-day-24d7b8
 - date: 2026-12-25
 - when: Friday, December 25, 2026 (time not listed)
-- start: 2026-12-25T12:00:00-07:00
+- start: 2026-12-25T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: 

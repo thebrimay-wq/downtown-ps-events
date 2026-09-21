@@ -130,6 +130,14 @@ def infer_family_friendly(title, desc, category):
     if FAMILY_RX.search(blob): return True
     return category == "family"
 
+# The offset Pleasanton has on that date: -07:00 in summer, -08:00 in winter.
+# A fixed -07:00 made every timed winter event render an hour early.
+def stamp_local(ymd, hhmm):
+    from zoneinfo import ZoneInfo
+    y, m, d = (int(x) for x in ymd.split("-"))
+    hh, mm = (int(x) for x in hhmm.split(":"))
+    return dt.datetime(y, m, d, hh, mm, tzinfo=ZoneInfo("America/Los_Angeles")).isoformat(timespec="seconds")
+
 def to_iso(datestr, timestr=None, timetext=None):
     """Resolve a date (+ optional time) into a Pacific-local ISO timestamp.
 
@@ -140,7 +148,7 @@ def to_iso(datestr, timestr=None, timetext=None):
     s = str(datestr)
     iso = re.match(r"(\d{4}-\d{2}-\d{2})[T ](\d{2}:\d{2})", s)
     if iso:
-        return f"{iso.group(1)}T{iso.group(2)}:00-07:00", parse_date(iso.group(1)), True
+        return stamp_local(iso.group(1), iso.group(2)), parse_date(iso.group(1)), True
     d = parse_date(s)
     if not d: return None, None, False
     # The date string itself often carries the clock ("Sep 3, 2026 6:00 PM").
@@ -154,7 +162,7 @@ def to_iso(datestr, timestr=None, timetext=None):
             t, had_time = dt.time(int(m.group(1)), int(m.group(2))), True
         else:
             t = dt.time(12, 0)
-    return f"{d.isoformat()}T{t.strftime('%H:%M')}:00-07:00", d, had_time
+    return stamp_local(d.isoformat(), t.strftime("%H:%M")), d, had_time
 
 def norm_title(t):
     return re.sub(r"[^a-z0-9]+", "", (t or "").lower())[:60]

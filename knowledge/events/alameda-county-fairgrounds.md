@@ -203,7 +203,7 @@ An unforgettable experience awaits at California’s largest and longest-running
 - date: 2026-10-02
 - when: Friday, October 2, 2026 (time not listed)
 - start: 2026-10-02T12:00:00-07:00
-- end: 2026-11-01T12:00:00-07:00
+- end: 2026-11-01T12:00:00-08:00
 - all_day: yes
 - venue: Alameda County Fairgrounds
 - address: 4501 Pleasanton Ave, Pleasanton, CA 94566
@@ -294,8 +294,8 @@ An unforgettable experience awaits at California’s largest and longest-running
 - slug: goodguys-36th-fuel-curve-autumn-get-together-cac0d0
 - date: 2026-11-14
 - when: Saturday, November 14, 2026 (time not listed)
-- start: 2026-11-14T12:00:00-07:00
-- end: 2026-11-15T12:00:00-07:00
+- start: 2026-11-14T12:00:00-08:00
+- end: 2026-11-15T12:00:00-08:00
 - all_day: yes
 - venue: Alameda County Fairgrounds
 - address: 4501 Pleasanton Ave, Pleasanton, CA 94566
@@ -317,8 +317,8 @@ An unforgettable experience awaits at California’s largest and longest-running
 - slug: the-great-junk-hunt-6a05f5
 - date: 2026-11-20
 - when: Friday, November 20, 2026 (time not listed)
-- start: 2026-11-20T12:00:00-07:00
-- end: 2026-11-21T12:00:00-07:00
+- start: 2026-11-20T12:00:00-08:00
+- end: 2026-11-21T12:00:00-08:00
 - all_day: yes
 - venue: Alameda County Fairgrounds
 - address: 4501 Pleasanton Ave, Pleasanton, CA 94566

@@ -9102,8 +9102,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: ea36c3b5280b
 - slug: livermore-farmers-market-ea36c3
 - date: 2026-11-01
-- when: Sunday, November 1, 2026, 8:00 AM
-- start: 2026-11-01T09:00:00-07:00
+- when: Sunday, November 1, 2026, 9:00 AM
+- start: 2026-11-01T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9125,8 +9125,8 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - id: b4390a533fea
 - slug: volunteer-at-valley-humane-society-b4390a
 - date: 2026-11-01
-- when: Sunday, November 1, 2026, 9:00 AM
-- start: 2026-11-01T10:00:00-07:00
+- when: Sunday, November 1, 2026, 10:00 AM
+- start: 2026-11-01T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9148,8 +9148,8 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - id: 68c1388e5253
 - slug: sparc-adult-improv-classes-68c138
 - date: 2026-11-01
-- when: Sunday, November 1, 2026, 5:00 PM
-- start: 2026-11-01T18:00:00-07:00
+- when: Sunday, November 1, 2026, 6:00 PM
+- start: 2026-11-01T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: All classes are held at the
@@ -9171,8 +9171,8 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - id: 3a09302c9a5e
 - slug: volunteer-in-the-parks-3a0930
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 7:00 AM
-- start: 2026-11-02T08:00:00-07:00
+- when: Monday, November 2, 2026, 8:00 AM
+- start: 2026-11-02T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9194,8 +9194,8 @@ Volunteers are vital to the East Bay Regional Parks with opportunities available
 - id: 30020d3d0447
 - slug: fee-assistance-program-30020d
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 8:00 AM
-- start: 2026-11-02T09:00:00-07:00
+- when: Monday, November 2, 2026, 9:00 AM
+- start: 2026-11-02T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9217,8 +9217,8 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - id: 44ac950020b9
 - slug: drop-in-billiards-44ac95
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 8:00 AM
-- start: 2026-11-02T09:00:00-07:00
+- when: Monday, November 2, 2026, 9:00 AM
+- start: 2026-11-02T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9240,8 +9240,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: b5094869879d
 - slug: tax-aide-program-looking-for-new-volunteers-b50948
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 9:00 AM
-- start: 2026-11-02T10:00:00-07:00
+- when: Monday, November 2, 2026, 10:00 AM
+- start: 2026-11-02T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9263,8 +9263,8 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - id: 09b73ef56efd
 - slug: volunteer-with-spectrum-community-services-09b73e
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 9:00 AM
-- start: 2026-11-02T10:00:00-07:00
+- when: Monday, November 2, 2026, 10:00 AM
+- start: 2026-11-02T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9286,8 +9286,8 @@ Spectrum Community Services is looking for new volunteers to join the team in a 
 - id: b14ee6cb591b
 - slug: larpd-scholarship-program-b14ee6
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 9:00 AM
-- start: 2026-11-02T10:00:00-07:00
+- when: Monday, November 2, 2026, 10:00 AM
+- start: 2026-11-02T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9309,8 +9309,8 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - id: 1c0aaecdf38f
 - slug: step-by-step-esl-conversation-1c0aae
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 9:00 AM
-- start: 2026-11-02T10:00:00-07:00
+- when: Monday, November 2, 2026, 10:00 AM
+- start: 2026-11-02T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9333,7 +9333,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - slug: fall-player-evaluations-begin-f772f3
 - date: 2026-11-02
 - when: Monday, November 2, 2026 (time not listed)
-- start: 2026-11-02T12:00:00-07:00
+- start: 2026-11-02T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/5844656348.5 mi
@@ -9355,8 +9355,8 @@ Practice intermediate-level English grammar and conversation with other adult le
 - id: 6f0447543381
 - slug: free-monday-movie-6f0447
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 12:00 PM
-- start: 2026-11-02T13:00:00-07:00
+- when: Monday, November 2, 2026, 1:00 PM
+- start: 2026-11-02T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9378,8 +9378,8 @@ Enjoy a free movie every Monday at the Danville Senior Center Community Hall. 1 
 - id: 41a5fb325736
 - slug: homework-help-at-rincon-branch-41a5fb
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 2:00 PM
-- start: 2026-11-02T15:00:00-07:00
+- when: Monday, November 2, 2026, 3:00 PM
+- start: 2026-11-02T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9401,8 +9401,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: f9906888e8b0
 - slug: open-heart-refuge-f99068
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 5:00 PM
-- start: 2026-11-02T18:00:00-07:00
+- when: Monday, November 2, 2026, 6:00 PM
+- start: 2026-11-02T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9424,8 +9424,8 @@ Open Heart Refuge offers overnight shelter using an assigned bed model. Check-in
 - id: f071581f2ded
 - slug: family-storytime-at-san-ramon-library-f07158
 - date: 2026-11-02
-- when: Monday, November 2, 2026, 5:00 PM
-- start: 2026-11-02T18:00:00-07:00
+- when: Monday, November 2, 2026, 6:00 PM
+- start: 2026-11-02T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: San Ramon Library
@@ -9447,8 +9447,8 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - id: 85879df783a6
 - slug: wellness-alliance-meeting-85879d
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 7:00 AM
-- start: 2026-11-03T08:00:00-07:00
+- when: Tuesday, November 3, 2026, 8:00 AM
+- start: 2026-11-03T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9470,8 +9470,8 @@ Join for the Wellness Alliance monthly meeting which brings together local leade
 - id: 16bd7f821486
 - slug: business-referral-network-16bd7f
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 8:00 AM
-- start: 2026-11-03T09:00:00-07:00
+- when: Tuesday, November 3, 2026, 9:00 AM
+- start: 2026-11-03T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9493,8 +9493,8 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - id: db0670681e80
 - slug: drop-in-billiards-db0670
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 8:00 AM
-- start: 2026-11-03T09:00:00-07:00
+- when: Tuesday, November 3, 2026, 9:00 AM
+- start: 2026-11-03T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9516,8 +9516,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: 1e2e4c258fc1
 - slug: vintage-lounge-puzzling-1e2e4c
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 8:00 AM
-- start: 2026-11-03T09:00:00-07:00
+- when: Tuesday, November 3, 2026, 9:00 AM
+- start: 2026-11-03T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9539,8 +9539,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: 84f48580a343
 - slug: buzz-session-crime-prevention-during-the-holidays-84f485
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 9:00 AM
-- start: 2026-11-03T10:00:00-07:00
+- when: Tuesday, November 3, 2026, 10:00 AM
+- start: 2026-11-03T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Veterans Memorial Building > Senior Center
@@ -9562,8 +9562,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: 93a74509daf1
 - slug: volunteer-with-cityserve-93a745
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 9:00 AM
-- start: 2026-11-03T10:00:00-07:00
+- when: Tuesday, November 3, 2026, 10:00 AM
+- start: 2026-11-03T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9585,8 +9585,8 @@ Immediate volunteer opportunities are available as a Caring Visitor, RideCare Dr
 - id: 5c5b986b6c93
 - slug: volunteer-with-hope-hospice-5c5b98
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 9:00 AM
-- start: 2026-11-03T10:00:00-07:00
+- when: Tuesday, November 3, 2026, 10:00 AM
+- start: 2026-11-03T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9608,8 +9608,8 @@ Hope patient care volunteers help patients and their families in many different 
 - id: 248f40cc6c00
 - slug: toddler-storytime-248f40
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 10:00 AM
-- start: 2026-11-03T11:00:00-07:00
+- when: Tuesday, November 3, 2026, 11:00 AM
+- start: 2026-11-03T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: Dublin Library
@@ -9631,8 +9631,8 @@ Toddlers aged 2-5 and their families are invited to join us for stories, songs, 
 - id: bc6c085a0af1
 - slug: souper-tuesday-free-lunch-bc6c08
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 10:00 AM
-- start: 2026-11-03T11:00:00-07:00
+- when: Tuesday, November 3, 2026, 11:00 AM
+- start: 2026-11-03T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9654,8 +9654,8 @@ Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CitySer
 - id: e95090a872a4
 - slug: the-job-club-e95090
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 11:00 AM
-- start: 2026-11-03T12:00:00-07:00
+- when: Tuesday, November 3, 2026, 12:00 PM
+- start: 2026-11-03T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9677,8 +9677,8 @@ Join this zoom meeting every Monday for a supportive, energizing meeting designe
 - id: 82215db4fe79
 - slug: yoga-for-adults-at-san-ramon-library-82215d
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 11:00 AM
-- start: 2026-11-03T12:00:00-07:00
+- when: Tuesday, November 3, 2026, 12:00 PM
+- start: 2026-11-03T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Yoga for adults
@@ -9700,8 +9700,8 @@ This yoga class is designed for adults and seniors of all experience levels, fro
 - id: 99a425cbcd4d
 - slug: american-life-vocabulary-with-gary-richter-99a425
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 12:00 PM
-- start: 2026-11-03T13:00:00-07:00
+- when: Tuesday, November 3, 2026, 1:00 PM
+- start: 2026-11-03T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9723,8 +9723,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: b9aa7319739a
 - slug: homework-help-at-rincon-branch-b9aa73
 - date: 2026-11-03
-- when: Tuesday, November 3, 2026, 2:00 PM
-- start: 2026-11-03T15:00:00-07:00
+- when: Tuesday, November 3, 2026, 3:00 PM
+- start: 2026-11-03T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9746,8 +9746,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 8c4af559e54d
 - slug: business-referral-network-thursdays-8c4af5
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 8:00 AM
-- start: 2026-11-05T09:00:00-07:00
+- when: Thursday, November 5, 2026, 9:00 AM
+- start: 2026-11-05T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9769,8 +9769,8 @@ The San Ramon Chamber Business Referral Network, Thursdays, meets the first and 
 - id: a791f1137831
 - slug: tax-aide-program-looking-for-new-volunteers-a791f1
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 9:00 AM
-- start: 2026-11-05T10:00:00-07:00
+- when: Thursday, November 5, 2026, 10:00 AM
+- start: 2026-11-05T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9792,8 +9792,8 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - id: 17ed6e58f380
 - slug: east-bay-sbdc-in-person-advising-sessions-17ed6e
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 9:00 AM
-- start: 2026-11-05T10:00:00-07:00
+- when: Thursday, November 5, 2026, 10:00 AM
+- start: 2026-11-05T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton, CA 10:00 am3.7 mi
@@ -9815,8 +9815,8 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - id: ee0bcf948df2
 - slug: free-weekly-pop-up-ee0bcf
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 9:00 AM
-- start: 2026-11-05T10:00:00-07:00
+- when: Thursday, November 5, 2026, 10:00 AM
+- start: 2026-11-05T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9838,8 +9838,8 @@ Grab a lunch to go, connect with a caring volunteer, clothing, seasonal and hyge
 - id: ac297d0e0982
 - slug: ridecare-transportation-ac297d
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 9:00 AM
-- start: 2026-11-05T10:00:00-07:00
+- when: Thursday, November 5, 2026, 10:00 AM
+- start: 2026-11-05T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9861,8 +9861,8 @@ Free, caring rides for seniors and adults with disabilities residing in Livermor
 - id: c9b4cf078d3c
 - slug: larpd-community-support-program-c9b4cf
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 9:00 AM
-- start: 2026-11-05T10:00:00-07:00
+- when: Thursday, November 5, 2026, 10:00 AM
+- start: 2026-11-05T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9884,8 +9884,8 @@ Scholarships are available through the LARPD Foundation’s Community Support Pr
 - id: 83bef22a04b4
 - slug: volunteer-at-open-heart-kitchen-83bef2
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 9:00 AM
-- start: 2026-11-05T10:00:00-07:00
+- when: Thursday, November 5, 2026, 10:00 AM
+- start: 2026-11-05T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9907,8 +9907,8 @@ Open Heart Kitchen offers individual and group volunteer opportunities at a vari
 - id: 64484657451c
 - slug: care-giver-support-group-644846
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 9:00 AM
-- start: 2026-11-05T10:00:00-07:00
+- when: Thursday, November 5, 2026, 10:00 AM
+- start: 2026-11-05T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9930,8 +9930,8 @@ These free presentations from City Serve of the Tri-Valley provide support for u
 - id: 1e616a1de694
 - slug: toddler-storytime-1e616a
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 10:00 AM
-- start: 2026-11-05T11:00:00-07:00
+- when: Thursday, November 5, 2026, 11:00 AM
+- start: 2026-11-05T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9953,8 +9953,8 @@ Rhymes, songs, bounces and books for the whole family. Build a foundation for li
 - id: 95616bb489e0
 - slug: storytime-at-san-ramon-library-95616b
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 10:00 AM
-- start: 2026-11-05T11:00:00-07:00
+- when: Thursday, November 5, 2026, 11:00 AM
+- start: 2026-11-05T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9976,8 +9976,8 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - id: ee6eb66c5c23
 - slug: community-meals-ee6eb6
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 11:00 AM
-- start: 2026-11-05T12:00:00-07:00
+- when: Thursday, November 5, 2026, 12:00 PM
+- start: 2026-11-05T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -9999,8 +9999,8 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - id: d7b8d177778e
 - slug: drop-in-bridge-at-rlcc-d7b8d1
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 12:00 PM
-- start: 2026-11-05T13:00:00-07:00
+- when: Thursday, November 5, 2026, 1:00 PM
+- start: 2026-11-05T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10022,8 +10022,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: e19b07e9ba34
 - slug: american-life-vocabulary-with-gary-richter-e19b07
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 12:00 PM
-- start: 2026-11-05T13:00:00-07:00
+- when: Thursday, November 5, 2026, 1:00 PM
+- start: 2026-11-05T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10045,8 +10045,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: eb2b4f45d7cd
 - slug: homework-help-at-rincon-branch-eb2b4f
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 2:00 PM
-- start: 2026-11-05T15:00:00-07:00
+- when: Thursday, November 5, 2026, 3:00 PM
+- start: 2026-11-05T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10068,8 +10068,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: f732b1ee5d08
 - slug: san-ramon-library-teen-advisory-board-f732b1
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 3:00 PM
-- start: 2026-11-05T16:00:00-07:00
+- when: Thursday, November 5, 2026, 4:00 PM
+- start: 2026-11-05T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10091,8 +10091,8 @@ The Teen Advisory Board meets on the first Thursday of each month where teen vol
 - id: 5fcee628acd6
 - slug: free-social-adults-only-19-chess-club-5fcee6
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 4:00 PM
-- start: 2026-11-05T17:00:00-07:00
+- when: Thursday, November 5, 2026, 5:00 PM
+- start: 2026-11-05T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -10114,8 +10114,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: b5d559895d2f
 - slug: livermore-historic-preservation-commission-b5d559
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 6:00 PM
-- start: 2026-11-05T19:00:00-07:00
+- when: Thursday, November 5, 2026, 7:00 PM
+- start: 2026-11-05T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10137,8 +10137,8 @@ The next Livermore Historic Preservation Commission meeting is 7 p.m., Sept. 3. 
 - id: 14455c680b94
 - slug: english-class-14455c
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 6:00 PM
-- start: 2026-11-05T19:00:00-07:00
+- when: Thursday, November 5, 2026, 7:00 PM
+- start: 2026-11-05T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: The Church of Jesus Christ of Latter-day Saints
@@ -10160,8 +10160,8 @@ Free English class for adults of all ages and nationalities, every Thursday from
 - id: 925335b8cbcf
 - slug: tee-sanders-925335
 - date: 2026-11-05
-- when: Thursday, November 5, 2026, 6:00 PM
-- start: 2026-11-05T19:00:00-07:00
+- when: Thursday, November 5, 2026, 7:00 PM
+- start: 2026-11-05T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pick-UpPleasanton Tommy T's
@@ -10183,8 +10183,8 @@ November 05 Tee Sanders T
 - id: cc67d0ec8e92
 - slug: volunteer-for-ride-care-cc67d0
 - date: 2026-11-06
-- when: Friday, November 6, 2026, 9:00 AM
-- start: 2026-11-06T10:00:00-07:00
+- when: Friday, November 6, 2026, 10:00 AM
+- start: 2026-11-06T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10207,7 +10207,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - slug: amir-k-57b3ae
 - date: 2026-11-06
 - when: Friday, November 6, 2026 (time not listed)
-- start: 2026-11-06T12:00:00-07:00
+- start: 2026-11-06T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -10229,8 +10229,8 @@ Fri, Nov 6, 2026 Sat, Nov 7, 2026
 - id: e7d96ef58c08
 - slug: drop-in-bridge-at-rlcc-e7d96e
 - date: 2026-11-06
-- when: Friday, November 6, 2026, 12:00 PM
-- start: 2026-11-06T13:00:00-07:00
+- when: Friday, November 6, 2026, 1:00 PM
+- start: 2026-11-06T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10252,8 +10252,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: 18b818232c3b
 - slug: kids-night-out-18b818
 - date: 2026-11-06
-- when: Friday, November 6, 2026, 5:00 PM
-- start: 2026-11-06T18:00:00-07:00
+- when: Friday, November 6, 2026, 6:00 PM
+- start: 2026-11-06T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: Danville Community Center & Library > Valley Oak Room
@@ -10275,8 +10275,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: a92b858d1904
 - slug: audiorage-a92b85
 - date: 2026-11-06
-- when: Friday, November 6, 2026, 8:00 PM
-- start: 2026-11-06T21:00:00-07:00
+- when: Friday, November 6, 2026, 9:00 PM
+- start: 2026-11-06T21:00:00-08:00
 - end: 
 - all_day: no
 - venue: Meenar Music Club
@@ -10298,8 +10298,8 @@ The Strokes, The Killers, Green Day, Smashing Pumpkins, Rage Against the Machine
 - id: aed33f63f18d
 - slug: volunteer-in-the-parks-aed33f
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 7:00 AM
-- start: 2026-11-09T08:00:00-07:00
+- when: Monday, November 9, 2026, 8:00 AM
+- start: 2026-11-09T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10321,8 +10321,8 @@ Volunteers are vital to the East Bay Regional Parks with opportunities available
 - id: 7f1344843d8e
 - slug: fee-assistance-program-7f1344
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 8:00 AM
-- start: 2026-11-09T09:00:00-07:00
+- when: Monday, November 9, 2026, 9:00 AM
+- start: 2026-11-09T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10344,8 +10344,8 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - id: d97c860a7cfa
 - slug: drop-in-billiards-d97c86
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 8:00 AM
-- start: 2026-11-09T09:00:00-07:00
+- when: Monday, November 9, 2026, 9:00 AM
+- start: 2026-11-09T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10367,8 +10367,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: d853b4d8b3cb
 - slug: senior-bingo-d853b4
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 9:00 AM
-- start: 2026-11-09T10:00:00-07:00
+- when: Monday, November 9, 2026, 10:00 AM
+- start: 2026-11-09T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Veterans Memorial Building > Senior Center
@@ -10390,8 +10390,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: b04061c9b451
 - slug: tax-aide-program-looking-for-new-volunteers-b04061
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 9:00 AM
-- start: 2026-11-09T10:00:00-07:00
+- when: Monday, November 9, 2026, 10:00 AM
+- start: 2026-11-09T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10413,8 +10413,8 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - id: 2a6a39ed66ae
 - slug: volunteer-with-spectrum-community-services-2a6a39
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 9:00 AM
-- start: 2026-11-09T10:00:00-07:00
+- when: Monday, November 9, 2026, 10:00 AM
+- start: 2026-11-09T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10436,8 +10436,8 @@ Spectrum Community Services is looking for new volunteers to join the team in a 
 - id: f7343e1c55c6
 - slug: larpd-scholarship-program-f7343e
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 9:00 AM
-- start: 2026-11-09T10:00:00-07:00
+- when: Monday, November 9, 2026, 10:00 AM
+- start: 2026-11-09T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10459,8 +10459,8 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - id: db0f0dfe530d
 - slug: step-by-step-esl-conversation-db0f0d
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 9:00 AM
-- start: 2026-11-09T10:00:00-07:00
+- when: Monday, November 9, 2026, 10:00 AM
+- start: 2026-11-09T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10482,8 +10482,8 @@ Practice intermediate-level English grammar and conversation with other adult le
 - id: 3a99f5c62ebb
 - slug: free-monday-movie-3a99f5
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 12:00 PM
-- start: 2026-11-09T13:00:00-07:00
+- when: Monday, November 9, 2026, 1:00 PM
+- start: 2026-11-09T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10505,8 +10505,8 @@ Enjoy a free movie every Monday at the Danville Senior Center Community Hall. 1 
 - id: 2af0abe47236
 - slug: homework-help-at-rincon-branch-2af0ab
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 2:00 PM
-- start: 2026-11-09T15:00:00-07:00
+- when: Monday, November 9, 2026, 3:00 PM
+- start: 2026-11-09T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10528,8 +10528,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 3908a8dc9d30
 - slug: heritage-resource-commission-3908a8
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 4:00 PM
-- start: 2026-11-09T17:00:00-07:00
+- when: Monday, November 9, 2026, 5:00 PM
+- start: 2026-11-09T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10551,8 +10551,8 @@ The next Danville Heritage Resource Commission - Regular Meeting is 5 p.m., Sept
 - id: 46d9662f72d7
 - slug: open-heart-refuge-46d966
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 5:00 PM
-- start: 2026-11-09T18:00:00-07:00
+- when: Monday, November 9, 2026, 6:00 PM
+- start: 2026-11-09T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10574,8 +10574,8 @@ Open Heart Refuge offers overnight shelter using an assigned bed model. Check-in
 - id: f728fba17b9a
 - slug: family-storytime-at-san-ramon-library-f728fb
 - date: 2026-11-09
-- when: Monday, November 9, 2026, 5:00 PM
-- start: 2026-11-09T18:00:00-07:00
+- when: Monday, November 9, 2026, 6:00 PM
+- start: 2026-11-09T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: San Ramon Library
@@ -10597,8 +10597,8 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - id: adef5be93710
 - slug: town-council-study-session-cancelled-adef5b
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 7:00 AM
-- start: 2026-11-10T08:00:00-07:00
+- when: Tuesday, November 10, 2026, 8:00 AM
+- start: 2026-11-10T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: Town of Danville Main Office
@@ -10620,8 +10620,8 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - id: 9984c65bfc1f
 - slug: drop-in-billiards-9984c6
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 8:00 AM
-- start: 2026-11-10T09:00:00-07:00
+- when: Tuesday, November 10, 2026, 9:00 AM
+- start: 2026-11-10T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10643,8 +10643,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: 922bd09d985e
 - slug: vintage-lounge-puzzling-922bd0
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 8:00 AM
-- start: 2026-11-10T09:00:00-07:00
+- when: Tuesday, November 10, 2026, 9:00 AM
+- start: 2026-11-10T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10666,8 +10666,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: 3f2136748027
 - slug: buzz-session-san-ramon-valley-village-3f2136
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 9:00 AM
-- start: 2026-11-10T10:00:00-07:00
+- when: Tuesday, November 10, 2026, 10:00 AM
+- start: 2026-11-10T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Veterans Memorial Building > Senior Center
@@ -10689,8 +10689,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: 37234264abad
 - slug: volunteer-with-cityserve-372342
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 9:00 AM
-- start: 2026-11-10T10:00:00-07:00
+- when: Tuesday, November 10, 2026, 10:00 AM
+- start: 2026-11-10T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10712,8 +10712,8 @@ Immediate volunteer opportunities are available as a Caring Visitor, RideCare Dr
 - id: 626339822a5d
 - slug: volunteer-with-hope-hospice-626339
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 9:00 AM
-- start: 2026-11-10T10:00:00-07:00
+- when: Tuesday, November 10, 2026, 10:00 AM
+- start: 2026-11-10T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10735,8 +10735,8 @@ Hope patient care volunteers help patients and their families in many different 
 - id: c1e4d35eef8b
 - slug: souper-tuesday-free-lunch-c1e4d3
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 10:00 AM
-- start: 2026-11-10T11:00:00-07:00
+- when: Tuesday, November 10, 2026, 11:00 AM
+- start: 2026-11-10T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10758,8 +10758,8 @@ Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CitySer
 - id: 74e6772d3322
 - slug: biz-links-networking-group-74e677
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 11:00 AM
-- start: 2026-11-10T12:00:00-07:00
+- when: Tuesday, November 10, 2026, 12:00 PM
+- start: 2026-11-10T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton Chamber of Commerce
@@ -10781,8 +10781,8 @@ Biz Links is a Chamber networking group focused on building meaningful business 
 - id: b0ced20435e2
 - slug: the-job-club-b0ced2
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 11:00 AM
-- start: 2026-11-10T12:00:00-07:00
+- when: Tuesday, November 10, 2026, 12:00 PM
+- start: 2026-11-10T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10804,8 +10804,8 @@ Join this zoom meeting every Monday for a supportive, energizing meeting designe
 - id: 55ff0b107891
 - slug: american-life-vocabulary-with-gary-richter-55ff0b
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 12:00 PM
-- start: 2026-11-10T13:00:00-07:00
+- when: Tuesday, November 10, 2026, 1:00 PM
+- start: 2026-11-10T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10827,8 +10827,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: bbeb956f7f19
 - slug: homework-help-at-rincon-branch-bbeb95
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 2:00 PM
-- start: 2026-11-10T15:00:00-07:00
+- when: Tuesday, November 10, 2026, 3:00 PM
+- start: 2026-11-10T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10850,8 +10850,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 2534522fad4f
 - slug: bookworms-san-ramon-library-kid-s-book-club-253452
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 3:00 PM
-- start: 2026-11-10T16:00:00-07:00
+- when: Tuesday, November 10, 2026, 4:00 PM
+- start: 2026-11-10T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10873,8 +10873,8 @@ Bookworms is a monthly book club for readers in 3rd through 5th grade where a ne
 - id: b40eebc0039a
 - slug: movie-and-game-night-b40eeb
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 3:00 PM
-- start: 2026-11-10T16:00:00-07:00
+- when: Tuesday, November 10, 2026, 4:00 PM
+- start: 2026-11-10T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: Oak Hill Park & Community Center
@@ -10896,8 +10896,8 @@ Bookworms is a monthly book club for readers in 3rd through 5th grade where a ne
 - id: 326565a923d3
 - slug: danville-planning-commission-326565
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 4:00 PM
-- start: 2026-11-10T17:00:00-07:00
+- when: Tuesday, November 10, 2026, 5:00 PM
+- start: 2026-11-10T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10919,8 +10919,8 @@ The next Danville Planning Commission meeting is 5 p.m., July 14. Town Meeting H
 - id: 77382e020fc7
 - slug: ignite-young-professionals-august-mixer-77382e
 - date: 2026-11-10
-- when: Tuesday, November 10, 2026, 4:00 PM
-- start: 2026-11-10T17:00:00-07:00
+- when: Tuesday, November 10, 2026, 5:00 PM
+- start: 2026-11-10T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10942,8 +10942,8 @@ IGNITE brings together young professionals who want to build community, expand n
 - id: 1a3a858c8fda
 - slug: care-coordination-services-1a3a85
 - date: 2026-11-11
-- when: Wednesday, November 11, 2026, 8:00 AM
-- start: 2026-11-11T09:00:00-07:00
+- when: Wednesday, November 11, 2026, 9:00 AM
+- start: 2026-11-11T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10965,8 +10965,8 @@ CityServe Care Coordination program connects individuals and families in need to
 - id: 13515a52d338
 - slug: volunteer-for-ride-care-13515a
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 9:00 AM
-- start: 2026-11-13T10:00:00-07:00
+- when: Friday, November 13, 2026, 10:00 AM
+- start: 2026-11-13T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -10989,7 +10989,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - slug: d-l-hughley-e63520
 - date: 2026-11-13
 - when: Friday, November 13, 2026 (time not listed)
-- start: 2026-11-13T12:00:00-07:00
+- start: 2026-11-13T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -11012,7 +11012,7 @@ Fri, Nov 13, 2026 Sat, Nov 14, 2026 Sun, Nov 15, 2026
 - slug: cedric-the-entertainer-bdea8f
 - date: 2026-11-13
 - when: Friday, November 13, 2026 (time not listed)
-- start: 2026-11-13T12:00:00-07:00
+- start: 2026-11-13T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -11034,8 +11034,8 @@ Fri, Nov 13, 2026 Sat, Nov 14, 2026
 - id: dbee4611e1ca
 - slug: drop-in-bridge-at-rlcc-dbee46
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 12:00 PM
-- start: 2026-11-13T13:00:00-07:00
+- when: Friday, November 13, 2026, 1:00 PM
+- start: 2026-11-13T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11057,8 +11057,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: c08a2253d51a
 - slug: art-fun-with-ms-debbie-forest-friends-thanksgiving-c08a22
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 2:00 PM
-- start: 2026-11-13T15:00:00-07:00
+- when: Friday, November 13, 2026, 3:00 PM
+- start: 2026-11-13T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: Hap Magee Ranch Park > The Cottage
@@ -11080,8 +11080,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: 1de27d017182
 - slug: dublin-night-markets-1de27d
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 4:00 PM
-- start: 2026-11-13T17:00:00-07:00
+- when: Friday, November 13, 2026, 5:00 PM
+- start: 2026-11-13T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11103,8 +11103,8 @@ Dublin’s monthly Night Market series returns featuring all types of vendors an
 - id: ba7f4ccdfa16
 - slug: night-market-at-st-pat-s-row-ba7f4c
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 4:00 PM
-- start: 2026-11-13T17:00:00-07:00
+- when: Friday, November 13, 2026, 5:00 PM
+- start: 2026-11-13T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: St. Pat's Row
@@ -11126,8 +11126,8 @@ Join us for four Night Market events this fall, featuring food vendors, handmade
 - id: 406a6d7ce126
 - slug: murder-mystery-dinner-a-dance-with-death-406a6d
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 4:00 PM
-- start: 2026-11-13T17:00:00-07:00
+- when: Friday, November 13, 2026, 5:00 PM
+- start: 2026-11-13T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Community Hall
@@ -11149,8 +11149,8 @@ Join us for four Night Market events this fall, featuring food vendors, handmade
 - id: e5c5c84ddc07
 - slug: music-lessons-with-pleasanton-s-1776-era-fife-and-drum-children-s-band-e5c5c8
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 4:00 PM
-- start: 2026-11-13T17:00:00-07:00
+- when: Friday, November 13, 2026, 5:00 PM
+- start: 2026-11-13T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: near Mohr Elementary school, call for details
@@ -11172,8 +11172,8 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - id: 1f8a7192cd71
 - slug: danville-farmers-market-1f8a71
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 8:00 AM
-- start: 2026-11-14T09:00:00-07:00
+- when: Saturday, November 14, 2026, 9:00 AM
+- start: 2026-11-14T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11195,8 +11195,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: fef45b835866
 - slug: pleasanton-farmers-market-fef45b
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 8:00 AM
-- start: 2026-11-14T09:00:00-07:00
+- when: Saturday, November 14, 2026, 9:00 AM
+- start: 2026-11-14T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11218,8 +11218,8 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - id: 04b138aa1eff
 - slug: san-ramon-farmers-market-04b138
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 8:00 AM
-- start: 2026-11-14T09:00:00-07:00
+- when: Saturday, November 14, 2026, 9:00 AM
+- start: 2026-11-14T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11241,8 +11241,8 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - id: bee8ba8c94ad
 - slug: volunteer-at-tri-valley-haven-bee8ba
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 9:00 AM
-- start: 2026-11-14T10:00:00-07:00
+- when: Saturday, November 14, 2026, 10:00 AM
+- start: 2026-11-14T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11264,8 +11264,8 @@ Tri-Valley Haven's mission is to advocate for survivors of domestic violence, se
 - id: 1ac382ae122f
 - slug: chess-hour-1ac382
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 10:00 AM
-- start: 2026-11-14T11:00:00-07:00
+- when: Saturday, November 14, 2026, 11:00 AM
+- start: 2026-11-14T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11288,7 +11288,7 @@ Practice chess skills and meet other chess players for games at the library. All
 - slug: d-l-hughley-55f577
 - date: 2026-11-14
 - when: Saturday, November 14, 2026 (time not listed)
-- start: 2026-11-14T12:00:00-07:00
+- start: 2026-11-14T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -11311,7 +11311,7 @@ Fri, Nov 13, 2026 Sat, Nov 14, 2026 Sun, Nov 15, 2026
 - slug: cedric-the-entertainer-c264dd
 - date: 2026-11-14
 - when: Saturday, November 14, 2026 (time not listed)
-- start: 2026-11-14T12:00:00-07:00
+- start: 2026-11-14T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -11334,7 +11334,7 @@ Fri, Nov 13, 2026 Sat, Nov 14, 2026
 - slug: fusion-cup-a8e82a
 - date: 2026-11-14
 - when: Saturday, November 14, 2026 (time not listed)
-- start: 2026-11-14T12:00:00-07:00
+- start: 2026-11-14T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465638?dy=14&mth=11&yr=20268.5 mi
@@ -11357,7 +11357,7 @@ Fri, Nov 13, 2026 Sat, Nov 14, 2026
 - slug: evolution-program-last-weekend-46e9c1
 - date: 2026-11-14
 - when: Saturday, November 14, 2026 (time not listed)
-- start: 2026-11-14T12:00:00-07:00
+- start: 2026-11-14T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/5844656368.5 mi
@@ -11379,8 +11379,8 @@ Fri, Nov 13, 2026 Sat, Nov 14, 2026
 - id: 601c1ad07e16
 - slug: karaoke-saturday-601c1a
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 11:00 AM
-- start: 2026-11-14T12:00:00-07:00
+- when: Saturday, November 14, 2026, 12:00 PM
+- start: 2026-11-14T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Charles R. Vineyards
@@ -11402,8 +11402,8 @@ Get ready to unleash your inner rock star at Karaoke Saturday! Doors swing open 
 - id: a9a2e444320c
 - slug: tracy-cruz-music-a9a2e4
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 5:00 PM
-- start: 2026-11-14T18:00:00-07:00
+- when: Saturday, November 14, 2026, 6:00 PM
+- start: 2026-11-14T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: Las Positas Vineyards
@@ -11425,8 +11425,8 @@ Multi-award winning R&B/Soul/Jazz music artist Tracy Cruz will be performing LIV
 - id: f7b711216fe9
 - slug: mark-bettencourt-and-the-aftermath-f7b711
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 8:00 PM
-- start: 2026-11-14T21:00:00-07:00
+- when: Saturday, November 14, 2026, 9:00 PM
+- start: 2026-11-14T21:00:00-08:00
 - end: 
 - all_day: no
 - venue: Meenar Music Club
@@ -11448,8 +11448,8 @@ Mark Bettencourt and the Aftermath is probably the highest energy band you will 
 - id: 5cdef9e4473a
 - slug: livermore-farmers-market-5cdef9
 - date: 2026-11-15
-- when: Sunday, November 15, 2026, 8:00 AM
-- start: 2026-11-15T09:00:00-07:00
+- when: Sunday, November 15, 2026, 9:00 AM
+- start: 2026-11-15T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11471,8 +11471,8 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - id: f0c2ec9ba37c
 - slug: volunteer-at-valley-humane-society-f0c2ec
 - date: 2026-11-15
-- when: Sunday, November 15, 2026, 9:00 AM
-- start: 2026-11-15T10:00:00-07:00
+- when: Sunday, November 15, 2026, 10:00 AM
+- start: 2026-11-15T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11494,8 +11494,8 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - id: e08513371c22
 - slug: business-referral-network-e08513
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 8:00 AM
-- start: 2026-11-17T09:00:00-07:00
+- when: Tuesday, November 17, 2026, 9:00 AM
+- start: 2026-11-17T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11517,8 +11517,8 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - id: 99f92d0d6c9f
 - slug: drop-in-billiards-99f92d
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 8:00 AM
-- start: 2026-11-17T09:00:00-07:00
+- when: Tuesday, November 17, 2026, 9:00 AM
+- start: 2026-11-17T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11540,8 +11540,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: bd8929a1617d
 - slug: vintage-lounge-puzzling-bd8929
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 8:00 AM
-- start: 2026-11-17T09:00:00-07:00
+- when: Tuesday, November 17, 2026, 9:00 AM
+- start: 2026-11-17T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11563,8 +11563,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: c5b710db257d
 - slug: buzz-session-holiday-bakery-desserts-demonstration-c5b710
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 9:00 AM
-- start: 2026-11-17T10:00:00-07:00
+- when: Tuesday, November 17, 2026, 10:00 AM
+- start: 2026-11-17T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Veterans Memorial Building > Senior Center
@@ -11586,8 +11586,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: b5b4e85fe147
 - slug: volunteer-with-cityserve-b5b4e8
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 9:00 AM
-- start: 2026-11-17T10:00:00-07:00
+- when: Tuesday, November 17, 2026, 10:00 AM
+- start: 2026-11-17T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11609,8 +11609,8 @@ Immediate volunteer opportunities are available as a Caring Visitor, RideCare Dr
 - id: 0b2c40a5c4c9
 - slug: volunteer-with-hope-hospice-0b2c40
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 9:00 AM
-- start: 2026-11-17T10:00:00-07:00
+- when: Tuesday, November 17, 2026, 10:00 AM
+- start: 2026-11-17T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11632,8 +11632,8 @@ Hope patient care volunteers help patients and their families in many different 
 - id: ecaacc54f33e
 - slug: souper-tuesday-free-lunch-ecaacc
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 10:00 AM
-- start: 2026-11-17T11:00:00-07:00
+- when: Tuesday, November 17, 2026, 11:00 AM
+- start: 2026-11-17T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11655,8 +11655,8 @@ Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CitySer
 - id: 75fed5c83971
 - slug: the-job-club-75fed5
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 11:00 AM
-- start: 2026-11-17T12:00:00-07:00
+- when: Tuesday, November 17, 2026, 12:00 PM
+- start: 2026-11-17T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11678,8 +11678,8 @@ Join this zoom meeting every Monday for a supportive, energizing meeting designe
 - id: 683a2d6a97ff
 - slug: chair-yoga-for-seniors-and-adults-683a2d
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 11:00 AM
-- start: 2026-11-17T12:00:00-07:00
+- when: Tuesday, November 17, 2026, 12:00 PM
+- start: 2026-11-17T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11701,8 +11701,8 @@ Chair yoga is perfect for those who prefer or require seated support offering al
 - id: f59d39882168
 - slug: afternoon-mingle-f59d39
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 11:00 AM
-- start: 2026-11-17T12:00:00-07:00
+- when: Tuesday, November 17, 2026, 12:00 PM
+- start: 2026-11-17T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Veterans Memorial Building > Senior Center
@@ -11724,8 +11724,8 @@ Chair yoga is perfect for those who prefer or require seated support offering al
 - id: 87fd873541ce
 - slug: american-life-vocabulary-with-gary-richter-87fd87
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 12:00 PM
-- start: 2026-11-17T13:00:00-07:00
+- when: Tuesday, November 17, 2026, 1:00 PM
+- start: 2026-11-17T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11747,8 +11747,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: a84c0e7b764c
 - slug: homework-help-at-rincon-branch-a84c0e
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 2:00 PM
-- start: 2026-11-17T15:00:00-07:00
+- when: Tuesday, November 17, 2026, 3:00 PM
+- start: 2026-11-17T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11770,8 +11770,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: f57d56baee10
 - slug: danville-town-council-regular-meeting-f57d56
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 4:00 PM
-- start: 2026-11-17T17:00:00-07:00
+- when: Tuesday, November 17, 2026, 5:00 PM
+- start: 2026-11-17T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Town Council - Regular Meeting
@@ -11793,8 +11793,8 @@ The next Danville Town Council - Regular Meeting is 5 p.m., July 21. Town Meetin
 - id: aa566c951cb1
 - slug: lvjusd-board-meetings-aa566c
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 5:00 PM
-- start: 2026-11-17T18:00:00-07:00
+- when: Tuesday, November 17, 2026, 6:00 PM
+- start: 2026-11-17T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11816,8 +11816,8 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - id: 4dad1895cb0c
 - slug: san-ramon-valley-unified-school-district-4dad18
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 5:00 PM
-- start: 2026-11-17T18:00:00-07:00
+- when: Tuesday, November 17, 2026, 6:00 PM
+- start: 2026-11-17T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11839,8 +11839,8 @@ The next regular Board of Education Meeting is 6 p.m., June 28. District Board R
 - id: 90f039324656
 - slug: pleasanton-city-council-90f039
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 6:00 PM
-- start: 2026-11-17T19:00:00-07:00
+- when: Tuesday, November 17, 2026, 7:00 PM
+- start: 2026-11-17T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: City of Pleasanton
@@ -11862,8 +11862,8 @@ Pleasanton City Council Meetings are held at 7 p.m. on the first and third Tuesd
 - id: 59bb73da9541
 - slug: livermore-planning-commission-59bb73
 - date: 2026-11-17
-- when: Tuesday, November 17, 2026, 6:00 PM
-- start: 2026-11-17T19:00:00-07:00
+- when: Tuesday, November 17, 2026, 7:00 PM
+- start: 2026-11-17T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11885,8 +11885,8 @@ The next Livermore Planning Commission meeting is 7 p.m., Sept. 15. City Hall. V
 - id: 1cd4acdeb9dd
 - slug: care-coordination-services-1cd4ac
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 8:00 AM
-- start: 2026-11-18T09:00:00-07:00
+- when: Wednesday, November 18, 2026, 9:00 AM
+- start: 2026-11-18T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11908,8 +11908,8 @@ CityServe Care Coordination program connects individuals and families in need to
 - id: c3de26794d7d
 - slug: the-lending-library-c3de26
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 8:00 AM
-- start: 2026-11-18T09:00:00-07:00
+- when: Wednesday, November 18, 2026, 9:00 AM
+- start: 2026-11-18T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11931,8 +11931,8 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - id: 098de9c46a50
 - slug: eugene-o-neill-national-historic-site-098de9
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 9:00 AM
-- start: 2026-11-18T10:00:00-07:00
+- when: Wednesday, November 18, 2026, 10:00 AM
+- start: 2026-11-18T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11954,8 +11954,8 @@ The Eugene O'Neill National Historic Site is free to the public with reservation
 - id: b1b639e848a3
 - slug: volunteer-with-niles-canyon-railway-b1b639
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 9:00 AM
-- start: 2026-11-18T10:00:00-07:00
+- when: Wednesday, November 18, 2026, 10:00 AM
+- start: 2026-11-18T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -11977,8 +11977,8 @@ Niles Canyon Railway is looking for volunteers for all levels of skill and exper
 - id: 6f29104ad7be
 - slug: family-story-hour-6f2910
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 10:00 AM
-- start: 2026-11-18T11:00:00-07:00
+- when: Wednesday, November 18, 2026, 11:00 AM
+- start: 2026-11-18T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12000,8 +12000,8 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - id: e3d5c9f65afb
 - slug: drop-in-mahjong-at-rlcc-e3d5c9
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 12:00 PM
-- start: 2026-11-18T13:00:00-07:00
+- when: Wednesday, November 18, 2026, 1:00 PM
+- start: 2026-11-18T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12023,8 +12023,8 @@ American Version Mahjong meets 1-4 p.m., Wednesdays in the Sycamore Room. Free l
 - id: 49c6e9bc5ac2
 - slug: homework-help-at-rincon-branch-49c6e9
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 2:00 PM
-- start: 2026-11-18T15:00:00-07:00
+- when: Wednesday, November 18, 2026, 3:00 PM
+- start: 2026-11-18T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12046,8 +12046,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: fa2e0ae05569
 - slug: volunteer-with-culinary-angels-fa2e0a
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 2:00 PM
-- start: 2026-11-18T15:00:00-07:00
+- when: Wednesday, November 18, 2026, 3:00 PM
+- start: 2026-11-18T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12069,8 +12069,8 @@ Culinary Angels is looking for volunteers to do inventory a few times a month. 3
 - id: 8a880b31d15f
 - slug: san-ramon-lego-club-8a880b
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 3:00 PM
-- start: 2026-11-18T16:00:00-07:00
+- when: Wednesday, November 18, 2026, 4:00 PM
+- start: 2026-11-18T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12092,8 +12092,8 @@ Join and learn while having fun. Suitable for children 6 to 9 years. 4-5 p.m., J
 - id: e9d8eabafacd
 - slug: business-after-hours-mixer-e9d8ea
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 3:00 PM
-- start: 2026-11-18T16:00:00-07:00
+- when: Wednesday, November 18, 2026, 4:00 PM
+- start: 2026-11-18T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12115,8 +12115,8 @@ Chamber members host an open house at their business, inviting attendees to a fi
 - id: 84e17ae566a7
 - slug: danville-farmers-market-84e17a
 - date: 2026-11-21
-- when: Saturday, November 21, 2026, 8:00 AM
-- start: 2026-11-21T09:00:00-07:00
+- when: Saturday, November 21, 2026, 9:00 AM
+- start: 2026-11-21T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12138,8 +12138,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: 0e6b90c70a77
 - slug: pleasanton-farmers-market-0e6b90
 - date: 2026-11-21
-- when: Saturday, November 21, 2026, 8:00 AM
-- start: 2026-11-21T09:00:00-07:00
+- when: Saturday, November 21, 2026, 9:00 AM
+- start: 2026-11-21T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12161,8 +12161,8 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - id: 6d20fa1a2aba
 - slug: san-ramon-farmers-market-6d20fa
 - date: 2026-11-21
-- when: Saturday, November 21, 2026, 8:00 AM
-- start: 2026-11-21T09:00:00-07:00
+- when: Saturday, November 21, 2026, 9:00 AM
+- start: 2026-11-21T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12184,8 +12184,8 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - id: 3a7dbe54d98d
 - slug: volunteer-at-tri-valley-haven-3a7dbe
 - date: 2026-11-21
-- when: Saturday, November 21, 2026, 9:00 AM
-- start: 2026-11-21T10:00:00-07:00
+- when: Saturday, November 21, 2026, 10:00 AM
+- start: 2026-11-21T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12207,8 +12207,8 @@ Tri-Valley Haven's mission is to advocate for survivors of domestic violence, se
 - id: 466c291f9d21
 - slug: chess-hour-466c29
 - date: 2026-11-21
-- when: Saturday, November 21, 2026, 10:00 AM
-- start: 2026-11-21T11:00:00-07:00
+- when: Saturday, November 21, 2026, 11:00 AM
+- start: 2026-11-21T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12231,7 +12231,7 @@ Practice chess skills and meet other chess players for games at the library. All
 - slug: shuler-king-008bf2
 - date: 2026-11-21
 - when: Saturday, November 21, 2026 (time not listed)
-- start: 2026-11-21T12:00:00-07:00
+- start: 2026-11-21T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -12253,8 +12253,8 @@ Fri, Nov 20, 2026 Sat, Nov 21, 2026 Sun, Nov 22, 2026
 - id: 30b1809ca557
 - slug: kids-night-out-edge-30b180
 - date: 2026-11-21
-- when: Saturday, November 21, 2026, 4:00 PM
-- start: 2026-11-21T17:00:00-07:00
+- when: Saturday, November 21, 2026, 5:00 PM
+- start: 2026-11-21T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: EDGE Performance Center
@@ -12276,8 +12276,8 @@ Tag(s): Home http://www.fusionsc.org/event/show/588783271
 - id: fd34065c2f56
 - slug: livermore-farmers-market-fd3406
 - date: 2026-11-22
-- when: Sunday, November 22, 2026, 8:00 AM
-- start: 2026-11-22T09:00:00-07:00
+- when: Sunday, November 22, 2026, 9:00 AM
+- start: 2026-11-22T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12299,8 +12299,8 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - id: f46f8f7dd9b6
 - slug: volunteer-at-valley-humane-society-f46f8f
 - date: 2026-11-22
-- when: Sunday, November 22, 2026, 9:00 AM
-- start: 2026-11-22T10:00:00-07:00
+- when: Sunday, November 22, 2026, 10:00 AM
+- start: 2026-11-22T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12323,7 +12323,7 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - slug: shuler-king-08ae14
 - date: 2026-11-22
 - when: Sunday, November 22, 2026 (time not listed)
-- start: 2026-11-22T12:00:00-07:00
+- start: 2026-11-22T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -12345,8 +12345,8 @@ Fri, Nov 20, 2026 Sat, Nov 21, 2026 Sun, Nov 22, 2026
 - id: a02d15c27070
 - slug: larpd-puzzle-palooza-a02d15
 - date: 2026-11-22
-- when: Sunday, November 22, 2026, 12:00 PM
-- start: 2026-11-22T13:00:00-07:00
+- when: Sunday, November 22, 2026, 1:00 PM
+- start: 2026-11-22T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: Livermore Aquatic Center
@@ -12368,8 +12368,8 @@ There will be 3 hours to complete a 1000-, 750-, or 500-piece puzzle, with a pri
 - id: 021cbeb3b15a
 - slug: volunteer-in-the-parks-021cbe
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 7:00 AM
-- start: 2026-11-23T08:00:00-07:00
+- when: Monday, November 23, 2026, 8:00 AM
+- start: 2026-11-23T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12391,8 +12391,8 @@ Volunteers are vital to the East Bay Regional Parks with opportunities available
 - id: 014f119f0933
 - slug: fee-assistance-program-014f11
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 8:00 AM
-- start: 2026-11-23T09:00:00-07:00
+- when: Monday, November 23, 2026, 9:00 AM
+- start: 2026-11-23T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12414,8 +12414,8 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - id: 5604836eaa4d
 - slug: drop-in-billiards-560483
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 8:00 AM
-- start: 2026-11-23T09:00:00-07:00
+- when: Monday, November 23, 2026, 9:00 AM
+- start: 2026-11-23T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12437,8 +12437,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: cb21a1d7057d
 - slug: tax-aide-program-looking-for-new-volunteers-cb21a1
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 9:00 AM
-- start: 2026-11-23T10:00:00-07:00
+- when: Monday, November 23, 2026, 10:00 AM
+- start: 2026-11-23T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12460,8 +12460,8 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - id: f8eab380ab4e
 - slug: volunteer-with-spectrum-community-services-f8eab3
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 9:00 AM
-- start: 2026-11-23T10:00:00-07:00
+- when: Monday, November 23, 2026, 10:00 AM
+- start: 2026-11-23T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12483,8 +12483,8 @@ Spectrum Community Services is looking for new volunteers to join the team in a 
 - id: 96ae9c5e1994
 - slug: larpd-scholarship-program-96ae9c
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 9:00 AM
-- start: 2026-11-23T10:00:00-07:00
+- when: Monday, November 23, 2026, 10:00 AM
+- start: 2026-11-23T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12506,8 +12506,8 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - id: cd675e48a87d
 - slug: step-by-step-esl-conversation-cd675e
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 9:00 AM
-- start: 2026-11-23T10:00:00-07:00
+- when: Monday, November 23, 2026, 10:00 AM
+- start: 2026-11-23T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12529,8 +12529,8 @@ Practice intermediate-level English grammar and conversation with other adult le
 - id: a8d663bf85fc
 - slug: free-monday-movie-a8d663
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 12:00 PM
-- start: 2026-11-23T13:00:00-07:00
+- when: Monday, November 23, 2026, 1:00 PM
+- start: 2026-11-23T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12552,8 +12552,8 @@ Enjoy a free movie every Monday at the Danville Senior Center Community Hall. 1 
 - id: 1c9798f4e795
 - slug: homework-help-at-rincon-branch-1c9798
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 2:00 PM
-- start: 2026-11-23T15:00:00-07:00
+- when: Monday, November 23, 2026, 3:00 PM
+- start: 2026-11-23T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12575,8 +12575,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 617a0f878692
 - slug: danville-bicycle-advisory-commission-617a0f
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 4:00 PM
-- start: 2026-11-23T17:00:00-07:00
+- when: Monday, November 23, 2026, 5:00 PM
+- start: 2026-11-23T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Town Meeting Hall
@@ -12598,8 +12598,8 @@ The next Danville Bicycle Advisory Commission, Regular Meeting, is 5 p.m., May 1
 - id: 77a52b85f226
 - slug: open-heart-refuge-77a52b
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 5:00 PM
-- start: 2026-11-23T18:00:00-07:00
+- when: Monday, November 23, 2026, 6:00 PM
+- start: 2026-11-23T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12621,8 +12621,8 @@ Open Heart Refuge offers overnight shelter using an assigned bed model. Check-in
 - id: ad387dae3960
 - slug: bicycle-pedestrian-and-trails-committee-ad387d
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 5:00 PM
-- start: 2026-11-23T18:00:00-07:00
+- when: Monday, November 23, 2026, 6:00 PM
+- start: 2026-11-23T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12644,8 +12644,8 @@ The next Bicycle, Pedestrian and Trails Committee is 6:30 p.m., Sept. 28. Senior
 - id: a2d1bb6955ed
 - slug: family-storytime-at-san-ramon-library-a2d1bb
 - date: 2026-11-23
-- when: Monday, November 23, 2026, 5:00 PM
-- start: 2026-11-23T18:00:00-07:00
+- when: Monday, November 23, 2026, 6:00 PM
+- start: 2026-11-23T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: San Ramon Library
@@ -12667,8 +12667,8 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - id: 3e7994307d3c
 - slug: care-coordination-services-3e7994
 - date: 2026-11-25
-- when: Wednesday, November 25, 2026, 8:00 AM
-- start: 2026-11-25T09:00:00-07:00
+- when: Wednesday, November 25, 2026, 9:00 AM
+- start: 2026-11-25T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12690,8 +12690,8 @@ CityServe Care Coordination program connects individuals and families in need to
 - id: 9bf53fe90e1d
 - slug: the-lending-library-9bf53f
 - date: 2026-11-25
-- when: Wednesday, November 25, 2026, 8:00 AM
-- start: 2026-11-25T09:00:00-07:00
+- when: Wednesday, November 25, 2026, 9:00 AM
+- start: 2026-11-25T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12713,8 +12713,8 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - id: b4807123f1eb
 - slug: eugene-o-neill-national-historic-site-b48071
 - date: 2026-11-25
-- when: Wednesday, November 25, 2026, 9:00 AM
-- start: 2026-11-25T10:00:00-07:00
+- when: Wednesday, November 25, 2026, 10:00 AM
+- start: 2026-11-25T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12736,8 +12736,8 @@ The Eugene O'Neill National Historic Site is free to the public with reservation
 - id: 79ece9d7f12a
 - slug: volunteer-with-niles-canyon-railway-79ece9
 - date: 2026-11-25
-- when: Wednesday, November 25, 2026, 9:00 AM
-- start: 2026-11-25T10:00:00-07:00
+- when: Wednesday, November 25, 2026, 10:00 AM
+- start: 2026-11-25T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12759,8 +12759,8 @@ Niles Canyon Railway is looking for volunteers for all levels of skill and exper
 - id: 6725584f1c9c
 - slug: family-story-hour-672558
 - date: 2026-11-25
-- when: Wednesday, November 25, 2026, 10:00 AM
-- start: 2026-11-25T11:00:00-07:00
+- when: Wednesday, November 25, 2026, 11:00 AM
+- start: 2026-11-25T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12782,8 +12782,8 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - id: 786d12770949
 - slug: drop-in-mahjong-at-rlcc-786d12
 - date: 2026-11-25
-- when: Wednesday, November 25, 2026, 12:00 PM
-- start: 2026-11-25T13:00:00-07:00
+- when: Wednesday, November 25, 2026, 1:00 PM
+- start: 2026-11-25T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12805,8 +12805,8 @@ American Version Mahjong meets 1-4 p.m., Wednesdays in the Sycamore Room. Free l
 - id: dbcaad3973a6
 - slug: homework-help-at-rincon-branch-dbcaad
 - date: 2026-11-25
-- when: Wednesday, November 25, 2026, 2:00 PM
-- start: 2026-11-25T15:00:00-07:00
+- when: Wednesday, November 25, 2026, 3:00 PM
+- start: 2026-11-25T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12828,8 +12828,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 8fa169b07d83
 - slug: volunteer-with-culinary-angels-8fa169
 - date: 2026-11-25
-- when: Wednesday, November 25, 2026, 2:00 PM
-- start: 2026-11-25T15:00:00-07:00
+- when: Wednesday, November 25, 2026, 3:00 PM
+- start: 2026-11-25T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12851,8 +12851,8 @@ Culinary Angels is looking for volunteers to do inventory a few times a month. 3
 - id: 2811641c00c0
 - slug: family-storytime-at-pleasanton-library-281164
 - date: 2026-11-25
-- when: Wednesday, November 25, 2026, 6:00 PM
-- start: 2026-11-25T19:00:00-07:00
+- when: Wednesday, November 25, 2026, 7:00 PM
+- start: 2026-11-25T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12874,8 +12874,8 @@ Join on Wednesday nights for Family Storytime, a lively mix of movement, sing-al
 - id: 7b539c1402fc
 - slug: tax-aide-program-looking-for-new-volunteers-7b539c
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 9:00 AM
-- start: 2026-11-26T10:00:00-07:00
+- when: Thursday, November 26, 2026, 10:00 AM
+- start: 2026-11-26T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12897,8 +12897,8 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - id: 1f98b18d95a2
 - slug: free-weekly-pop-up-1f98b1
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 9:00 AM
-- start: 2026-11-26T10:00:00-07:00
+- when: Thursday, November 26, 2026, 10:00 AM
+- start: 2026-11-26T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12920,8 +12920,8 @@ Grab a lunch to go, connect with a caring volunteer, clothing, seasonal and hyge
 - id: 21aa7883a9a9
 - slug: ridecare-transportation-21aa78
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 9:00 AM
-- start: 2026-11-26T10:00:00-07:00
+- when: Thursday, November 26, 2026, 10:00 AM
+- start: 2026-11-26T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12943,8 +12943,8 @@ Free, caring rides for seniors and adults with disabilities residing in Livermor
 - id: 93f894306dfe
 - slug: larpd-community-support-program-93f894
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 9:00 AM
-- start: 2026-11-26T10:00:00-07:00
+- when: Thursday, November 26, 2026, 10:00 AM
+- start: 2026-11-26T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12966,8 +12966,8 @@ Scholarships are available through the LARPD Foundation’s Community Support Pr
 - id: 49afda876e02
 - slug: volunteer-at-open-heart-kitchen-49afda
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 9:00 AM
-- start: 2026-11-26T10:00:00-07:00
+- when: Thursday, November 26, 2026, 10:00 AM
+- start: 2026-11-26T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -12989,8 +12989,8 @@ Open Heart Kitchen offers individual and group volunteer opportunities at a vari
 - id: 8c3534c6dd93
 - slug: care-giver-support-group-8c3534
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 9:00 AM
-- start: 2026-11-26T10:00:00-07:00
+- when: Thursday, November 26, 2026, 10:00 AM
+- start: 2026-11-26T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13012,8 +13012,8 @@ These free presentations from City Serve of the Tri-Valley provide support for u
 - id: 0c19a13b7020
 - slug: toddler-storytime-0c19a1
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 10:00 AM
-- start: 2026-11-26T11:00:00-07:00
+- when: Thursday, November 26, 2026, 11:00 AM
+- start: 2026-11-26T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13035,8 +13035,8 @@ Rhymes, songs, bounces and books for the whole family. Build a foundation for li
 - id: c8ff97198420
 - slug: storytime-at-san-ramon-library-c8ff97
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 10:00 AM
-- start: 2026-11-26T11:00:00-07:00
+- when: Thursday, November 26, 2026, 11:00 AM
+- start: 2026-11-26T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13058,8 +13058,8 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - id: 3e05c530ee82
 - slug: community-meals-3e05c5
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 11:00 AM
-- start: 2026-11-26T12:00:00-07:00
+- when: Thursday, November 26, 2026, 12:00 PM
+- start: 2026-11-26T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13081,8 +13081,8 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - id: 23479287af07
 - slug: drop-in-bridge-at-rlcc-234792
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 12:00 PM
-- start: 2026-11-26T13:00:00-07:00
+- when: Thursday, November 26, 2026, 1:00 PM
+- start: 2026-11-26T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13104,8 +13104,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: 5c2f12f8ea7c
 - slug: american-life-vocabulary-with-gary-richter-5c2f12
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 12:00 PM
-- start: 2026-11-26T13:00:00-07:00
+- when: Thursday, November 26, 2026, 1:00 PM
+- start: 2026-11-26T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13127,8 +13127,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: d63b19542b00
 - slug: homework-help-at-rincon-branch-d63b19
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 2:00 PM
-- start: 2026-11-26T15:00:00-07:00
+- when: Thursday, November 26, 2026, 3:00 PM
+- start: 2026-11-26T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13150,8 +13150,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 66e3fa793cf8
 - slug: pop-up-crafternoon-66e3fa
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 2:00 PM
-- start: 2026-11-26T15:00:00-07:00
+- when: Thursday, November 26, 2026, 3:00 PM
+- start: 2026-11-26T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13173,8 +13173,8 @@ Join in the San Ramon Library children's area for a fun craft. 3-4 p.m., July 23
 - id: c61daba48722
 - slug: black-friday-cyber-monday-sale-c61dab
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 2:00 PM
-- start: 2026-11-26T15:00:00-07:00
+- when: Thursday, November 26, 2026, 3:00 PM
+- start: 2026-11-26T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: Alameda County Fairgrounds
@@ -13196,8 +13196,8 @@ The Fair annual Black Friday & Cyber Monday Sale is November 26 through December
 - id: 8b5e5e42a816
 - slug: free-social-adults-only-19-chess-club-8b5e5e
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 4:00 PM
-- start: 2026-11-26T17:00:00-07:00
+- when: Thursday, November 26, 2026, 5:00 PM
+- start: 2026-11-26T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -13219,8 +13219,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: 15d6dbf416bd
 - slug: pleasanton-unified-school-district-15d6db
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 5:00 PM
-- start: 2026-11-26T18:00:00-07:00
+- when: Thursday, November 26, 2026, 6:00 PM
+- start: 2026-11-26T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: VirtualPleasanton Unified School District
@@ -13242,8 +13242,8 @@ Regular Board meetings of the Pleasanton Unified School District are scheduled t
 - id: 239baac80391
 - slug: english-class-239baa
 - date: 2026-11-26
-- when: Thursday, November 26, 2026, 6:00 PM
-- start: 2026-11-26T19:00:00-07:00
+- when: Thursday, November 26, 2026, 7:00 PM
+- start: 2026-11-26T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: The Church of Jesus Christ of Latter-day Saints
@@ -13265,8 +13265,8 @@ Free English class for adults of all ages and nationalities, every Thursday from
 - id: 21df494f3a79
 - slug: volunteer-for-ride-care-21df49
 - date: 2026-11-27
-- when: Friday, November 27, 2026, 9:00 AM
-- start: 2026-11-27T10:00:00-07:00
+- when: Friday, November 27, 2026, 10:00 AM
+- start: 2026-11-27T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13289,7 +13289,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - slug: d-l-hughley-fab58c
 - date: 2026-11-27
 - when: Friday, November 27, 2026 (time not listed)
-- start: 2026-11-27T12:00:00-07:00
+- start: 2026-11-27T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -13312,7 +13312,7 @@ Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026
 - slug: day-after-thanksgiving-day-62d7e2
 - date: 2026-11-27
 - when: Friday, November 27, 2026 (time not listed)
-- start: 2026-11-27T12:00:00-07:00
+- start: 2026-11-27T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/5843417168.5 mi
@@ -13335,7 +13335,7 @@ Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026
 - slug: lighting-of-the-old-oak-tree-8f62e8
 - date: 2026-11-27
 - when: Friday, November 27, 2026 (time not listed)
-- start: 2026-11-27T12:00:00-07:00
+- start: 2026-11-27T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Historic Downtown Danville
@@ -13357,8 +13357,8 @@ Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026
 - id: 76ec3135b546
 - slug: drop-in-bridge-at-rlcc-76ec31
 - date: 2026-11-27
-- when: Friday, November 27, 2026, 12:00 PM
-- start: 2026-11-27T13:00:00-07:00
+- when: Friday, November 27, 2026, 1:00 PM
+- start: 2026-11-27T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13380,8 +13380,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: 79d708ff5e08
 - slug: music-lessons-with-pleasanton-s-1776-era-fife-and-drum-children-s-band-79d708
 - date: 2026-11-27
-- when: Friday, November 27, 2026, 4:00 PM
-- start: 2026-11-27T17:00:00-07:00
+- when: Friday, November 27, 2026, 5:00 PM
+- start: 2026-11-27T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: near Mohr Elementary school, call for details
@@ -13403,8 +13403,8 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - id: a9f36b6fe6b8
 - slug: danville-farmers-market-a9f36b
 - date: 2026-11-28
-- when: Saturday, November 28, 2026, 8:00 AM
-- start: 2026-11-28T09:00:00-07:00
+- when: Saturday, November 28, 2026, 9:00 AM
+- start: 2026-11-28T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13426,8 +13426,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: d7bb1a45c37b
 - slug: livermore-farmers-market-d7bb1a
 - date: 2026-11-29
-- when: Sunday, November 29, 2026, 8:00 AM
-- start: 2026-11-29T09:00:00-07:00
+- when: Sunday, November 29, 2026, 9:00 AM
+- start: 2026-11-29T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13449,8 +13449,8 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - id: 9db1983b47ea
 - slug: volunteer-at-valley-humane-society-9db198
 - date: 2026-11-29
-- when: Sunday, November 29, 2026, 9:00 AM
-- start: 2026-11-29T10:00:00-07:00
+- when: Sunday, November 29, 2026, 10:00 AM
+- start: 2026-11-29T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13473,7 +13473,7 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - slug: d-l-hughley-8c073c
 - date: 2026-11-29
 - when: Sunday, November 29, 2026 (time not listed)
-- start: 2026-11-29T12:00:00-07:00
+- start: 2026-11-29T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -13495,8 +13495,8 @@ Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026
 - id: 5da6c436ac4d
 - slug: volunteer-in-the-parks-5da6c4
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 7:00 AM
-- start: 2026-11-30T08:00:00-07:00
+- when: Monday, November 30, 2026, 8:00 AM
+- start: 2026-11-30T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13518,8 +13518,8 @@ Volunteers are vital to the East Bay Regional Parks with opportunities available
 - id: d93735ab0b9d
 - slug: fee-assistance-program-d93735
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 8:00 AM
-- start: 2026-11-30T09:00:00-07:00
+- when: Monday, November 30, 2026, 9:00 AM
+- start: 2026-11-30T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13541,8 +13541,8 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - id: 985bddde844f
 - slug: drop-in-billiards-985bdd
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 8:00 AM
-- start: 2026-11-30T09:00:00-07:00
+- when: Monday, November 30, 2026, 9:00 AM
+- start: 2026-11-30T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13564,8 +13564,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: a710cb8ec737
 - slug: volunteer-with-spectrum-community-services-a710cb
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 9:00 AM
-- start: 2026-11-30T10:00:00-07:00
+- when: Monday, November 30, 2026, 10:00 AM
+- start: 2026-11-30T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13587,8 +13587,8 @@ Spectrum Community Services is looking for new volunteers to join the team in a 
 - id: 598ab0576925
 - slug: larpd-scholarship-program-598ab0
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 9:00 AM
-- start: 2026-11-30T10:00:00-07:00
+- when: Monday, November 30, 2026, 10:00 AM
+- start: 2026-11-30T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13610,8 +13610,8 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - id: fb2ff70ab7f4
 - slug: step-by-step-esl-conversation-fb2ff7
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 9:00 AM
-- start: 2026-11-30T10:00:00-07:00
+- when: Monday, November 30, 2026, 10:00 AM
+- start: 2026-11-30T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13633,8 +13633,8 @@ Practice intermediate-level English grammar and conversation with other adult le
 - id: 455f97b28a09
 - slug: free-monday-movie-455f97
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 12:00 PM
-- start: 2026-11-30T13:00:00-07:00
+- when: Monday, November 30, 2026, 1:00 PM
+- start: 2026-11-30T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13656,8 +13656,8 @@ Enjoy a free movie every Monday at the Danville Senior Center Community Hall. 1 
 - id: 199ece675840
 - slug: homework-help-at-rincon-branch-199ece
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 2:00 PM
-- start: 2026-11-30T15:00:00-07:00
+- when: Monday, November 30, 2026, 3:00 PM
+- start: 2026-11-30T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13679,8 +13679,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 469c2f1ec61c
 - slug: open-heart-refuge-469c2f
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 5:00 PM
-- start: 2026-11-30T18:00:00-07:00
+- when: Monday, November 30, 2026, 6:00 PM
+- start: 2026-11-30T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13702,8 +13702,8 @@ Open Heart Refuge offers overnight shelter using an assigned bed model. Check-in
 - id: 2a184a93638f
 - slug: family-storytime-at-san-ramon-library-2a184a
 - date: 2026-11-30
-- when: Monday, November 30, 2026, 5:00 PM
-- start: 2026-11-30T18:00:00-07:00
+- when: Monday, November 30, 2026, 6:00 PM
+- start: 2026-11-30T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: San Ramon Library
@@ -13725,8 +13725,8 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - id: 3be72aefbd69
 - slug: wellness-alliance-meeting-3be72a
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 7:00 AM
-- start: 2026-12-01T08:00:00-07:00
+- when: Tuesday, December 1, 2026, 8:00 AM
+- start: 2026-12-01T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13748,8 +13748,8 @@ Join for the Wellness Alliance monthly meeting which brings together local leade
 - id: 46ed223cccb8
 - slug: business-referral-network-46ed22
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 8:00 AM
-- start: 2026-12-01T09:00:00-07:00
+- when: Tuesday, December 1, 2026, 9:00 AM
+- start: 2026-12-01T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13771,8 +13771,8 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - id: eaa5f092e764
 - slug: drop-in-billiards-eaa5f0
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 8:00 AM
-- start: 2026-12-01T09:00:00-07:00
+- when: Tuesday, December 1, 2026, 9:00 AM
+- start: 2026-12-01T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13794,8 +13794,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: b3cd1947a090
 - slug: vintage-lounge-puzzling-b3cd19
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 8:00 AM
-- start: 2026-12-01T09:00:00-07:00
+- when: Tuesday, December 1, 2026, 9:00 AM
+- start: 2026-12-01T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13817,8 +13817,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: b9d44c930f7f
 - slug: buzz-session-holiday-walk-and-shop-local-b9d44c
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 9:00 AM
-- start: 2026-12-01T10:00:00-07:00
+- when: Tuesday, December 1, 2026, 10:00 AM
+- start: 2026-12-01T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Veterans Memorial Building > Senior Center
@@ -13840,8 +13840,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: 632e029be68d
 - slug: volunteer-with-cityserve-632e02
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 9:00 AM
-- start: 2026-12-01T10:00:00-07:00
+- when: Tuesday, December 1, 2026, 10:00 AM
+- start: 2026-12-01T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13863,8 +13863,8 @@ Immediate volunteer opportunities are available as a Caring Visitor, RideCare Dr
 - id: 9be7795a0d3e
 - slug: volunteer-with-hope-hospice-9be779
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 9:00 AM
-- start: 2026-12-01T10:00:00-07:00
+- when: Tuesday, December 1, 2026, 10:00 AM
+- start: 2026-12-01T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13886,8 +13886,8 @@ Hope patient care volunteers help patients and their families in many different 
 - id: 35298a919176
 - slug: souper-tuesday-free-lunch-35298a
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 10:00 AM
-- start: 2026-12-01T11:00:00-07:00
+- when: Tuesday, December 1, 2026, 11:00 AM
+- start: 2026-12-01T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13910,7 +13910,7 @@ Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CitySer
 - slug: winter-clinics-program-ca0ce7
 - date: 2026-12-01
 - when: Tuesday, December 1, 2026 (time not listed)
-- start: 2026-12-01T12:00:00-07:00
+- start: 2026-12-01T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465642?dy=1&mth=12&yr=20269.1 mi
@@ -13932,8 +13932,8 @@ Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CitySer
 - id: 7659cac36462
 - slug: the-job-club-7659ca
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 11:00 AM
-- start: 2026-12-01T12:00:00-07:00
+- when: Tuesday, December 1, 2026, 12:00 PM
+- start: 2026-12-01T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -13955,8 +13955,8 @@ Join this zoom meeting every Monday for a supportive, energizing meeting designe
 - id: 674c28843932
 - slug: yoga-for-adults-at-san-ramon-library-674c28
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 11:00 AM
-- start: 2026-12-01T12:00:00-07:00
+- when: Tuesday, December 1, 2026, 12:00 PM
+- start: 2026-12-01T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Yoga for adults
@@ -13978,8 +13978,8 @@ This yoga class is designed for adults and seniors of all experience levels, fro
 - id: fdb9adec0557
 - slug: american-life-vocabulary-with-gary-richter-fdb9ad
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 12:00 PM
-- start: 2026-12-01T13:00:00-07:00
+- when: Tuesday, December 1, 2026, 1:00 PM
+- start: 2026-12-01T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14001,8 +14001,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: 640b3c58b0eb
 - slug: homework-help-at-rincon-branch-640b3c
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 2:00 PM
-- start: 2026-12-01T15:00:00-07:00
+- when: Tuesday, December 1, 2026, 3:00 PM
+- start: 2026-12-01T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14024,8 +14024,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 1ea7ce8b4b0c
 - slug: tinker-thinkers-at-san-ramon-library-1ea7ce
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 3:00 PM
-- start: 2026-12-01T16:00:00-07:00
+- when: Tuesday, December 1, 2026, 4:00 PM
+- start: 2026-12-01T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14047,8 +14047,8 @@ For elementary school children in 1st-5th grades. Make, create, build and explor
 - id: 3cd0b23008d6
 - slug: greek-orthodox-evening-prayer-3cd0b2
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 5:00 PM
-- start: 2026-12-01T18:00:00-07:00
+- when: Tuesday, December 1, 2026, 6:00 PM
+- start: 2026-12-01T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton, CA 6:30 pm3.7 mi
@@ -14070,8 +14070,8 @@ For elementary school children in 1st-5th grades. Make, create, build and explor
 - id: 0843f8b7e962
 - slug: livermore-planning-commission-0843f8
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 6:00 PM
-- start: 2026-12-01T19:00:00-07:00
+- when: Tuesday, December 1, 2026, 7:00 PM
+- start: 2026-12-01T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14093,8 +14093,8 @@ The next Livermore Planning Commission meeting is 7 p.m., Sept. 15. City Hall. V
 - id: 6efde5856f16
 - slug: pleasanton-city-council-6efde5
 - date: 2026-12-01
-- when: Tuesday, December 1, 2026, 6:00 PM
-- start: 2026-12-01T19:00:00-07:00
+- when: Tuesday, December 1, 2026, 7:00 PM
+- start: 2026-12-01T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: City of Pleasanton
@@ -14116,8 +14116,8 @@ Pleasanton City Council Meetings are held at 7 p.m. on the first and third Tuesd
 - id: 7f0a5aeb6b71
 - slug: business-alliance-meeting-7f0a5a
 - date: 2026-12-02
-- when: Wednesday, December 2, 2026, 7:00 AM
-- start: 2026-12-02T08:00:00-07:00
+- when: Wednesday, December 2, 2026, 8:00 AM
+- start: 2026-12-02T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14139,8 +14139,8 @@ These zoom meetings through the Livermore Chamber of Commerce are 8-9:30 a.m., t
 - id: eac198e8553c
 - slug: care-coordination-services-eac198
 - date: 2026-12-02
-- when: Wednesday, December 2, 2026, 8:00 AM
-- start: 2026-12-02T09:00:00-07:00
+- when: Wednesday, December 2, 2026, 9:00 AM
+- start: 2026-12-02T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14162,8 +14162,8 @@ CityServe Care Coordination program connects individuals and families in need to
 - id: e6afd9d3437d
 - slug: the-lending-library-e6afd9
 - date: 2026-12-02
-- when: Wednesday, December 2, 2026, 8:00 AM
-- start: 2026-12-02T09:00:00-07:00
+- when: Wednesday, December 2, 2026, 9:00 AM
+- start: 2026-12-02T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14185,8 +14185,8 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - id: 7402dde52efb
 - slug: business-referral-network-thursdays-7402dd
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 8:00 AM
-- start: 2026-12-03T09:00:00-07:00
+- when: Thursday, December 3, 2026, 9:00 AM
+- start: 2026-12-03T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14208,8 +14208,8 @@ The San Ramon Chamber Business Referral Network, Thursdays, meets the first and 
 - id: be0878294577
 - slug: east-bay-sbdc-in-person-advising-sessions-be0878
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 9:00 AM
-- start: 2026-12-03T10:00:00-07:00
+- when: Thursday, December 3, 2026, 10:00 AM
+- start: 2026-12-03T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton, CA 10:00 am3.7 mi
@@ -14231,8 +14231,8 @@ The San Ramon Chamber Business Referral Network, Thursdays, meets the first and 
 - id: 7f519a823f63
 - slug: free-weekly-pop-up-7f519a
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 9:00 AM
-- start: 2026-12-03T10:00:00-07:00
+- when: Thursday, December 3, 2026, 10:00 AM
+- start: 2026-12-03T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14254,8 +14254,8 @@ Grab a lunch to go, connect with a caring volunteer, clothing, seasonal and hyge
 - id: a4925831fb1c
 - slug: ridecare-transportation-a49258
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 9:00 AM
-- start: 2026-12-03T10:00:00-07:00
+- when: Thursday, December 3, 2026, 10:00 AM
+- start: 2026-12-03T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14277,8 +14277,8 @@ Free, caring rides for seniors and adults with disabilities residing in Livermor
 - id: 53945aa120ff
 - slug: larpd-community-support-program-53945a
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 9:00 AM
-- start: 2026-12-03T10:00:00-07:00
+- when: Thursday, December 3, 2026, 10:00 AM
+- start: 2026-12-03T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14300,8 +14300,8 @@ Scholarships are available through the LARPD Foundation’s Community Support Pr
 - id: bed8212e3cbf
 - slug: volunteer-at-open-heart-kitchen-bed821
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 9:00 AM
-- start: 2026-12-03T10:00:00-07:00
+- when: Thursday, December 3, 2026, 10:00 AM
+- start: 2026-12-03T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14323,8 +14323,8 @@ Open Heart Kitchen offers individual and group volunteer opportunities at a vari
 - id: ea0c355f31e6
 - slug: care-giver-support-group-ea0c35
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 9:00 AM
-- start: 2026-12-03T10:00:00-07:00
+- when: Thursday, December 3, 2026, 10:00 AM
+- start: 2026-12-03T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14346,8 +14346,8 @@ These free presentations from City Serve of the Tri-Valley provide support for u
 - id: 52365434d3db
 - slug: toddler-storytime-523654
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 10:00 AM
-- start: 2026-12-03T11:00:00-07:00
+- when: Thursday, December 3, 2026, 11:00 AM
+- start: 2026-12-03T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14369,8 +14369,8 @@ Rhymes, songs, bounces and books for the whole family. Build a foundation for li
 - id: 0d224c5b0bfe
 - slug: storytime-at-san-ramon-library-0d224c
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 10:00 AM
-- start: 2026-12-03T11:00:00-07:00
+- when: Thursday, December 3, 2026, 11:00 AM
+- start: 2026-12-03T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14392,8 +14392,8 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - id: c438e000bae4
 - slug: community-meals-c438e0
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 11:00 AM
-- start: 2026-12-03T12:00:00-07:00
+- when: Thursday, December 3, 2026, 12:00 PM
+- start: 2026-12-03T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14415,8 +14415,8 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - id: 5bf7fedf3d5c
 - slug: drop-in-bridge-at-rlcc-5bf7fe
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 12:00 PM
-- start: 2026-12-03T13:00:00-07:00
+- when: Thursday, December 3, 2026, 1:00 PM
+- start: 2026-12-03T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14438,8 +14438,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: 4d7b10200236
 - slug: american-life-vocabulary-with-gary-richter-4d7b10
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 12:00 PM
-- start: 2026-12-03T13:00:00-07:00
+- when: Thursday, December 3, 2026, 1:00 PM
+- start: 2026-12-03T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14461,8 +14461,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: b1720a58934e
 - slug: homework-help-at-rincon-branch-b1720a
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 2:00 PM
-- start: 2026-12-03T15:00:00-07:00
+- when: Thursday, December 3, 2026, 3:00 PM
+- start: 2026-12-03T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14484,8 +14484,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 54f3c421bc95
 - slug: san-ramon-library-teen-advisory-board-54f3c4
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 3:00 PM
-- start: 2026-12-03T16:00:00-07:00
+- when: Thursday, December 3, 2026, 4:00 PM
+- start: 2026-12-03T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14507,8 +14507,8 @@ The Teen Advisory Board meets on the first Thursday of each month where teen vol
 - id: 54c82cb28280
 - slug: free-social-adults-only-19-chess-club-54c82c
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 4:00 PM
-- start: 2026-12-03T17:00:00-07:00
+- when: Thursday, December 3, 2026, 5:00 PM
+- start: 2026-12-03T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -14530,8 +14530,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: 0853fc355149
 - slug: livermore-historic-preservation-commission-0853fc
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 6:00 PM
-- start: 2026-12-03T19:00:00-07:00
+- when: Thursday, December 3, 2026, 7:00 PM
+- start: 2026-12-03T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14553,8 +14553,8 @@ The next Livermore Historic Preservation Commission meeting is 7 p.m., Sept. 3. 
 - id: c541fdd340d3
 - slug: english-class-c541fd
 - date: 2026-12-03
-- when: Thursday, December 3, 2026, 6:00 PM
-- start: 2026-12-03T19:00:00-07:00
+- when: Thursday, December 3, 2026, 7:00 PM
+- start: 2026-12-03T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: The Church of Jesus Christ of Latter-day Saints
@@ -14576,8 +14576,8 @@ Free English class for adults of all ages and nationalities, every Thursday from
 - id: e1b7aedc73f0
 - slug: volunteer-for-ride-care-e1b7ae
 - date: 2026-12-04
-- when: Friday, December 4, 2026, 9:00 AM
-- start: 2026-12-04T10:00:00-07:00
+- when: Friday, December 4, 2026, 10:00 AM
+- start: 2026-12-04T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14600,7 +14600,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - slug: george-lopez-2bbaa3
 - date: 2026-12-04
 - when: Friday, December 4, 2026 (time not listed)
-- start: 2026-12-04T12:00:00-07:00
+- start: 2026-12-04T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -14622,8 +14622,8 @@ Fri, Dec 4, 2026 Sat, Dec 5, 2026
 - id: 200c6793cfaf
 - slug: drop-in-bridge-at-rlcc-200c67
 - date: 2026-12-04
-- when: Friday, December 4, 2026, 12:00 PM
-- start: 2026-12-04T13:00:00-07:00
+- when: Friday, December 4, 2026, 1:00 PM
+- start: 2026-12-04T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14645,8 +14645,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: b76d2216ad45
 - slug: kids-night-out-b76d22
 - date: 2026-12-04
-- when: Friday, December 4, 2026, 5:00 PM
-- start: 2026-12-04T18:00:00-07:00
+- when: Friday, December 4, 2026, 6:00 PM
+- start: 2026-12-04T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: Danville Community Center & Library > Valley Oak Room
@@ -14668,8 +14668,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: e467ed01d49d
 - slug: danville-farmers-market-e467ed
 - date: 2026-12-05
-- when: Saturday, December 5, 2026, 8:00 AM
-- start: 2026-12-05T09:00:00-07:00
+- when: Saturday, December 5, 2026, 9:00 AM
+- start: 2026-12-05T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14691,8 +14691,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: 4cd68c510f30
 - slug: pleasanton-farmers-market-4cd68c
 - date: 2026-12-05
-- when: Saturday, December 5, 2026, 8:00 AM
-- start: 2026-12-05T09:00:00-07:00
+- when: Saturday, December 5, 2026, 9:00 AM
+- start: 2026-12-05T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14714,8 +14714,8 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - id: b1e6a86098ee
 - slug: san-ramon-farmers-market-b1e6a8
 - date: 2026-12-05
-- when: Saturday, December 5, 2026, 8:00 AM
-- start: 2026-12-05T09:00:00-07:00
+- when: Saturday, December 5, 2026, 9:00 AM
+- start: 2026-12-05T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14737,8 +14737,8 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - id: f9c36e1e25aa
 - slug: volunteer-in-the-parks-f9c36e
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 7:00 AM
-- start: 2026-12-07T08:00:00-07:00
+- when: Monday, December 7, 2026, 8:00 AM
+- start: 2026-12-07T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14760,8 +14760,8 @@ Volunteers are vital to the East Bay Regional Parks with opportunities available
 - id: 3bf8045d2fa7
 - slug: fee-assistance-program-3bf804
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 8:00 AM
-- start: 2026-12-07T09:00:00-07:00
+- when: Monday, December 7, 2026, 9:00 AM
+- start: 2026-12-07T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14783,8 +14783,8 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - id: 07c2467204dd
 - slug: drop-in-billiards-07c246
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 8:00 AM
-- start: 2026-12-07T09:00:00-07:00
+- when: Monday, December 7, 2026, 9:00 AM
+- start: 2026-12-07T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14806,8 +14806,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: 06348faf8cf1
 - slug: the-price-is-merry-06348f
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 9:00 AM
-- start: 2026-12-07T10:00:00-07:00
+- when: Monday, December 7, 2026, 10:00 AM
+- start: 2026-12-07T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Veterans Memorial Building > Senior Center
@@ -14829,8 +14829,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: 8a9ab7b59cdf
 - slug: volunteer-with-spectrum-community-services-8a9ab7
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 9:00 AM
-- start: 2026-12-07T10:00:00-07:00
+- when: Monday, December 7, 2026, 10:00 AM
+- start: 2026-12-07T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14852,8 +14852,8 @@ Spectrum Community Services is looking for new volunteers to join the team in a 
 - id: 90ad090ce6f6
 - slug: larpd-scholarship-program-90ad09
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 9:00 AM
-- start: 2026-12-07T10:00:00-07:00
+- when: Monday, December 7, 2026, 10:00 AM
+- start: 2026-12-07T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14875,8 +14875,8 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - id: 443c084582f7
 - slug: step-by-step-esl-conversation-443c08
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 9:00 AM
-- start: 2026-12-07T10:00:00-07:00
+- when: Monday, December 7, 2026, 10:00 AM
+- start: 2026-12-07T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14898,8 +14898,8 @@ Practice intermediate-level English grammar and conversation with other adult le
 - id: 01e97492e8bd
 - slug: free-monday-movie-01e974
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 12:00 PM
-- start: 2026-12-07T13:00:00-07:00
+- when: Monday, December 7, 2026, 1:00 PM
+- start: 2026-12-07T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14921,8 +14921,8 @@ Enjoy a free movie every Monday at the Danville Senior Center Community Hall. 1 
 - id: f0b4b737342c
 - slug: homework-help-at-rincon-branch-f0b4b7
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 2:00 PM
-- start: 2026-12-07T15:00:00-07:00
+- when: Monday, December 7, 2026, 3:00 PM
+- start: 2026-12-07T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14944,8 +14944,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: c398ecbc132b
 - slug: open-heart-refuge-c398ec
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 5:00 PM
-- start: 2026-12-07T18:00:00-07:00
+- when: Monday, December 7, 2026, 6:00 PM
+- start: 2026-12-07T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -14967,8 +14967,8 @@ Open Heart Refuge offers overnight shelter using an assigned bed model. Check-in
 - id: 8272ef83a172
 - slug: family-storytime-at-san-ramon-library-8272ef
 - date: 2026-12-07
-- when: Monday, December 7, 2026, 5:00 PM
-- start: 2026-12-07T18:00:00-07:00
+- when: Monday, December 7, 2026, 6:00 PM
+- start: 2026-12-07T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: San Ramon Library
@@ -14990,8 +14990,8 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - id: daec33990cf3
 - slug: town-council-study-session-cancelled-daec33
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 7:00 AM
-- start: 2026-12-08T08:00:00-07:00
+- when: Tuesday, December 8, 2026, 8:00 AM
+- start: 2026-12-08T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: Town of Danville Main Office
@@ -15013,8 +15013,8 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - id: 8bf26788c165
 - slug: drop-in-billiards-8bf267
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 8:00 AM
-- start: 2026-12-08T09:00:00-07:00
+- when: Tuesday, December 8, 2026, 9:00 AM
+- start: 2026-12-08T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15036,8 +15036,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: f7d9a07a5a67
 - slug: vintage-lounge-puzzling-f7d9a0
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 8:00 AM
-- start: 2026-12-08T09:00:00-07:00
+- when: Tuesday, December 8, 2026, 9:00 AM
+- start: 2026-12-08T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15059,8 +15059,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: 2a350af5568c
 - slug: buzz-session-learning-contra-costa-county-transit-basics-and-navigatio-2a350a
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 9:00 AM
-- start: 2026-12-08T10:00:00-07:00
+- when: Tuesday, December 8, 2026, 10:00 AM
+- start: 2026-12-08T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Veterans Memorial Building > Senior Center
@@ -15082,8 +15082,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: 4ef5b6403220
 - slug: volunteer-with-cityserve-4ef5b6
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 9:00 AM
-- start: 2026-12-08T10:00:00-07:00
+- when: Tuesday, December 8, 2026, 10:00 AM
+- start: 2026-12-08T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15105,8 +15105,8 @@ Immediate volunteer opportunities are available as a Caring Visitor, RideCare Dr
 - id: 29511a9a7d02
 - slug: volunteer-with-hope-hospice-29511a
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 9:00 AM
-- start: 2026-12-08T10:00:00-07:00
+- when: Tuesday, December 8, 2026, 10:00 AM
+- start: 2026-12-08T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15128,8 +15128,8 @@ Hope patient care volunteers help patients and their families in many different 
 - id: 7a7c88647f2b
 - slug: souper-tuesday-free-lunch-7a7c88
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 10:00 AM
-- start: 2026-12-08T11:00:00-07:00
+- when: Tuesday, December 8, 2026, 11:00 AM
+- start: 2026-12-08T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15151,8 +15151,8 @@ Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CitySer
 - id: 8e31e02614d6
 - slug: biz-links-networking-group-8e31e0
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 11:00 AM
-- start: 2026-12-08T12:00:00-07:00
+- when: Tuesday, December 8, 2026, 12:00 PM
+- start: 2026-12-08T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton Chamber of Commerce
@@ -15174,8 +15174,8 @@ Biz Links is a Chamber networking group focused on building meaningful business 
 - id: 7dca0a3319fd
 - slug: the-job-club-7dca0a
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 11:00 AM
-- start: 2026-12-08T12:00:00-07:00
+- when: Tuesday, December 8, 2026, 12:00 PM
+- start: 2026-12-08T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15197,8 +15197,8 @@ Join this zoom meeting every Monday for a supportive, energizing meeting designe
 - id: cb08c828163a
 - slug: american-life-vocabulary-with-gary-richter-cb08c8
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 12:00 PM
-- start: 2026-12-08T13:00:00-07:00
+- when: Tuesday, December 8, 2026, 1:00 PM
+- start: 2026-12-08T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15220,8 +15220,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: fe464b6cb060
 - slug: homework-help-at-rincon-branch-fe464b
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 2:00 PM
-- start: 2026-12-08T15:00:00-07:00
+- when: Tuesday, December 8, 2026, 3:00 PM
+- start: 2026-12-08T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15243,8 +15243,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 4e3d707aad70
 - slug: danville-planning-commission-4e3d70
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 4:00 PM
-- start: 2026-12-08T17:00:00-07:00
+- when: Tuesday, December 8, 2026, 5:00 PM
+- start: 2026-12-08T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15266,8 +15266,8 @@ The next Danville Planning Commission meeting is 5 p.m., July 14. Town Meeting H
 - id: 6030a1428613
 - slug: ignite-young-professionals-august-mixer-6030a1
 - date: 2026-12-08
-- when: Tuesday, December 8, 2026, 4:00 PM
-- start: 2026-12-08T17:00:00-07:00
+- when: Tuesday, December 8, 2026, 5:00 PM
+- start: 2026-12-08T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15289,8 +15289,8 @@ IGNITE brings together young professionals who want to build community, expand n
 - id: 52321a1a286d
 - slug: care-coordination-services-52321a
 - date: 2026-12-09
-- when: Wednesday, December 9, 2026, 8:00 AM
-- start: 2026-12-09T09:00:00-07:00
+- when: Wednesday, December 9, 2026, 9:00 AM
+- start: 2026-12-09T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15312,8 +15312,8 @@ CityServe Care Coordination program connects individuals and families in need to
 - id: 46eedeb9bc8b
 - slug: the-lending-library-46eede
 - date: 2026-12-09
-- when: Wednesday, December 9, 2026, 8:00 AM
-- start: 2026-12-09T09:00:00-07:00
+- when: Wednesday, December 9, 2026, 9:00 AM
+- start: 2026-12-09T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15335,8 +15335,8 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - id: ec894ecb8447
 - slug: eugene-o-neill-national-historic-site-ec894e
 - date: 2026-12-09
-- when: Wednesday, December 9, 2026, 9:00 AM
-- start: 2026-12-09T10:00:00-07:00
+- when: Wednesday, December 9, 2026, 10:00 AM
+- start: 2026-12-09T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15358,8 +15358,8 @@ The Eugene O'Neill National Historic Site is free to the public with reservation
 - id: dbdaf6c0f51e
 - slug: volunteer-with-niles-canyon-railway-dbdaf6
 - date: 2026-12-09
-- when: Wednesday, December 9, 2026, 9:00 AM
-- start: 2026-12-09T10:00:00-07:00
+- when: Wednesday, December 9, 2026, 10:00 AM
+- start: 2026-12-09T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15381,8 +15381,8 @@ Niles Canyon Railway is looking for volunteers for all levels of skill and exper
 - id: 02863b609eb3
 - slug: family-story-hour-02863b
 - date: 2026-12-09
-- when: Wednesday, December 9, 2026, 10:00 AM
-- start: 2026-12-09T11:00:00-07:00
+- when: Wednesday, December 9, 2026, 11:00 AM
+- start: 2026-12-09T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15404,8 +15404,8 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - id: 22679d6e13d6
 - slug: drop-in-mahjong-at-rlcc-22679d
 - date: 2026-12-09
-- when: Wednesday, December 9, 2026, 12:00 PM
-- start: 2026-12-09T13:00:00-07:00
+- when: Wednesday, December 9, 2026, 1:00 PM
+- start: 2026-12-09T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15427,8 +15427,8 @@ American Version Mahjong meets 1-4 p.m., Wednesdays in the Sycamore Room. Free l
 - id: 11b53ef3a50e
 - slug: volunteer-for-ride-care-11b53e
 - date: 2026-12-11
-- when: Friday, December 11, 2026, 9:00 AM
-- start: 2026-12-11T10:00:00-07:00
+- when: Friday, December 11, 2026, 10:00 AM
+- start: 2026-12-11T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15451,7 +15451,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - slug: tony-roberts-1d6420
 - date: 2026-12-11
 - when: Friday, December 11, 2026 (time not listed)
-- start: 2026-12-11T12:00:00-07:00
+- start: 2026-12-11T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -15473,8 +15473,8 @@ Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026
 - id: b1b6a59c4253
 - slug: drop-in-bridge-at-rlcc-b1b6a5
 - date: 2026-12-11
-- when: Friday, December 11, 2026, 12:00 PM
-- start: 2026-12-11T13:00:00-07:00
+- when: Friday, December 11, 2026, 1:00 PM
+- start: 2026-12-11T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15496,8 +15496,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: a58ce3bc962a
 - slug: music-lessons-with-pleasanton-s-1776-era-fife-and-drum-children-s-band-a58ce3
 - date: 2026-12-11
-- when: Friday, December 11, 2026, 4:00 PM
-- start: 2026-12-11T17:00:00-07:00
+- when: Friday, December 11, 2026, 5:00 PM
+- start: 2026-12-11T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: near Mohr Elementary school, call for details
@@ -15519,8 +15519,8 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - id: a714ebdad19c
 - slug: danville-farmers-market-a714eb
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 8:00 AM
-- start: 2026-12-12T09:00:00-07:00
+- when: Saturday, December 12, 2026, 9:00 AM
+- start: 2026-12-12T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15542,8 +15542,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: 4ec652c6c402
 - slug: pleasanton-farmers-market-4ec652
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 8:00 AM
-- start: 2026-12-12T09:00:00-07:00
+- when: Saturday, December 12, 2026, 9:00 AM
+- start: 2026-12-12T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15565,8 +15565,8 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - id: 8e0c0b312f55
 - slug: san-ramon-farmers-market-8e0c0b
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 8:00 AM
-- start: 2026-12-12T09:00:00-07:00
+- when: Saturday, December 12, 2026, 9:00 AM
+- start: 2026-12-12T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15588,8 +15588,8 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - id: 61062472585d
 - slug: volunteer-at-tri-valley-haven-610624
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 9:00 AM
-- start: 2026-12-12T10:00:00-07:00
+- when: Saturday, December 12, 2026, 10:00 AM
+- start: 2026-12-12T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15611,8 +15611,8 @@ Tri-Valley Haven's mission is to advocate for survivors of domestic violence, se
 - id: 3e2d68ee1bef
 - slug: chess-hour-3e2d68
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 10:00 AM
-- start: 2026-12-12T11:00:00-07:00
+- when: Saturday, December 12, 2026, 11:00 AM
+- start: 2026-12-12T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15635,7 +15635,7 @@ Practice chess skills and meet other chess players for games at the library. All
 - slug: tony-roberts-785881
 - date: 2026-12-12
 - when: Saturday, December 12, 2026 (time not listed)
-- start: 2026-12-12T12:00:00-07:00
+- start: 2026-12-12T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -15657,8 +15657,8 @@ Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026
 - id: 08c17ba23cf3
 - slug: karaoke-saturday-08c17b
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 11:00 AM
-- start: 2026-12-12T12:00:00-07:00
+- when: Saturday, December 12, 2026, 12:00 PM
+- start: 2026-12-12T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Charles R. Vineyards
@@ -15680,8 +15680,8 @@ Get ready to unleash your inner rock star at Karaoke Saturday! Doors swing open 
 - id: 0e041de457a4
 - slug: holiday-hustle-5k-10k-livermore-0e041d
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 3:00 PM
-- start: 2026-12-12T16:00:00-07:00
+- when: Saturday, December 12, 2026, 4:00 PM
+- start: 2026-12-12T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: May Nissen Park, Picnic Area by Library building
@@ -15703,8 +15703,8 @@ In teams of 1 to 5, adventure through the wonderfully decorated neighborhoods of
 - id: 4e9fdfcd9210
 - slug: kids-night-out-edge-4e9fdf
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 4:00 PM
-- start: 2026-12-12T17:00:00-07:00
+- when: Saturday, December 12, 2026, 5:00 PM
+- start: 2026-12-12T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: EDGE Performance Center
@@ -15726,8 +15726,8 @@ Tag(s): Home http://www.fusionsc.org/event/show/588783279
 - id: dd74d1ca1e8f
 - slug: andy-grammer-greater-than-pt-ii-a-one-man-show-dd74d1
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 7:00 PM
-- start: 2026-12-12T20:00:00-07:00
+- when: Saturday, December 12, 2026, 8:00 PM
+- start: 2026-12-12T20:00:00-08:00
 - end: 
 - all_day: no
 - venue: Dougherty Valley Performing Arts Center
@@ -15749,8 +15749,8 @@ An intimate, high-energy evening with multi-platinum artist Andy Grammer. Stripp
 - id: f296fab8d3fe
 - slug: livermore-farmers-market-f296fa
 - date: 2026-12-13
-- when: Sunday, December 13, 2026, 8:00 AM
-- start: 2026-12-13T09:00:00-07:00
+- when: Sunday, December 13, 2026, 9:00 AM
+- start: 2026-12-13T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15772,8 +15772,8 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - id: 82938db37f92
 - slug: volunteer-at-valley-humane-society-82938d
 - date: 2026-12-13
-- when: Sunday, December 13, 2026, 9:00 AM
-- start: 2026-12-13T10:00:00-07:00
+- when: Sunday, December 13, 2026, 10:00 AM
+- start: 2026-12-13T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15796,7 +15796,7 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - slug: tony-roberts-859e54
 - date: 2026-12-13
 - when: Sunday, December 13, 2026 (time not listed)
-- start: 2026-12-13T12:00:00-07:00
+- start: 2026-12-13T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -15818,8 +15818,8 @@ Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026
 - id: 3de4197c61e7
 - slug: volunteer-in-the-parks-3de419
 - date: 2026-12-14
-- when: Monday, December 14, 2026, 7:00 AM
-- start: 2026-12-14T08:00:00-07:00
+- when: Monday, December 14, 2026, 8:00 AM
+- start: 2026-12-14T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15841,8 +15841,8 @@ Volunteers are vital to the East Bay Regional Parks with opportunities available
 - id: 124d65a026a4
 - slug: fee-assistance-program-124d65
 - date: 2026-12-14
-- when: Monday, December 14, 2026, 8:00 AM
-- start: 2026-12-14T09:00:00-07:00
+- when: Monday, December 14, 2026, 9:00 AM
+- start: 2026-12-14T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15864,8 +15864,8 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - id: bfa0ab5b9806
 - slug: drop-in-billiards-bfa0ab
 - date: 2026-12-14
-- when: Monday, December 14, 2026, 8:00 AM
-- start: 2026-12-14T09:00:00-07:00
+- when: Monday, December 14, 2026, 9:00 AM
+- start: 2026-12-14T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15887,8 +15887,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: 31c3f6d20310
 - slug: volunteer-with-spectrum-community-services-31c3f6
 - date: 2026-12-14
-- when: Monday, December 14, 2026, 9:00 AM
-- start: 2026-12-14T10:00:00-07:00
+- when: Monday, December 14, 2026, 10:00 AM
+- start: 2026-12-14T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15910,8 +15910,8 @@ Spectrum Community Services is looking for new volunteers to join the team in a 
 - id: 1cad4d4520eb
 - slug: larpd-scholarship-program-1cad4d
 - date: 2026-12-14
-- when: Monday, December 14, 2026, 9:00 AM
-- start: 2026-12-14T10:00:00-07:00
+- when: Monday, December 14, 2026, 10:00 AM
+- start: 2026-12-14T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15933,8 +15933,8 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - id: b1bb17ad56fd
 - slug: step-by-step-esl-conversation-b1bb17
 - date: 2026-12-14
-- when: Monday, December 14, 2026, 9:00 AM
-- start: 2026-12-14T10:00:00-07:00
+- when: Monday, December 14, 2026, 10:00 AM
+- start: 2026-12-14T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15956,8 +15956,8 @@ Practice intermediate-level English grammar and conversation with other adult le
 - id: ec4f17c933be
 - slug: free-monday-movie-ec4f17
 - date: 2026-12-14
-- when: Monday, December 14, 2026, 12:00 PM
-- start: 2026-12-14T13:00:00-07:00
+- when: Monday, December 14, 2026, 1:00 PM
+- start: 2026-12-14T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -15979,8 +15979,8 @@ Enjoy a free movie every Monday at the Danville Senior Center Community Hall. 1 
 - id: 8c003f790d30
 - slug: homework-help-at-rincon-branch-8c003f
 - date: 2026-12-14
-- when: Monday, December 14, 2026, 2:00 PM
-- start: 2026-12-14T15:00:00-07:00
+- when: Monday, December 14, 2026, 3:00 PM
+- start: 2026-12-14T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16002,8 +16002,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: ea71568c6f81
 - slug: drop-in-billiards-ea7156
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 8:00 AM
-- start: 2026-12-15T09:00:00-07:00
+- when: Tuesday, December 15, 2026, 9:00 AM
+- start: 2026-12-15T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16025,8 +16025,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: ff24fa7200b2
 - slug: vintage-lounge-puzzling-ff24fa
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 8:00 AM
-- start: 2026-12-15T09:00:00-07:00
+- when: Tuesday, December 15, 2026, 9:00 AM
+- start: 2026-12-15T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16048,8 +16048,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: fedb6165b176
 - slug: holiday-brunch-fedb61
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 9:00 AM
-- start: 2026-12-15T10:00:00-07:00
+- when: Tuesday, December 15, 2026, 10:00 AM
+- start: 2026-12-15T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: Veterans Memorial Building > Senior Center
@@ -16071,8 +16071,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: 0adac09fc92e
 - slug: volunteer-with-cityserve-0adac0
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 9:00 AM
-- start: 2026-12-15T10:00:00-07:00
+- when: Tuesday, December 15, 2026, 10:00 AM
+- start: 2026-12-15T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16094,8 +16094,8 @@ Immediate volunteer opportunities are available as a Caring Visitor, RideCare Dr
 - id: d2f3e429edd7
 - slug: volunteer-with-hope-hospice-d2f3e4
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 9:00 AM
-- start: 2026-12-15T10:00:00-07:00
+- when: Tuesday, December 15, 2026, 10:00 AM
+- start: 2026-12-15T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16117,8 +16117,8 @@ Hope patient care volunteers help patients and their families in many different 
 - id: 35a14a1c25d8
 - slug: souper-tuesday-free-lunch-35a14a
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 10:00 AM
-- start: 2026-12-15T11:00:00-07:00
+- when: Tuesday, December 15, 2026, 11:00 AM
+- start: 2026-12-15T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16140,8 +16140,8 @@ Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CitySer
 - id: f5a7908080a7
 - slug: the-job-club-f5a790
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 11:00 AM
-- start: 2026-12-15T12:00:00-07:00
+- when: Tuesday, December 15, 2026, 12:00 PM
+- start: 2026-12-15T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16163,8 +16163,8 @@ Join this zoom meeting every Monday for a supportive, energizing meeting designe
 - id: 50988890e351
 - slug: american-life-vocabulary-with-gary-richter-509888
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 12:00 PM
-- start: 2026-12-15T13:00:00-07:00
+- when: Tuesday, December 15, 2026, 1:00 PM
+- start: 2026-12-15T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16186,8 +16186,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: 79627b81c07b
 - slug: homework-help-at-rincon-branch-79627b
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 2:00 PM
-- start: 2026-12-15T15:00:00-07:00
+- when: Tuesday, December 15, 2026, 3:00 PM
+- start: 2026-12-15T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16209,8 +16209,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 5ba55fd6ead6
 - slug: danville-town-council-regular-meeting-5ba55f
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 4:00 PM
-- start: 2026-12-15T17:00:00-07:00
+- when: Tuesday, December 15, 2026, 5:00 PM
+- start: 2026-12-15T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Town Council - Regular Meeting
@@ -16232,8 +16232,8 @@ The next Danville Town Council - Regular Meeting is 5 p.m., July 21. Town Meetin
 - id: 3035f3a1b83a
 - slug: san-ramon-valley-unified-school-district-3035f3
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 5:00 PM
-- start: 2026-12-15T18:00:00-07:00
+- when: Tuesday, December 15, 2026, 6:00 PM
+- start: 2026-12-15T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16255,8 +16255,8 @@ The next regular Board of Education Meeting is 6 p.m., June 28. District Board R
 - id: 0a4dac430953
 - slug: lvjusd-board-meetings-0a4dac
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 5:00 PM
-- start: 2026-12-15T18:00:00-07:00
+- when: Tuesday, December 15, 2026, 6:00 PM
+- start: 2026-12-15T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16278,8 +16278,8 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - id: 79cb770694ef
 - slug: pleasanton-city-council-79cb77
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 6:00 PM
-- start: 2026-12-15T19:00:00-07:00
+- when: Tuesday, December 15, 2026, 7:00 PM
+- start: 2026-12-15T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: City of Pleasanton
@@ -16301,8 +16301,8 @@ Pleasanton City Council Meetings are held at 7 p.m. on the first and third Tuesd
 - id: 416724b6f072
 - slug: livermore-planning-commission-416724
 - date: 2026-12-15
-- when: Tuesday, December 15, 2026, 6:00 PM
-- start: 2026-12-15T19:00:00-07:00
+- when: Tuesday, December 15, 2026, 7:00 PM
+- start: 2026-12-15T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16324,8 +16324,8 @@ The next Livermore Planning Commission meeting is 7 p.m., Sept. 15. City Hall. V
 - id: e89aa226a113
 - slug: care-coordination-services-e89aa2
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 8:00 AM
-- start: 2026-12-16T09:00:00-07:00
+- when: Wednesday, December 16, 2026, 9:00 AM
+- start: 2026-12-16T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16347,8 +16347,8 @@ CityServe Care Coordination program connects individuals and families in need to
 - id: fa11517d0fee
 - slug: the-lending-library-fa1151
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 8:00 AM
-- start: 2026-12-16T09:00:00-07:00
+- when: Wednesday, December 16, 2026, 9:00 AM
+- start: 2026-12-16T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16370,8 +16370,8 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - id: b1ecd1c81a8a
 - slug: eugene-o-neill-national-historic-site-b1ecd1
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 9:00 AM
-- start: 2026-12-16T10:00:00-07:00
+- when: Wednesday, December 16, 2026, 10:00 AM
+- start: 2026-12-16T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16393,8 +16393,8 @@ The Eugene O'Neill National Historic Site is free to the public with reservation
 - id: b01e3afbd478
 - slug: volunteer-with-niles-canyon-railway-b01e3a
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 9:00 AM
-- start: 2026-12-16T10:00:00-07:00
+- when: Wednesday, December 16, 2026, 10:00 AM
+- start: 2026-12-16T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16416,8 +16416,8 @@ Niles Canyon Railway is looking for volunteers for all levels of skill and exper
 - id: 1ec52ee0aca3
 - slug: family-story-hour-1ec52e
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 10:00 AM
-- start: 2026-12-16T11:00:00-07:00
+- when: Wednesday, December 16, 2026, 11:00 AM
+- start: 2026-12-16T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16439,8 +16439,8 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - id: ffc941df7f93
 - slug: drop-in-mahjong-at-rlcc-ffc941
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 12:00 PM
-- start: 2026-12-16T13:00:00-07:00
+- when: Wednesday, December 16, 2026, 1:00 PM
+- start: 2026-12-16T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16462,8 +16462,8 @@ American Version Mahjong meets 1-4 p.m., Wednesdays in the Sycamore Room. Free l
 - id: b5e1bda9af28
 - slug: homework-help-at-rincon-branch-b5e1bd
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 2:00 PM
-- start: 2026-12-16T15:00:00-07:00
+- when: Wednesday, December 16, 2026, 3:00 PM
+- start: 2026-12-16T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16485,8 +16485,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 3a69867b2cb4
 - slug: volunteer-with-culinary-angels-3a6986
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 2:00 PM
-- start: 2026-12-16T15:00:00-07:00
+- when: Wednesday, December 16, 2026, 3:00 PM
+- start: 2026-12-16T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16508,8 +16508,8 @@ Culinary Angels is looking for volunteers to do inventory a few times a month. 3
 - id: 1f71534424de
 - slug: san-ramon-lego-club-1f7153
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 3:00 PM
-- start: 2026-12-16T16:00:00-07:00
+- when: Wednesday, December 16, 2026, 4:00 PM
+- start: 2026-12-16T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16531,8 +16531,8 @@ Join and learn while having fun. Suitable for children 6 to 9 years. 4-5 p.m., J
 - id: 7ef8e17e4bc2
 - slug: business-after-hours-mixer-7ef8e1
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 3:00 PM
-- start: 2026-12-16T16:00:00-07:00
+- when: Wednesday, December 16, 2026, 4:00 PM
+- start: 2026-12-16T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16554,8 +16554,8 @@ Chamber members host an open house at their business, inviting attendees to a fi
 - id: 16597e172877
 - slug: family-storytime-at-pleasanton-library-16597e
 - date: 2026-12-16
-- when: Wednesday, December 16, 2026, 6:00 PM
-- start: 2026-12-16T19:00:00-07:00
+- when: Wednesday, December 16, 2026, 7:00 PM
+- start: 2026-12-16T19:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16577,8 +16577,8 @@ Join on Wednesday nights for Family Storytime, a lively mix of movement, sing-al
 - id: 7c197d2cf499
 - slug: business-referral-network-thursdays-7c197d
 - date: 2026-12-17
-- when: Thursday, December 17, 2026, 8:00 AM
-- start: 2026-12-17T09:00:00-07:00
+- when: Thursday, December 17, 2026, 9:00 AM
+- start: 2026-12-17T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16600,8 +16600,8 @@ The San Ramon Chamber Business Referral Network, Thursdays, meets the first and 
 - id: 18ff7fd156b6
 - slug: danville-farmers-market-18ff7f
 - date: 2026-12-19
-- when: Saturday, December 19, 2026, 8:00 AM
-- start: 2026-12-19T09:00:00-07:00
+- when: Saturday, December 19, 2026, 9:00 AM
+- start: 2026-12-19T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16623,8 +16623,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: 67812648475b
 - slug: jesse-loren-strickman-678126
 - date: 2026-12-19
-- when: Saturday, December 19, 2026, 8:00 AM
-- start: 2026-12-19T09:00:00-07:00
+- when: Saturday, December 19, 2026, 9:00 AM
+- start: 2026-12-19T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: Museum of San Ramon Valley
@@ -16646,8 +16646,8 @@ Jesse Loren Strickman performs a free four hour set at the PCFMA Danville farmer
 - id: 44a81ea4713d
 - slug: pleasanton-farmers-market-44a81e
 - date: 2026-12-19
-- when: Saturday, December 19, 2026, 8:00 AM
-- start: 2026-12-19T09:00:00-07:00
+- when: Saturday, December 19, 2026, 9:00 AM
+- start: 2026-12-19T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16669,8 +16669,8 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - id: cecdeb636a74
 - slug: san-ramon-farmers-market-cecdeb
 - date: 2026-12-19
-- when: Saturday, December 19, 2026, 8:00 AM
-- start: 2026-12-19T09:00:00-07:00
+- when: Saturday, December 19, 2026, 9:00 AM
+- start: 2026-12-19T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16692,8 +16692,8 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - id: 46cfddca22e1
 - slug: volunteer-at-tri-valley-haven-46cfdd
 - date: 2026-12-19
-- when: Saturday, December 19, 2026, 9:00 AM
-- start: 2026-12-19T10:00:00-07:00
+- when: Saturday, December 19, 2026, 10:00 AM
+- start: 2026-12-19T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16715,8 +16715,8 @@ Tri-Valley Haven's mission is to advocate for survivors of domestic violence, se
 - id: 9aaba16d340c
 - slug: chess-hour-9aaba1
 - date: 2026-12-19
-- when: Saturday, December 19, 2026, 10:00 AM
-- start: 2026-12-19T11:00:00-07:00
+- when: Saturday, December 19, 2026, 11:00 AM
+- start: 2026-12-19T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16738,8 +16738,8 @@ Practice chess skills and meet other chess players for games at the library. All
 - id: 3bbd85cdb5a0
 - slug: livermore-farmers-market-3bbd85
 - date: 2026-12-20
-- when: Sunday, December 20, 2026, 8:00 AM
-- start: 2026-12-20T09:00:00-07:00
+- when: Sunday, December 20, 2026, 9:00 AM
+- start: 2026-12-20T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16761,8 +16761,8 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - id: 95aebad50d44
 - slug: volunteer-at-valley-humane-society-95aeba
 - date: 2026-12-20
-- when: Sunday, December 20, 2026, 9:00 AM
-- start: 2026-12-20T10:00:00-07:00
+- when: Sunday, December 20, 2026, 10:00 AM
+- start: 2026-12-20T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16784,8 +16784,8 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - id: c984b8a8a80a
 - slug: volunteer-in-the-parks-c984b8
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 7:00 AM
-- start: 2026-12-21T08:00:00-07:00
+- when: Monday, December 21, 2026, 8:00 AM
+- start: 2026-12-21T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16807,8 +16807,8 @@ Volunteers are vital to the East Bay Regional Parks with opportunities available
 - id: 4bb043b31da7
 - slug: fee-assistance-program-4bb043
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 8:00 AM
-- start: 2026-12-21T09:00:00-07:00
+- when: Monday, December 21, 2026, 9:00 AM
+- start: 2026-12-21T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16830,8 +16830,8 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - id: bf1921aeb52d
 - slug: drop-in-billiards-bf1921
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 8:00 AM
-- start: 2026-12-21T09:00:00-07:00
+- when: Monday, December 21, 2026, 9:00 AM
+- start: 2026-12-21T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16853,8 +16853,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: 4a88c8a75412
 - slug: volunteer-with-spectrum-community-services-4a88c8
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 9:00 AM
-- start: 2026-12-21T10:00:00-07:00
+- when: Monday, December 21, 2026, 10:00 AM
+- start: 2026-12-21T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16876,8 +16876,8 @@ Spectrum Community Services is looking for new volunteers to join the team in a 
 - id: 8c8c1795d377
 - slug: larpd-scholarship-program-8c8c17
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 9:00 AM
-- start: 2026-12-21T10:00:00-07:00
+- when: Monday, December 21, 2026, 10:00 AM
+- start: 2026-12-21T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16899,8 +16899,8 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - id: 28e5e65b754b
 - slug: step-by-step-esl-conversation-28e5e6
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 9:00 AM
-- start: 2026-12-21T10:00:00-07:00
+- when: Monday, December 21, 2026, 10:00 AM
+- start: 2026-12-21T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16922,8 +16922,8 @@ Practice intermediate-level English grammar and conversation with other adult le
 - id: 1cef5e403576
 - slug: free-monday-movie-1cef5e
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 12:00 PM
-- start: 2026-12-21T13:00:00-07:00
+- when: Monday, December 21, 2026, 1:00 PM
+- start: 2026-12-21T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16945,8 +16945,8 @@ Enjoy a free movie every Monday at the Danville Senior Center Community Hall. 1 
 - id: b9a9b3a49326
 - slug: homework-help-at-rincon-branch-b9a9b3
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 2:00 PM
-- start: 2026-12-21T15:00:00-07:00
+- when: Monday, December 21, 2026, 3:00 PM
+- start: 2026-12-21T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16968,8 +16968,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 1bf9a340c0a1
 - slug: open-heart-refuge-1bf9a3
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 5:00 PM
-- start: 2026-12-21T18:00:00-07:00
+- when: Monday, December 21, 2026, 6:00 PM
+- start: 2026-12-21T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -16991,8 +16991,8 @@ Open Heart Refuge offers overnight shelter using an assigned bed model. Check-in
 - id: 9b91a578237c
 - slug: family-storytime-at-san-ramon-library-9b91a5
 - date: 2026-12-21
-- when: Monday, December 21, 2026, 5:00 PM
-- start: 2026-12-21T18:00:00-07:00
+- when: Monday, December 21, 2026, 6:00 PM
+- start: 2026-12-21T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: San Ramon Library
@@ -17014,8 +17014,8 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - id: abbb7bc1ef28
 - slug: business-referral-network-abbb7b
 - date: 2026-12-22
-- when: Tuesday, December 22, 2026, 8:00 AM
-- start: 2026-12-22T09:00:00-07:00
+- when: Tuesday, December 22, 2026, 9:00 AM
+- start: 2026-12-22T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17037,8 +17037,8 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - id: 3b21ea02aa6b
 - slug: drop-in-billiards-3b21ea
 - date: 2026-12-22
-- when: Tuesday, December 22, 2026, 8:00 AM
-- start: 2026-12-22T09:00:00-07:00
+- when: Tuesday, December 22, 2026, 9:00 AM
+- start: 2026-12-22T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17060,8 +17060,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: adbbe79cdf06
 - slug: vintage-lounge-puzzling-adbbe7
 - date: 2026-12-22
-- when: Tuesday, December 22, 2026, 8:00 AM
-- start: 2026-12-22T09:00:00-07:00
+- when: Tuesday, December 22, 2026, 9:00 AM
+- start: 2026-12-22T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17083,8 +17083,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: dca147c54221
 - slug: volunteer-with-cityserve-dca147
 - date: 2026-12-22
-- when: Tuesday, December 22, 2026, 9:00 AM
-- start: 2026-12-22T10:00:00-07:00
+- when: Tuesday, December 22, 2026, 10:00 AM
+- start: 2026-12-22T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17106,8 +17106,8 @@ Immediate volunteer opportunities are available as a Caring Visitor, RideCare Dr
 - id: 3ad58c3d62fd
 - slug: volunteer-with-hope-hospice-3ad58c
 - date: 2026-12-22
-- when: Tuesday, December 22, 2026, 9:00 AM
-- start: 2026-12-22T10:00:00-07:00
+- when: Tuesday, December 22, 2026, 10:00 AM
+- start: 2026-12-22T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17129,8 +17129,8 @@ Hope patient care volunteers help patients and their families in many different 
 - id: 0c35a2fad282
 - slug: souper-tuesday-free-lunch-0c35a2
 - date: 2026-12-22
-- when: Tuesday, December 22, 2026, 10:00 AM
-- start: 2026-12-22T11:00:00-07:00
+- when: Tuesday, December 22, 2026, 11:00 AM
+- start: 2026-12-22T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17152,8 +17152,8 @@ Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CitySer
 - id: 4a35b7d15c02
 - slug: american-life-vocabulary-with-gary-richter-4a35b7
 - date: 2026-12-22
-- when: Tuesday, December 22, 2026, 12:00 PM
-- start: 2026-12-22T13:00:00-07:00
+- when: Tuesday, December 22, 2026, 1:00 PM
+- start: 2026-12-22T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17175,8 +17175,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: 047a2f42e6bc
 - slug: homework-help-at-rincon-branch-047a2f
 - date: 2026-12-22
-- when: Tuesday, December 22, 2026, 2:00 PM
-- start: 2026-12-22T15:00:00-07:00
+- when: Tuesday, December 22, 2026, 3:00 PM
+- start: 2026-12-22T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17198,8 +17198,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 65c7d4fa40fa
 - slug: danville-planning-commission-65c7d4
 - date: 2026-12-22
-- when: Tuesday, December 22, 2026, 4:00 PM
-- start: 2026-12-22T17:00:00-07:00
+- when: Tuesday, December 22, 2026, 5:00 PM
+- start: 2026-12-22T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17221,8 +17221,8 @@ The next Danville Planning Commission meeting is 5 p.m., July 14. Town Meeting H
 - id: f3bd294e89df
 - slug: care-coordination-services-f3bd29
 - date: 2026-12-23
-- when: Wednesday, December 23, 2026, 8:00 AM
-- start: 2026-12-23T09:00:00-07:00
+- when: Wednesday, December 23, 2026, 9:00 AM
+- start: 2026-12-23T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17244,8 +17244,8 @@ CityServe Care Coordination program connects individuals and families in need to
 - id: 1eaced1c62c1
 - slug: the-lending-library-1eaced
 - date: 2026-12-23
-- when: Wednesday, December 23, 2026, 8:00 AM
-- start: 2026-12-23T09:00:00-07:00
+- when: Wednesday, December 23, 2026, 9:00 AM
+- start: 2026-12-23T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17267,8 +17267,8 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - id: 64bddc20a905
 - slug: eugene-o-neill-national-historic-site-64bddc
 - date: 2026-12-23
-- when: Wednesday, December 23, 2026, 9:00 AM
-- start: 2026-12-23T10:00:00-07:00
+- when: Wednesday, December 23, 2026, 10:00 AM
+- start: 2026-12-23T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17290,8 +17290,8 @@ The Eugene O'Neill National Historic Site is free to the public with reservation
 - id: 162da700520d
 - slug: volunteer-with-niles-canyon-railway-162da7
 - date: 2026-12-23
-- when: Wednesday, December 23, 2026, 9:00 AM
-- start: 2026-12-23T10:00:00-07:00
+- when: Wednesday, December 23, 2026, 10:00 AM
+- start: 2026-12-23T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17313,8 +17313,8 @@ Niles Canyon Railway is looking for volunteers for all levels of skill and exper
 - id: 1e778dac2a32
 - slug: family-story-hour-1e778d
 - date: 2026-12-23
-- when: Wednesday, December 23, 2026, 10:00 AM
-- start: 2026-12-23T11:00:00-07:00
+- when: Wednesday, December 23, 2026, 11:00 AM
+- start: 2026-12-23T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17336,8 +17336,8 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - id: 58006c3f9c51
 - slug: drop-in-mahjong-at-rlcc-58006c
 - date: 2026-12-23
-- when: Wednesday, December 23, 2026, 12:00 PM
-- start: 2026-12-23T13:00:00-07:00
+- when: Wednesday, December 23, 2026, 1:00 PM
+- start: 2026-12-23T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17359,8 +17359,8 @@ American Version Mahjong meets 1-4 p.m., Wednesdays in the Sycamore Room. Free l
 - id: a83671a34977
 - slug: homework-help-at-rincon-branch-a83671
 - date: 2026-12-23
-- when: Wednesday, December 23, 2026, 2:00 PM
-- start: 2026-12-23T15:00:00-07:00
+- when: Wednesday, December 23, 2026, 3:00 PM
+- start: 2026-12-23T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17382,8 +17382,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: e61892619d7a
 - slug: volunteer-with-culinary-angels-e61892
 - date: 2026-12-23
-- when: Wednesday, December 23, 2026, 2:00 PM
-- start: 2026-12-23T15:00:00-07:00
+- when: Wednesday, December 23, 2026, 3:00 PM
+- start: 2026-12-23T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17405,8 +17405,8 @@ Culinary Angels is looking for volunteers to do inventory a few times a month. 3
 - id: b57d0ab3ebde
 - slug: whatever-wednesdays-teen-games-b57d0a
 - date: 2026-12-23
-- when: Wednesday, December 23, 2026, 3:00 PM
-- start: 2026-12-23T16:00:00-07:00
+- when: Wednesday, December 23, 2026, 4:00 PM
+- start: 2026-12-23T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17428,8 +17428,8 @@ Play against other teens in classic card and board games where winners receive t
 - id: c2b07e2cc0b1
 - slug: free-weekly-pop-up-c2b07e
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 9:00 AM
-- start: 2026-12-24T10:00:00-07:00
+- when: Thursday, December 24, 2026, 10:00 AM
+- start: 2026-12-24T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17451,8 +17451,8 @@ Grab a lunch to go, connect with a caring volunteer, clothing, seasonal and hyge
 - id: 183cd75dfc31
 - slug: ridecare-transportation-183cd7
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 9:00 AM
-- start: 2026-12-24T10:00:00-07:00
+- when: Thursday, December 24, 2026, 10:00 AM
+- start: 2026-12-24T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17474,8 +17474,8 @@ Free, caring rides for seniors and adults with disabilities residing in Livermor
 - id: 66b1a0fe36e2
 - slug: larpd-community-support-program-66b1a0
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 9:00 AM
-- start: 2026-12-24T10:00:00-07:00
+- when: Thursday, December 24, 2026, 10:00 AM
+- start: 2026-12-24T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17497,8 +17497,8 @@ Scholarships are available through the LARPD Foundation’s Community Support Pr
 - id: 99b5f2609f3d
 - slug: volunteer-at-open-heart-kitchen-99b5f2
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 9:00 AM
-- start: 2026-12-24T10:00:00-07:00
+- when: Thursday, December 24, 2026, 10:00 AM
+- start: 2026-12-24T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17520,8 +17520,8 @@ Open Heart Kitchen offers individual and group volunteer opportunities at a vari
 - id: 2ed7e04828e6
 - slug: storytime-at-san-ramon-library-2ed7e0
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 10:00 AM
-- start: 2026-12-24T11:00:00-07:00
+- when: Thursday, December 24, 2026, 11:00 AM
+- start: 2026-12-24T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17543,8 +17543,8 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - id: d2cb60c39bc5
 - slug: community-meals-d2cb60
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 11:00 AM
-- start: 2026-12-24T12:00:00-07:00
+- when: Thursday, December 24, 2026, 12:00 PM
+- start: 2026-12-24T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17566,8 +17566,8 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - id: dd183988b212
 - slug: drop-in-bridge-at-rlcc-dd1839
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 12:00 PM
-- start: 2026-12-24T13:00:00-07:00
+- when: Thursday, December 24, 2026, 1:00 PM
+- start: 2026-12-24T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17589,8 +17589,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: d0946b188da7
 - slug: american-life-vocabulary-with-gary-richter-d0946b
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 12:00 PM
-- start: 2026-12-24T13:00:00-07:00
+- when: Thursday, December 24, 2026, 1:00 PM
+- start: 2026-12-24T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17612,8 +17612,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: f0671efd329a
 - slug: homework-help-at-rincon-branch-f0671e
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 2:00 PM
-- start: 2026-12-24T15:00:00-07:00
+- when: Thursday, December 24, 2026, 3:00 PM
+- start: 2026-12-24T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17635,8 +17635,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: d0777abaa7f6
 - slug: pop-up-crafternoon-d0777a
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 2:00 PM
-- start: 2026-12-24T15:00:00-07:00
+- when: Thursday, December 24, 2026, 3:00 PM
+- start: 2026-12-24T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17658,8 +17658,8 @@ Join in the San Ramon Library children's area for a fun craft. 3-4 p.m., July 23
 - id: acea3e93d98a
 - slug: free-social-adults-only-19-chess-club-acea3e
 - date: 2026-12-24
-- when: Thursday, December 24, 2026, 4:00 PM
-- start: 2026-12-24T17:00:00-07:00
+- when: Thursday, December 24, 2026, 5:00 PM
+- start: 2026-12-24T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -17681,8 +17681,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: c8c818ae9fd1
 - slug: volunteer-for-ride-care-c8c818
 - date: 2026-12-25
-- when: Friday, December 25, 2026, 9:00 AM
-- start: 2026-12-25T10:00:00-07:00
+- when: Friday, December 25, 2026, 10:00 AM
+- start: 2026-12-25T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17704,8 +17704,8 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - id: e478315e70a1
 - slug: drop-in-bridge-at-rlcc-e47831
 - date: 2026-12-25
-- when: Friday, December 25, 2026, 12:00 PM
-- start: 2026-12-25T13:00:00-07:00
+- when: Friday, December 25, 2026, 1:00 PM
+- start: 2026-12-25T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17727,8 +17727,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: c383d8a443c1
 - slug: music-lessons-with-pleasanton-s-1776-era-fife-and-drum-children-s-band-c383d8
 - date: 2026-12-25
-- when: Friday, December 25, 2026, 4:00 PM
-- start: 2026-12-25T17:00:00-07:00
+- when: Friday, December 25, 2026, 5:00 PM
+- start: 2026-12-25T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: near Mohr Elementary school, call for details
@@ -17750,8 +17750,8 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - id: ca30539037fb
 - slug: danville-farmers-market-ca3053
 - date: 2026-12-26
-- when: Saturday, December 26, 2026, 8:00 AM
-- start: 2026-12-26T09:00:00-07:00
+- when: Saturday, December 26, 2026, 9:00 AM
+- start: 2026-12-26T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17773,8 +17773,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: c63052a707a8
 - slug: pleasanton-farmers-market-c63052
 - date: 2026-12-26
-- when: Saturday, December 26, 2026, 8:00 AM
-- start: 2026-12-26T09:00:00-07:00
+- when: Saturday, December 26, 2026, 9:00 AM
+- start: 2026-12-26T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17796,8 +17796,8 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - id: 6ae394e9f760
 - slug: san-ramon-farmers-market-6ae394
 - date: 2026-12-26
-- when: Saturday, December 26, 2026, 8:00 AM
-- start: 2026-12-26T09:00:00-07:00
+- when: Saturday, December 26, 2026, 9:00 AM
+- start: 2026-12-26T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17819,8 +17819,8 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - id: a614b5253974
 - slug: volunteer-at-tri-valley-haven-a614b5
 - date: 2026-12-26
-- when: Saturday, December 26, 2026, 9:00 AM
-- start: 2026-12-26T10:00:00-07:00
+- when: Saturday, December 26, 2026, 10:00 AM
+- start: 2026-12-26T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17842,8 +17842,8 @@ Tri-Valley Haven's mission is to advocate for survivors of domestic violence, se
 - id: d413e3b13717
 - slug: chess-hour-d413e3
 - date: 2026-12-26
-- when: Saturday, December 26, 2026, 10:00 AM
-- start: 2026-12-26T11:00:00-07:00
+- when: Saturday, December 26, 2026, 11:00 AM
+- start: 2026-12-26T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17865,8 +17865,8 @@ Practice chess skills and meet other chess players for games at the library. All
 - id: 9f6156388cce
 - slug: saturday-storytime-9f6156
 - date: 2026-12-26
-- when: Saturday, December 26, 2026, 10:00 AM
-- start: 2026-12-26T11:00:00-07:00
+- when: Saturday, December 26, 2026, 11:00 AM
+- start: 2026-12-26T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17888,8 +17888,8 @@ Enjoy family time together with stories, songs, rhymes, finger plays and more. 1
 - id: d7a0d2191ba4
 - slug: livermore-farmers-market-d7a0d2
 - date: 2026-12-27
-- when: Sunday, December 27, 2026, 8:00 AM
-- start: 2026-12-27T09:00:00-07:00
+- when: Sunday, December 27, 2026, 9:00 AM
+- start: 2026-12-27T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17911,8 +17911,8 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - id: 983117375181
 - slug: volunteer-at-valley-humane-society-983117
 - date: 2026-12-27
-- when: Sunday, December 27, 2026, 9:00 AM
-- start: 2026-12-27T10:00:00-07:00
+- when: Sunday, December 27, 2026, 10:00 AM
+- start: 2026-12-27T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17934,8 +17934,8 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - id: 66ff4b430d20
 - slug: volunteer-in-the-parks-66ff4b
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 7:00 AM
-- start: 2026-12-28T08:00:00-07:00
+- when: Monday, December 28, 2026, 8:00 AM
+- start: 2026-12-28T08:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17957,8 +17957,8 @@ Volunteers are vital to the East Bay Regional Parks with opportunities available
 - id: 3774483abd06
 - slug: fee-assistance-program-377448
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 8:00 AM
-- start: 2026-12-28T09:00:00-07:00
+- when: Monday, December 28, 2026, 9:00 AM
+- start: 2026-12-28T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -17980,8 +17980,8 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - id: 45effbb75c90
 - slug: drop-in-billiards-45effb
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 8:00 AM
-- start: 2026-12-28T09:00:00-07:00
+- when: Monday, December 28, 2026, 9:00 AM
+- start: 2026-12-28T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18003,8 +18003,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: e0ba5f2de1b0
 - slug: volunteer-with-spectrum-community-services-e0ba5f
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 9:00 AM
-- start: 2026-12-28T10:00:00-07:00
+- when: Monday, December 28, 2026, 10:00 AM
+- start: 2026-12-28T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18026,8 +18026,8 @@ Spectrum Community Services is looking for new volunteers to join the team in a 
 - id: c83b37b458d8
 - slug: larpd-scholarship-program-c83b37
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 9:00 AM
-- start: 2026-12-28T10:00:00-07:00
+- when: Monday, December 28, 2026, 10:00 AM
+- start: 2026-12-28T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18049,8 +18049,8 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - id: 8256f790cfce
 - slug: step-by-step-esl-conversation-8256f7
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 9:00 AM
-- start: 2026-12-28T10:00:00-07:00
+- when: Monday, December 28, 2026, 10:00 AM
+- start: 2026-12-28T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18072,8 +18072,8 @@ Practice intermediate-level English grammar and conversation with other adult le
 - id: 623b06c83170
 - slug: free-monday-movie-623b06
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 12:00 PM
-- start: 2026-12-28T13:00:00-07:00
+- when: Monday, December 28, 2026, 1:00 PM
+- start: 2026-12-28T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18095,8 +18095,8 @@ Enjoy a free movie every Monday at the Danville Senior Center Community Hall. 1 
 - id: ee268a18cdbc
 - slug: homework-help-at-rincon-branch-ee268a
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 2:00 PM
-- start: 2026-12-28T15:00:00-07:00
+- when: Monday, December 28, 2026, 3:00 PM
+- start: 2026-12-28T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18118,8 +18118,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 4d2fea31e22b
 - slug: open-heart-refuge-4d2fea
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 5:00 PM
-- start: 2026-12-28T18:00:00-07:00
+- when: Monday, December 28, 2026, 6:00 PM
+- start: 2026-12-28T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18141,8 +18141,8 @@ Open Heart Refuge offers overnight shelter using an assigned bed model. Check-in
 - id: b8b93e9cc0cb
 - slug: family-storytime-at-san-ramon-library-b8b93e
 - date: 2026-12-28
-- when: Monday, December 28, 2026, 5:00 PM
-- start: 2026-12-28T18:00:00-07:00
+- when: Monday, December 28, 2026, 6:00 PM
+- start: 2026-12-28T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: San Ramon Library
@@ -18164,8 +18164,8 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - id: 1579d5ab5f09
 - slug: drop-in-billiards-1579d5
 - date: 2026-12-29
-- when: Tuesday, December 29, 2026, 8:00 AM
-- start: 2026-12-29T09:00:00-07:00
+- when: Tuesday, December 29, 2026, 9:00 AM
+- start: 2026-12-29T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18187,8 +18187,8 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - id: 178ebb8bdd30
 - slug: vintage-lounge-puzzling-178ebb
 - date: 2026-12-29
-- when: Tuesday, December 29, 2026, 8:00 AM
-- start: 2026-12-29T09:00:00-07:00
+- when: Tuesday, December 29, 2026, 9:00 AM
+- start: 2026-12-29T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18210,8 +18210,8 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 - id: a28313430a81
 - slug: volunteer-with-cityserve-a28313
 - date: 2026-12-29
-- when: Tuesday, December 29, 2026, 9:00 AM
-- start: 2026-12-29T10:00:00-07:00
+- when: Tuesday, December 29, 2026, 10:00 AM
+- start: 2026-12-29T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18233,8 +18233,8 @@ Immediate volunteer opportunities are available as a Caring Visitor, RideCare Dr
 - id: 75b129195f0d
 - slug: volunteer-with-hope-hospice-75b129
 - date: 2026-12-29
-- when: Tuesday, December 29, 2026, 9:00 AM
-- start: 2026-12-29T10:00:00-07:00
+- when: Tuesday, December 29, 2026, 10:00 AM
+- start: 2026-12-29T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18256,8 +18256,8 @@ Hope patient care volunteers help patients and their families in many different 
 - id: fa9ed59cbadd
 - slug: souper-tuesday-free-lunch-fa9ed5
 - date: 2026-12-29
-- when: Tuesday, December 29, 2026, 10:00 AM
-- start: 2026-12-29T11:00:00-07:00
+- when: Tuesday, December 29, 2026, 11:00 AM
+- start: 2026-12-29T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18279,8 +18279,8 @@ Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CitySer
 - id: bf1bbd6d4af4
 - slug: american-life-vocabulary-with-gary-richter-bf1bbd
 - date: 2026-12-29
-- when: Tuesday, December 29, 2026, 12:00 PM
-- start: 2026-12-29T13:00:00-07:00
+- when: Tuesday, December 29, 2026, 1:00 PM
+- start: 2026-12-29T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18302,8 +18302,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: f3fc3d294afc
 - slug: homework-help-at-rincon-branch-f3fc3d
 - date: 2026-12-29
-- when: Tuesday, December 29, 2026, 2:00 PM
-- start: 2026-12-29T15:00:00-07:00
+- when: Tuesday, December 29, 2026, 3:00 PM
+- start: 2026-12-29T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18325,8 +18325,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 7d7e2053937c
 - slug: care-coordination-services-7d7e20
 - date: 2026-12-30
-- when: Wednesday, December 30, 2026, 8:00 AM
-- start: 2026-12-30T09:00:00-07:00
+- when: Wednesday, December 30, 2026, 9:00 AM
+- start: 2026-12-30T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18348,8 +18348,8 @@ CityServe Care Coordination program connects individuals and families in need to
 - id: a92d90f08150
 - slug: the-lending-library-a92d90
 - date: 2026-12-30
-- when: Wednesday, December 30, 2026, 8:00 AM
-- start: 2026-12-30T09:00:00-07:00
+- when: Wednesday, December 30, 2026, 9:00 AM
+- start: 2026-12-30T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18371,8 +18371,8 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - id: ad9885d518b8
 - slug: eugene-o-neill-national-historic-site-ad9885
 - date: 2026-12-30
-- when: Wednesday, December 30, 2026, 9:00 AM
-- start: 2026-12-30T10:00:00-07:00
+- when: Wednesday, December 30, 2026, 10:00 AM
+- start: 2026-12-30T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18394,8 +18394,8 @@ The Eugene O'Neill National Historic Site is free to the public with reservation
 - id: c210204d56ec
 - slug: volunteer-with-niles-canyon-railway-c21020
 - date: 2026-12-30
-- when: Wednesday, December 30, 2026, 9:00 AM
-- start: 2026-12-30T10:00:00-07:00
+- when: Wednesday, December 30, 2026, 10:00 AM
+- start: 2026-12-30T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18417,8 +18417,8 @@ Niles Canyon Railway is looking for volunteers for all levels of skill and exper
 - id: 58ed4f0aa59d
 - slug: family-story-hour-58ed4f
 - date: 2026-12-30
-- when: Wednesday, December 30, 2026, 10:00 AM
-- start: 2026-12-30T11:00:00-07:00
+- when: Wednesday, December 30, 2026, 11:00 AM
+- start: 2026-12-30T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18440,8 +18440,8 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - id: fb5a4831b666
 - slug: drop-in-mahjong-at-rlcc-fb5a48
 - date: 2026-12-30
-- when: Wednesday, December 30, 2026, 12:00 PM
-- start: 2026-12-30T13:00:00-07:00
+- when: Wednesday, December 30, 2026, 1:00 PM
+- start: 2026-12-30T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18463,8 +18463,8 @@ American Version Mahjong meets 1-4 p.m., Wednesdays in the Sycamore Room. Free l
 - id: cd5a913ae90a
 - slug: homework-help-at-rincon-branch-cd5a91
 - date: 2026-12-30
-- when: Wednesday, December 30, 2026, 2:00 PM
-- start: 2026-12-30T15:00:00-07:00
+- when: Wednesday, December 30, 2026, 3:00 PM
+- start: 2026-12-30T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18486,8 +18486,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 833ceb977072
 - slug: volunteer-with-culinary-angels-833ceb
 - date: 2026-12-30
-- when: Wednesday, December 30, 2026, 2:00 PM
-- start: 2026-12-30T15:00:00-07:00
+- when: Wednesday, December 30, 2026, 3:00 PM
+- start: 2026-12-30T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18509,8 +18509,8 @@ Culinary Angels is looking for volunteers to do inventory a few times a month. 3
 - id: 3b0b253b81ba
 - slug: free-weekly-pop-up-3b0b25
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 9:00 AM
-- start: 2026-12-31T10:00:00-07:00
+- when: Thursday, December 31, 2026, 10:00 AM
+- start: 2026-12-31T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18532,8 +18532,8 @@ Grab a lunch to go, connect with a caring volunteer, clothing, seasonal and hyge
 - id: a0cb98d7c48c
 - slug: ridecare-transportation-a0cb98
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 9:00 AM
-- start: 2026-12-31T10:00:00-07:00
+- when: Thursday, December 31, 2026, 10:00 AM
+- start: 2026-12-31T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18555,8 +18555,8 @@ Free, caring rides for seniors and adults with disabilities residing in Livermor
 - id: 6ba9adab5fce
 - slug: larpd-community-support-program-6ba9ad
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 9:00 AM
-- start: 2026-12-31T10:00:00-07:00
+- when: Thursday, December 31, 2026, 10:00 AM
+- start: 2026-12-31T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18578,8 +18578,8 @@ Scholarships are available through the LARPD Foundation’s Community Support Pr
 - id: 8d0b0e5e276c
 - slug: volunteer-at-open-heart-kitchen-8d0b0e
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 9:00 AM
-- start: 2026-12-31T10:00:00-07:00
+- when: Thursday, December 31, 2026, 10:00 AM
+- start: 2026-12-31T10:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18601,8 +18601,8 @@ Open Heart Kitchen offers individual and group volunteer opportunities at a vari
 - id: a718db202b85
 - slug: storytime-at-san-ramon-library-a718db
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 10:00 AM
-- start: 2026-12-31T11:00:00-07:00
+- when: Thursday, December 31, 2026, 11:00 AM
+- start: 2026-12-31T11:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18624,8 +18624,8 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - id: 48f44245b9e3
 - slug: community-meals-48f442
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 11:00 AM
-- start: 2026-12-31T12:00:00-07:00
+- when: Thursday, December 31, 2026, 12:00 PM
+- start: 2026-12-31T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18647,8 +18647,8 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - id: 1f0d24121400
 - slug: drop-in-bridge-at-rlcc-1f0d24
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 12:00 PM
-- start: 2026-12-31T13:00:00-07:00
+- when: Thursday, December 31, 2026, 1:00 PM
+- start: 2026-12-31T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18670,8 +18670,8 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - id: fa7ea0101f08
 - slug: american-life-vocabulary-with-gary-richter-fa7ea0
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 12:00 PM
-- start: 2026-12-31T13:00:00-07:00
+- when: Thursday, December 31, 2026, 1:00 PM
+- start: 2026-12-31T13:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18693,8 +18693,8 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - id: c39c8fd911a5
 - slug: homework-help-at-rincon-branch-c39c8f
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 2:00 PM
-- start: 2026-12-31T15:00:00-07:00
+- when: Thursday, December 31, 2026, 3:00 PM
+- start: 2026-12-31T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18716,8 +18716,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: e05f56059a04
 - slug: free-social-adults-only-19-chess-club-e05f56
 - date: 2026-12-31
-- when: Thursday, December 31, 2026, 4:00 PM
-- start: 2026-12-31T17:00:00-07:00
+- when: Thursday, December 31, 2026, 5:00 PM
+- start: 2026-12-31T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -18739,8 +18739,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: ab78e10709c6
 - slug: danville-farmers-market-ab78e1
 - date: 2027-01-02
-- when: Saturday, January 2, 2027, 8:00 AM
-- start: 2027-01-02T09:00:00-07:00
+- when: Saturday, January 2, 2027, 9:00 AM
+- start: 2027-01-02T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18762,8 +18762,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: 631fd9b86b80
 - slug: homework-help-at-rincon-branch-631fd9
 - date: 2027-01-04
-- when: Monday, January 4, 2027, 2:00 PM
-- start: 2027-01-04T15:00:00-07:00
+- when: Monday, January 4, 2027, 3:00 PM
+- start: 2027-01-04T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18785,8 +18785,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 8228c1ce72f9
 - slug: homework-help-at-rincon-branch-8228c1
 - date: 2027-01-05
-- when: Tuesday, January 5, 2027, 2:00 PM
-- start: 2027-01-05T15:00:00-07:00
+- when: Tuesday, January 5, 2027, 3:00 PM
+- start: 2027-01-05T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18808,8 +18808,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 5fa81337e641
 - slug: homework-help-at-rincon-branch-5fa813
 - date: 2027-01-06
-- when: Wednesday, January 6, 2027, 2:00 PM
-- start: 2027-01-06T15:00:00-07:00
+- when: Wednesday, January 6, 2027, 3:00 PM
+- start: 2027-01-06T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18831,8 +18831,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: ef54b08afac0
 - slug: tri-valley-rainbow-night-ef54b0
 - date: 2027-01-06
-- when: Wednesday, January 6, 2027, 4:00 PM
-- start: 2027-01-06T17:00:00-07:00
+- when: Wednesday, January 6, 2027, 5:00 PM
+- start: 2027-01-06T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Swirl on the Square
@@ -18854,8 +18854,8 @@ Come join us for our monthly Queer gathering! Make new friends, hang out with ol
 - id: 11199af76a54
 - slug: homework-help-at-rincon-branch-11199a
 - date: 2027-01-07
-- when: Thursday, January 7, 2027, 2:00 PM
-- start: 2027-01-07T15:00:00-07:00
+- when: Thursday, January 7, 2027, 3:00 PM
+- start: 2027-01-07T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18877,8 +18877,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: c1b47e222326
 - slug: free-social-adults-only-19-chess-club-c1b47e
 - date: 2027-01-07
-- when: Thursday, January 7, 2027, 4:00 PM
-- start: 2027-01-07T17:00:00-07:00
+- when: Thursday, January 7, 2027, 5:00 PM
+- start: 2027-01-07T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -18900,8 +18900,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: 92a082ace339
 - slug: music-lessons-with-pleasanton-s-1776-era-fife-and-drum-children-s-band-92a082
 - date: 2027-01-08
-- when: Friday, January 8, 2027, 4:00 PM
-- start: 2027-01-08T17:00:00-07:00
+- when: Friday, January 8, 2027, 5:00 PM
+- start: 2027-01-08T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: near Mohr Elementary school, call for details
@@ -18923,8 +18923,8 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - id: 71c04c57cdba
 - slug: danville-farmers-market-71c04c
 - date: 2027-01-09
-- when: Saturday, January 9, 2027, 8:00 AM
-- start: 2027-01-09T09:00:00-07:00
+- when: Saturday, January 9, 2027, 9:00 AM
+- start: 2027-01-09T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18946,8 +18946,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: 6af2a04a5ab7
 - slug: homework-help-at-rincon-branch-6af2a0
 - date: 2027-01-11
-- when: Monday, January 11, 2027, 2:00 PM
-- start: 2027-01-11T15:00:00-07:00
+- when: Monday, January 11, 2027, 3:00 PM
+- start: 2027-01-11T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -18969,8 +18969,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 6be64762bb7d
 - slug: biz-links-networking-group-6be647
 - date: 2027-01-12
-- when: Tuesday, January 12, 2027, 11:00 AM
-- start: 2027-01-12T12:00:00-07:00
+- when: Tuesday, January 12, 2027, 12:00 PM
+- start: 2027-01-12T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton Chamber of Commerce
@@ -18992,8 +18992,8 @@ Biz Links is a Chamber networking group focused on building meaningful business 
 - id: dd529e07780b
 - slug: homework-help-at-rincon-branch-dd529e
 - date: 2027-01-12
-- when: Tuesday, January 12, 2027, 2:00 PM
-- start: 2027-01-12T15:00:00-07:00
+- when: Tuesday, January 12, 2027, 3:00 PM
+- start: 2027-01-12T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19015,8 +19015,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: e23b31f7057d
 - slug: homework-help-at-rincon-branch-e23b31
 - date: 2027-01-13
-- when: Wednesday, January 13, 2027, 2:00 PM
-- start: 2027-01-13T15:00:00-07:00
+- when: Wednesday, January 13, 2027, 3:00 PM
+- start: 2027-01-13T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19038,8 +19038,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 876a5aab53f8
 - slug: networking-mixer-876a5a
 - date: 2027-01-13
-- when: Wednesday, January 13, 2027, 4:00 PM
-- start: 2027-01-13T17:00:00-07:00
+- when: Wednesday, January 13, 2027, 5:00 PM
+- start: 2027-01-13T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton, CAJanuary Networking Event Hosted by: Pivot Craft Kitchen & Sports Bar Wednesday, January 13, 2027 5:00 p.m. to 7:00 p.m. 5121 Hopyard Road, Pleasanton Please register in advance. Networking mixers are a benefit of chamber membership and are free for members to attend. Chamber members are welcome to promote their business by bringing a raffle prize. Your business will then be announced at the mixer. PROSPECTIVE MEMBERS & GUESTS: Please contact Jeanette: (925) 846-5858 ext. 202 or email jeanette@pleasanton.org 5:00 pm5.3 mi
@@ -19061,8 +19061,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: d1671d003eb4
 - slug: homework-help-at-rincon-branch-d1671d
 - date: 2027-01-14
-- when: Thursday, January 14, 2027, 2:00 PM
-- start: 2027-01-14T15:00:00-07:00
+- when: Thursday, January 14, 2027, 3:00 PM
+- start: 2027-01-14T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19084,8 +19084,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 2e11bfb04161
 - slug: free-social-adults-only-19-chess-club-2e11bf
 - date: 2027-01-14
-- when: Thursday, January 14, 2027, 4:00 PM
-- start: 2027-01-14T17:00:00-07:00
+- when: Thursday, January 14, 2027, 5:00 PM
+- start: 2027-01-14T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -19107,8 +19107,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: ec86f9cc45ce
 - slug: danville-farmers-market-ec86f9
 - date: 2027-01-16
-- when: Saturday, January 16, 2027, 8:00 AM
-- start: 2027-01-16T09:00:00-07:00
+- when: Saturday, January 16, 2027, 9:00 AM
+- start: 2027-01-16T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19130,8 +19130,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: 4c321397851a
 - slug: homework-help-at-rincon-branch-4c3213
 - date: 2027-01-18
-- when: Monday, January 18, 2027, 2:00 PM
-- start: 2027-01-18T15:00:00-07:00
+- when: Monday, January 18, 2027, 3:00 PM
+- start: 2027-01-18T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19153,8 +19153,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: b2fd5e852db9
 - slug: homework-help-at-rincon-branch-b2fd5e
 - date: 2027-01-19
-- when: Tuesday, January 19, 2027, 2:00 PM
-- start: 2027-01-19T15:00:00-07:00
+- when: Tuesday, January 19, 2027, 3:00 PM
+- start: 2027-01-19T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19176,8 +19176,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 837966233228
 - slug: lvjusd-board-meetings-837966
 - date: 2027-01-19
-- when: Tuesday, January 19, 2027, 5:00 PM
-- start: 2027-01-19T18:00:00-07:00
+- when: Tuesday, January 19, 2027, 6:00 PM
+- start: 2027-01-19T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19199,8 +19199,8 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - id: 53fcfbd25e6e
 - slug: homework-help-at-rincon-branch-53fcfb
 - date: 2027-01-20
-- when: Wednesday, January 20, 2027, 2:00 PM
-- start: 2027-01-20T15:00:00-07:00
+- when: Wednesday, January 20, 2027, 3:00 PM
+- start: 2027-01-20T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19222,8 +19222,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: ef8e5fa0f5eb
 - slug: homework-help-at-rincon-branch-ef8e5f
 - date: 2027-01-21
-- when: Thursday, January 21, 2027, 2:00 PM
-- start: 2027-01-21T15:00:00-07:00
+- when: Thursday, January 21, 2027, 3:00 PM
+- start: 2027-01-21T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19245,8 +19245,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: f5f86c930777
 - slug: free-social-adults-only-19-chess-club-f5f86c
 - date: 2027-01-21
-- when: Thursday, January 21, 2027, 4:00 PM
-- start: 2027-01-21T17:00:00-07:00
+- when: Thursday, January 21, 2027, 5:00 PM
+- start: 2027-01-21T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -19268,8 +19268,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: 8c86578b2481
 - slug: music-lessons-with-pleasanton-s-1776-era-fife-and-drum-children-s-band-8c8657
 - date: 2027-01-22
-- when: Friday, January 22, 2027, 4:00 PM
-- start: 2027-01-22T17:00:00-07:00
+- when: Friday, January 22, 2027, 5:00 PM
+- start: 2027-01-22T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: near Mohr Elementary school, call for details
@@ -19291,8 +19291,8 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - id: 9a5b8fda0029
 - slug: danville-farmers-market-9a5b8f
 - date: 2027-01-23
-- when: Saturday, January 23, 2027, 8:00 AM
-- start: 2027-01-23T09:00:00-07:00
+- when: Saturday, January 23, 2027, 9:00 AM
+- start: 2027-01-23T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19314,8 +19314,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: d5c5e4fa8f12
 - slug: homework-help-at-rincon-branch-d5c5e4
 - date: 2027-01-25
-- when: Monday, January 25, 2027, 2:00 PM
-- start: 2027-01-25T15:00:00-07:00
+- when: Monday, January 25, 2027, 3:00 PM
+- start: 2027-01-25T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19337,8 +19337,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: f236bbae6550
 - slug: bicycle-advisory-commission-regular-meeting-f236bb
 - date: 2027-01-25
-- when: Monday, January 25, 2027, 4:00 PM
-- start: 2027-01-25T17:00:00-07:00
+- when: Monday, January 25, 2027, 5:00 PM
+- start: 2027-01-25T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Town Meeting Hall
@@ -19360,8 +19360,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: d052a2e198f9
 - slug: homework-help-at-rincon-branch-d052a2
 - date: 2027-01-26
-- when: Tuesday, January 26, 2027, 2:00 PM
-- start: 2027-01-26T15:00:00-07:00
+- when: Tuesday, January 26, 2027, 3:00 PM
+- start: 2027-01-26T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19383,8 +19383,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: db047d82186a
 - slug: homework-help-at-rincon-branch-db047d
 - date: 2027-01-27
-- when: Wednesday, January 27, 2027, 2:00 PM
-- start: 2027-01-27T15:00:00-07:00
+- when: Wednesday, January 27, 2027, 3:00 PM
+- start: 2027-01-27T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19406,8 +19406,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: f82d462a853d
 - slug: homework-help-at-rincon-branch-f82d46
 - date: 2027-01-28
-- when: Thursday, January 28, 2027, 2:00 PM
-- start: 2027-01-28T15:00:00-07:00
+- when: Thursday, January 28, 2027, 3:00 PM
+- start: 2027-01-28T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19429,8 +19429,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 61e67b1b0d78
 - slug: free-social-adults-only-19-chess-club-61e67b
 - date: 2027-01-28
-- when: Thursday, January 28, 2027, 4:00 PM
-- start: 2027-01-28T17:00:00-07:00
+- when: Thursday, January 28, 2027, 5:00 PM
+- start: 2027-01-28T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -19452,8 +19452,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: f46cae11b158
 - slug: danville-farmers-market-f46cae
 - date: 2027-01-30
-- when: Saturday, January 30, 2027, 8:00 AM
-- start: 2027-01-30T09:00:00-07:00
+- when: Saturday, January 30, 2027, 9:00 AM
+- start: 2027-01-30T09:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19475,8 +19475,8 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - id: e1818a700f9f
 - slug: homework-help-at-rincon-branch-e1818a
 - date: 2027-02-01
-- when: Monday, February 1, 2027, 2:00 PM
-- start: 2027-02-01T15:00:00-07:00
+- when: Monday, February 1, 2027, 3:00 PM
+- start: 2027-02-01T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19498,8 +19498,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: f1f553e005d6
 - slug: homework-help-at-rincon-branch-f1f553
 - date: 2027-02-02
-- when: Tuesday, February 2, 2027, 2:00 PM
-- start: 2027-02-02T15:00:00-07:00
+- when: Tuesday, February 2, 2027, 3:00 PM
+- start: 2027-02-02T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19521,8 +19521,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 67c8e52ddfad
 - slug: lvjusd-board-meetings-67c8e5
 - date: 2027-02-02
-- when: Tuesday, February 2, 2027, 5:00 PM
-- start: 2027-02-02T18:00:00-07:00
+- when: Tuesday, February 2, 2027, 6:00 PM
+- start: 2027-02-02T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19544,8 +19544,8 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - id: 9f43791680e9
 - slug: homework-help-at-rincon-branch-9f4379
 - date: 2027-02-03
-- when: Wednesday, February 3, 2027, 2:00 PM
-- start: 2027-02-03T15:00:00-07:00
+- when: Wednesday, February 3, 2027, 3:00 PM
+- start: 2027-02-03T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19567,8 +19567,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 987e0852dd51
 - slug: tri-valley-rainbow-night-987e08
 - date: 2027-02-03
-- when: Wednesday, February 3, 2027, 4:00 PM
-- start: 2027-02-03T17:00:00-07:00
+- when: Wednesday, February 3, 2027, 5:00 PM
+- start: 2027-02-03T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Swirl on the Square
@@ -19590,8 +19590,8 @@ Come join us for our monthly Queer gathering! Make new friends, hang out with ol
 - id: f0ffa0b4125e
 - slug: homework-help-at-rincon-branch-f0ffa0
 - date: 2027-02-04
-- when: Thursday, February 4, 2027, 2:00 PM
-- start: 2027-02-04T15:00:00-07:00
+- when: Thursday, February 4, 2027, 3:00 PM
+- start: 2027-02-04T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19613,8 +19613,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 7cc0d3a6afd5
 - slug: free-social-adults-only-19-chess-club-7cc0d3
 - date: 2027-02-04
-- when: Thursday, February 4, 2027, 4:00 PM
-- start: 2027-02-04T17:00:00-07:00
+- when: Thursday, February 4, 2027, 5:00 PM
+- start: 2027-02-04T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -19636,8 +19636,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: b7c2c099cac8
 - slug: music-lessons-with-pleasanton-s-1776-era-fife-and-drum-children-s-band-b7c2c0
 - date: 2027-02-05
-- when: Friday, February 5, 2027, 4:00 PM
-- start: 2027-02-05T17:00:00-07:00
+- when: Friday, February 5, 2027, 5:00 PM
+- start: 2027-02-05T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: near Mohr Elementary school, call for details
@@ -19659,8 +19659,8 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - id: f943dd370b01
 - slug: homework-help-at-rincon-branch-f943dd
 - date: 2027-02-08
-- when: Monday, February 8, 2027, 2:00 PM
-- start: 2027-02-08T15:00:00-07:00
+- when: Monday, February 8, 2027, 3:00 PM
+- start: 2027-02-08T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19682,8 +19682,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 5bb66defc074
 - slug: biz-links-networking-group-5bb66d
 - date: 2027-02-09
-- when: Tuesday, February 9, 2027, 11:00 AM
-- start: 2027-02-09T12:00:00-07:00
+- when: Tuesday, February 9, 2027, 12:00 PM
+- start: 2027-02-09T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton Chamber of Commerce
@@ -19705,8 +19705,8 @@ Biz Links is a Chamber networking group focused on building meaningful business 
 - id: cfac2a43a609
 - slug: homework-help-at-rincon-branch-cfac2a
 - date: 2027-02-09
-- when: Tuesday, February 9, 2027, 2:00 PM
-- start: 2027-02-09T15:00:00-07:00
+- when: Tuesday, February 9, 2027, 3:00 PM
+- start: 2027-02-09T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19728,8 +19728,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: e7efad7b3c4e
 - slug: homework-help-at-rincon-branch-e7efad
 - date: 2027-02-10
-- when: Wednesday, February 10, 2027, 2:00 PM
-- start: 2027-02-10T15:00:00-07:00
+- when: Wednesday, February 10, 2027, 3:00 PM
+- start: 2027-02-10T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19751,8 +19751,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: f7abf40c5118
 - slug: networking-mixer-the-draft-maverick-f7abf4
 - date: 2027-02-10
-- when: Wednesday, February 10, 2027, 4:00 PM
-- start: 2027-02-10T17:00:00-07:00
+- when: Wednesday, February 10, 2027, 5:00 PM
+- start: 2027-02-10T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton, CAFebruary Networking Mixer is hosted by: THE DRAFT SPORTS PUB/MAVERICKS Wednesday, February 10, 2027 4825 Hopyard Road Pleasanton Please register in advance. Networking mixers are a benefit of chamber membership and are free for members to attend. (Please Note: All Attendees Must Be 21 years old or older) PROSPECTIVE MEMBERS & GUESTS: Please contact Jeanette: (925) 846-5858 ext. 202 or email jeanette@pleasanton.org jeanette@pleasanton.org 5:00 pm1.3 mi
@@ -19774,8 +19774,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 47b4688c8a88
 - slug: homework-help-at-rincon-branch-47b468
 - date: 2027-02-11
-- when: Thursday, February 11, 2027, 2:00 PM
-- start: 2027-02-11T15:00:00-07:00
+- when: Thursday, February 11, 2027, 3:00 PM
+- start: 2027-02-11T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19797,8 +19797,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 2f5d2758204f
 - slug: free-social-adults-only-19-chess-club-2f5d27
 - date: 2027-02-11
-- when: Thursday, February 11, 2027, 4:00 PM
-- start: 2027-02-11T17:00:00-07:00
+- when: Thursday, February 11, 2027, 5:00 PM
+- start: 2027-02-11T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -19820,8 +19820,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: f0d6ebf28d0b
 - slug: homework-help-at-rincon-branch-f0d6eb
 - date: 2027-02-15
-- when: Monday, February 15, 2027, 2:00 PM
-- start: 2027-02-15T15:00:00-07:00
+- when: Monday, February 15, 2027, 3:00 PM
+- start: 2027-02-15T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19843,8 +19843,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 776a2b81318b
 - slug: homework-help-at-rincon-branch-776a2b
 - date: 2027-02-16
-- when: Tuesday, February 16, 2027, 2:00 PM
-- start: 2027-02-16T15:00:00-07:00
+- when: Tuesday, February 16, 2027, 3:00 PM
+- start: 2027-02-16T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19866,8 +19866,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: f1cc33efad8f
 - slug: lvjusd-board-meetings-f1cc33
 - date: 2027-02-16
-- when: Tuesday, February 16, 2027, 5:00 PM
-- start: 2027-02-16T18:00:00-07:00
+- when: Tuesday, February 16, 2027, 6:00 PM
+- start: 2027-02-16T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19889,8 +19889,8 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - id: a5ce2a94a4fa
 - slug: homework-help-at-rincon-branch-a5ce2a
 - date: 2027-02-17
-- when: Wednesday, February 17, 2027, 2:00 PM
-- start: 2027-02-17T15:00:00-07:00
+- when: Wednesday, February 17, 2027, 3:00 PM
+- start: 2027-02-17T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19912,8 +19912,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 636bd064a128
 - slug: homework-help-at-rincon-branch-636bd0
 - date: 2027-02-18
-- when: Thursday, February 18, 2027, 2:00 PM
-- start: 2027-02-18T15:00:00-07:00
+- when: Thursday, February 18, 2027, 3:00 PM
+- start: 2027-02-18T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -19935,8 +19935,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 5337a13f37db
 - slug: free-social-adults-only-19-chess-club-5337a1
 - date: 2027-02-18
-- when: Thursday, February 18, 2027, 4:00 PM
-- start: 2027-02-18T17:00:00-07:00
+- when: Thursday, February 18, 2027, 5:00 PM
+- start: 2027-02-18T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -19958,8 +19958,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: 70e53e3fab9f
 - slug: music-lessons-with-pleasanton-s-1776-era-fife-and-drum-children-s-band-70e53e
 - date: 2027-02-19
-- when: Friday, February 19, 2027, 4:00 PM
-- start: 2027-02-19T17:00:00-07:00
+- when: Friday, February 19, 2027, 5:00 PM
+- start: 2027-02-19T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: near Mohr Elementary school, call for details
@@ -19981,8 +19981,8 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - id: ae5566fb287c
 - slug: homework-help-at-rincon-branch-ae5566
 - date: 2027-02-22
-- when: Monday, February 22, 2027, 2:00 PM
-- start: 2027-02-22T15:00:00-07:00
+- when: Monday, February 22, 2027, 3:00 PM
+- start: 2027-02-22T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20004,8 +20004,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 1d99ace46414
 - slug: homework-help-at-rincon-branch-1d99ac
 - date: 2027-02-23
-- when: Tuesday, February 23, 2027, 2:00 PM
-- start: 2027-02-23T15:00:00-07:00
+- when: Tuesday, February 23, 2027, 3:00 PM
+- start: 2027-02-23T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20027,8 +20027,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: d41c5e29ef4e
 - slug: homework-help-at-rincon-branch-d41c5e
 - date: 2027-02-24
-- when: Wednesday, February 24, 2027, 2:00 PM
-- start: 2027-02-24T15:00:00-07:00
+- when: Wednesday, February 24, 2027, 3:00 PM
+- start: 2027-02-24T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20050,8 +20050,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 2c491dcbde04
 - slug: homework-help-at-rincon-branch-2c491d
 - date: 2027-02-25
-- when: Thursday, February 25, 2027, 2:00 PM
-- start: 2027-02-25T15:00:00-07:00
+- when: Thursday, February 25, 2027, 3:00 PM
+- start: 2027-02-25T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20073,8 +20073,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: fd500f55e6d6
 - slug: free-social-adults-only-19-chess-club-fd500f
 - date: 2027-02-25
-- when: Thursday, February 25, 2027, 4:00 PM
-- start: 2027-02-25T17:00:00-07:00
+- when: Thursday, February 25, 2027, 5:00 PM
+- start: 2027-02-25T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -20097,7 +20097,7 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - slug: quinn-dale-23b7c8
 - date: 2027-02-26
 - when: Friday, February 26, 2027 (time not listed)
-- start: 2027-02-26T12:00:00-07:00
+- start: 2027-02-26T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -20120,7 +20120,7 @@ Fri, Feb 26, 2027 Sat, Feb 27, 2027
 - slug: quinn-dale-0aab91
 - date: 2027-02-27
 - when: Saturday, February 27, 2027 (time not listed)
-- start: 2027-02-27T12:00:00-07:00
+- start: 2027-02-27T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
@@ -20142,8 +20142,8 @@ Fri, Feb 26, 2027 Sat, Feb 27, 2027
 - id: c60c3406c2cb
 - slug: homework-help-at-rincon-branch-c60c34
 - date: 2027-03-01
-- when: Monday, March 1, 2027, 2:00 PM
-- start: 2027-03-01T15:00:00-07:00
+- when: Monday, March 1, 2027, 3:00 PM
+- start: 2027-03-01T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20165,8 +20165,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: fc544888ef48
 - slug: homework-help-at-rincon-branch-fc5448
 - date: 2027-03-02
-- when: Tuesday, March 2, 2027, 2:00 PM
-- start: 2027-03-02T15:00:00-07:00
+- when: Tuesday, March 2, 2027, 3:00 PM
+- start: 2027-03-02T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20188,8 +20188,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 950598c6a671
 - slug: lvjusd-board-meetings-950598
 - date: 2027-03-02
-- when: Tuesday, March 2, 2027, 5:00 PM
-- start: 2027-03-02T18:00:00-07:00
+- when: Tuesday, March 2, 2027, 6:00 PM
+- start: 2027-03-02T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20211,8 +20211,8 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - id: 1fb946479ba9
 - slug: homework-help-at-rincon-branch-1fb946
 - date: 2027-03-03
-- when: Wednesday, March 3, 2027, 2:00 PM
-- start: 2027-03-03T15:00:00-07:00
+- when: Wednesday, March 3, 2027, 3:00 PM
+- start: 2027-03-03T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20234,8 +20234,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: ad02323a013e
 - slug: tri-valley-rainbow-night-ad0232
 - date: 2027-03-03
-- when: Wednesday, March 3, 2027, 4:00 PM
-- start: 2027-03-03T17:00:00-07:00
+- when: Wednesday, March 3, 2027, 5:00 PM
+- start: 2027-03-03T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Swirl on the Square
@@ -20257,8 +20257,8 @@ Come join us for our monthly Queer gathering! Make new friends, hang out with ol
 - id: 0e22591c04ab
 - slug: homework-help-at-rincon-branch-0e2259
 - date: 2027-03-04
-- when: Thursday, March 4, 2027, 2:00 PM
-- start: 2027-03-04T15:00:00-07:00
+- when: Thursday, March 4, 2027, 3:00 PM
+- start: 2027-03-04T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20280,8 +20280,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: bc49689a8f85
 - slug: free-social-adults-only-19-chess-club-bc4968
 - date: 2027-03-04
-- when: Thursday, March 4, 2027, 4:00 PM
-- start: 2027-03-04T17:00:00-07:00
+- when: Thursday, March 4, 2027, 5:00 PM
+- start: 2027-03-04T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)
@@ -20303,8 +20303,8 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - id: 97912bd91fda
 - slug: music-lessons-with-pleasanton-s-1776-era-fife-and-drum-children-s-band-97912b
 - date: 2027-03-05
-- when: Friday, March 5, 2027, 4:00 PM
-- start: 2027-03-05T17:00:00-07:00
+- when: Friday, March 5, 2027, 5:00 PM
+- start: 2027-03-05T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: near Mohr Elementary school, call for details
@@ -20326,8 +20326,8 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - id: 9ba86a1955f1
 - slug: homework-help-at-rincon-branch-9ba86a
 - date: 2027-03-08
-- when: Monday, March 8, 2027, 2:00 PM
-- start: 2027-03-08T15:00:00-07:00
+- when: Monday, March 8, 2027, 3:00 PM
+- start: 2027-03-08T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20349,8 +20349,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: dbab8676db2e
 - slug: biz-links-networking-group-dbab86
 - date: 2027-03-09
-- when: Tuesday, March 9, 2027, 11:00 AM
-- start: 2027-03-09T12:00:00-07:00
+- when: Tuesday, March 9, 2027, 12:00 PM
+- start: 2027-03-09T12:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pleasanton Chamber of Commerce
@@ -20372,8 +20372,8 @@ Biz Links is a Chamber networking group focused on building meaningful business 
 - id: 457652259c74
 - slug: homework-help-at-rincon-branch-457652
 - date: 2027-03-09
-- when: Tuesday, March 9, 2027, 2:00 PM
-- start: 2027-03-09T15:00:00-07:00
+- when: Tuesday, March 9, 2027, 3:00 PM
+- start: 2027-03-09T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20395,8 +20395,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: d14c1470827a
 - slug: homework-help-at-rincon-branch-d14c14
 - date: 2027-03-10
-- when: Wednesday, March 10, 2027, 2:00 PM
-- start: 2027-03-10T15:00:00-07:00
+- when: Wednesday, March 10, 2027, 3:00 PM
+- start: 2027-03-10T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20418,8 +20418,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: 3af1a26bc54e
 - slug: homework-help-at-rincon-branch-3af1a2
 - date: 2027-03-11
-- when: Thursday, March 11, 2027, 2:00 PM
-- start: 2027-03-11T15:00:00-07:00
+- when: Thursday, March 11, 2027, 3:00 PM
+- start: 2027-03-11T15:00:00-08:00
 - end: 
 - all_day: no
 - venue: 
@@ -20441,8 +20441,8 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - id: cde5cffb2ca8
 - slug: free-social-adults-only-19-chess-club-cde5cf
 - date: 2027-03-11
-- when: Thursday, March 11, 2027, 4:00 PM
-- start: 2027-03-11T17:00:00-07:00
+- when: Thursday, March 11, 2027, 5:00 PM
+- start: 2027-03-11T17:00:00-08:00
 - end: 
 - all_day: no
 - venue: Pacific Pearl Mall Food Hall (next to Shihlin Taiwan Street Food Snacks)

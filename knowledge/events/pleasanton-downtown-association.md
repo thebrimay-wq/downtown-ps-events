@@ -132,9 +132,9 @@ static.wixstatic.com/media/ef95f1_2becd6c7d71544a889bddf97e55f1f8d~mv2.png/v1/fi
 - id: 19ea847fb2b5
 - slug: friday-december-4-2026-4pm-8pm-19ea84
 - date: 2026-12-04
-- when: Friday, December 4, 2026, 3:00 PM – 7:00 PM
-- start: 2026-12-04T16:00:00-07:00
-- end: 2026-12-04T20:00:00-07:00
+- when: Friday, December 4, 2026, 4:00 PM – 8:00 PM
+- start: 2026-12-04T16:00:00-08:00
+- end: 2026-12-04T20:00:00-08:00
 - all_day: no
 - venue: Downtown Pleasanton
 - address: Main Street, Pleasanton, CA 94566
@@ -155,9 +155,9 @@ tic.wixstatic.com/media/ef95f1_2becd6c7d71544a889bddf97e55f1f8d~mv2.png/v1/fill/
 - id: 91fd77c17133
 - slug: saturday-december-12-2026-5-00-pm-8-00-pm-91fd77
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 4:00 PM – 7:00 PM
-- start: 2026-12-12T17:00:00-07:00
-- end: 2026-12-12T20:00:00-07:00
+- when: Saturday, December 12, 2026, 5:00 PM – 8:00 PM
+- start: 2026-12-12T17:00:00-08:00
+- end: 2026-12-12T20:00:00-08:00
 - all_day: no
 - venue: Downtown Pleasanton
 - address: Main Street, Pleasanton, CA 94566

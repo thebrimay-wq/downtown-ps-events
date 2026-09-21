@@ -109,7 +109,7 @@ Experience the electrifying music of Santana with Carnaval – a powerhouse trib
 - id: 63b4e5b20833
 - slug: creatures-of-impulse-face-off-2026-63b4e5
 - date: 2026-10-22
-- when: Thursday, October 22, 2026, 7:00 PM – 8:30 PM
+- when: Thursday, October 22, 2026, Oct 22, 7:00 PM – Oct 24, 8:30 PM
 - start: 2026-10-22T19:00:00-07:00
 - end: 2026-10-24T20:30:00-07:00
 - all_day: no
@@ -201,9 +201,9 @@ Tickets go on sale October 1 Come join East Bay Musical Society (EBMS) for our F
 - id: 81f22cf0d300
 - slug: pytc-school-of-rock-young-actors-edition-81f22c
 - date: 2026-11-06
-- when: Friday, November 6, 2026, 6:00 PM – 7:00 PM
-- start: 2026-11-06T19:00:00-07:00
-- end: 2026-11-06T20:00:00-07:00
+- when: Friday, November 6, 2026, 7:00 PM – 8:00 PM
+- start: 2026-11-06T19:00:00-08:00
+- end: 2026-11-06T20:00:00-08:00
 - all_day: no
 - venue: Firehouse Arts Center
 - address: 4444 Railroad Ave., Pleasanton, CA, 94566
@@ -224,9 +224,9 @@ Rock got no reason, rock got no rhyme… You better get me to school on time! An
 - id: e718e59a1a34
 - slug: pytc-school-of-rock-young-actors-edition-e718e5
 - date: 2026-11-07
-- when: Saturday, November 7, 2026, 1:00 PM – 2:00 PM
-- start: 2026-11-07T14:00:00-07:00
-- end: 2026-11-07T15:00:00-07:00
+- when: Saturday, November 7, 2026, 2:00 PM – 3:00 PM
+- start: 2026-11-07T14:00:00-08:00
+- end: 2026-11-07T15:00:00-08:00
 - all_day: no
 - venue: Firehouse Arts Center
 - address: 4444 Railroad Ave., Pleasanton, CA, 94566
@@ -247,9 +247,9 @@ Rock got no reason, rock got no rhyme… You better get me to school on time! An
 - id: eb29e757058a
 - slug: pytc-school-of-rock-young-actors-edition-eb29e7
 - date: 2026-11-08
-- when: Sunday, November 8, 2026, 1:00 PM – 2:00 PM
-- start: 2026-11-08T14:00:00-07:00
-- end: 2026-11-08T15:00:00-07:00
+- when: Sunday, November 8, 2026, 2:00 PM – 3:00 PM
+- start: 2026-11-08T14:00:00-08:00
+- end: 2026-11-08T15:00:00-08:00
 - all_day: no
 - venue: Firehouse Arts Center
 - address: 4444 Railroad Ave., Pleasanton, CA, 94566
@@ -270,9 +270,9 @@ Rock got no reason, rock got no rhyme… You better get me to school on time! An
 - id: 044a23a19d01
 - slug: pytc-school-of-rock-young-actors-edition-044a23
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 6:00 PM – 7:00 PM
-- start: 2026-11-13T19:00:00-07:00
-- end: 2026-11-13T20:00:00-07:00
+- when: Friday, November 13, 2026, 7:00 PM – 8:00 PM
+- start: 2026-11-13T19:00:00-08:00
+- end: 2026-11-13T20:00:00-08:00
 - all_day: no
 - venue: Firehouse Arts Center
 - address: 4444 Railroad Ave., Pleasanton, CA, 94566
@@ -293,9 +293,9 @@ Rock got no reason, rock got no rhyme… You better get me to school on time! An
 - id: f1d4f9f6da53
 - slug: pytc-school-of-rock-young-actors-edition-f1d4f9
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 1:00 PM – 2:00 PM
-- start: 2026-11-14T14:00:00-07:00
-- end: 2026-11-14T15:00:00-07:00
+- when: Saturday, November 14, 2026, 2:00 PM – 3:00 PM
+- start: 2026-11-14T14:00:00-08:00
+- end: 2026-11-14T15:00:00-08:00
 - all_day: no
 - venue: Firehouse Arts Center
 - address: 4444 Railroad Ave., Pleasanton, CA, 94566
@@ -316,9 +316,9 @@ Rock got no reason, rock got no rhyme… You better get me to school on time! An
 - id: 27181b5737bc
 - slug: pytc-school-of-rock-young-actors-edition-27181b
 - date: 2026-11-15
-- when: Sunday, November 15, 2026, 1:00 PM – 2:00 PM
-- start: 2026-11-15T14:00:00-07:00
-- end: 2026-11-15T15:00:00-07:00
+- when: Sunday, November 15, 2026, 2:00 PM – 3:00 PM
+- start: 2026-11-15T14:00:00-08:00
+- end: 2026-11-15T15:00:00-08:00
 - all_day: no
 - venue: Firehouse Arts Center
 - address: 4444 Railroad Ave., Pleasanton, CA, 94566
@@ -339,9 +339,9 @@ Rock got no reason, rock got no rhyme… You better get me to school on time! An
 - id: a06419ae8c72
 - slug: pytc-cabaret-singer-s-choice-a06419
 - date: 2026-11-20
-- when: Friday, November 20, 2026, 6:00 PM – 8:00 PM
-- start: 2026-11-20T19:00:00-07:00
-- end: 2026-11-20T21:00:00-07:00
+- when: Friday, November 20, 2026, 7:00 PM – 9:00 PM
+- start: 2026-11-20T19:00:00-08:00
+- end: 2026-11-20T21:00:00-08:00
 - all_day: no
 - venue: Firehouse Arts Center
 - address: 4444 Railroad Ave., Pleasanton, CA, 94566
@@ -362,8 +362,8 @@ Enjoy an evening of music handpicked by the performers themselves! This special 
 - id: 81b80a9b0d23
 - slug: chorus-eclectic-tomorrow-s-yesterday-81b80a
 - date: 2026-11-21
-- when: Saturday, November 21, 2026, 3:00 PM
-- start: 2026-11-21T16:00:00-07:00
+- when: Saturday, November 21, 2026, 4:00 PM
+- start: 2026-11-21T16:00:00-08:00
 - end: 
 - all_day: no
 - venue: Firehouse Arts Center
@@ -385,9 +385,9 @@ Celebrate the enduring legacy of Indigenous First Nations through music with Cho
 - id: 983de80b1802
 - slug: a-song-for-you-the-music-of-karen-carpenter-at-christmas-983de8
 - date: 2026-11-22
-- when: Sunday, November 22, 2026, 1:00 PM – 3:00 PM
-- start: 2026-11-22T14:00:00-07:00
-- end: 2026-11-22T16:00:00-07:00
+- when: Sunday, November 22, 2026, 2:00 PM – 4:00 PM
+- start: 2026-11-22T14:00:00-08:00
+- end: 2026-11-22T16:00:00-08:00
 - all_day: no
 - venue: Firehouse Arts Center
 - address: 4444 Railroad Ave., Pleasanton, CA, 94566
@@ -408,8 +408,8 @@ Celebrate the holiday season with Laurie Roldan in “A Song For You: The Music 
 - id: 526f5718ba6b
 - slug: mads-tolling-s-cool-yule-a-nordic-holiday-celebration-526f57
 - date: 2026-12-11
-- when: Friday, December 11, 2026, 6:30 PM
-- start: 2026-12-11T19:30:00-07:00
+- when: Friday, December 11, 2026, 7:30 PM
+- start: 2026-12-11T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Firehouse Arts Center
@@ -431,8 +431,8 @@ In the spirit of Yule, two-time Grammy Award winner Mads Tolling shares the Chri
 - id: a9b6d4ff9dd7
 - slug: the-golden-follies-a-very-follies-holiday-2026-a9b6d4
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 1:00 PM
-- start: 2026-12-12T14:00:00-07:00
+- when: Saturday, December 12, 2026, 2:00 PM
+- start: 2026-12-12T14:00:00-08:00
 - end: 
 - all_day: no
 - venue: Firehouse Arts Center
@@ -454,8 +454,8 @@ Celebrate the season with The Golden Follies as these talented and energetic sen
 - id: 6b2a9ff8a7a1
 - slug: summer-night-city-the-abba-tribute-6b2a9f
 - date: 2026-12-18
-- when: Friday, December 18, 2026, 6:30 PM
-- start: 2026-12-18T19:30:00-07:00
+- when: Friday, December 18, 2026, 7:30 PM
+- start: 2026-12-18T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Firehouse Arts Center
@@ -477,8 +477,8 @@ Step into the sparkle, style, and unforgettable music of ABBA with Summer Night 
 - id: 60bc3b0d1051
 - slug: phil-of-genesis-a-musical-tribute-to-phil-collins-genesis-60bc3b
 - date: 2026-12-19
-- when: Saturday, December 19, 2026, 6:30 PM
-- start: 2026-12-19T19:30:00-07:00
+- when: Saturday, December 19, 2026, 7:30 PM
+- start: 2026-12-19T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Firehouse Arts Center

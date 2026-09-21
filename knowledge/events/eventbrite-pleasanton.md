@@ -1513,7 +1513,7 @@ Celebrate the publication of ACOTAR #6 with a special midnight release party at 
 - slug: dublin-diwali-mela-2026-06ba4d
 - date: 2026-11-07
 - when: Saturday, November 7, 2026 (time not listed)
-- start: 2026-11-07T12:00:00-07:00
+- start: 2026-11-07T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Emerald Glen Park
@@ -1536,7 +1536,7 @@ Diwali Mela in Dublin 2026 hosted by Trivalley Hindu Connect
 - slug: michelle-lambert-live-music-las-positas-vineyards-livermore-f835e3
 - date: 2026-11-07
 - when: Saturday, November 7, 2026 (time not listed)
-- start: 2026-11-07T12:00:00-07:00
+- start: 2026-11-07T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Las Positas Vineyards
@@ -1558,8 +1558,8 @@ Michelle Lambert is a Pop/Folk singer/songwriter that is not only talented but s
 - id: 1bfd1352550e
 - slug: the-sbm-film-festival-2026-1bfd13
 - date: 2026-11-07
-- when: Saturday, November 7, 2026, 5:00 PM
-- start: 2026-11-07T18:00:00-07:00
+- when: Saturday, November 7, 2026, 6:00 PM
+- start: 2026-11-07T18:00:00-08:00
 - end: 
 - all_day: no
 - venue: Village Theatre & Art Gallery
@@ -1582,7 +1582,7 @@ Join us for the 4th annual SBM Film Festival on Saturday, November 7th! Doors op
 - slug: holiday-craft-fair-ea23f8
 - date: 2026-11-21
 - when: Saturday, November 21, 2026 (time not listed)
-- start: 2026-11-21T12:00:00-07:00
+- start: 2026-11-21T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Danville Grange #85
@@ -1605,7 +1605,7 @@ Join us for our 1st Craft Fair
 - slug: disco-night-with-pride-and-joy-2c4332
 - date: 2026-11-28
 - when: Saturday, November 28, 2026 (time not listed)
-- start: 2026-11-28T12:00:00-07:00
+- start: 2026-11-28T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Almost Famous Wine Lounge
@@ -1628,7 +1628,7 @@ Disco is back! ✨ Join us for classic 70s-80s disco hits performed live by Prid
 - slug: jeff-ryan-s-cheery-christmas-party-b34e6d
 - date: 2026-12-05
 - when: Saturday, December 5, 2026 (time not listed)
-- start: 2026-12-05T12:00:00-07:00
+- start: 2026-12-05T12:00:00-08:00
 - end: 
 - all_day: yes
 - venue: Almost Famous Wine Lounge
@@ -1651,8 +1651,8 @@ Special holiday show! Featuring one of contemporary jazz's most compelling young
 - slug: soulsearch-dublin-pleasanton-enlightenment-expo-psychic-healing-fair-81e54b
 - date: 2026-12-12
 - when: Saturday, December 12, 2026 (time not listed)
-- start: 2026-12-12T12:00:00-07:00
-- end: 2026-12-13T12:00:00-07:00
+- start: 2026-12-12T12:00:00-08:00
+- end: 2026-12-13T12:00:00-08:00
 - all_day: yes
 - venue: Holiday Inn Dublin-Pleasanton by IHG
 - address: 6680 Regional Street, Dublin, CA, 94568

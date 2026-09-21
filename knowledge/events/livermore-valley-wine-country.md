@@ -408,7 +408,7 @@ SugarBear kicks off the weekend with an energetic mix of soul, funk, and reggae 
 - id: 5495ee15d261
 - slug: labor-day-brews-cheers-tour-5495ee
 - date: 2026-09-05
-- when: Saturday, September 5, 2026, 10:00 AM – 12:00 PM
+- when: Saturday, September 5, 2026, Sep 5, 10:00 AM – Sep 6, 12:00 PM
 - start: 2026-09-05T10:00:00-07:00
 - end: 2026-09-06T12:00:00-07:00
 - all_day: no
@@ -454,7 +454,7 @@ Transform our Terrace & Green into a Weingarten! Enjoy authentic Bavarian comfor
 - id: 73086fb68db8
 - slug: concannon-estate-block-party-labor-day-weekend-73086f
 - date: 2026-09-05
-- when: Saturday, September 5, 2026, 11:30 AM – 12:00 PM
+- when: Saturday, September 5, 2026, Sep 5, 11:30 AM – Sep 7, 12:00 PM
 - start: 2026-09-05T11:30:00-07:00
 - end: 2026-09-07T12:00:00-07:00
 - all_day: no
@@ -1489,7 +1489,7 @@ Get ready for a night of high energy entertainment on the Vineyard Patio at McGr
 - id: b1ea917438f4
 - slug: hidden-gems-of-livermore-wine-experience-b1ea91
 - date: 2026-09-18
-- when: Friday, September 18, 2026, 10:00 AM – 12:00 PM
+- when: Friday, September 18, 2026, Sep 18, 10:00 AM – Sep 20, 12:00 PM
 - start: 2026-09-18T10:00:00-07:00
 - end: 2026-09-20T12:00:00-07:00
 - all_day: no
@@ -2455,7 +2455,7 @@ Enjoy a lovely wine day with a tasting flight or a picnic at Retzlaff Vineyards.
 - id: adcfe22f2ee9
 - slug: harvest-festival-and-craft-fair-at-charles-r-vineyards-adcfe2
 - date: 2026-09-26
-- when: Saturday, September 26, 2026, 4:30 PM – 12:00 PM
+- when: Saturday, September 26, 2026, Sep 26, 4:30 PM – Sep 27, 12:00 PM
 - start: 2026-09-26T16:30:00-07:00
 - end: 2026-09-27T12:00:00-07:00
 - all_day: no
@@ -3766,8 +3766,8 @@ We invite you to sip celebrate and show off your most creative Halloween look. J
 - id: f0339cb20466
 - slug: petty-theft-san-francisco-tribute-to-tom-petty-and-the-heartbreakers-f0339c
 - date: 2026-11-06
-- when: Friday, November 6, 2026, 6:30 PM
-- start: 2026-11-06T19:30:00-07:00
+- when: Friday, November 6, 2026, 7:30 PM
+- start: 2026-11-06T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -3789,8 +3789,8 @@ Named Best Tribute/Cover Band 4 years in a row, this Tom Petty tribute has sold-
 - id: e82a351230e7
 - slug: lpv-live-music-featuring-the-bay-station-trio-e82a35
 - date: 2026-11-06
-- when: Friday, November 6, 2026, 7:30 PM
-- start: 2026-11-06T20:30:00-07:00
+- when: Friday, November 6, 2026, 8:30 PM
+- start: 2026-11-06T20:30:00-08:00
 - end: 
 - all_day: no
 - venue: Las Positas Vineyards
@@ -3812,8 +3812,8 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - id: 122da986ff44
 - slug: saturday-at-retzlaff-live-music-by-joey-t-didier-122da9
 - date: 2026-11-07
-- when: Saturday, November 7, 2026, 3:30 PM
-- start: 2026-11-07T16:30:00-07:00
+- when: Saturday, November 7, 2026, 4:30 PM
+- start: 2026-11-07T16:30:00-08:00
 - end: 
 - all_day: no
 - venue: Retzlaff Organic Vineyards and Estate Winery
@@ -3835,8 +3835,8 @@ Come for wine tasting or a bottle picnic and enjoy live music by Joey T & Didier
 - id: 4e5c6fccb4c5
 - slug: the-china-cats-tribute-to-the-grateful-dead-4e5c6f
 - date: 2026-11-07
-- when: Saturday, November 7, 2026, 6:30 PM
-- start: 2026-11-07T19:30:00-07:00
+- when: Saturday, November 7, 2026, 7:30 PM
+- start: 2026-11-07T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -3858,8 +3858,8 @@ The Bay Area's premier Grateful Dead tribute band, who have shared stages with D
 - id: ae83feeb2791
 - slug: lpv-live-music-featuring-michelle-lambert-ae83fe
 - date: 2026-11-07
-- when: Saturday, November 7, 2026, 7:30 PM
-- start: 2026-11-07T20:30:00-07:00
+- when: Saturday, November 7, 2026, 8:30 PM
+- start: 2026-11-07T20:30:00-08:00
 - end: 
 - all_day: no
 - venue: Las Positas Vineyards
@@ -3881,8 +3881,8 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - id: 3e09d24a24e6
 - slug: peter-michael-escovedo-and-the-allstars-3e09d2
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 6:30 PM
-- start: 2026-11-13T19:30:00-07:00
+- when: Friday, November 13, 2026, 7:30 PM
+- start: 2026-11-13T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -3904,8 +3904,8 @@ All-star ensemble led by acclaimed Emmy-winning percussionist Peter Michael Esco
 - id: 3943b770fb16
 - slug: lpv-live-music-featuring-didier-bouvet-joey-t-3943b7
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 7:30 PM
-- start: 2026-11-13T20:30:00-07:00
+- when: Friday, November 13, 2026, 8:30 PM
+- start: 2026-11-13T20:30:00-08:00
 - end: 
 - all_day: no
 - venue: Las Positas Vineyards
@@ -3927,8 +3927,8 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - id: 8456602cff41
 - slug: lpv-live-music-featuring-tracy-cruz-845660
 - date: 2026-11-13
-- when: Friday, November 13, 2026, 7:30 PM
-- start: 2026-11-13T20:30:00-07:00
+- when: Friday, November 13, 2026, 8:30 PM
+- start: 2026-11-13T20:30:00-08:00
 - end: 
 - all_day: no
 - venue: Las Positas Vineyards
@@ -3950,8 +3950,8 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - id: 8c207f461759
 - slug: karaoke-saturday-at-charles-r-vineyards-8c207f
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 3:30 PM
-- start: 2026-11-14T16:30:00-07:00
+- when: Saturday, November 14, 2026, 4:30 PM
+- start: 2026-11-14T16:30:00-08:00
 - end: 
 - all_day: no
 - venue: Charles R Vineyards
@@ -3973,8 +3973,8 @@ Sing your favorite song while sipping on your favorite wine. Bring a picnic, you
 - id: 793108dd43dd
 - slug: saturday-at-retzlaff-live-music-by-loren-olk-793108
 - date: 2026-11-14
-- when: Saturday, November 14, 2026, 3:30 PM
-- start: 2026-11-14T16:30:00-07:00
+- when: Saturday, November 14, 2026, 4:30 PM
+- start: 2026-11-14T16:30:00-08:00
 - end: 
 - all_day: no
 - venue: Retzlaff Organic Vineyards and Estate Winery
@@ -3996,8 +3996,8 @@ Come for wine tasting or a bottle picnic and enjoy live music by Loren Olk at ch
 - id: 82c663c2cb91
 - slug: byob-bring-your-own-bottle-82c663
 - date: 2026-11-15
-- when: Sunday, November 15, 2026, 3:30 PM
-- start: 2026-11-15T16:30:00-07:00
+- when: Sunday, November 15, 2026, 4:30 PM
+- start: 2026-11-15T16:30:00-08:00
 - end: 
 - all_day: no
 - venue: Page Mill Winery
@@ -4019,8 +4019,8 @@ Recycling is good but re-using is better! Bring your empty wine bottles for BYOB
 - id: 92eb005c2c66
 - slug: josh-rouse-92eb00
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 6:30 PM
-- start: 2026-11-18T19:30:00-07:00
+- when: Wednesday, November 18, 2026, 7:30 PM
+- start: 2026-11-18T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -4042,8 +4042,8 @@ Hailed by NPR as “one of contemporary music’s most engaging singer-songwrite
 - id: b75b9301b455
 - slug: 50th-celebration-of-fenestra-and-page-mill-winery-benefitting-tri-vall-b75b93
 - date: 2026-11-18
-- when: Wednesday, November 18, 2026, 8:00 PM
-- start: 2026-11-18T21:00:00-07:00
+- when: Wednesday, November 18, 2026, 9:00 PM
+- start: 2026-11-18T21:00:00-08:00
 - end: 
 - all_day: no
 - venue: Page Mill Winery
@@ -4065,8 +4065,8 @@ Join us for a special evening celebrating the 50-year legacy of Page Mill Winery
 - id: 99c84411d4f4
 - slug: momotombo-sf-with-former-members-of-malo-and-santana-99c844
 - date: 2026-11-20
-- when: Friday, November 20, 2026, 6:30 PM
-- start: 2026-11-20T19:30:00-07:00
+- when: Friday, November 20, 2026, 7:30 PM
+- start: 2026-11-20T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -4088,8 +4088,8 @@ Dynamic 10-piece Latin Rock powerhouse, featuring iconic alumni from Malo and Sa
 - id: 9ce306dd02bf
 - slug: saturday-at-retzlaff-live-music-by-chris-rogers-9ce306
 - date: 2026-11-21
-- when: Saturday, November 21, 2026, 3:30 PM
-- start: 2026-11-21T16:30:00-07:00
+- when: Saturday, November 21, 2026, 4:30 PM
+- start: 2026-11-21T16:30:00-08:00
 - end: 
 - all_day: no
 - venue: Retzlaff Organic Vineyards and Estate Winery
@@ -4111,8 +4111,8 @@ Come for wine tasting or a bottle picnic and enjoy live music by Chris Rogers at
 - id: 778f06522fac
 - slug: lpv-live-music-featuring-rock-on-tap-778f06
 - date: 2026-11-21
-- when: Saturday, November 21, 2026, 7:30 PM
-- start: 2026-11-21T20:30:00-07:00
+- when: Saturday, November 21, 2026, 8:30 PM
+- start: 2026-11-21T20:30:00-08:00
 - end: 
 - all_day: no
 - venue: Las Positas Vineyards
@@ -4134,8 +4134,8 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - id: 14474ff0974c
 - slug: lpv-live-music-featuring-maddy-hudson-14474f
 - date: 2026-11-27
-- when: Friday, November 27, 2026, 7:30 PM
-- start: 2026-11-27T20:30:00-07:00
+- when: Friday, November 27, 2026, 8:30 PM
+- start: 2026-11-27T20:30:00-08:00
 - end: 
 - all_day: no
 - venue: Las Positas Vineyards
@@ -4157,8 +4157,8 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - id: 0b192dec66a7
 - slug: disco-night-with-pride-joy-0b192d
 - date: 2026-11-28
-- when: Saturday, November 28, 2026, 6:30 PM
-- start: 2026-11-28T19:30:00-07:00
+- when: Saturday, November 28, 2026, 7:30 PM
+- start: 2026-11-28T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -4180,8 +4180,8 @@ Disco is back! ✨ Join us for classic 70s-80s disco hits performed live by Prid
 - id: 5e789cd9a4c6
 - slug: lpv-live-music-featuring-the-kelly-mcdonald-band-5e789c
 - date: 2026-11-28
-- when: Saturday, November 28, 2026, 7:30 PM
-- start: 2026-11-28T20:30:00-07:00
+- when: Saturday, November 28, 2026, 8:30 PM
+- start: 2026-11-28T20:30:00-08:00
 - end: 
 - all_day: no
 - venue: Las Positas Vineyards
@@ -4203,8 +4203,8 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - id: 69988b24932f
 - slug: fleetwood-macram-a-tribute-to-fleetwood-mac-69988b
 - date: 2026-12-04
-- when: Friday, December 4, 2026, 6:30 PM
-- start: 2026-12-04T19:30:00-07:00
+- when: Friday, December 4, 2026, 7:30 PM
+- start: 2026-12-04T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -4226,8 +4226,8 @@ Awe inspiring live experience complete with show stopping renditions of Fleetwoo
 - id: 3dc3833c170b
 - slug: terroir-to-table-wine-food-paring-3dc383
 - date: 2026-12-04
-- when: Friday, December 4, 2026, 7:30 PM
-- start: 2026-12-04T20:30:00-07:00
+- when: Friday, December 4, 2026, 8:30 PM
+- start: 2026-12-04T20:30:00-08:00
 - end: 
 - all_day: no
 - venue: Murrieta's Well
@@ -4249,8 +4249,8 @@ Step into an intimate evening at Murrieta’s Well where wine, food, and place c
 - id: 9a7f48f9fb6a
 - slug: burning-down-the-house-the-bay-area-s-talking-heads-tribute-9a7f48
 - date: 2026-12-11
-- when: Friday, December 11, 2026, 6:30 PM
-- start: 2026-12-11T19:30:00-07:00
+- when: Friday, December 11, 2026, 7:30 PM
+- start: 2026-12-11T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -4272,8 +4272,8 @@ This six-piece band brings the music of Talking Heads to life with an irresistib
 - id: 32fd4dfabb14
 - slug: karaoke-saturday-at-charles-r-vineyards-32fd4d
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 3:30 PM
-- start: 2026-12-12T16:30:00-07:00
+- when: Saturday, December 12, 2026, 4:30 PM
+- start: 2026-12-12T16:30:00-08:00
 - end: 
 - all_day: no
 - venue: Charles R Vineyards
@@ -4295,8 +4295,8 @@ Sing your favorite song while sipping on your favorite wine. Bring a picnic, you
 - id: 5217d0bb76a4
 - slug: forejour-tribute-to-foreigner-and-journey-5217d0
 - date: 2026-12-12
-- when: Saturday, December 12, 2026, 6:30 PM
-- start: 2026-12-12T19:30:00-07:00
+- when: Saturday, December 12, 2026, 7:30 PM
+- start: 2026-12-12T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -4318,8 +4318,8 @@ FOREJOUR pays tribute to the music of ‘80s mega bands FOREIGNER & JOURNEY, rec
 - id: 614ab1d22641
 - slug: byob-bring-your-own-bottle-614ab1
 - date: 2026-12-20
-- when: Sunday, December 20, 2026, 3:30 PM
-- start: 2026-12-20T16:30:00-07:00
+- when: Sunday, December 20, 2026, 4:30 PM
+- start: 2026-12-20T16:30:00-08:00
 - end: 
 - all_day: no
 - venue: Page Mill Winery
@@ -4341,8 +4341,8 @@ Recycling is good but re-using is better! Bring your empty wine bottles for BYOB
 - id: a4f72908939b
 - slug: delta-wires-a4f729
 - date: 2027-01-09
-- when: Saturday, January 9, 2027, 6:30 PM
-- start: 2027-01-09T19:30:00-07:00
+- when: Saturday, January 9, 2027, 7:30 PM
+- start: 2027-01-09T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -4364,8 +4364,8 @@ Rockin’ big band harmonica and horns blues! This acclaimed band has appeared w
 - id: 58e6183958ff
 - slug: evan-thomas-and-the-brotherhood-58e618
 - date: 2027-02-05
-- when: Friday, February 5, 2027, 6:30 PM
-- start: 2027-02-05T19:30:00-07:00
+- when: Friday, February 5, 2027, 7:30 PM
+- start: 2027-02-05T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company
@@ -4387,8 +4387,8 @@ Evan Thomas and his Band deliver an electric mix of funk, soul, and blues that's
 - id: 0cf95174f820
 - slug: crossroads-eric-clapton-tribute-0cf951
 - date: 2027-02-06
-- when: Saturday, February 6, 2027, 6:30 PM
-- start: 2027-02-06T19:30:00-07:00
+- when: Saturday, February 6, 2027, 7:30 PM
+- start: 2027-02-06T19:30:00-08:00
 - end: 
 - all_day: no
 - venue: Almost Famous Wine Company

@@ -51,7 +51,19 @@ from build_events import says_free, infer_family_friendly  # noqa: E402
 VIBE_SLUG = re.compile(r"/event/([a-z0-9\-]+?)-\d{4}-\d{2}-\d{2}/?$")
 SMALL = {"a", "an", "and", "at", "by", "for", "in", "of", "on", "or", "the", "to", "with"}
 
-TZ = "-07:00"
+from datetime import datetime, time as dtime
+from zoneinfo import ZoneInfo
+
+ZONE = ZoneInfo("America/Los_Angeles")
+
+
+def stamp(date, t):
+    """`YYYY-MM-DDTHH:MM:SS±HH:MM` with the offset Pleasanton actually has on
+    that day: -07:00 in summer, -08:00 in winter. A fixed -07:00, which the
+    crawl once wrote for every row, made a 7:00 PM December show render as
+    6:00 PM."""
+    y, m, d = (int(x) for x in date.split("-"))
+    return datetime.combine(datetime(y, m, d).date(), t, tzinfo=ZONE).isoformat(timespec="seconds")
 
 
 def slugify(s):
@@ -155,7 +167,28 @@ def repair_descriptions(events):
 
 # ------------------------------------------------------------------- times --
 def _stamp(date, t):
-    return f"{date}T{t.strftime('%H:%M')}:00{TZ}"
+    return stamp(date, t)
+
+
+# ----------------------------------------------------------------- offsets --
+def repair_offsets(events):
+    """Every timestamp was written with -07:00 regardless of date. Re-stamp
+    each one from its wall-clock time with the offset that date really has,
+    so the instant the site renders is the time the source published."""
+    fixes = {}
+    for e in events:
+        new = {}
+        for field in ("start_at", "end_at"):
+            v = e.get(field)
+            if not v:
+                continue
+            hh, mm = int(v[11:13]), int(v[14:16])
+            fixed = stamp(v[:10], dtime(hh, mm))
+            if fixed != v:
+                new[field] = fixed
+        if new:
+            fixes[e["id"]] = new
+    return fixes
 
 
 def repair_times(events):
@@ -377,6 +410,13 @@ def main():
                 e.update(times[e["id"]])
     report.append(("times repaired", times,
                    lambda v: f"{v['start_at'][11:16]}–{(v['end_at'] or '')[11:16] or '?'} all_day={v['all_day']}"))
+
+    offsets = repair_offsets(bundle)
+    for rows in (events, bundle):
+        for e in rows:
+            if e["id"] in offsets:
+                e.update(offsets[e["id"]])
+    report.append(("offsets corrected", offsets, lambda v: ", ".join(f"{k}={x[-6:]}" for k, x in v.items())))
 
     streets = repair_street_addresses(bundle)
     apply(events, streets, "address"); apply(bundle, streets, "address")
