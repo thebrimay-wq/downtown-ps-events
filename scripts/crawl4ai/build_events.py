@@ -1,7 +1,7 @@
 """Parse every crawled page, normalize, filter to the next 12 months, dedupe."""
 import json, os, re, sys, hashlib
 import datetime as dt
-from extract import PARSERS, parse_date, parse_time, txt, TODAY, HORIZON, read
+from extract import PARSERS, parse_date, parse_time, parse_time_range, txt, TODAY, HORIZON, read
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -90,6 +90,45 @@ JUNK_DESC = re.compile(
     r"^(\W+|event details|read more|details|more info|[\d\s:.apm]+mi)$", re.I)
 
 FREE_RX = re.compile(r"\bfree\b|\bno charge\b|\bcomplimentary\b", re.I)
+# Phrases in a blurb that state the cost outright. "free" alone is not one:
+# "free parking" and "feel free to bring a chair" say nothing about admission.
+FREE_TEXT_RX = re.compile(
+    r"\b(free admission|is free|no charge|free registration|free and open|free to attend|"
+    r"free event|admission is free|free of charge|at no charge|"
+    r"complimentary (?:admission|entry|tickets?|event|class|concert|show))\b", re.I)
+# A sentence about what club members get ("members receive complimentary
+# tickets") describes a perk, not the price of admission.
+MEMBER_PERK_RX = re.compile(r"\bmembers?\b", re.I)
+DOLLAR_RX = re.compile(r"\$\s?\d")
+
+
+def says_free(desc):
+    """True when the blurb states that attending costs nothing. A blurb that
+    also names a dollar amount is not free, whatever else it says."""
+    if not desc or DOLLAR_RX.search(desc): return False
+    for sentence in re.split(r"(?<=[.!?])\s+", desc):
+        if FREE_TEXT_RX.search(sentence) and not MEMBER_PERK_RX.search(sentence):
+            return True
+    return False
+# Who an event suits, read from what the organiser wrote rather than from the
+# category: a "market" or "festival" can be 21+, and a chess club can say
+# "Adults-Only (19+)" in its title.
+ADULTS_RX = re.compile(r"\b(adults?[- ]only|21\s*\+|18\s*\+|19\s*\+|over 21|must be 21|ages 21)\b", re.I)
+FAMILY_RX = re.compile(
+    r"\b(family[- ]friendly|all ages|kid[- ]friendly|for kids|for children|children welcome|"
+    r"kids welcome|kids and families|storytime|story time)\b", re.I)
+
+
+def infer_is_free(price, title, desc):
+    if price: return bool(FREE_RX.search(price))
+    return bool(FREE_RX.search(title or "")) or says_free(desc)
+
+
+def infer_family_friendly(title, desc, category):
+    blob = f"{title or ''} {desc or ''}"
+    if ADULTS_RX.search(blob): return False
+    if FAMILY_RX.search(blob): return True
+    return category == "family"
 
 def to_iso(datestr, timestr=None, timetext=None):
     """Resolve a date (+ optional time) into a Pacific-local ISO timestamp.
@@ -104,11 +143,14 @@ def to_iso(datestr, timestr=None, timetext=None):
         return f"{iso.group(1)}T{iso.group(2)}:00-07:00", parse_date(iso.group(1)), True
     d = parse_date(s)
     if not d: return None, None, False
-    t = parse_time(timestr or "") or parse_time(timetext or "")
+    # The date string itself often carries the clock ("Sep 3, 2026 6:00 PM").
+    t = parse_time(timestr or "") or parse_time(timetext or "") or parse_time(s)
     had_time = t is not None
     if t is None:
+        # A bare "HH:MM" tail, but never 00:00: that is the Pleasanton Weekly
+        # "no time set" anchor, and reading it as midnight invents a time.
         m = re.search(r"(\d{1,2}):(\d{2})\s*$", str(timetext or ""))
-        if m:
+        if m and (int(m.group(1)), int(m.group(2))) != (0, 0):
             t, had_time = dt.time(int(m.group(1)), int(m.group(2))), True
         else:
             t = dt.time(12, 0)
@@ -154,8 +196,15 @@ def main():
         if not (TODAY <= d <= HORIZON):
             dropped["out-of-window"] += 1; continue
         end_iso = None
-        if e.get("end"):
-            end_iso, _, _ = to_iso(e.get("end"), None, e.get("end_time_text"))
+        end_time_text = e.get("end_time_text")
+        if not end_time_text:
+            # "3:00 pm - 6:00 pm" in the time text names the end as well.
+            _, end_t = parse_time_range(e.get("time_text") or "")
+            if end_t: end_time_text = end_t.strftime("%H:%M")
+        # An end time with no end date is an end on the start date; the old
+        # guard on e["end"] alone threw every such time away.
+        if e.get("end") or end_time_text:
+            end_iso, _, _ = to_iso(e.get("end") or d.isoformat(), None, end_time_text)
         # An end that is not after the start tells us nothing; drop it rather
         # than render "12:00 PM – 12:00 PM".
         if end_iso and start_iso and end_iso <= start_iso:
@@ -182,13 +231,6 @@ def main():
                 dropped["no-location"] = dropped.get("no-location", 0) + 1
                 continue
         key = (norm_title(title), d.isoformat())
-        if key in seen:
-            dropped["dupe"] += 1
-            prev = seen[key]
-            # Keep the richer record.
-            if len(json.dumps(e, default=str)) > len(json.dumps(prev, default=str)):
-                events[events.index(prev)] = prev  # keep ordering stable
-            continue
         venue = txt(e.get("venue"))
         if venue and title and venue.strip().lower() == title.strip().lower():
             venue = None
@@ -198,13 +240,23 @@ def main():
             all_day=not had_time,
             venue=venue, address=txt(e.get("address")), city=city,
             category=blob_cat, tags=[t for t in (e.get("tags") or []) if t],
-            price=price, is_free=bool(price and FREE_RX.search(price)) or bool(not price and FREE_RX.search(title)),
-            is_family_friendly=blob_cat in ("family", "market", "festival"),
+            price=price, is_free=infer_is_free(price, title, desc),
+            is_family_friendly=infer_family_friendly(title, desc, blob_cat),
             image_url=txt(e.get("image")), ticket_url=txt(e.get("ticket")),
             region=region,
             source_name=e.get("source"), source_group=e.get("group"),
             source_url=txt(e.get("url")), extraction=e.get("method"),
         )
+        if key in seen:
+            dropped["dupe"] += 1
+            prev = seen[key]
+            # Keep the richer record, in the slot the first one took so the
+            # order stays stable. Comparing built records (not raw dicts)
+            # means the same fields are weighed on both sides.
+            if len(json.dumps(rec, default=str)) > len(json.dumps(prev, default=str)):
+                events[events.index(prev)] = rec
+                seen[key] = rec
+            continue
         seen[key] = rec
         events.append(rec)
 

@@ -30,13 +30,78 @@ def parse_date(s, default_year=None):
     except Exception:
         return None
 
+# A clock time with a meridiem. The hour may not follow a digit or a dot:
+# "6.00pm" used to match at "00pm" and come out as noon, and "10:00" must
+# not yield a "0:00" from its tail.
+_T12 = re.compile(r"(?<![\d.$])(\d{1,2})(?:[:.](\d{2}))?\s*([ap])\.?m\b\.?", re.I)
+# "8-9:30 a.m.", "2-5pm": the first clock of a range that shares one meridiem.
+_T12_RANGE_HEAD = re.compile(r"(?<![\d.$])(\d{1,2})(?:[:.](\d{2}))?\s*(?:-|–|—|to)\s*$", re.I)
+# 24-hour "19:30". Not when a meridiem follows (the 12-hour rule owns that),
+# and not a price ("$10:00").
+_T24 = re.compile(r"(?<![\d.:$])([01]?\d|2[0-3]):([0-5]\d)(?![\d:]|\s*[ap]\.?m\b)", re.I)
+_NOON = re.compile(r"\bnoon\b", re.I)
+_RANGE_SEP = re.compile(r"\s*(?:-|–|—|to|through|until|till|’til|'til)\s*", re.I)
+
+
+def _t12(hour, minute, meridiem):
+    h = int(hour) % 12
+    if meridiem.lower() == "p": h += 12
+    return dt.time(h, int(minute or 0))
+
+
+def _time_candidates(s):
+    """Every clock time in s as (start, end, time, range_end), earliest
+    first. range_end is set only for "8-9:30 a.m." style ranges that share
+    one meridiem, where the match itself names both ends."""
+    out = []
+    for m in _T12.finditer(s):
+        t = _t12(m.group(1), m.group(2), m.group(3))
+        # A range with one shared meridiem ("8-9:30 a.m.", "4-8pm") names
+        # its START first; the meridiem belongs to both halves. Report the
+        # first clock, not the end of the range.
+        head = _T12_RANGE_HEAD.search(s, 0, m.start())
+        if head:
+            first = _t12(head.group(1), head.group(2), m.group(3))
+            # "11-1 p.m." runs across noon: the first half is still morning.
+            if first > t: first = _t12(head.group(1), head.group(2), "a")
+            out.append((head.start(1), m.end(), first, t))
+        else:
+            out.append((m.start(), m.end(), t, None))
+    for m in _T24.finditer(s):
+        h, mi = int(m.group(1)), int(m.group(2))
+        # 00:00 is never a published start time here: Pleasanton Weekly's
+        # widget stamps it on every event whose organiser gave no time, so
+        # treating it as midnight would turn "time unknown" into a claim.
+        if h == 0 and mi == 0: continue
+        out.append((m.start(), m.end(), dt.time(h, mi), None))
+    for m in _NOON.finditer(s):
+        out.append((m.start(), m.end(), dt.time(12, 0), None))
+    out.sort(key=lambda x: x[0])
+    return out
+
+
 def parse_time(s):
+    """The first clock time in s, or None when it names none."""
     if not s: return None
-    m = re.search(r"(\d{1,2})(?::(\d{2}))?\s*([ap])\.?m\.?", s, re.I)
-    if not m: return None
-    h = int(m.group(1)) % 12
-    if m.group(3).lower() == "p": h += 12
-    return dt.time(h, int(m.group(2) or 0))
+    c = _time_candidates(str(s))
+    return c[0][2] if c else None
+
+
+def parse_time_range(s):
+    """(start, end) for "3:00 pm - 6:00 pm", "8am-6pm", "10:00 am to 1:00 pm";
+    end is None unless a second clock follows the first across a range
+    separator. An end at or before the start is not a range."""
+    if not s: return None, None
+    s = str(s)
+    c = _time_candidates(s)
+    if not c: return None, None
+    pos, end_pos, start, shared_end = c[0]
+    end = shared_end
+    if end is None:
+        sep = _RANGE_SEP.match(s, end_pos)
+        if sep and sep.end() > end_pos:
+            end = next((t for p, _, t, _ in c[1:] if p == sep.end()), None)
+    return start, (end if end and end > start else None)
 
 def read(key, ext="md"):
     p = os.path.join(PAGES, key + "." + ext)
@@ -210,7 +275,10 @@ def parse_acfair(md, url, source, group):
                     if yr and not re.search(r"\d{4}", end): end = f"{end}, {yr.group(0)}"
                 # grab following prose as description
                 desc = next((txt(x) for x in lines[j+1:j+8] if x and not x.startswith(("!", "#", "["))), None)
+                # "Hours : 8am-6pm" sits a line or two under the date; hand
+                # that text on so build_events can read a start time from it.
                 out.append(ev(title=title, start=start, end=end, description=desc,
+                              time_text=" ".join(lines[j:j + 5]),
                               venue="Alameda County Fairgrounds",
                               address="4501 Pleasanton Ave, Pleasanton, CA 94566",
                               url=url, source=source, group=group, method="acfair"))
@@ -241,7 +309,9 @@ def parse_pda(md, url, source, group):
         d = parse_date(start)
         if not d or not (TODAY <= d <= HORIZON): continue
         ctx = txt(body[max(0, m.start() - 200): m.end() + 300])
-        out.append(ev(title=title, start=start, description=ctx,
+        # The same window that becomes the description carries the time
+        # ("4pm - 8pm", "5:00 PM - 8:00 PM"); pass it on rather than lose it.
+        out.append(ev(title=title, start=start, description=ctx, time_text=ctx,
                       venue="Downtown Pleasanton", address="Main Street, Pleasanton, CA 94566",
                       url=url, source=source, group=group, method="pda"))
         break  # one page = one signature event
@@ -266,7 +336,9 @@ def parse_patch(md, url, source, group):
         ymd = m.group("ymd")
         if not title or len(title) < 4: continue
         out.append(ev(title=title, start=f"{ymd[:4]}-{ymd[4:6]}-{ymd[6:]}",
-                      time_text=tm.group("time"), address=addr, description=txt(rest) or None,
+                      # Listings without a clock in the header often name one in
+                      # the blurb ("Music starts at 6:00pm", "Time: 8:00am - 6:00pm").
+                      time_text=tm.group("time") or rest, address=addr, description=txt(rest) or None,
                       url=m.group("href"), source=source, group=group, method="patch"))
     return out
 
@@ -285,15 +357,27 @@ def parse_pweekly(md, url, source, group):
         head = parts[0].strip()
         # The link text runs "TitleVenue | City, CA…" with no separator. The
         # detail URL carries a slug of the title alone, so use it as the ruler.
-        slug = m.group("slug")
+        # The site keeps a trailing hyphen on slugs of titles that end in
+        # punctuation ("Meet Up!" -> "meet-up-"); _slugify strips it, so
+        # compare against the stripped form or the ruler never matches.
+        slug = m.group("slug").rstrip("-")
         title = venue = None
         for i in range(4, len(head) + 1):
             if _slugify(head[:i]) == slug:
+                # The slug dropped that punctuation; the title keeps it.
+                while i < len(head) and not head[i].isalnum() and not head[i].isspace():
+                    i += 1
                 title, venue = head[:i].strip(), head[i:].strip()
                 break
         if title is None:
+            # "SPRK Strength 55+ SPRK Strength 55+": the widget repeats the
+            # title with a space between the copies, so the halves sit either
+            # side of that space, not at exactly len/2.
             half = len(head) // 2
-            title = head[:half] if head[:half] and head[:half] == head[half:half * 2] else head
+            if len(head) % 2 == 1 and head[half] == " " and head[:half] == head[half + 1:]:
+                title = head[:half]
+            else:
+                title = head
         title = txt(title)
         venue = txt(venue)
         city = desc = None
@@ -303,10 +387,18 @@ def parse_pweekly(md, url, source, group):
             else: desc = txt(parts[1])
             # The widget appends "10:00 am5.3 mi" (start time + distance from
             # the reader) to every blurb; that is chrome, not description.
+            # Untimed events get the distance alone, glued to the avatar
+            # initial ("…Sun, Sep 6, 2026 T1.0 mi"), and performer pages open
+            # with the widget's "Biography" label.
             if desc:
-                desc = txt(re.sub(r"\s*\d{1,2}:\d{2}\s*[ap]m\s*[\d.]+\s*mi\s*$", "", desc))
+                desc = txt(re.sub(r"\s*(?:\d{1,2}:\d{2}\s*[ap]m\s*)?[A-Z]?\d+(?:\.\d+)?\s*mi\s*$", "", desc))
+            if desc:
+                desc = txt(re.sub(r"^Biography\s+", "", desc))
         if not title or len(title) < 4: continue
-        out.append(ev(title=title, start=m.group("iso"), time_text=f"{m.group('hh')}:00",
+        # The URL hour is "00" when the organiser set no time; that is the
+        # widget's "no time" anchor, not midnight, so pass no time at all.
+        hh = m.group("hh")
+        out.append(ev(title=title, start=m.group("iso"), time_text=None if hh == "00" else f"{hh}:00",
                       venue=venue, address=city, description=desc, url=m.group("href"),
                       source=source, group=group, method="pweekly"))
     return out
@@ -346,7 +438,7 @@ def parse_generic(md, html, url, source, group):
         if DATE_ANY.match(title): continue
         link = re.search(r"\((https?://[^)]+)\)", " ".join(lines[i:i + 3]))
         desc = next((txt(x) for x in lines[i+1:i+6] if x and not x.startswith(("!", "#", "*", "|"))), None)
-        out.append(ev(title=title, start=dm.group(1), description=desc,
+        out.append(ev(title=title, start=dm.group(1), description=desc, time_text=window,
                       url=(link.group(1) if link else url), source=source, group=group,
                       method="generic"))
     return out
