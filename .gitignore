@@ -38,3 +38,6 @@ yarn-error.log*
 /.wrangler
 .dev.vars
 cloudflare-env.d.ts
+
+# Agent worktrees created by Claude Code; each is its own checkout.
+.claude/worktrees/
