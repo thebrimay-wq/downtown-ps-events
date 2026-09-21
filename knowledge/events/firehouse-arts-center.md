@@ -97,7 +97,7 @@ Escape to a tropical paradise with Garratt Wilkin & The Parrotheads, the nationâ
 - tags: Presenting Series
 - price: $33 â€“ $43
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.firehousearts.org/calendar-event/carnaval/
 - tickets: 
 - source: Firehouse Arts Center

@@ -72,7 +72,7 @@ Arroyo Cellars will offer cookie and wine pairings featuring the culinary creati
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: $10.00
+- price: $10
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -233,7 +233,7 @@ Combining infectious melodies with a high-energy band and captivating frontman, 
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: $34.
+- price: $34
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -325,7 +325,7 @@ Get excited for our upcoming Fun Friday! It will be an enchanting evening of fun
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -371,7 +371,7 @@ Join us for live music featuring JNeen from 6–9 PM. Open seating, no reservati
 - city: Livermore
 - category: music
 - tags: 
-- price: Cost: $10 (pay at the door)
+- price: $10 (pay at the door)
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -465,7 +465,7 @@ Transform our Terrace & Green into a Weingarten! Enjoy authentic Bavarian comfor
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.lvwine.org/events/2026/9/September.html
 - tickets: https://concannon.wine/estate-block-party/
 - source: Livermore Valley Wine Country
@@ -578,7 +578,7 @@ Spend your summer nights at Wente Family Vineyards, where the concert lawn comes
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -854,7 +854,7 @@ You made it halfway through the week. Reward yourself with acoustic music played
 - city: Livermore
 - category: music
 - tags: 
-- price: None
+- price: 
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1038,7 +1038,7 @@ Your Friday wind-down is at Retzlaff Vineyards, with live music by Chris Rogers,
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1107,7 +1107,7 @@ Join us for a special Friday Night Live on our scenic Vineyard Patio for an even
 - city: Livermore
 - category: education
 - tags: 
-- price: Cost: $10
+- price: $10
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1115,29 +1115,6 @@ Join us for a special Friday Night Live on our scenic Vineyard Patio for an even
 - source: Livermore Valley Wine Country
 
 Join us for Soul Line Dancing with Rayzelle. Whether you are a beginner or seasoned stepper, this is your opportunity to learn some new and revisit some old line dancing routines. Don't forget your fan or purchase one of Longevity's as you will need to cool off from the hot moves. Class starts at 7pm and doors open at 6:30pm. See you there!
-
-## The Drag Dinner Show at JMC Cellars
-
-- id: 8f31599b0a6a
-- slug: the-drag-dinner-show-at-jmc-cellars-8f3159
-- date: 2026-09-12
-- when: Saturday, September 12, 2026 (time not listed)
-- start: 2026-09-12T12:00:00-07:00
-- end: 
-- all_day: yes
-- venue: JMC Cellars
-- address: 6800 Greenville Road, LIVERMORE, CA 94550
-- city: Livermore
-- category: food-drink
-- tags: 
-- price: 45
-- free: no
-- family_friendly: no
-- url: https://www.lvwine.org/events/2026/9/September.html
-- tickets: https://jmccellars.orderport.net/product-details/0230/the-drag-dinner-show-at-jmc-cellars-%f0%9f%90%93-dinner-chicken-option
-- source: Livermore Valley Wine Country
-
-Join us Saturday, Sept 19th for an unforgettable Drag Dinner Show at beautiful JMC Cellars in Livermore California! Enjoy locally sourced cuisine by Chef Debbie Casey spectacular performances from fabulous queens and incredible wine overlooking the vines. Doors open at 5:30 PM with the show beginning at 6:30 PM. Perfect for celebrations or an unforgettable Saturday night in wine country. Secure your seats and select your meal today!
 
 ## KARAOKE SATURDAY AT CHARLES R VINEYARDS
 
@@ -1185,6 +1162,29 @@ Sing your favorite song while sipping on your favorite wine. Bring a picnic, you
 
 Come for wine tasting or a bottle picnic and enjoy live music by The Matt Finders band at charming Retzlaff Vineyards. Fratelli's Pizza is here! Reservations are appreciated. Club members enjoy picnic tables for 6 and quarterly tastings at no charge. A minimum wine purchase is required for all picnic groups. Kids and well behaved dogs are welcome. Sorry, no outside alcohol.
 
+## The Drag Dinner Show at JMC Cellars
+
+- id: 8f31599b0a6a
+- slug: the-drag-dinner-show-at-jmc-cellars-8f3159
+- date: 2026-09-12
+- when: Saturday, September 12, 2026, 5:30 PM
+- start: 2026-09-12T17:30:00-07:00
+- end: 
+- all_day: no
+- venue: JMC Cellars
+- address: 6800 Greenville Road, LIVERMORE, CA 94550
+- city: Livermore
+- category: food-drink
+- tags: 
+- price: $45
+- free: no
+- family_friendly: no
+- url: https://www.lvwine.org/events/2026/9/September.html
+- tickets: https://jmccellars.orderport.net/product-details/0230/the-drag-dinner-show-at-jmc-cellars-%f0%9f%90%93-dinner-chicken-option
+- source: Livermore Valley Wine Country
+
+Join us Saturday, Sept 19th for an unforgettable Drag Dinner Show at beautiful JMC Cellars in Livermore California! Enjoy locally sourced cuisine by Chef Debbie Casey spectacular performances from fabulous queens and incredible wine overlooking the vines. Doors open at 5:30 PM with the show beginning at 6:30 PM. Perfect for celebrations or an unforgettable Saturday night in wine country. Secure your seats and select your meal today!
+
 ## Sip by Sunset Summer Music Series
 
 - id: 386cacedc1b8
@@ -1222,7 +1222,7 @@ Live music with Michelle Lambert! Glass and bottles sales only. $5 Cover charge
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1293,7 +1293,7 @@ Create your perfect day in Livermore Valley with a private wine charter designed
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.lvwine.org/events/2026/9/September.html
 - tickets: https://concannon.wine/winery-events/
 - source: Livermore Valley Wine Country
@@ -1337,9 +1337,9 @@ Come for wine tasting or a bottle picnic and enjoy live music by Steve Fread at 
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: 10
+- price: $10
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.lvwine.org/events/2026/9/September.html
 - tickets: https://jmccellars.orderport.net/product-details/0232/wings-and-wine-falconry-show
 - source: Livermore Valley Wine Country
@@ -1360,7 +1360,7 @@ Back by popular demand! Join us for the Wings and Wine falconry experience on Su
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: 75
+- price: $75
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1383,7 +1383,7 @@ Tuesday, September 15th 5:30-7:00PM Join Sip & Script for Modern Calligraphy Fun
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: $10.00
+- price: $10
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1452,7 +1452,7 @@ Enjoy live music from our very own Ashley Shroyer — a familiar face many of yo
 - city: Livermore
 - category: family
 - tags: 
-- price: 75
+- price: $75
 - free: no
 - family_friendly: yes
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1567,7 +1567,7 @@ Looking for the perfect way to kick off your weekend? Join us every Friday at Ch
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: 25.00
+- price: $25
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1659,7 +1659,7 @@ Get excited for our upcoming Fun Friday! It will be an enchanting evening of fun
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1751,7 +1751,7 @@ Bring friends, relax, and enjoy the perfect blend of music, nature, and exceptio
 - city: Livermore
 - category: music
 - tags: 
-- price: 10
+- price: $10
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1797,7 +1797,7 @@ Come for wine tasting or a bottle picnic and enjoy live music by Loren Olk at ch
 - city: Livermore
 - category: music
 - tags: 
-- price: 20
+- price: $20
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1843,7 +1843,7 @@ Enjoy a concert in the beautiful Livermore vineyards! Listen to the music of Mus
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -1912,7 +1912,7 @@ Go beyond the tasting room and into the vineyard on this relaxed small group mor
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: 95
+- price: $95
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2004,7 +2004,7 @@ Come for wine tasting or a bottle picnic and enjoy live music by The Matt Finder
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: $10.00
+- price: $10
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2188,7 +2188,7 @@ Local favorite Loren O returns to the Concannon Estate with an evening of live g
 - city: Livermore
 - category: arts
 - tags: 
-- price: 5
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2326,7 +2326,7 @@ Join us Friday September 25th from 5 - 8 pm for our 3rd annual Bridgerton Ball! 
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2418,7 +2418,7 @@ Join us for Friday Night Live at McGrail Vineyards! It s a perfect evening of li
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: 65
+- price: $65
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2489,7 +2489,7 @@ Celebrate 2026 Harvest with us. Enjoy award winning wine, live music, and works 
 - tags: 
 - price: $85
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
 - tickets: https://wentevineyards.com/events/food-wine-festival-september-26/
 - source: Livermore Valley Wine Country
@@ -2533,7 +2533,7 @@ Experience an intimate celebration of culinary excellence, exceptional wine, and
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2671,7 +2671,7 @@ Come for wine tasting or a bottle picnic and enjoy live music by Joey T & Didier
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: 40
+- price: $40
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2740,7 +2740,7 @@ You made it halfway through the week. Reward yourself with acoustic music played
 - city: Livermore
 - category: food-drink
 - tags: 
-- price: $34.
+- price: $34
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2809,7 +2809,7 @@ Ease into the rhythm of summer with Smooth Jazz Alley, a contemporary jazz trio 
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2832,7 +2832,7 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2855,7 +2855,7 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - city: Livermore
 - category: music
 - tags: 
-- price: Cost: $10 at the door
+- price: $10 at the door
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/9/September.html
@@ -2924,7 +2924,7 @@ Cowboys Cabernet is back for an unforgettable night of line dancing live country
 - city: Livermore
 - category: music
 - tags: 
-- price: 65
+- price: $65
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3039,7 +3039,7 @@ All-star Bay Area rock/funk collective featuring current/former members of Tower
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3085,7 +3085,7 @@ Join us for live music featuring Shakedown Funk Band from 6-9 PM. Open seating n
 - city: Livermore
 - category: education
 - tags: 
-- price: Cost: $10
+- price: $10
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3110,7 +3110,7 @@ Always popular and in demand. Line Dancing is back! Join us for as Cree shares s
 - tags: 
 - price: $20
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
 - tickets: https://wentevineyards.com/events/90s-y2k-dance-party-october-9/
 - source: Livermore Valley Wine Country
@@ -3154,7 +3154,7 @@ Bring friends, relax, and enjoy the perfect blend of music, nature, and exceptio
 - city: Livermore
 - category: music
 - tags: 
-- price: 10
+- price: $10
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3269,7 +3269,7 @@ Step into an intimate evening at Murrieta’s Well where wine, food, and place c
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3361,7 +3361,7 @@ Starring Robert Bartko! With his live vocals, Robert Bartko exudes the energy an
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3453,7 +3453,7 @@ Spend your summer nights at Wente Family Vineyards, where the concert lawn comes
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3545,7 +3545,7 @@ Two legendary rock experiences in one unforgettable night! Featuring Paul Holdga
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3614,7 +3614,7 @@ Come for wine tasting or a bottle picnic and enjoy live music by Lisa Long at ch
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3660,7 +3660,7 @@ For October's Fifth Friday Community Fundraiser Night, Sakura Winery is partneri
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/10/October.html
@@ -3798,7 +3798,7 @@ Named Best Tribute/Cover Band 4 years in a row, this Tom Petty tribute has sold-
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/11/November.html
@@ -3867,7 +3867,7 @@ The Bay Area's premier Grateful Dead tribute band, who have shared stages with D
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/11/November.html
@@ -3913,7 +3913,7 @@ All-star ensemble led by acclaimed Emmy-winning percussionist Peter Michael Esco
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/11/November.html
@@ -3936,7 +3936,7 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/11/November.html
@@ -4120,7 +4120,7 @@ Come for wine tasting or a bottle picnic and enjoy live music by Chris Rogers at
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/11/November.html
@@ -4143,7 +4143,7 @@ Come enjoy Live Music , food & wine offered with music beginning at 6pm.
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/11/November.html
@@ -4189,7 +4189,7 @@ Disco is back! ✨ Join us for classic 70s-80s disco hits performed live by Prid
 - city: Livermore
 - category: music
 - tags: 
-- price: $5.0
+- price: $5
 - free: no
 - family_friendly: no
 - url: https://www.lvwine.org/events/2026/11/November.html
