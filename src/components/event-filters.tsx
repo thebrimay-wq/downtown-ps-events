@@ -38,7 +38,16 @@ export function EventFilters() {
   // (back button, a calendar link) is external and the inputs follow it.
   const requested = useRef<string | null>(null);
 
+  // The URL as of the last commit, readable from any closure. The debounced
+  // effects below capture `current` from the render that changed the text,
+  // and by the time their 300ms elapse the URL may have moved on and
+  // `pending` been cleared; reading a stale searchParams there is how
+  // "Clear all filters" put the category back. In production the commit
+  // lands inside the debounce window, so it happened on every clear.
+  const latest = useRef(searchParams);
+
   useEffect(() => {
+    latest.current = searchParams;
     pending.current = null;
     if (searchParams.toString() === requested.current) return;
     setSearch(searchParams.get("search") ?? "");
@@ -46,8 +55,8 @@ export function EventFilters() {
   }, [searchParams]);
 
   const current = useCallback(
-    () => pending.current ?? new URLSearchParams(searchParams.toString()),
-    [searchParams],
+    () => pending.current ?? new URLSearchParams(latest.current.toString()),
+    [],
   );
 
   const navigate = useCallback(
