@@ -15,7 +15,7 @@ import {
   FilterTransitionProvider,
 } from "@/components/filter-transition";
 import { BundledDataBanner } from "@/components/bundled-data-banner";
-import { TZ, isThisWeekend, isToday, localDateKey } from "@/lib/utils";
+import { isRealDate, TZ, isThisWeekend, isToday, localDateKey } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Browse Events",
@@ -36,8 +36,9 @@ function str(v: string | string[] | undefined): string | undefined {
   return Array.isArray(v) ? v[0] : v;
 }
 
-// A calendar day link asks for date=YYYY-MM-DD; the presets are words.
-const DAY_KEY = /^\d{4}-\d{2}-\d{2}$/;
+// The most cards one request will render. The Show-more chain stops at the
+// total anyway; this stops a hand-typed limit from rendering the whole set.
+const MAX_LIMIT = 600;
 
 // The instants that bound one Pleasanton calendar day.
 function dayBounds(key: string): Pick<Filters, "from" | "to"> {
@@ -103,11 +104,14 @@ export default async function EventsPage({
     location: str(sp.location),
     free: str(sp.free) === "1",
     familyFriendly: str(sp.family) === "1",
-    ...(datePreset && DAY_KEY.test(datePreset) ? dayBounds(datePreset) : {}),
+    // A calendar day link asks for date=YYYY-MM-DD; the presets are words.
+    // Only a day that exists gets bounds: "2026-02-30" passes a shape check
+    // and then throws inside toISOString, after the shell has streamed.
+    ...(datePreset && isRealDate(datePreset) ? dayBounds(datePreset) : {}),
   };
   const view = str(sp.view) === "calendar" ? "calendar" : "list";
   const month = str(sp.month);
-  const limit = Math.max(1, parseInt(str(sp.limit) ?? "", 10) || PAGE_SIZE);
+  const limit = Math.min(MAX_LIMIT, Math.max(1, parseInt(str(sp.limit) ?? "", 10) || PAGE_SIZE));
   const hasFilters = ["category", "search", "location", "free", "family", "date"]
     .some((key) => str(sp[key]));
 
