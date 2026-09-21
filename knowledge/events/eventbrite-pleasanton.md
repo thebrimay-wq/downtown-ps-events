@@ -580,7 +580,7 @@ Acoustic and Electric Rock Covers from 70s, 80s, and 90s
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.eventbrite.com/e/do-great-things-music-festival-second-annual-tickets-1992300849472
 - tickets: 
 - source: Eventbrite — Pleasanton
@@ -718,7 +718,7 @@ End Times Watchfulness is a summons to awaken before the trumpet sounds - to liv
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.eventbrite.com/e/convergence-summit-powered-by-innovate-bay-tickets-1994582170966
 - tickets: 
 - source: Eventbrite — Pleasanton
@@ -879,7 +879,7 @@ Get ready to rock with Damage Inc as they blast you back to Metallica’s early 
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.eventbrite.com/e/flea-market-tickets-1996908311515
 - tickets: 
 - source: Eventbrite — Pleasanton
@@ -925,7 +925,7 @@ IXL Live: Administrator Edition is designed for school and district leaders and 
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.eventbrite.com/e/singles-bunco-night-at-jmc-cellars-ages-21-and-up-tickets-1998904575394
 - tickets: 
 - source: Eventbrite — Pleasanton
@@ -1063,7 +1063,7 @@ A floating sound journey is a meditative experience. Float on a float above a po
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.eventbrite.com/e/sound-bath-with-1000s-of-crystals-tickets-1998931561109
 - tickets: 
 - source: Eventbrite — Pleasanton
@@ -1247,7 +1247,7 @@ Gary gave us new ways to maximize our life and business. New content and new lea
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.eventbrite.com/e/626-night-market-pleasanton-october-9-11-2026-tickets-1977106388430
 - tickets: 
 - source: Eventbrite — Pleasanton
@@ -1507,29 +1507,6 @@ Join us for an afternoon of fashion and tasty bites that celebrate cancer surviv
 
 Celebrate the publication of ACOTAR #6 with a special midnight release party at Rakestraw Books.
 
-## The SBM Film Festival 2026
-
-- id: 1bfd1352550e
-- slug: the-sbm-film-festival-2026-1bfd13
-- date: 2026-11-07
-- when: Saturday, November 7, 2026 (time not listed)
-- start: 2026-11-07T12:00:00-07:00
-- end: 
-- all_day: yes
-- venue: Village Theatre & Art Gallery
-- address: 233 Front Street, Danville, CA, 94526
-- city: Danville
-- category: festival
-- tags: 
-- price: 
-- free: no
-- family_friendly: yes
-- url: https://www.eventbrite.com/e/the-sbm-film-festival-2026-tickets-1997054076502
-- tickets: 
-- source: Eventbrite — Pleasanton
-
-Join us for the 4th annual SBM Film Festival on Saturday, November 7th! Doors open at 6 pm and will be held in the Danville Village Theater.
-
 ## Dublin Diwali Mela 2026
 
 - id: 06ba4d893926
@@ -1576,6 +1553,29 @@ Diwali Mela in Dublin 2026 hosted by Trivalley Hindu Connect
 
 Michelle Lambert is a Pop/Folk singer/songwriter that is not only talented but so much fun to watch
 
+## The SBM Film Festival 2026
+
+- id: 1bfd1352550e
+- slug: the-sbm-film-festival-2026-1bfd13
+- date: 2026-11-07
+- when: Saturday, November 7, 2026, 5:00 PM
+- start: 2026-11-07T18:00:00-07:00
+- end: 
+- all_day: no
+- venue: Village Theatre & Art Gallery
+- address: 233 Front Street, Danville, CA, 94526
+- city: Danville
+- category: festival
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.eventbrite.com/e/the-sbm-film-festival-2026-tickets-1997054076502
+- tickets: 
+- source: Eventbrite — Pleasanton
+
+Join us for the 4th annual SBM Film Festival on Saturday, November 7th! Doors open at 6 pm and will be held in the Danville Village Theater.
+
 ## Holiday Craft Fair
 
 - id: ea23f8ba8de7
@@ -1592,7 +1592,7 @@ Michelle Lambert is a Pop/Folk singer/songwriter that is not only talented but s
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.eventbrite.com/e/holiday-craft-fair-tickets-1992952656043
 - tickets: 
 - source: Eventbrite — Pleasanton
@@ -1661,7 +1661,7 @@ Special holiday show! Featuring one of contemporary jazz's most compelling young
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.eventbrite.com/e/soulsearch-dublin-pleasanton-enlightenment-expo-psychic-healing-fair-tickets-1979543366497
 - tickets: 
 - source: Eventbrite — Pleasanton

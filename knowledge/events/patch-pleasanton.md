@@ -109,10 +109,10 @@ September 5–7 | 11:30 AM–5:00 PM Live Music Daily | 12:00–4:00 PM Celebrat
 - id: 8fc2fe6031f6
 - slug: live-lpv-mad-about-you-8fc2fe
 - date: 2026-09-05
-- when: Saturday, September 5, 2026 (time not listed)
-- start: 2026-09-05T12:00:00-07:00
+- when: Saturday, September 5, 2026, 6:00 PM
+- start: 2026-09-05T18:00:00-07:00
 - end: 
-- all_day: yes
+- all_day: no
 - venue: 
 - address: :00 PMLas Positas Vineyards, 1828 Wetmore Rd, Livermore, CA
 - city: Livermore
@@ -132,10 +132,10 @@ Join Us! OUTDOOR Live Music @ LPV Music starts at 6:00pm Wine by the bottle and 
 - id: fe76f91e7e6f
 - slug: 160th-annual-scottish-highland-gathering-games-fe76f9
 - date: 2026-09-06
-- when: Sunday, September 6, 2026 (time not listed)
-- start: 2026-09-06T12:00:00-07:00
-- end: 
-- all_day: yes
+- when: Sunday, September 6, 2026, 8:00 AM – 6:00 PM
+- start: 2026-09-06T08:00:00-07:00
+- end: 2026-09-06T18:00:00-07:00
+- all_day: no
 - venue: 
 - address: :00 AMPleasanton, CA
 - city: Pleasanton
@@ -143,7 +143,7 @@ Join Us! OUTDOOR Live Music @ LPV Music starts at 6:00pm Wine by the bottle and 
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://patch.com/california/pleasanton/calendar/event/20260906/0f0a064d-6ac9-4aa7-87cb-b2912c1da24c/160th-annual-scottish-highland-gathering-games
 - tickets: 
 - source: Patch — Pleasanton

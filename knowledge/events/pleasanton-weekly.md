@@ -114,7 +114,7 @@ This free walking group at the Pleasanton Senior Center is 8:45-10 a.m., Wednesd
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -137,7 +137,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -326,7 +326,7 @@ This exhibit invites artists to step through the present and into the echoes of 
 - category: other
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/live-well-be-well-50-/19634848/2026-09-02T10
 - tickets: 
@@ -418,7 +418,7 @@ The 2026 swim season is here and Park District swim facilities will operate on a
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-09-02T10
 - tickets: 
@@ -666,7 +666,7 @@ Free Preventative Benefits: What Medicare Covers In Full: - Provides a brief ove
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -833,7 +833,7 @@ Maker Madness for ages 8-12. 4-5 p.m., Wednesday. Livermore Civic Center Library
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2026-09-02T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -971,17 +971,17 @@ Singo is Music Bingo We play a 35-second clip of your favorite songs and if you 
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/family-storytime-at-pleasanton-library/19483633/2026-09-02T19
 - tickets: 
 - source: Pleasanton Weekly
 
 Join on Wednesday nights for Family Storytime, a lively mix of movement, sing-along music with guitar and engaging stories the whole family will love. 7-7:30 p.m., Wednesdays.
 
-## SPRK Strength 55+ SPRK Strength 55+
+## SPRK Strength 55+
 
 - id: 9c3023ae9e8d
-- slug: sprk-strength-55-sprk-strength-55-9c3023
+- slug: sprk-strength-55-9c3023
 - date: 2026-09-03
 - when: Thursday, September 3, 2026, 9:00 AM
 - start: 2026-09-03T09:00:00-07:00
@@ -1034,7 +1034,7 @@ Join Intermediate/Advanced Line Dance, 9-11 a.m., Tuesdays and Thursdays. Drop-i
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -1116,29 +1116,6 @@ The Firehouse Arts Center lobby exhibit features the work of Marina Omelianenko 
 
 AARP Tax-Aide is looking for volunteers to become members of a team providing free tax preparation service in Contra Costa County. The program provides comprehensive training and ongoing support. To learn more visit aarpfoundation.org/taxaidevolunteer.
 
-## TK Kirkland
-
-- id: 3c807ce60c52
-- slug: tk-kirkland-3c807c
-- date: 2026-09-06
-- when: Sunday, September 6, 2026, 12:00 AM
-- start: 2026-09-06T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/tk-kirkland/18542041/2026-09-06T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Sep 4, 2026 Sat, Sep 5, 2026 Sun, Sep 6, 2026 T1.0 mi
-
 ## Scottish Highland Gathering & Games
 
 - id: c5a5b97f395f
@@ -1155,7 +1132,7 @@ Biography Fri, Sep 4, 2026 Sat, Sep 5, 2026 Sun, Sep 6, 2026 T1.0 mi
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/scottish-highland-gathering-games/19583545/2026-09-06T08
 - tickets: 
 - source: Pleasanton Weekly
@@ -1172,13 +1149,13 @@ A Bay Area tradition since 1866, be thrilled by world-class competitions and cel
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-09-06T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -1207,6 +1184,29 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - source: Pleasanton Weekly
 
 Join Valley Humane Society's valued team of volunteers for a rewarding experience that has a meaningful impact on the lives of animals and people in the community. Visit valleyhumane.org/volunteer.
+
+## TK Kirkland
+
+- id: 3c807ce60c52
+- slug: tk-kirkland-3c807c
+- date: 2026-09-06
+- when: Sunday, September 6, 2026 (time not listed)
+- start: 2026-09-06T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/tk-kirkland/18542041/2026-09-06T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Sep 4, 2026 Sat, Sep 5, 2026 Sun, Sep 6, 2026
 
 ## Beer on the Rails
 
@@ -1270,7 +1270,7 @@ Combining blistering dobro and gritty lyrics, Matt Bradford weaves instrumental 
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/puffs-at-village-theater/16961583/2026-09-06T14
 - tickets: 
 - source: Pleasanton Weekly
@@ -1356,7 +1356,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -1586,7 +1586,7 @@ Spectrum Meals on Wheels provides home delivered meals (60+). Call For more info
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -1770,7 +1770,7 @@ Join Intermediate/Advanced Line Dance, 9-11 a.m., Tuesdays and Thursdays. Drop-i
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -1793,7 +1793,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -1852,10 +1852,10 @@ Stop by the Vintage Lounge to showcase to enjoy puzzle-solving. 9 a.m.-4 p.m., M
 
 (no description)
 
-## SPRK Strength 55+ SPRK Strength 55+
+## SPRK Strength 55+
 
 - id: 7d469f2d3862
-- slug: sprk-strength-55-sprk-strength-55-7d469f
+- slug: sprk-strength-55-7d469f
 - date: 2026-09-10
 - when: Thursday, September 10, 2026, 9:00 AM
 - start: 2026-09-10T09:00:00-07:00
@@ -1960,7 +1960,7 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/card-games-games-of-chance/17759307/2026-09-10T10
 - tickets: 
 - source: Pleasanton Weekly
@@ -1977,7 +1977,7 @@ Join for Card Games/Games of Chance, 10 a.m.-12:30 p.m., Tuesdays and Thursdays.
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 4005 Stoneridge Dr, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -2184,7 +2184,7 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 450 N Livermore Ave, Livermore, CA
 - city: Livermore
 - category: family
 - tags: 
@@ -2276,7 +2276,7 @@ Join for Table Tennis at the Alcosta Senior & Community Center. 1-4 p.m., Thursd
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -2351,7 +2351,7 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/afterschool-teen-zone/19768575/2026-09-10T15
 - tickets: 
 - source: Pleasanton Weekly
@@ -2397,7 +2397,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-thursday-farmers-market/18509531/2026-09-10T16
 - tickets: 
 - source: Pleasanton Weekly
@@ -2414,7 +2414,7 @@ Featuring over 50 vendors, join to explore, taste and shop fresh produce. 4-8 p.
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 500 La Gonda Way, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -2466,35 +2466,12 @@ Join the Danville Area Chamber of Commerce's Monthly Mixer, which provides an op
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2026-09-10T17
 - tickets: 
 - source: Pleasanton Weekly
 
 Our weekly casual chess nights are aimed at adults (19+) of all levels, including: - passionate online players looking to connect and compete in person - chess parents that want to keep up with their kids - novices that are curious about the game - come between 5:30-6:30 PM to get instruction and tips! We welcome women and seniors! - current and returning tournament players. Join us if you are looking for a non-intimidating way to exercise your brain, hang with other adults, and maybe even win a prize! Organizer: Emerald Hills Chess is a Dublin nonprofit that teaches 300 K-12 students in the Tri-Valley, and also holds popular (100-150 player) US Chess-rated monthly tournaments.
-
-## Evolution & Premier Picture Days
-
-- id: ff69b86d80c5
-- slug: evolution-premier-picture-days-ff69b8
-- date: 2026-09-14
-- when: Monday, September 14, 2026, 12:00 AM
-- start: 2026-09-14T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465630?dy=14&mth=9&yr=20268.5 mi
-- address: Livermore, CA
-- city: Livermore
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/evolution-premier-picture-days/18297688/2026-09-14T00
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
 
 ## Volunteer in the Parks
 
@@ -2598,7 +2575,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -2856,7 +2833,7 @@ A beginner program designed for anyone who is new to exercise or looking for gen
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-09-14T10
 - tickets: 
@@ -2886,6 +2863,29 @@ Practice intermediate-level English grammar and conversation with other adult le
 - source: Pleasanton Weekly
 
 Tech Tutoring at the Pleasanton Senior Center. Drop-in fees apply. 11 a.m.-12 p.m., Mondays.
+
+## Evolution & Premier Picture Days
+
+- id: ff69b86d80c5
+- slug: evolution-premier-picture-days-ff69b8
+- date: 2026-09-14
+- when: Monday, September 14, 2026 (time not listed)
+- start: 2026-09-14T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465630?dy=14&mth=9&yr=20268.5 mi
+- address: Livermore, CA
+- city: Livermore
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/evolution-premier-picture-days/18297688/2026-09-14T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
 
 ## Golden Circle Craft Group (50+)
 
@@ -2966,7 +2966,7 @@ Spectrum Meals on Wheels provides home delivered meals (60+). Call For more info
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -3035,7 +3035,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 201 Front St, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -3058,7 +3058,7 @@ The next Danville Heritage Resource Commission - Regular Meeting is 5 p.m., Sept
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 1016 S. Livermore Ave, Livermore, CA
 - city: Livermore
 - category: family
 - tags: 
@@ -3173,7 +3173,7 @@ In this zoom meeting, Speaker Roger Prince PhD will cover traditional best pract
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 2020 Fifth St, Livermore, CA
 - city: Livermore
 - category: music
 - tags: 
@@ -3231,52 +3231,6 @@ Services include housing problem solving, housing education classes, employment 
 - source: Pleasanton Weekly
 
 Join Intermediate/Advanced Line Dance, 9-11 a.m., Tuesdays and Thursdays. Drop-in fees apply. Alcosta Senior & Community Center.
-
-## Kountry Wayne
-
-- id: 0fdbac092b55
-- slug: kountry-wayne-0fdbac
-- date: 2026-09-18
-- when: Friday, September 18, 2026, 12:00 AM
-- start: 2026-09-18T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/kountry-wayne/18864014/2026-09-18T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Sep 18, 2026 Sat, Sep 19, 2026 Sun, Sep 20, 2026 K1.0 mi
-
-## Fusion Friday Program
-
-- id: e72d904604d3
-- slug: fusion-friday-program-e72d90
-- date: 2026-09-18
-- when: Friday, September 18, 2026, 12:00 AM
-- start: 2026-09-18T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465631?dy=18&mth=9&yr=20268.5 mi
-- address: Livermore, CA
-- city: Livermore
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/fusion-friday-program/18297671/2026-09-18T00
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
 
 ## Pleasanton Rides
 
@@ -3462,16 +3416,16 @@ Go in motorcoach style with LARPD to enjoy a day in Sausalito for lunching, stro
 
 PGS Gold & Coin, Chicagoland’s trusted coin and precious metals dealer is hosting a 5 day Roadshow Buying Event in Livermore. We’re actively purchasing gold, coins, jewelry, sterling silver pieces, watches, old paper money, bullion, and collectibles. Receive a free, no-obligation evaluation from our certified buying team. If you choose to sell, you’ll receive a transparent offer and immediate payment. No appointment is necessary, walk-ins are welcome. We look forward to meeting you at our Livermore Roadshow Buying Event.
 
-## Meet Up!Danville Community Center & Library > Town Green
+## Meet Up!
 
 - id: 4601a1d6012a
-- slug: meet-up-danville-community-center-library-town-green-4601a1
+- slug: meet-up-4601a1
 - date: 2026-09-18
 - when: Friday, September 18, 2026, 10:00 AM
 - start: 2026-09-18T10:00:00-07:00
 - end: 
 - all_day: no
-- venue: 
+- venue: Town Green
 - address: Danville, CA
 - city: Danville
 - category: education
@@ -3646,6 +3600,52 @@ By popular demand, City Center Bishop Ranch, San Ramon’s lively open-air dinin
 
 Cruise across the Bay Bridge to Pier 3 and board the San Francisco Belle. Brunch with bottomless Mimosas included. Watch the Fleet Week Air Show featuring the United Airlines 777 and the Blue Angels. 11:30 a.m.-6 p.m., Oct. 10. Cost $185/$195. Sign up at the Pleasanton Senior Center VIP Travel desk.
 
+## Kountry Wayne
+
+- id: 0fdbac092b55
+- slug: kountry-wayne-0fdbac
+- date: 2026-09-18
+- when: Friday, September 18, 2026 (time not listed)
+- start: 2026-09-18T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/kountry-wayne/18864014/2026-09-18T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Sep 18, 2026 Sat, Sep 19, 2026 Sun, Sep 20, 2026
+
+## Fusion Friday Program
+
+- id: e72d904604d3
+- slug: fusion-friday-program-e72d90
+- date: 2026-09-18
+- when: Friday, September 18, 2026 (time not listed)
+- start: 2026-09-18T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465631?dy=18&mth=9&yr=20268.5 mi
+- address: Livermore, CA
+- city: Livermore
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/fusion-friday-program/18297671/2026-09-18T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
+
 ## Drop-In Bridge at RLCC
 
 - id: bcb84748d151
@@ -3656,7 +3656,7 @@ Cruise across the Bay Bridge to Pier 3 and board the San Francisco Belle. Brunch
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -3932,7 +3932,7 @@ Join Intermediate/Advanced Line Dance, 9-11 a.m., Tuesdays and Thursdays. Drop-i
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -3955,7 +3955,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -4053,7 +4053,7 @@ Transportation to and from the Alcosta Senior and Community Center, grocery shop
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/card-games-games-of-chance/17759307/2026-09-22T10
 - tickets: 
 - source: Pleasanton Weekly
@@ -4231,7 +4231,7 @@ Toddlers aged 2-5 and their families are invited to join us for stories, songs, 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -4329,7 +4329,7 @@ This Intermediate English conversation group focuses on topics of everyday life 
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/afterschool-teen-zone/19768575/2026-09-22T15
 - tickets: 
 - source: Pleasanton Weekly
@@ -4599,7 +4599,7 @@ This free walking group at the Pleasanton Senior Center is 8:45-10 a.m., Wednesd
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -4622,7 +4622,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -4765,7 +4765,7 @@ This exhibit invites artists to step through the present and into the echoes of 
 - category: other
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/live-well-be-well-50-/19634848/2026-09-30T10
 - tickets: 
@@ -4811,7 +4811,7 @@ Join for American Mahjong at the Alcosta Senior & Community Center. 10 a.m.-12 p
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-09-30T10
 - tickets: 
@@ -4990,7 +4990,7 @@ Join for Bingo at the Pleasanton Senior Center, 1-3 p.m., Wednesdays. Drop-in fe
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -5157,7 +5157,7 @@ Description SAVE THE DATE - DETAILS TO FOLLOW Candidate Details
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/family-storytime-at-pleasanton-library/19483633/2026-09-30T19
 - tickets: 
 - source: Pleasanton Weekly
@@ -5174,7 +5174,7 @@ Join on Wednesday nights for Family Storytime, a lively mix of movement, sing-al
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -5243,7 +5243,7 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 4005 Stoneridge Dr, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -5256,52 +5256,6 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 
 Grab a lunch to go, connect with a caring volunteer, clothing, seasonal and hygene products, private showers. Thursdays, 10 a.m.-12 p.m. The John Paul II Activity Center, 4005 Stoneridge Dr., Pleasanton. Closest bus line is Wheels Route 14.
 
-## JJ Williamson
-
-- id: ff9f4d3153cb
-- slug: jj-williamson-ff9f4d
-- date: 2026-10-04
-- when: Sunday, October 4, 2026, 12:00 AM
-- start: 2026-10-04T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/jj-williamson/19639771/2026-10-04T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Oct 2, 2026 Sat, Oct 3, 2026 Sun, Oct 4, 2026 J1.0 mi
-
-## Step Up for Down Syndrome Walk & Family Picnic
-
-- id: 73d41fce69dd
-- slug: step-up-for-down-syndrome-walk-family-picnic-73d41f
-- date: 2026-10-04
-- when: Sunday, October 4, 2026, 12:00 AM
-- start: 2026-10-04T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Oak Hill Park
-- address: Danville, CA
-- city: Danville
-- category: family
-- tags: 
-- price: 
-- free: no
-- family_friendly: yes
-- url: https://www.pleasantonweekly.com/calendar/#!/details/step-up-for-down-syndrome-walk-family-picnic/18210995/2026-10-04T00
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
-
 ## Livermore Farmers' Market
 
 - id: 49eb2bc26155
@@ -5312,13 +5266,13 @@ Biography Fri, Oct 2, 2026 Sat, Oct 3, 2026 Sun, Oct 4, 2026 J1.0 mi
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-10-04T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -5370,6 +5324,52 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - source: Pleasanton Weekly
 
 Join us for a soulful day of music, wine, and vineyard views at Wente Family Vineyards’ Jazz Festival in the Vineyards. Settle in on the concert lawn—bring your low-back chairs or blankets and claim your spot for an unforgettable afternoon. Wente wines, beer, and cocktails will be available for purchase, along with catered concessions from 12PM–5PM to satisfy your lunch cravings.
+
+## JJ Williamson
+
+- id: ff9f4d3153cb
+- slug: jj-williamson-ff9f4d
+- date: 2026-10-04
+- when: Sunday, October 4, 2026 (time not listed)
+- start: 2026-10-04T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/jj-williamson/19639771/2026-10-04T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Oct 2, 2026 Sat, Oct 3, 2026 Sun, Oct 4, 2026
+
+## Step Up for Down Syndrome Walk & Family Picnic
+
+- id: 73d41fce69dd
+- slug: step-up-for-down-syndrome-walk-family-picnic-73d41f
+- date: 2026-10-04
+- when: Sunday, October 4, 2026 (time not listed)
+- start: 2026-10-04T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Oak Hill Park
+- address: Danville, CA
+- city: Danville
+- category: family
+- tags: 
+- price: 
+- free: no
+- family_friendly: yes
+- url: https://www.pleasantonweekly.com/calendar/#!/details/step-up-for-down-syndrome-walk-family-picnic/18210995/2026-10-04T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
 
 ## SPARC Adult Improv Classes
 
@@ -5450,7 +5450,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -5570,7 +5570,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-10-05T10
 - tickets: 
@@ -5588,7 +5588,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -5703,7 +5703,7 @@ Join for the Wellness Alliance monthly meeting which brings together local leade
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -5726,7 +5726,7 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -5749,7 +5749,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -5831,29 +5831,6 @@ Immediate volunteer opportunities are available as a Caring Visitor, RideCare Dr
 
 Hope patient care volunteers help patients and their families in many different ways by interacting with patients, escorting a canine companion to visit patients, or helping in the office or special event. For more information visit hopehospice.com/volunteering.
 
-## Malik S
-
-- id: 7b8d479ea8b8
-- slug: malik-s-7b8d47
-- date: 2026-10-08
-- when: Thursday, October 8, 2026, 12:00 AM
-- start: 2026-10-08T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/malik-s/19230647/2026-10-08T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Thu, Oct 8, 2026 Fri, Oct 9, 2026 Sat, Oct 10, 2026 M1.0 mi
-
 ## Tax-Aide Program Looking for New Volunteers
 
 - id: 24ade29c1da5
@@ -5887,7 +5864,7 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 4005 Stoneridge Dr, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -6038,6 +6015,29 @@ Rhymes, songs, bounces and books for the whole family. Build a foundation for li
 
 Attending Storytime is a wonderful opportunity for young children to develop language, early literacy and social skills. Participants are welcome to stay for a 15-minute play session at the end of storytime. 11:15-11:45 a.m., Thursdays.
 
+## Malik S
+
+- id: 7b8d479ea8b8
+- slug: malik-s-7b8d47
+- date: 2026-10-08
+- when: Thursday, October 8, 2026 (time not listed)
+- start: 2026-10-08T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/malik-s/19230647/2026-10-08T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Thu, Oct 8, 2026 Fri, Oct 9, 2026 Sat, Oct 10, 2026
+
 ## Community Meals
 
 - id: f52cd387adf5
@@ -6048,7 +6048,7 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 450 N Livermore Ave, Livermore, CA
 - city: Livermore
 - category: family
 - tags: 
@@ -6071,7 +6071,7 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -6146,7 +6146,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-thursday-farmers-market/18509531/2026-10-08T16
 - tickets: 
 - source: Pleasanton Weekly
@@ -6192,7 +6192,7 @@ Join the Danville Area Chamber of Commerce's Monthly Mixer, which provides an op
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2026-10-08T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -6261,7 +6261,7 @@ Regular Board meetings of the Pleasanton Unified School District are scheduled t
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/english-class/17553271/2026-10-08T19
 - tickets: 
 - source: Pleasanton Weekly
@@ -6324,7 +6324,7 @@ Cruise across the Bay Bridge to Pier 3 and board the San Francisco Belle. Brunch
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -6485,7 +6485,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -6605,7 +6605,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-10-12T10
 - tickets: 
@@ -6623,7 +6623,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -6669,7 +6669,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 201 Front St, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -6761,7 +6761,7 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -6784,7 +6784,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -6899,7 +6899,7 @@ Toddlers aged 2-5 and their families are invited to join us for stories, songs, 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -7027,29 +7027,6 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 
 Bookworms is a monthly book club for readers in 3rd through 5th grade where a new book is discussed each month with a book themed activity. Register at the information desk. 4-5 p.m., July 14. San Ramon Library.
 
-## Lil Duval
-
-- id: 1079c8851cee
-- slug: lil-duval-1079c8
-- date: 2026-10-16
-- when: Friday, October 16, 2026, 12:00 AM
-- start: 2026-10-16T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/lil-duval/19230648/2026-10-16T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Oct 16, 2026 Sat, Oct 17, 2026 Sun, Oct 18, 2026 L1.0 mi
-
 ## Volunteer for Ride Care
 
 - id: 1b1769e6be07
@@ -7073,6 +7050,29 @@ Biography Fri, Oct 16, 2026 Sat, Oct 17, 2026 Sun, Oct 18, 2026 L1.0 mi
 
 CityServe recruits and trains volunteers who not only drive participants to appointments and errands but also offer companionship and reassurance. Volunteers pick riders up at home, accompany them into the appointment if needed, and ensure they return home safely. Visit cityservecares.org/ridecare.
 
+## Lil Duval
+
+- id: 1079c8851cee
+- slug: lil-duval-1079c8
+- date: 2026-10-16
+- when: Friday, October 16, 2026 (time not listed)
+- start: 2026-10-16T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/lil-duval/19230648/2026-10-16T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Oct 16, 2026 Sat, Oct 17, 2026 Sun, Oct 18, 2026
+
 ## Drop-In Bridge at RLCC
 
 - id: ce6ab014457b
@@ -7083,7 +7083,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -7152,13 +7152,13 @@ Step into the shadows of Ravenswood Historic Site and join LARPD Rangers and vol
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2026-10-17T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -7175,13 +7175,13 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 46 W Angela St, Pleasanton, CA
 - city: Pleasanton
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/pleasanton-farmers-market/17775643/2026-10-17T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -7198,13 +7198,13 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6000 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/san-ramon-farmers-market/17775659/2026-10-17T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -7227,7 +7227,7 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/volunteer-at-tri-valley-haven/13672438/2026-10-17T10
 - tickets: 
 - source: Pleasanton Weekly
@@ -7382,7 +7382,7 @@ Join us for the Pumpkin Patch and Splash event at the Robert Livermore Aquatic C
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -7405,7 +7405,7 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -7428,7 +7428,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -7566,7 +7566,7 @@ Toddlers aged 2-5 and their families are invited to join us for stories, songs, 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -7704,7 +7704,7 @@ The next Danville Town Council - Regular Meeting is 5 p.m., July 21. Town Meetin
 - end: 
 - all_day: no
 - venue: City of Pleasanton
-- address: Pleasanton, CA
+- address: 200 Old Bernal Ave, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -7750,7 +7750,7 @@ The next Livermore Planning Commission meeting is 7 p.m., Sept. 15. City Hall. V
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -7773,7 +7773,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -7801,7 +7801,7 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-10-21T10
 - tickets: 
@@ -7888,7 +7888,7 @@ The Firehouse Arts Center features the work of Zina Kassab on the Nancy Thompson
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -7901,29 +7901,6 @@ The Firehouse Arts Center features the work of Zina Kassab on the Nancy Thompson
 
 American Version Mahjong meets 1-4 p.m., Wednesdays in the Sycamore Room. Free lessons are available if new to the game. Drop in fees apply. Robert Livermore Community Center, 4444 East Ave.
 
-## Ghouls & Goals Tournament
-
-- id: c7a24fe79ec5
-- slug: ghouls-goals-tournament-c7a24f
-- date: 2026-10-24
-- when: Saturday, October 24, 2026, 12:00 AM
-- start: 2026-10-24T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465633?dy=24&mth=10&yr=20268.5 mi
-- address: Livermore, CA
-- city: Livermore
-- category: sports
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/ghouls-goals-tournament/18297672/2026-10-24T00
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
-
 ## Danville Farmers' Market
 
 - id: 3aaef224af1d
@@ -7934,13 +7911,13 @@ American Version Mahjong meets 1-4 p.m., Wednesdays in the Sycamore Room. Free l
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2026-10-24T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -7957,13 +7934,13 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 46 W Angela St, Pleasanton, CA
 - city: Pleasanton
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/pleasanton-farmers-market/17775643/2026-10-24T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -7980,13 +7957,13 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6000 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/san-ramon-farmers-market/17775659/2026-10-24T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -8009,7 +7986,7 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/volunteer-at-tri-valley-haven/13672438/2026-10-24T10
 - tickets: 
 - source: Pleasanton Weekly
@@ -8038,6 +8015,29 @@ Tri-Valley Haven's mission is to advocate for survivors of domestic violence, se
 - source: Pleasanton Weekly
 
 Practice chess skills and meet other chess players for games at the library. All ages and experience levels are welcome with chess boards provided. 11 a.m.-12 p.m., Saturday. San Ramon Library.
+
+## Ghouls & Goals Tournament
+
+- id: c7a24fe79ec5
+- slug: ghouls-goals-tournament-c7a24f
+- date: 2026-10-24
+- when: Saturday, October 24, 2026 (time not listed)
+- start: 2026-10-24T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465633?dy=24&mth=10&yr=20268.5 mi
+- address: Livermore, CA
+- city: Livermore
+- category: sports
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/ghouls-goals-tournament/18297672/2026-10-24T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
 
 ## Pleasanton Art League Solo Exhibit
 
@@ -8083,7 +8083,7 @@ The Firehouse Arts Center features the work of Zina Kassab on the Nancy Thompson
 - tickets: 
 - source: Pleasanton Weekly
 
-Biography October 24 STOP! DROP! AND ROLL! Comedy Show Fundraiser S
+October 24 STOP! DROP! AND ROLL! Comedy Show Fundraiser S
 
 ## Saturday Live Music and Dance Lessons
 
@@ -8124,7 +8124,7 @@ Biography October 24 STOP! DROP! AND ROLL! Comedy Show Fundraiser S
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/fall-festival-and-trunk-or-treat/19733093/2026-10-24T18
 - tickets: 
 - source: Pleasanton Weekly
@@ -8177,29 +8177,6 @@ Enjoy live music with Chelsea Ames at Canyon Club Brewery in Danville
 
 (no description)
 
-## Harvest Festival Original Art & Craft Show
-
-- id: d2a2efeec432
-- slug: harvest-festival-original-art-craft-show-d2a2ef
-- date: 2026-10-25
-- when: Sunday, October 25, 2026, 12:00 AM
-- start: 2026-10-25T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Alameda County Fairgrounds
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: festival
-- tags: 
-- price: 
-- free: no
-- family_friendly: yes
-- url: https://www.pleasantonweekly.com/calendar/#!/details/harvest-festival-original-art-craft-show/18073418/2026-10-25T00
-- tickets: 
-- source: Pleasanton Weekly
-
-For 53 years the nation&'s most talented artisans have successfully sold their creations at the Harvest Festival® Original Art & Craft Shows. We have seven established venues that attract thousands of eager shoppers with their "shop till you drop" attitude, looking for their next treasures to purchase. Don't miss your opportunity to join us on our 2026 tour. No application or jury fee. Category limitations. No commission on sales. Indoor booths in climate-controlled facilities, hotel discounts, exhibitor shipping, 24 hr. security. No buy & sell, commercial, or imported products allowed in our artisan booths. Extensive marketing in all medias.3.5 mi
-
 ## Livermore Farmers' Market
 
 - id: a9bc9db30f08
@@ -8210,13 +8187,13 @@ For 53 years the nation&'s most talented artisans have successfully sold their c
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-10-25T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -8245,6 +8222,29 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - source: Pleasanton Weekly
 
 Join Valley Humane Society's valued team of volunteers for a rewarding experience that has a meaningful impact on the lives of animals and people in the community. Visit valleyhumane.org/volunteer.
+
+## Harvest Festival Original Art & Craft Show
+
+- id: d2a2efeec432
+- slug: harvest-festival-original-art-craft-show-d2a2ef
+- date: 2026-10-25
+- when: Sunday, October 25, 2026 (time not listed)
+- start: 2026-10-25T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Alameda County Fairgrounds
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: festival
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/harvest-festival-original-art-craft-show/18073418/2026-10-25T00
+- tickets: 
+- source: Pleasanton Weekly
+
+For 53 years the nation&'s most talented artisans have successfully sold their creations at the Harvest Festival® Original Art & Craft Shows. We have seven established venues that attract thousands of eager shoppers with their "shop till you drop" attitude, looking for their next treasures to purchase. Don't miss your opportunity to join us on our 2026 tour. No application or jury fee. Category limitations. No commission on sales. Indoor booths in climate-controlled facilities, hotel discounts, exhibitor shipping, 24 hr. security. No buy & sell, commercial, or imported products allowed in our artisan booths. Extensive marketing in all medias.
 
 ## 7th Annual Walking in Life Fashion Event & Luncheon
 
@@ -8290,7 +8290,7 @@ Seventh Annual Walking in Life Fashion Event & Luncheon! Sunday, October 25, 202
 - tickets: 
 - source: Pleasanton Weekly
 
-Biography October 25 Hocus Pocus Drag Brunch H
+October 25 Hocus Pocus Drag Brunch H
 
 ## SPARC Adult Improv Classes
 
@@ -8371,7 +8371,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -8468,7 +8468,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-10-26T10
 - tickets: 
@@ -8486,7 +8486,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -8509,7 +8509,7 @@ Enjoy a free movie every Monday at the Danville Senior Center Community Hall. 1 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -8532,7 +8532,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -8560,7 +8560,7 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-10-28T10
 - tickets: 
@@ -8647,7 +8647,7 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -8745,7 +8745,7 @@ Maker Madness for ages 8-12. 4-5 p.m., Wednesday. Livermore Civic Center Library
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/whatever-wednesdays-teen-games/19006210/2026-10-28T16
 - tickets: 
 - source: Pleasanton Weekly
@@ -8791,7 +8791,7 @@ Play against other teens in classic card and board games where winners receive t
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/family-storytime-at-pleasanton-library/19483633/2026-10-28T19
 - tickets: 
 - source: Pleasanton Weekly
@@ -8854,7 +8854,7 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 4005 Stoneridge Dr, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -9015,7 +9015,7 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 450 N Livermore Ave, Livermore, CA
 - city: Livermore
 - category: family
 - tags: 
@@ -9038,7 +9038,7 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -9107,13 +9107,13 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-11-01T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -9161,29 +9161,6 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - free: no
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/sparc-adult-improv-classes/19730741/2026-11-01T18
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
-
-## Fall Player Evaluations Begin
-
-- id: f772f34ccbda
-- slug: fall-player-evaluations-begin-f772f3
-- date: 2026-11-01
-- when: Sunday, November 1, 2026, 11:00 PM
-- start: 2026-11-02T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/5844656348.5 mi
-- address: Livermore, CA
-- city: Livermore
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/fall-player-evaluations-begin/18297673/2026-11-02T00
 - tickets: 
 - source: Pleasanton Weekly
 
@@ -9245,7 +9222,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -9342,13 +9319,36 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-11-02T10
 - tickets: 
 - source: Pleasanton Weekly
 
 Practice intermediate-level English grammar and conversation with other adult learners in a relaxed group setting. Free and open to ages 18 and up. 10:30-11:30 a.m., Mondays. Pleasanton Library.
+
+## Fall Player Evaluations Begin
+
+- id: f772f34ccbda
+- slug: fall-player-evaluations-begin-f772f3
+- date: 2026-11-02
+- when: Monday, November 2, 2026 (time not listed)
+- start: 2026-11-02T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/5844656348.5 mi
+- address: Livermore, CA
+- city: Livermore
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/fall-player-evaluations-begin/18297673/2026-11-02T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
 
 ## Free Monday Movie
 
@@ -9360,7 +9360,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -9475,7 +9475,7 @@ Join for the Wellness Alliance monthly meeting which brings together local leade
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -9498,7 +9498,7 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -9521,7 +9521,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -9636,7 +9636,7 @@ Toddlers aged 2-5 and their families are invited to join us for stories, songs, 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -9751,7 +9751,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -9820,7 +9820,7 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 4005 Stoneridge Dr, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -9981,7 +9981,7 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 450 N Livermore Ave, Livermore, CA
 - city: Livermore
 - category: family
 - tags: 
@@ -10004,7 +10004,7 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -10102,7 +10102,7 @@ The Teen Advisory Board meets on the first Thursday of each month where teen vol
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2026-11-05T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -10148,7 +10148,7 @@ The next Livermore Historic Preservation Commission meeting is 7 p.m., Sept. 3. 
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/english-class/17553271/2026-11-05T19
 - tickets: 
 - source: Pleasanton Weekly
@@ -10176,30 +10176,7 @@ Free English class for adults of all ages and nationalities, every Thursday from
 - tickets: 
 - source: Pleasanton Weekly
 
-Biography November 05 Tee Sanders T
-
-## Amir K
-
-- id: 57b3aea51610
-- slug: amir-k-57b3ae
-- date: 2026-11-05
-- when: Thursday, November 5, 2026, 11:00 PM
-- start: 2026-11-06T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/amir-k/18960303/2026-11-06T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Nov 6, 2026 Sat, Nov 7, 2026 A1.0 mi
+November 05 Tee Sanders T
 
 ## Volunteer for Ride Care
 
@@ -10224,6 +10201,29 @@ Biography Fri, Nov 6, 2026 Sat, Nov 7, 2026 A1.0 mi
 
 CityServe recruits and trains volunteers who not only drive participants to appointments and errands but also offer companionship and reassurance. Volunteers pick riders up at home, accompany them into the appointment if needed, and ensure they return home safely. Visit cityservecares.org/ridecare.
 
+## Amir K
+
+- id: 57b3aea51610
+- slug: amir-k-57b3ae
+- date: 2026-11-06
+- when: Friday, November 6, 2026 (time not listed)
+- start: 2026-11-06T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/amir-k/18960303/2026-11-06T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Nov 6, 2026 Sat, Nov 7, 2026
+
 ## Drop-In Bridge at RLCC
 
 - id: e7d96ef58c08
@@ -10234,7 +10234,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -10349,7 +10349,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -10469,7 +10469,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-11-09T10
 - tickets: 
@@ -10487,7 +10487,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -10533,7 +10533,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 201 Front St, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -10625,7 +10625,7 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -10648,7 +10648,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -10740,7 +10740,7 @@ Hope patient care volunteers help patients and their families in many different 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -10947,7 +10947,7 @@ IGNITE brings together young professionals who want to build community, expand n
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -10959,52 +10959,6 @@ IGNITE brings together young professionals who want to build community, expand n
 - source: Pleasanton Weekly
 
 CityServe Care Coordination program connects individuals and families in need to local resources including basic needs, physical health, emotional wellness , employment & education and financial stability. Drop-in hours 9 a.m.-12 p.m. & 1-4 p.m., Mon.-Fri. Livermore Multi-Service Center, 3311 Pacific Ave.
-
-## D.L. Hughley
-
-- id: e63520167999
-- slug: d-l-hughley-e63520
-- date: 2026-11-12
-- when: Thursday, November 12, 2026, 11:00 PM
-- start: 2026-11-13T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/d-l-hughley/15388287/2026-11-13T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Nov 13, 2026 Sat, Nov 14, 2026 Sun, Nov 15, 2026 D1.0 mi
-
-## Cedric The Entertainer
-
-- id: bdea8fba7b60
-- slug: cedric-the-entertainer-bdea8f
-- date: 2026-11-12
-- when: Thursday, November 12, 2026, 11:00 PM
-- start: 2026-11-13T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/cedric-the-entertainer/19490060/2026-11-13T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Nov 13, 2026 Sat, Nov 14, 2026 C1.0 mi
 
 ## Volunteer for Ride Care
 
@@ -11029,6 +10983,52 @@ Biography Fri, Nov 13, 2026 Sat, Nov 14, 2026 C1.0 mi
 
 CityServe recruits and trains volunteers who not only drive participants to appointments and errands but also offer companionship and reassurance. Volunteers pick riders up at home, accompany them into the appointment if needed, and ensure they return home safely. Visit cityservecares.org/ridecare.
 
+## D.L. Hughley
+
+- id: e63520167999
+- slug: d-l-hughley-e63520
+- date: 2026-11-13
+- when: Friday, November 13, 2026 (time not listed)
+- start: 2026-11-13T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/d-l-hughley/15388287/2026-11-13T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Nov 13, 2026 Sat, Nov 14, 2026 Sun, Nov 15, 2026
+
+## Cedric The Entertainer
+
+- id: bdea8fba7b60
+- slug: cedric-the-entertainer-bdea8f
+- date: 2026-11-13
+- when: Friday, November 13, 2026 (time not listed)
+- start: 2026-11-13T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/cedric-the-entertainer/19490060/2026-11-13T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Nov 13, 2026 Sat, Nov 14, 2026
+
 ## Drop-In Bridge at RLCC
 
 - id: dbee4611e1ca
@@ -11039,7 +11039,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -11121,16 +11121,16 @@ Dublin’s monthly Night Market series returns featuring all types of vendors an
 
 Join us for four Night Market events this fall, featuring food vendors, handmade goods, and live music at St Pat's Row (between Golden Gate Drive and Regional Street). Stop by for new flavors, browse for unique finds, or just enjoy the evening with friends and neighbors. https://dublin.ca.gov/calendar.aspx?EID=8001
 
-## Murder Mystery Dinner: "A Dance with Death"Veterans Memorial Building > Community Hall
+## Murder Mystery Dinner: "A Dance with Death"
 
 - id: 406a6d7ce126
-- slug: murder-mystery-dinner-a-dance-with-death-veterans-memorial-building-co-406a6d
+- slug: murder-mystery-dinner-a-dance-with-death-406a6d
 - date: 2026-11-13
 - when: Friday, November 13, 2026, 4:00 PM
 - start: 2026-11-13T17:00:00-07:00
 - end: 
 - all_day: no
-- venue: 
+- venue: Community Hall
 - address: Danville, CA
 - city: Danville
 - category: food-drink
@@ -11167,98 +11167,6 @@ Join us for four Night Market events this fall, featuring food vendors, handmade
 
 Do you want your child (8-16) to experience the fun, education and social camaraderie of being in the marching band---but without the enormous time commitment of a school marching band? Look no further! We have been providing music and leadership education to Pleasanton-area kids since our first lesson on March 19th 2010. The Young American Patriots Fife & Drum Corps "YAPs" is a NON-POLITICAL children's parade band dedicated to perpetuating the music, history & heritage of our nation's founding through musical education & traditional value-based teaching. We teach fife (like a flute) and drum in a small group setting.
 
-## D.L. Hughley
-
-- id: 55f57797c71a
-- slug: d-l-hughley-55f577
-- date: 2026-11-13
-- when: Friday, November 13, 2026, 11:00 PM
-- start: 2026-11-14T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/d-l-hughley/15388287/2026-11-14T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Nov 13, 2026 Sat, Nov 14, 2026 Sun, Nov 15, 2026 D1.0 mi
-
-## Cedric The Entertainer
-
-- id: c264dd21ec01
-- slug: cedric-the-entertainer-c264dd
-- date: 2026-11-13
-- when: Friday, November 13, 2026, 11:00 PM
-- start: 2026-11-14T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/cedric-the-entertainer/19490060/2026-11-14T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Nov 13, 2026 Sat, Nov 14, 2026 C1.0 mi
-
-## Fusion Cup
-
-- id: a8e82aefc7fa
-- slug: fusion-cup-a8e82a
-- date: 2026-11-13
-- when: Friday, November 13, 2026, 11:00 PM
-- start: 2026-11-14T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465638?dy=14&mth=11&yr=20268.5 mi
-- address: Livermore, CA
-- city: Livermore
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/fusion-cup/18297676/2026-11-14T00
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
-
-## Evolution Program - Last Weekend
-
-- id: 46e9c18e6e56
-- slug: evolution-program-last-weekend-46e9c1
-- date: 2026-11-13
-- when: Friday, November 13, 2026, 11:00 PM
-- start: 2026-11-14T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/5844656368.5 mi
-- address: Livermore, CA
-- city: Livermore
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/evolution-program-last-weekend/18297675/2026-11-14T00
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
-
 ## Danville Farmers' Market
 
 - id: 1f8a7192cd71
@@ -11269,13 +11177,13 @@ Biography Fri, Nov 13, 2026 Sat, Nov 14, 2026 C1.0 mi
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2026-11-14T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -11292,13 +11200,13 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 46 W Angela St, Pleasanton, CA
 - city: Pleasanton
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/pleasanton-farmers-market/17775643/2026-11-14T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -11315,13 +11223,13 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6000 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/san-ramon-farmers-market/17775659/2026-11-14T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -11344,7 +11252,7 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/volunteer-at-tri-valley-haven/13672438/2026-11-14T10
 - tickets: 
 - source: Pleasanton Weekly
@@ -11374,16 +11282,108 @@ Tri-Valley Haven's mission is to advocate for survivors of domestic violence, se
 
 Practice chess skills and meet other chess players for games at the library. All ages and experience levels are welcome with chess boards provided. 11 a.m.-12 p.m., Saturday. San Ramon Library.
 
-## Karaoke Saturday!Charles R. Vineyards
+## D.L. Hughley
+
+- id: 55f57797c71a
+- slug: d-l-hughley-55f577
+- date: 2026-11-14
+- when: Saturday, November 14, 2026 (time not listed)
+- start: 2026-11-14T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/d-l-hughley/15388287/2026-11-14T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Nov 13, 2026 Sat, Nov 14, 2026 Sun, Nov 15, 2026
+
+## Cedric The Entertainer
+
+- id: c264dd21ec01
+- slug: cedric-the-entertainer-c264dd
+- date: 2026-11-14
+- when: Saturday, November 14, 2026 (time not listed)
+- start: 2026-11-14T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/cedric-the-entertainer/19490060/2026-11-14T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Nov 13, 2026 Sat, Nov 14, 2026
+
+## Fusion Cup
+
+- id: a8e82aefc7fa
+- slug: fusion-cup-a8e82a
+- date: 2026-11-14
+- when: Saturday, November 14, 2026 (time not listed)
+- start: 2026-11-14T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465638?dy=14&mth=11&yr=20268.5 mi
+- address: Livermore, CA
+- city: Livermore
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/fusion-cup/18297676/2026-11-14T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
+
+## Evolution Program - Last Weekend
+
+- id: 46e9c18e6e56
+- slug: evolution-program-last-weekend-46e9c1
+- date: 2026-11-14
+- when: Saturday, November 14, 2026 (time not listed)
+- start: 2026-11-14T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/5844656368.5 mi
+- address: Livermore, CA
+- city: Livermore
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/evolution-program-last-weekend/18297675/2026-11-14T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
+
+## Karaoke Saturday!
 
 - id: 601c1ad07e16
-- slug: karaoke-saturday-charles-r-vineyards-601c1a
+- slug: karaoke-saturday-601c1a
 - date: 2026-11-14
 - when: Saturday, November 14, 2026, 11:00 AM
 - start: 2026-11-14T12:00:00-07:00
 - end: 
 - all_day: no
-- venue: 
+- venue: Charles R. Vineyards
 - address: Livermore, CA
 - city: Livermore
 - category: music
@@ -11453,13 +11453,13 @@ Mark Bettencourt and the Aftermath is probably the highest energy band you will 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-11-15T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -11499,7 +11499,7 @@ Join Valley Humane Society's valued team of volunteers for a rewarding experienc
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -11522,7 +11522,7 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -11545,7 +11545,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -11637,7 +11637,7 @@ Hope patient care volunteers help patients and their families in many different 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -11798,7 +11798,7 @@ The next Danville Town Council - Regular Meeting is 5 p.m., July 21. Town Meetin
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -11821,7 +11821,7 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 699 Old Orchard Dr, San Ramon, CA
 - city: San Ramon
 - category: community
 - tags: 
@@ -11844,7 +11844,7 @@ The next regular Board of Education Meeting is 6 p.m., June 28. District Board R
 - end: 
 - all_day: no
 - venue: City of Pleasanton
-- address: Pleasanton, CA
+- address: 200 Old Bernal Ave, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -11890,7 +11890,7 @@ The next Livermore Planning Commission meeting is 7 p.m., Sept. 15. City Hall. V
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -11913,7 +11913,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -11941,7 +11941,7 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-11-18T10
 - tickets: 
@@ -12005,7 +12005,7 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -12110,29 +12110,6 @@ Join and learn while having fun. Suitable for children 6 to 9 years. 4-5 p.m., J
 
 Chamber members host an open house at their business, inviting attendees to a first-hand view of their facilities, products and services. This is networking at its best with entertainment, food and beverages. 4:30-6:30 p.m., Aug. 19. Visit livermorechamber.org.
 
-## Shuler King
-
-- id: 008bf2c518fa
-- slug: shuler-king-008bf2
-- date: 2026-11-20
-- when: Friday, November 20, 2026, 11:00 PM
-- start: 2026-11-21T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/shuler-king/18960304/2026-11-21T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Nov 20, 2026 Sat, Nov 21, 2026 Sun, Nov 22, 2026 S1.0 mi
-
 ## Danville Farmers' Market
 
 - id: 84e17ae566a7
@@ -12143,13 +12120,13 @@ Biography Fri, Nov 20, 2026 Sat, Nov 21, 2026 Sun, Nov 22, 2026 S1.0 mi
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2026-11-21T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -12166,13 +12143,13 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 46 W Angela St, Pleasanton, CA
 - city: Pleasanton
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/pleasanton-farmers-market/17775643/2026-11-21T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -12189,13 +12166,13 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6000 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/san-ramon-farmers-market/17775659/2026-11-21T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -12218,7 +12195,7 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/volunteer-at-tri-valley-haven/13672438/2026-11-21T10
 - tickets: 
 - source: Pleasanton Weekly
@@ -12248,6 +12225,29 @@ Tri-Valley Haven's mission is to advocate for survivors of domestic violence, se
 
 Practice chess skills and meet other chess players for games at the library. All ages and experience levels are welcome with chess boards provided. 11 a.m.-12 p.m., Saturday. San Ramon Library.
 
+## Shuler King
+
+- id: 008bf2c518fa
+- slug: shuler-king-008bf2
+- date: 2026-11-21
+- when: Saturday, November 21, 2026 (time not listed)
+- start: 2026-11-21T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/shuler-king/18960304/2026-11-21T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Nov 20, 2026 Sat, Nov 21, 2026 Sun, Nov 22, 2026
+
 ## Kids Night Out @ EDGE
 
 - id: 30b1809ca557
@@ -12271,29 +12271,6 @@ Practice chess skills and meet other chess players for games at the library. All
 
 Tag(s): Home http://www.fusionsc.org/event/show/588783271
 
-## Shuler King
-
-- id: 08ae1432e823
-- slug: shuler-king-08ae14
-- date: 2026-11-21
-- when: Saturday, November 21, 2026, 11:00 PM
-- start: 2026-11-22T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/shuler-king/18960304/2026-11-22T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Nov 20, 2026 Sat, Nov 21, 2026 Sun, Nov 22, 2026 S1.0 mi
-
 ## Livermore Farmers' Market
 
 - id: fd34065c2f56
@@ -12304,13 +12281,13 @@ Biography Fri, Nov 20, 2026 Sat, Nov 21, 2026 Sun, Nov 22, 2026 S1.0 mi
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-11-22T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -12339,6 +12316,29 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - source: Pleasanton Weekly
 
 Join Valley Humane Society's valued team of volunteers for a rewarding experience that has a meaningful impact on the lives of animals and people in the community. Visit valleyhumane.org/volunteer.
+
+## Shuler King
+
+- id: 08ae1432e823
+- slug: shuler-king-08ae14
+- date: 2026-11-22
+- when: Sunday, November 22, 2026 (time not listed)
+- start: 2026-11-22T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/shuler-king/18960304/2026-11-22T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Nov 20, 2026 Sat, Nov 21, 2026 Sun, Nov 22, 2026
 
 ## LARPD Puzzle Palooza
 
@@ -12419,7 +12419,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -12516,7 +12516,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-11-23T10
 - tickets: 
@@ -12534,7 +12534,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -12580,7 +12580,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: Town Meeting Hall
-- address: Danville, CA
+- address: 201 Front St, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -12626,7 +12626,7 @@ Open Heart Refuge offers overnight shelter using an assigned bed model. Check-in
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 5353 Sunol Blvd, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -12672,7 +12672,7 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -12695,7 +12695,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -12723,7 +12723,7 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-11-25T10
 - tickets: 
@@ -12787,7 +12787,7 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -12862,7 +12862,7 @@ Culinary Angels is looking for volunteers to do inventory a few times a month. 3
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/family-storytime-at-pleasanton-library/19483633/2026-11-25T19
 - tickets: 
 - source: Pleasanton Weekly
@@ -12902,7 +12902,7 @@ AARP Tax-Aide is looking for volunteers to become members of a team providing fr
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 4005 Stoneridge Dr, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -13063,7 +13063,7 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 450 N Livermore Ave, Livermore, CA
 - city: Livermore
 - category: family
 - tags: 
@@ -13086,7 +13086,7 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -13184,7 +13184,7 @@ Join in the San Ramon Library children's area for a fun craft. 3-4 p.m., July 23
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/black-friday-cyber-monday-sale/17826830/2026-11-26T15
 - tickets: 
 - source: Pleasanton Weekly
@@ -13207,7 +13207,7 @@ The Fair annual Black Friday & Cyber Monday Sale is November 26 through December
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2026-11-26T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -13253,81 +13253,12 @@ Regular Board meetings of the Pleasanton Unified School District are scheduled t
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/english-class/17553271/2026-11-26T19
 - tickets: 
 - source: Pleasanton Weekly
 
 Free English class for adults of all ages and nationalities, every Thursday from 7pm to 8pm except national holidays.
-
-## D.L. Hughley
-
-- id: fab58cfbfa78
-- slug: d-l-hughley-fab58c
-- date: 2026-11-26
-- when: Thursday, November 26, 2026, 11:00 PM
-- start: 2026-11-27T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/d-l-hughley/15388287/2026-11-27T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026 D1.0 mi
-
-## Day after Thanksgiving Day
-
-- id: 62d7e2084e88
-- slug: day-after-thanksgiving-day-62d7e2
-- date: 2026-11-26
-- when: Thursday, November 26, 2026, 11:00 PM
-- start: 2026-11-27T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/5843417168.5 mi
-- address: Livermore, CA
-- city: Livermore
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/day-after-thanksgiving-day/18317251/2026-11-27T00
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
-
-## Lighting of the Old Oak Tree
-
-- id: 8f62e8c0e236
-- slug: lighting-of-the-old-oak-tree-8f62e8
-- date: 2026-11-26
-- when: Thursday, November 26, 2026, 11:00 PM
-- start: 2026-11-27T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Historic Downtown Danville
-- address: Danville, CA
-- city: Danville
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/lighting-of-the-old-oak-tree/18210998/2026-11-27T00
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
 
 ## Volunteer for Ride Care
 
@@ -13352,6 +13283,75 @@ Biography Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026 D1.0 mi
 
 CityServe recruits and trains volunteers who not only drive participants to appointments and errands but also offer companionship and reassurance. Volunteers pick riders up at home, accompany them into the appointment if needed, and ensure they return home safely. Visit cityservecares.org/ridecare.
 
+## D.L. Hughley
+
+- id: fab58cfbfa78
+- slug: d-l-hughley-fab58c
+- date: 2026-11-27
+- when: Friday, November 27, 2026 (time not listed)
+- start: 2026-11-27T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/d-l-hughley/15388287/2026-11-27T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026
+
+## Day after Thanksgiving Day
+
+- id: 62d7e2084e88
+- slug: day-after-thanksgiving-day-62d7e2
+- date: 2026-11-27
+- when: Friday, November 27, 2026 (time not listed)
+- start: 2026-11-27T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/5843417168.5 mi
+- address: Livermore, CA
+- city: Livermore
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/day-after-thanksgiving-day/18317251/2026-11-27T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
+
+## Lighting of the Old Oak Tree
+
+- id: 8f62e8c0e236
+- slug: lighting-of-the-old-oak-tree-8f62e8
+- date: 2026-11-27
+- when: Friday, November 27, 2026 (time not listed)
+- start: 2026-11-27T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Historic Downtown Danville
+- address: Danville, CA
+- city: Danville
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/lighting-of-the-old-oak-tree/18210998/2026-11-27T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
+
 ## Drop-In Bridge at RLCC
 
 - id: 76ec3135b546
@@ -13362,7 +13362,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -13408,41 +13408,18 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2026-11-28T09
 - tickets: 
 - source: Pleasanton Weekly
 
 The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railroad Ave.
-
-## D.L. Hughley
-
-- id: 8c073ce38a22
-- slug: d-l-hughley-8c073c
-- date: 2026-11-28
-- when: Saturday, November 28, 2026, 11:00 PM
-- start: 2026-11-29T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/d-l-hughley/15388287/2026-11-29T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026 D1.0 mi
 
 ## Livermore Farmers' Market
 
@@ -13454,13 +13431,13 @@ Biography Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026 D1.0 mi
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-11-29T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -13489,6 +13466,29 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - source: Pleasanton Weekly
 
 Join Valley Humane Society's valued team of volunteers for a rewarding experience that has a meaningful impact on the lives of animals and people in the community. Visit valleyhumane.org/volunteer.
+
+## D.L. Hughley
+
+- id: 8c073ce38a22
+- slug: d-l-hughley-8c073c
+- date: 2026-11-29
+- when: Sunday, November 29, 2026 (time not listed)
+- start: 2026-11-29T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/d-l-hughley/15388287/2026-11-29T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Nov 27, 2026 Sat, Nov 28, 2026 Sun, Nov 29, 2026
 
 ## Volunteer in the Parks
 
@@ -13546,7 +13546,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -13620,7 +13620,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-11-30T10
 - tickets: 
@@ -13638,7 +13638,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -13720,29 +13720,6 @@ Open Heart Refuge offers overnight shelter using an assigned bed model. Check-in
 
 Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-olds. Children will develop language, literacy, and social skills alongside their families. 6:30-7:00 p.m., Mondays.
 
-## Winter Clinics Program
-
-- id: ca0ce70c4f43
-- slug: winter-clinics-program-ca0ce7
-- date: 2026-11-30
-- when: Monday, November 30, 2026, 11:00 PM
-- start: 2026-12-01T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465642?dy=1&mth=12&yr=20269.1 mi
-- address: Livermore, CA
-- city: Livermore
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/winter-clinics-program/18317252/2026-12-01T00
-- tickets: 
-- source: Pleasanton Weekly
-
-(no description)
-
 ## Wellness Alliance Meeting
 
 - id: 3be72aefbd69
@@ -13776,7 +13753,7 @@ Join for the Wellness Alliance monthly meeting which brings together local leade
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -13799,7 +13776,7 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -13822,7 +13799,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -13914,7 +13891,7 @@ Hope patient care volunteers help patients and their families in many different 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -13926,6 +13903,29 @@ Hope patient care volunteers help patients and their families in many different 
 - source: Pleasanton Weekly
 
 Souper Tuesday Free Lunch through City Serve. 11 a.m.-12 p.m., Tuesdays. CityServe of the Tri-Valley, 3311 Pacific Ave., Livermore.
+
+## Winter Clinics Program
+
+- id: ca0ce70c4f43
+- slug: winter-clinics-program-ca0ce7
+- date: 2026-12-01
+- when: Tuesday, December 1, 2026 (time not listed)
+- start: 2026-12-01T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Livermore, CATag(s): Home http://www.fusionsc.org/event/show/584465642?dy=1&mth=12&yr=20269.1 mi
+- address: Livermore, CA
+- city: Livermore
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/winter-clinics-program/18317252/2026-12-01T00
+- tickets: 
+- source: Pleasanton Weekly
+
+(no description)
 
 ## The Job Club
 
@@ -14098,7 +14098,7 @@ The next Livermore Planning Commission meeting is 7 p.m., Sept. 15. City Hall. V
 - end: 
 - all_day: no
 - venue: City of Pleasanton
-- address: Pleasanton, CA
+- address: 200 Old Bernal Ave, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -14144,7 +14144,7 @@ These zoom meetings through the Livermore Chamber of Commerce are 8-9:30 a.m., t
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -14167,7 +14167,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -14190,7 +14190,7 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -14236,7 +14236,7 @@ The San Ramon Chamber Business Referral Network, Thursdays, meets the first and 
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 4005 Stoneridge Dr, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -14397,7 +14397,7 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 450 N Livermore Ave, Livermore, CA
 - city: Livermore
 - category: family
 - tags: 
@@ -14420,7 +14420,7 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -14518,7 +14518,7 @@ The Teen Advisory Board meets on the first Thursday of each month where teen vol
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2026-12-03T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -14564,35 +14564,12 @@ The next Livermore Historic Preservation Commission meeting is 7 p.m., Sept. 3. 
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/english-class/17553271/2026-12-03T19
 - tickets: 
 - source: Pleasanton Weekly
 
 Free English class for adults of all ages and nationalities, every Thursday from 7pm to 8pm except national holidays.
-
-## George Lopez
-
-- id: 2bbaa3112bc9
-- slug: george-lopez-2bbaa3
-- date: 2026-12-03
-- when: Thursday, December 3, 2026, 11:00 PM
-- start: 2026-12-04T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/george-lopez/19695818/2026-12-04T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Dec 4, 2026 Sat, Dec 5, 2026 G1.0 mi
 
 ## Volunteer for Ride Care
 
@@ -14617,6 +14594,29 @@ Biography Fri, Dec 4, 2026 Sat, Dec 5, 2026 G1.0 mi
 
 CityServe recruits and trains volunteers who not only drive participants to appointments and errands but also offer companionship and reassurance. Volunteers pick riders up at home, accompany them into the appointment if needed, and ensure they return home safely. Visit cityservecares.org/ridecare.
 
+## George Lopez
+
+- id: 2bbaa3112bc9
+- slug: george-lopez-2bbaa3
+- date: 2026-12-04
+- when: Friday, December 4, 2026 (time not listed)
+- start: 2026-12-04T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/george-lopez/19695818/2026-12-04T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Dec 4, 2026 Sat, Dec 5, 2026
+
 ## Drop-In Bridge at RLCC
 
 - id: 200c6793cfaf
@@ -14627,7 +14627,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -14673,13 +14673,13 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2026-12-05T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -14696,13 +14696,13 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 46 W Angela St, Pleasanton, CA
 - city: Pleasanton
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/pleasanton-farmers-market/17775643/2026-12-05T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -14719,13 +14719,13 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6000 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/san-ramon-farmers-market/17775659/2026-12-05T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -14788,7 +14788,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -14885,7 +14885,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-12-07T10
 - tickets: 
@@ -14903,7 +14903,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -15018,7 +15018,7 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -15041,7 +15041,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -15133,7 +15133,7 @@ Hope patient care volunteers help patients and their families in many different 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -15294,7 +15294,7 @@ IGNITE brings together young professionals who want to build community, expand n
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -15317,7 +15317,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -15345,7 +15345,7 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-12-09T10
 - tickets: 
@@ -15409,7 +15409,7 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -15421,29 +15421,6 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - source: Pleasanton Weekly
 
 American Version Mahjong meets 1-4 p.m., Wednesdays in the Sycamore Room. Free lessons are available if new to the game. Drop in fees apply. Robert Livermore Community Center, 4444 East Ave.
-
-## Tony Roberts
-
-- id: 1d6420d0bf3c
-- slug: tony-roberts-1d6420
-- date: 2026-12-10
-- when: Thursday, December 10, 2026, 11:00 PM
-- start: 2026-12-11T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/tony-roberts/19397709/2026-12-11T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026 T1.0 mi
 
 ## Volunteer for Ride Care
 
@@ -15468,6 +15445,29 @@ Biography Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026 T1.0 mi
 
 CityServe recruits and trains volunteers who not only drive participants to appointments and errands but also offer companionship and reassurance. Volunteers pick riders up at home, accompany them into the appointment if needed, and ensure they return home safely. Visit cityservecares.org/ridecare.
 
+## Tony Roberts
+
+- id: 1d6420d0bf3c
+- slug: tony-roberts-1d6420
+- date: 2026-12-11
+- when: Friday, December 11, 2026 (time not listed)
+- start: 2026-12-11T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/tony-roberts/19397709/2026-12-11T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026
+
 ## Drop-In Bridge at RLCC
 
 - id: b1b6a59c4253
@@ -15478,7 +15478,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -15514,29 +15514,6 @@ Join for Bridge in a friendly, relaxed setting, all experience levels welcome. 1
 
 Do you want your child (8-16) to experience the fun, education and social camaraderie of being in the marching band---but without the enormous time commitment of a school marching band? Look no further! We have been providing music and leadership education to Pleasanton-area kids since our first lesson on March 19th 2010. The Young American Patriots Fife & Drum Corps "YAPs" is a NON-POLITICAL children's parade band dedicated to perpetuating the music, history & heritage of our nation's founding through musical education & traditional value-based teaching. We teach fife (like a flute) and drum in a small group setting.
 
-## Tony Roberts
-
-- id: 785881584120
-- slug: tony-roberts-785881
-- date: 2026-12-11
-- when: Friday, December 11, 2026, 11:00 PM
-- start: 2026-12-12T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/tony-roberts/19397709/2026-12-12T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026 T1.0 mi
-
 ## Danville Farmers' Market
 
 - id: a714ebdad19c
@@ -15547,13 +15524,13 @@ Biography Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026 T1.0 mi
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2026-12-12T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -15570,13 +15547,13 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 46 W Angela St, Pleasanton, CA
 - city: Pleasanton
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/pleasanton-farmers-market/17775643/2026-12-12T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -15593,13 +15570,13 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6000 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/san-ramon-farmers-market/17775659/2026-12-12T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -15622,7 +15599,7 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/volunteer-at-tri-valley-haven/13672438/2026-12-12T10
 - tickets: 
 - source: Pleasanton Weekly
@@ -15652,16 +15629,39 @@ Tri-Valley Haven's mission is to advocate for survivors of domestic violence, se
 
 Practice chess skills and meet other chess players for games at the library. All ages and experience levels are welcome with chess boards provided. 11 a.m.-12 p.m., Saturday. San Ramon Library.
 
-## Karaoke Saturday!Charles R. Vineyards
+## Tony Roberts
+
+- id: 785881584120
+- slug: tony-roberts-785881
+- date: 2026-12-12
+- when: Saturday, December 12, 2026 (time not listed)
+- start: 2026-12-12T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/tony-roberts/19397709/2026-12-12T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026
+
+## Karaoke Saturday!
 
 - id: 08c17ba23cf3
-- slug: karaoke-saturday-charles-r-vineyards-08c17b
+- slug: karaoke-saturday-08c17b
 - date: 2026-12-12
 - when: Saturday, December 12, 2026, 11:00 AM
 - start: 2026-12-12T12:00:00-07:00
 - end: 
 - all_day: no
-- venue: 
+- venue: Charles R. Vineyards
 - address: Livermore, CA
 - city: Livermore
 - category: music
@@ -15744,29 +15744,6 @@ Tag(s): Home http://www.fusionsc.org/event/show/588783279
 
 An intimate, high-energy evening with multi-platinum artist Andy Grammer. Stripped to its core, this one-man show blends acoustic performance, spoken word, storytelling, and real-time audience connection into something deeply personal and undeniably uplifting. With only a piano, a guitar, and a room full of voices, Andy turns the stage into a shared experience: moving effortlessly between chart- topping hits, new songs, and the stories behind them. Raw, funny, and fully present, it’s an invitation into the heart of the music.
 
-## Tony Roberts
-
-- id: 859e54ee8e3a
-- slug: tony-roberts-859e54
-- date: 2026-12-12
-- when: Saturday, December 12, 2026, 11:00 PM
-- start: 2026-12-13T00:00:00-07:00
-- end: 
-- all_day: no
-- venue: Pick-UpPleasanton Tommy T's
-- address: Pleasanton, CA
-- city: Pleasanton
-- category: other
-- tags: 
-- price: 
-- free: no
-- family_friendly: no
-- url: https://www.pleasantonweekly.com/calendar/#!/details/tony-roberts/19397709/2026-12-13T00
-- tickets: 
-- source: Pleasanton Weekly
-
-Biography Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026 T1.0 mi
-
 ## Livermore Farmers' Market
 
 - id: f296fab8d3fe
@@ -15777,13 +15754,13 @@ Biography Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026 T1.0 mi
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-12-13T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -15812,6 +15789,29 @@ The Livermore Farmers' Market is Sunday, year-round. 9 a.m.-1 p.m., 206 South J 
 - source: Pleasanton Weekly
 
 Join Valley Humane Society's valued team of volunteers for a rewarding experience that has a meaningful impact on the lives of animals and people in the community. Visit valleyhumane.org/volunteer.
+
+## Tony Roberts
+
+- id: 859e54ee8e3a
+- slug: tony-roberts-859e54
+- date: 2026-12-13
+- when: Sunday, December 13, 2026 (time not listed)
+- start: 2026-12-13T12:00:00-07:00
+- end: 
+- all_day: yes
+- venue: Pick-UpPleasanton Tommy T's
+- address: Pleasanton, CA
+- city: Pleasanton
+- category: other
+- tags: 
+- price: 
+- free: no
+- family_friendly: no
+- url: https://www.pleasantonweekly.com/calendar/#!/details/tony-roberts/19397709/2026-12-13T00
+- tickets: 
+- source: Pleasanton Weekly
+
+Fri, Dec 11, 2026 Sat, Dec 12, 2026 Sun, Dec 13, 2026
 
 ## Volunteer in the Parks
 
@@ -15869,7 +15869,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -15943,7 +15943,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-12-14T10
 - tickets: 
@@ -15961,7 +15961,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -16007,7 +16007,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -16030,7 +16030,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -16122,7 +16122,7 @@ Hope patient care volunteers help patients and their families in many different 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -16237,7 +16237,7 @@ The next Danville Town Council - Regular Meeting is 5 p.m., July 21. Town Meetin
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 699 Old Orchard Dr, San Ramon, CA
 - city: San Ramon
 - category: community
 - tags: 
@@ -16260,7 +16260,7 @@ The next regular Board of Education Meeting is 6 p.m., June 28. District Board R
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -16283,7 +16283,7 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - end: 
 - all_day: no
 - venue: City of Pleasanton
-- address: Pleasanton, CA
+- address: 200 Old Bernal Ave, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -16329,7 +16329,7 @@ The next Livermore Planning Commission meeting is 7 p.m., Sept. 15. City Hall. V
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -16352,7 +16352,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -16380,7 +16380,7 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-12-16T10
 - tickets: 
@@ -16444,7 +16444,7 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -16565,7 +16565,7 @@ Chamber members host an open house at their business, inviting attendees to a fi
 - tags: 
 - price: 
 - free: no
-- family_friendly: no
+- family_friendly: yes
 - url: https://www.pleasantonweekly.com/calendar/#!/details/family-storytime-at-pleasanton-library/19483633/2026-12-16T19
 - tickets: 
 - source: Pleasanton Weekly
@@ -16582,7 +16582,7 @@ Join on Wednesday nights for Family Storytime, a lively mix of movement, sing-al
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -16605,13 +16605,13 @@ The San Ramon Chamber Business Referral Network, Thursdays, meets the first and 
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2026-12-19T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -16634,7 +16634,7 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/jesse-loren-strickman/18206175/2026-12-19T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -16651,13 +16651,13 @@ Jesse Loren Strickman performs a free four hour set at the PCFMA Danville farmer
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 46 W Angela St, Pleasanton, CA
 - city: Pleasanton
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/pleasanton-farmers-market/17775643/2026-12-19T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -16674,13 +16674,13 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6000 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/san-ramon-farmers-market/17775659/2026-12-19T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -16703,7 +16703,7 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/volunteer-at-tri-valley-haven/13672438/2026-12-19T10
 - tickets: 
 - source: Pleasanton Weekly
@@ -16743,13 +16743,13 @@ Practice chess skills and meet other chess players for games at the library. All
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-12-20T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -16835,7 +16835,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -16909,7 +16909,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-12-21T10
 - tickets: 
@@ -16927,7 +16927,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -17019,7 +17019,7 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6101 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: other
 - tags: 
@@ -17042,7 +17042,7 @@ The San Ramon Chamber, Business Referral Network Tuesday Group, meets the first 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -17065,7 +17065,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -17134,7 +17134,7 @@ Hope patient care volunteers help patients and their families in many different 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -17226,7 +17226,7 @@ The next Danville Planning Commission meeting is 5 p.m., July 14. Town Meeting H
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -17249,7 +17249,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -17277,7 +17277,7 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-12-23T10
 - tickets: 
@@ -17341,7 +17341,7 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -17416,7 +17416,7 @@ Culinary Angels is looking for volunteers to do inventory a few times a month. 3
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/whatever-wednesdays-teen-games/19006210/2026-12-23T16
 - tickets: 
 - source: Pleasanton Weekly
@@ -17433,7 +17433,7 @@ Play against other teens in classic card and board games where winners receive t
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 4005 Stoneridge Dr, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -17548,7 +17548,7 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 450 N Livermore Ave, Livermore, CA
 - city: Livermore
 - category: family
 - tags: 
@@ -17571,7 +17571,7 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -17669,7 +17669,7 @@ Join in the San Ramon Library children's area for a fun craft. 3-4 p.m., July 23
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2026-12-24T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -17709,7 +17709,7 @@ CityServe recruits and trains volunteers who not only drive participants to appo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -17755,13 +17755,13 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2026-12-26T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -17778,13 +17778,13 @@ The Danville Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 205 Railro
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 46 W Angela St, Pleasanton, CA
 - city: Pleasanton
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/pleasanton-farmers-market/17775643/2026-12-26T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -17801,13 +17801,13 @@ The Pleasanton Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. 46 W Ang
 - end: 
 - all_day: no
 - venue: 
-- address: San Ramon, CA
+- address: 6000 Bollinger Canyon Rd, San Ramon, CA
 - city: San Ramon
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/san-ramon-farmers-market/17775659/2026-12-26T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -17830,7 +17830,7 @@ The San Ramon Farmers' Market is year-round, 9 a.m.-1 p.m., Saturdays. City Cent
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/volunteer-at-tri-valley-haven/13672438/2026-12-26T10
 - tickets: 
 - source: Pleasanton Weekly
@@ -17893,13 +17893,13 @@ Enjoy family time together with stories, songs, rhymes, finger plays and more. 1
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 206 South J St, Livermore, CA
 - city: Livermore
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/livermore-farmers-market/17775650/2026-12-27T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -17985,7 +17985,7 @@ The City of Pleasanton Recreation Department provides a Fee Assistance Program f
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -18059,7 +18059,7 @@ The LARPD Foundation funds the Community Support Scholarship Program to provide 
 - category: education
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/step-by-step-esl-conversation/16305334/2026-12-28T10
 - tickets: 
@@ -18077,7 +18077,7 @@ Practice intermediate-level English grammar and conversation with other adult le
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 115 E. Prospect Ave, Danville, CA
 - city: Danville
 - category: community
 - tags: 
@@ -18169,7 +18169,7 @@ Family Storytime is a fun mix of songs, books, and stories, suited for 3-5 year-
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -18192,7 +18192,7 @@ Join for Billiards at the Livermore Senior Center. 9 a.m.-4 p.m., Mon.-Tues; 9 a
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -18261,7 +18261,7 @@ Hope patient care volunteers help patients and their families in many different 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -18330,7 +18330,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 3311 Pacific Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -18353,7 +18353,7 @@ CityServe Care Coordination program connects individuals and families in need to
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: education
 - tags: 
@@ -18381,7 +18381,7 @@ Borrow up to 6 books, enjoy reading in the lounge, or take home and return when 
 - category: arts
 - tags: 
 - price: 
-- free: no
+- free: yes
 - family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/eugene-o-neill-national-historic-site/17910440/2026-12-30T10
 - tickets: 
@@ -18445,7 +18445,7 @@ Family Story Hour is a fun combination of books, finger plays, rhymes, songs, mo
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -18514,7 +18514,7 @@ Culinary Angels is looking for volunteers to do inventory a few times a month. 3
 - end: 
 - all_day: no
 - venue: 
-- address: Pleasanton, CA
+- address: 4005 Stoneridge Dr, Pleasanton, CA
 - city: Pleasanton
 - category: community
 - tags: 
@@ -18629,7 +18629,7 @@ Attending Storytime is a wonderful opportunity for young children to develop lan
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 450 N Livermore Ave, Livermore, CA
 - city: Livermore
 - category: family
 - tags: 
@@ -18652,7 +18652,7 @@ Open Heart Kitchen serves free meals that are nutritious and freshly prepared. M
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 4444 East Ave, Livermore, CA
 - city: Livermore
 - category: other
 - tags: 
@@ -18727,7 +18727,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2026-12-31T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -18744,13 +18744,13 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2027-01-02T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -18842,7 +18842,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2027-01-06T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -18888,7 +18888,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-01-07T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -18928,13 +18928,13 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2027-01-09T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -19095,7 +19095,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-01-14T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -19112,13 +19112,13 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2027-01-16T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -19181,7 +19181,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -19256,7 +19256,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-01-21T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -19296,13 +19296,13 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2027-01-23T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -19440,7 +19440,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-01-28T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -19457,13 +19457,13 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - end: 
 - all_day: no
 - venue: 
-- address: Danville, CA
+- address: 205 Railroad Ave, Danville, CA
 - city: Danville
 - category: market
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/danville-farmers-market/17775656/2027-01-30T09
 - tickets: 
 - source: Pleasanton Weekly
@@ -19526,7 +19526,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -19578,7 +19578,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2027-02-03T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -19624,7 +19624,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-02-04T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -19808,7 +19808,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-02-11T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -19871,7 +19871,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -19946,7 +19946,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-02-18T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -20084,7 +20084,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-02-25T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -20095,11 +20095,11 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 
 - id: 23b7c826eaf0
 - slug: quinn-dale-23b7c8
-- date: 2027-02-25
-- when: Thursday, February 25, 2027, 11:00 PM
-- start: 2027-02-26T00:00:00-07:00
+- date: 2027-02-26
+- when: Friday, February 26, 2027 (time not listed)
+- start: 2027-02-26T12:00:00-07:00
 - end: 
-- all_day: no
+- all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
 - address: Pleasanton, CA
 - city: Pleasanton
@@ -20112,17 +20112,17 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - tickets: 
 - source: Pleasanton Weekly
 
-Biography Fri, Feb 26, 2027 Sat, Feb 27, 2027 Q1.0 mi
+Fri, Feb 26, 2027 Sat, Feb 27, 2027
 
 ## Quinn Dale
 
 - id: 0aab91bb69a7
 - slug: quinn-dale-0aab91
-- date: 2027-02-26
-- when: Friday, February 26, 2027, 11:00 PM
-- start: 2027-02-27T00:00:00-07:00
+- date: 2027-02-27
+- when: Saturday, February 27, 2027 (time not listed)
+- start: 2027-02-27T12:00:00-07:00
 - end: 
-- all_day: no
+- all_day: yes
 - venue: Pick-UpPleasanton Tommy T's
 - address: Pleasanton, CA
 - city: Pleasanton
@@ -20135,7 +20135,7 @@ Biography Fri, Feb 26, 2027 Sat, Feb 27, 2027 Q1.0 mi
 - tickets: 
 - source: Pleasanton Weekly
 
-Biography Fri, Feb 26, 2027 Sat, Feb 27, 2027 Q1.0 mi
+Fri, Feb 26, 2027 Sat, Feb 27, 2027
 
 ## Homework Help at Rincon Branch
 
@@ -20193,7 +20193,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -20245,7 +20245,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2027-03-03T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -20291,7 +20291,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-03-04T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -20452,7 +20452,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-03-11T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -20515,7 +20515,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -20590,7 +20590,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-03-18T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -20751,7 +20751,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-03-25T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -20866,7 +20866,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-04-01T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -20981,7 +20981,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2027-04-07T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21027,7 +21027,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-04-08T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21165,7 +21165,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-04-15T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21251,7 +21251,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -21326,7 +21326,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-04-22T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21441,7 +21441,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-04-29T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21527,7 +21527,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -21579,7 +21579,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2027-05-05T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21625,7 +21625,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-05-06T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21763,7 +21763,7 @@ The Livermore Rincon Branch Library homework help program offers free help to st
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-05-13T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21803,7 +21803,7 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -21832,7 +21832,7 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-05-20T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21878,7 +21878,7 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-05-27T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21924,7 +21924,7 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2027-06-02T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21947,7 +21947,7 @@ Come join us for our monthly Queer gathering! Make new friends, hang out with ol
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-06-03T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -21987,7 +21987,7 @@ Biz Links is a Chamber networking group focused on building meaningful business 
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -22016,7 +22016,7 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-06-10T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -22056,7 +22056,7 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - end: 
 - all_day: no
 - venue: 
-- address: Livermore, CA
+- address: 685 East Jack London Blvd, Livermore, CA
 - city: Livermore
 - category: community
 - tags: 
@@ -22085,7 +22085,7 @@ Livermore Valley Joint Unified School District Board Meetings are held in the Bo
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-06-17T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -22108,7 +22108,7 @@ Our weekly casual chess nights are aimed at adults (19+) of all levels, includin
 - tags: 
 - price: 
 - free: yes
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/free-social-adults-only-19-chess-club/16159390/2027-06-24T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -22154,7 +22154,7 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2027-07-07T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -22223,7 +22223,7 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2027-08-04T17
 - tickets: 
 - source: Pleasanton Weekly
@@ -22292,7 +22292,7 @@ Do you want your child (8-16) to experience the fun, education and social camara
 - tags: 
 - price: 
 - free: no
-- family_friendly: yes
+- family_friendly: no
 - url: https://www.pleasantonweekly.com/calendar/#!/details/tri-valley-rainbow-night/17174113/2027-09-01T17
 - tickets: 
 - source: Pleasanton Weekly
