@@ -217,7 +217,7 @@ export function AskChat({
             {messages.map((m) =>
               m.role === "user" ? (
                 <li key={m.id} className="flex justify-end">
-                  <p className="max-w-[85%] whitespace-pre-wrap rounded-3xl rounded-br-lg bg-brand-600 px-4 py-2.5 text-[15px] leading-relaxed text-white shadow-sm">
+                  <p className="max-w-[85%] whitespace-pre-wrap break-words [overflow-wrap:anywhere] rounded-3xl rounded-br-lg bg-brand-600 px-4 py-2.5 text-[15px] leading-relaxed text-white shadow-card">
                     {m.content}
                   </p>
                 </li>
@@ -231,7 +231,7 @@ export function AskChat({
                   </span>
                   <div className="min-w-0 flex-1">
                     {m.content && (
-                      <div className="text-[15px] leading-relaxed text-ink-soft">
+                      <div className="break-words [overflow-wrap:anywhere] text-[15px] leading-relaxed text-ink-soft">
                         <MarkdownLite text={m.content} />
                       </div>
                     )}
@@ -286,7 +286,7 @@ export function AskChat({
                 type="button"
                 onClick={stop}
                 aria-label="Stop"
-                className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-ink text-white shadow-sm transition hover:bg-ink-soft"
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-ink text-white shadow-card transition hover:bg-ink-soft"
               >
                 <Square className="h-4 w-4 fill-current" />
               </button>
@@ -295,7 +295,7 @@ export function AskChat({
                 type="submit"
                 disabled={!input.trim()}
                 aria-label="Send"
-                className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-600 text-white shadow-sm transition duration-200 hover:bg-brand-700 active:scale-[0.97] disabled:cursor-not-allowed disabled:bg-ink/15 disabled:text-ink-muted"
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-600 text-white shadow-card transition duration-200 hover:bg-brand-700 active:scale-[0.97] disabled:cursor-not-allowed disabled:bg-ink/15 disabled:text-ink-muted"
               >
                 <ArrowUp className="h-5 w-5" strokeWidth={2.5} />
               </button>

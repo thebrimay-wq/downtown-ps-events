@@ -199,8 +199,10 @@ export function SubmitForm({ categories }: { categories: CategoryOption[] }) {
   );
 }
 
+// scroll-mt keeps a field clear of the sticky header when the browser scrolls
+// it into view to show a validation message.
 const inputClass =
-  "min-h-11 w-full rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-base text-ink shadow-sm ring-1 ring-ink/10 placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:ring-brand-500";
+  "min-h-11 w-full scroll-mt-24 rounded-2xl border-0 bg-canvas-sunken px-4 py-2.5 text-base text-ink shadow-card ring-1 ring-ink/10 placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:ring-brand-500";
 
 function Field({
   label,
